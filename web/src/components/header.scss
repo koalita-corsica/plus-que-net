@@ -1,21 +1,29 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
+
 .root {
   position: relative;
   display: flex;
   justify-content: space-between;
+
+  .logo{
+      background-color: green;
+    }
+  .nav{
+      background-color: purple;
+      width: 100%;
+
+        ul{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+  
 }
-.root .logo {
-  background-color: green;
-}
-.root .nav {
-  background-color: purple;
-  width: 100%;
-}
-.root .nav ul {
-  display: flex;
-  justify-content: space-around;
-}
+
+
+
+
 
 .toggleNavButton {
   appearance: none;
@@ -26,19 +34,20 @@
   padding: calc(14 / 17 / 2 * 1rem);
   outline: none;
   color: inherit;
-}
-.toggleNavButton svg {
-  display: block;
-  fill: inherit;
-}
-@media (--media-min-small) {
-  .toggleNavButton {
+  
+
+  & svg {
+    display: block;
+    fill: inherit;
+  }
+
+  @media (--media-min-small) {
     display: none;
   }
 }
 
+
+
 .showNav {
   display: inline-block;
 }
-
-/*# sourceMappingURL=header.module.css.map */
