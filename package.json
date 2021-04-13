@@ -16,5 +16,12 @@
   "devDependencies": {
     "@sanity/cli": "^2.0.0",
     "lerna": "^3.13.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "gatsby-plugin-fontawesome-css": "^1.1.0",
+    "gatsby-source-google-reviews": "0.0.7"
   }
 }
