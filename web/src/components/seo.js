@@ -91,14 +91,16 @@ SEO.propTypes = {
 export default SEO
 
 const detailsQuery = graphql`
-  query DefaultSEOQuery {
-    site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
-      title
-      description
-      keywords
+query DefaultSEOQuery {
+  site: sanitySiteSettings(_id: {}) {
+    title
+    description
+    keywords
+    author {
       author {
         name
       }
     }
   }
+}
 `
