@@ -22,9 +22,14 @@ export default {
             title: 'Main image'
         },
         {
-            name: 'image',
-            type: 'image',
-            title: 'Images'
+            title: 'Images',
+            name: 'images',
+            type: 'array',
+            of: [
+              {
+                type: 'image',
+              }
+            ]
         },
         {
             name: 'text',

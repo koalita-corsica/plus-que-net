@@ -17,9 +17,30 @@ export default {
             }
         },
         {
-            name: 'text',
+            name: 'authors',
+            title: 'Authors',
+            type: 'array',
+            of: [
+              {
+                type: 'authorReference'
+              }
+            ]
+        },
+        {
+            name: 'image',
+            type: 'mainImage',
+            title: 'Image'
+        },
+        {
+            name: 'publishedAt',
+            type: 'datetime',
+            title: 'Published at',
+            description: 'This can be used to schedule post for publishing'
+        },
+        {
+            name: 'body',
             type: 'bodyPortableText',
-            title: 'Texte Principal'
+            title: 'Body'
         }
     ]
 }

@@ -1,48 +1,48 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Container from "../components/container";
-import GraphQLErrorList from "../components/graphql-error-list";
-import Project from "../components/project";
-import SEO from "../components/seo";
-import Layout from "../containers/layout";
-import Author from "../components/author";
-import Page from "../components/page";
+import React from 'react'
+import {graphql} from 'gatsby'
+import Container from '../components/container'
+import GraphQLErrorList from '../components/graphql-error-list'
+import SEO from '../components/seo'
+import Layout from '../containers/layout'
 
 export const query = graphql`
-query PageQuery($id: String!) {
+  query CategoryTemplateQuery($id: String!) {
     page: sanityPage(id: {eq: $id}) {
-      id
       title
-      parent {
-        id
-      }
-      text {
-        sanityChildren {
-          text
+      image {
+        asset {
+          url
         }
       }
+      authors {
+        author {
+          name
+        }
+      }
+      publishedAt
     }
   }
-  
-  
-`;
-
+`
 const PageTemplate = props => {
-  const { data, errors } = props;
-  const page = data && data.page;
+  const {data = {}, errors} = props
+  const {dados} = data.page
+  const {title, image, authors, publishedAt} = data.page || {}
+
   return (
     <Layout>
-      {errors && <SEO title="GraphQL Error" />}
-      {author && <SEO title={page.title || "Untitled"} />}
-    
-      {errors && (
-        <Container>
-          <GraphQLErrorList errors={errors} />
-        </Container>
-      )}
-      {page && <Page {...page} />}
+      <Container>
+        {errors && <GraphQLErrorList errors={errors} />}
+        {!data.page && <p>No category data</p>}
+        <SEO title={title} />
+        <article>
+          <h1>Page: {title}</h1>
+          <img src={image.asset.url} alt="" width="100" height="100"></img>
+          <p> {authors.author}</p>
+          <p> {publishedAt} </p>
+        </article>
+      </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default PageTemplate;
+export default PageTemplate

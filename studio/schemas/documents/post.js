@@ -33,6 +33,11 @@ export default {
       title: 'Main image'
     },
     {
+      name: 'image',
+      type: 'image',
+      title: 'Image pour le body'
+    },
+    {
       name: 'excerpt',
       type: 'excerptPortableText',
       title: 'Excerpt',
@@ -66,7 +71,13 @@ export default {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
-    }
+    },
+    {
+      title: 'Page',
+      name: 'page',
+      type: 'reference',
+      to: [{type: 'page'}]
+  },
   ],
   orderings: [
     {
