@@ -22,11 +22,6 @@ export const query = graphql`
         name
       }
     }
-    image {
-      asset {
-        url
-      }
-    }
   }
 }
 `
@@ -41,7 +36,7 @@ const IndexPage = props => {
       </Layout>
     )
   }
-  
+
   return (
     <Layout>
       <Container>

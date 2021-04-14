@@ -21,11 +21,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
           <Link to='/'>Accueil</Link>
         </li>
         <li>
-<<<<<<< HEAD
           <Link to='/prestations-tarifs/'>Prestations e Tarifs</Link>
-=======
-          <Link to='/tarifs/'>Prestations & Tarifs</Link>
->>>>>>> 136fd2bf44c3608b90604fa525bb8f688ce89b22
         </li>
         <li>
           <Link to='/blog/'>Blog</Link>
