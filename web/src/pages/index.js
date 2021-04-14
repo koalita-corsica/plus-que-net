@@ -41,7 +41,6 @@ const IndexPage = props => {
     <Layout>
       <Container>
         <h1> {page.title} </h1>
-        <img src={page.image.asset.url} width="200" height="200" alt="x"></img>
       </Container>
     </Layout>
   )
