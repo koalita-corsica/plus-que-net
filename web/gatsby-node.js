@@ -78,7 +78,7 @@ async function createSitePages (graphql, actions) {
       if (!slug) return
 
       // Make the URL with the current slug
-      const path = `/page/${slug.current}`
+      const path = `/${slug.current}`
 
       // Create the page using the URL path and the template file, and pass down the id
       // that we can use to query for the right category in the template file
