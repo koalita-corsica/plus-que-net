@@ -1,0 +1,46 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.root {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 15% 40% 20% 15% 10%;
+  font-family: "Roboto", sans-serif, bold;
+  font-size: 16px;
+  margin-right: 3vh;
+  margin-left: 3vh;
+}
+.root .plan {
+  grid-area: 1, 1, 2, 2;
+  text-align: right;
+  padding-right: 20px;
+  color: white;
+  font-weight: bold;
+}
+.root .space {
+  grid-area: 1, 2, 2, 3;
+  border-bottom: solid white 2px;
+}
+.root .google {
+  grid-area: 1, 3, 2, 4;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.root .link {
+  grid-area: 1, 4, 2, 5;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.root .icon {
+  color: white;
+  grid-area: 1, 5, 2, 6;
+  display: flex;
+  justify-content: space-around;
+}
+.root .icon :hover {
+  color: #F26633;
+}
+
+/*# sourceMappingURL=footer.module.css.map */

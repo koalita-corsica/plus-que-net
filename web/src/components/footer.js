@@ -13,14 +13,15 @@ import styles from './footer.module.css'
 
 const Footer = ({}) => (
   <div className={styles.root}>
-    <div className={styles.wrapper}>
-      <p> Plan du site </p>
-      <p> Google Avis 5,0 ⭐⭐⭐⭐⭐ </p>
-      <Link to="/mentionslegales"> Mentions Legales </Link>
-      <FontAwesomeIcon icon={faFacebook} />
-      <FontAwesomeIcon icon={faInstagram} />
-      <FontAwesomeIcon icon={faFacebookMessenger} />
-      <FontAwesomeIcon icon={faWhatsapp} />
+    <p className={styles.plan}> Plan du site </p>
+    <div className={styles.space}> </div>
+    <p className={styles.google}> Google avis 5,0 ⭐⭐⭐⭐⭐ </p>
+    <Link to="/mentionslegales" className={styles.link}> Mentions Legales </Link>
+    <div className={styles.icon}>
+      <FontAwesomeIcon icon={faFacebook} className={styles.fb}/>
+      <FontAwesomeIcon icon={faInstagram} className={styles.insta}/>
+      <FontAwesomeIcon icon={faFacebookMessenger} className={styles.messenger}/>
+      <FontAwesomeIcon icon={faWhatsapp} className={styles.whatsapp}/>
     </div>
   </div>
 )
