@@ -46,6 +46,47 @@ async function createBlogPostPages (graphql, actions) {
     })
 }
 
+async function createPages (graphql, actions) {
+  const {createPage} = actions
+  const result = await graphql(`
+  {
+    allSanityPage {
+      edges {
+        node {
+          title
+          image {
+            asset {
+              url
+            }
+          }
+          slug {
+            current
+          }
+        }
+      }
+    }
+  }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const postEdges = (result.data.allSanityPage || {}).edges || []
+
+  postEdges
+    .filter(edge => !isFuture(edge.node.publishedAt))
+    .forEach((edge, index) => {
+      const {id, slug = {}} = edge.node
+      const path = `/${slug.current}/`
+
+      createPage({
+        path,
+        component: require.resolve('./src/templates/page.js'),
+        context: {id}
+      })
+    })
+}
+
 exports.createPages = async ({graphql, actions}) => {
   await createBlogPostPages(graphql, actions)
+  await createPages(graphql, actions)
 }

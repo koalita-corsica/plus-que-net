@@ -97,9 +97,7 @@ query DefaultSEOQuery {
     description
     keywords
     author {
-      author {
-        name
-      }
+      name
     }
   }
 }
