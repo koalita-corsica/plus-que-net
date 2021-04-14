@@ -9,7 +9,7 @@ import {toPlainText} from '../lib/helpers'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
-    post: sanityPost(id: {eq: $id}) {
+    sanityPost(id: {eq: $id}) {
       id
       publishedAt
       categories {
@@ -17,37 +17,19 @@ export const query = graphql`
         title
       }
       mainImage {
-        ...SanityImage
-        alt
+        asset {
+          url
+        }
       }
       title
       slug {
         current
       }
-      _rawExcerpt(resolveReferences: {maxDepth: 5})
-      _rawBody(resolveReferences: {maxDepth: 5})
       authors {
-        _key
         author {
           image {
-            crop {
-              _key
-              _type
-              top
-              bottom
-              left
-              right
-            }
-            hotspot {
-              _key
-              _type
-              x
-              y
-              height
-              width
-            }
             asset {
-              _id
+              url
             }
           }
           name

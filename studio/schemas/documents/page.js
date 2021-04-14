@@ -27,11 +27,6 @@ export default {
             ]
         },
         {
-            name: 'image',
-            type: 'mainImage',
-            title: 'Image'
-        },
-        {
             name: 'publishedAt',
             type: 'datetime',
             title: 'Published at',
@@ -39,8 +34,9 @@ export default {
         },
         {
             name: 'body',
-            type: 'bodyPortableText',
-            title: 'Body'
+            title: 'Body',
+            type: 'array',
+            of: [{type: 'block'}, {type: 'image'}]
         }
     ]
 }

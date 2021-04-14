@@ -12,28 +12,35 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
 export const query = graphql`
-
-  query IndexPageQuery {
-  page: sanityPage(slug: {current: {eq: "accueil"}}) {
+  query PrestationsPageQuery {
+  page: sanityPage(slug: {current: {eq: "prestations-tarifs"}}) {
     id
     title
-    authors {
-      author {
-        name
-      }
-    }
-    image {
-      asset {
-        url
+  }
+  services: allSanityServices {
+    edges {
+      node {
+        title
+        mainImage {
+          asset {
+            url
+          }
+        }
+        images {
+          asset {
+            url
+          }
+        }
       }
     }
   }
 }
 `
 
-const IndexPage = props => {
+const PrestationPage = props => {
   const {data, errors} = props
   const page = data && data.page;
+  const service = data && data.services;
   if (errors) {
     return (
       <Layout>
@@ -41,15 +48,17 @@ const IndexPage = props => {
       </Layout>
     )
   }
-  
+
+  const services = data && data.posts && mapEdgesToNodes(data.posts)
+
   return (
     <Layout>
       <Container>
         <h1> {page.title} </h1>
-        <img src={page.image.asset.url} width="200" height="200" alt="x"></img>
-      </Container>
+        <h4> {service.title} </h4>  
+        </Container>
     </Layout>
   )
 }
 
-export default IndexPage
+export default PrestationPage

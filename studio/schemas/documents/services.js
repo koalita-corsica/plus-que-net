@@ -32,9 +32,10 @@ export default {
             ]
         },
         {
-            name: 'text',
-            type: 'bodyPortableText',
-            title: 'Texte Principal'
+            name: 'body',
+            title: 'Body',
+            type: 'array',
+            of: [{type: 'block'}, {type: 'image'}]
         }
     ]
 }

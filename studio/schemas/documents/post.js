@@ -3,7 +3,7 @@ import {format} from 'date-fns'
 export default {
   name: 'post',
   type: 'document',
-  title: 'Blog Post',
+  title: 'Blog Posts',
   fields: [
     {
       name: 'title',
@@ -31,11 +31,6 @@ export default {
       name: 'mainImage',
       type: 'mainImage',
       title: 'Main image'
-    },
-    {
-      name: 'image',
-      type: 'image',
-      title: 'Image pour le body'
     },
     {
       name: 'excerpt',

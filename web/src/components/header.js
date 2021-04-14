@@ -5,6 +5,7 @@ import {cn} from '../lib/helpers'
 
 import styles from './header.module.css'
 
+
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
   <div className={styles.root}>
     <div className={styles.logo}>
@@ -19,7 +20,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
           <Link to='/'>Accueil</Link>
         </li>
         <li>
-          <Link to='/tarifs/'>Prestations e Tarifs</Link>
+          <Link to='/prestations-tarifs/'>Prestations e Tarifs</Link>
         </li>
         <li>
           <Link to='/blog/'>Blog</Link>
