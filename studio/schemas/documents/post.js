@@ -51,14 +51,21 @@ export default {
     },
     {
       name: 'categories',
-      type: 'array',
+      type: 'reference',
       title: 'Categories',
-      of: [
+      to: [
         {
-          type: 'reference',
-          to: {
-            type: 'thematiques'
-          }
+          type: 'category',
+        }
+      ]
+    },
+    {
+      name: 'thematiques',
+      type: 'reference',
+      title: 'Thematiques',
+      to: [
+        {
+          type: 'thematiques',
         }
       ]
     },

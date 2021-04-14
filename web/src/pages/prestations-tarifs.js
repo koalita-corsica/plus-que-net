@@ -18,18 +18,17 @@ export const query = graphql`
     title
   }
   services: allSanityServices {
-    edges {
-      node {
-        title
-        mainImage {
-          asset {
-            url
-          }
+    nodes {
+      title
+      mainImage {
+        asset {
+          url
         }
-        images {
-          asset {
-            url
-          }
+        alt
+      }
+      images {
+        asset {
+          url
         }
       }
     }
@@ -40,7 +39,7 @@ export const query = graphql`
 const PrestationPage = props => {
   const {data, errors} = props
   const page = data && data.page;
-  const service = data && data.services;
+  const services = data && data.services;
   if (errors) {
     return (
       <Layout>
@@ -49,13 +48,13 @@ const PrestationPage = props => {
     )
   }
 
-  const services = data && data.posts && mapEdgesToNodes(data.posts)
-
   return (
     <Layout>
       <Container>
         <h1> {page.title} </h1>
-        <h4> {service.title} </h4>  
+        {services.nodes.map((service =>
+          <p> {service.title} </p>
+          ))}
         </Container>
     </Layout>
   )
