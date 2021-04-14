@@ -53,7 +53,9 @@ const PrestationPage = props => {
       <Container>
         <h1> {page.title} </h1>
         {services.nodes.map((service =>
+        <React.Fragment>
           <p> {service.title} </p>
+          </React.Fragment>
           ))}
         </Container>
     </Layout>
