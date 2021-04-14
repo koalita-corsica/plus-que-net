@@ -1,0 +1,16 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+Container{
+
+    .root{
+        display: flex;
+        background-color: red;
+    }
+    .wrapper{
+        width: 634px;
+        height: 319px;
+        overflow: hidden;
+    }
+}

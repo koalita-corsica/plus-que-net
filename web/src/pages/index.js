@@ -10,7 +10,6 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-
 export const query = graphql`
 
   query IndexPageQuery {
@@ -40,7 +39,6 @@ const IndexPage = props => {
   return (
     <Layout>
       <Container>
-        <h1> {page.title} </h1>
       </Container>
     </Layout>
   )
