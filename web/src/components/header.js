@@ -2,13 +2,14 @@ import {Link} from 'gatsby'
 import React from 'react'
 import Icon from './icon'
 import {cn} from '../lib/helpers'
+import logo from '../images/logo.png'
 
 import styles from './header.module.css'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
   <div className={styles.root}>
     <div className={styles.logo}>
-      <img src="https://drive.google.com/file/d/1htYVOZQwr7arnRZveyT4zZhj2YhFwysE/view?ts=60759839" alt="Plus-que-net" id="logo"/>
+      <img src={logo} width="256" heigth="169" alt="Plus-que-net" id="logo"/>
     </div>
     <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
       <Icon symbol='hamburger' />
@@ -19,7 +20,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
           <Link to='/'>Accueil</Link>
         </li>
         <li>
-          <Link to='/tarifs/'>Prestations e Tarifs</Link>
+          <Link to='/tarifs/'>Prestations & Tarifs</Link>
         </li>
         <li>
           <Link to='/blog/'>Blog</Link>

@@ -1,20 +1,35 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .root {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
   position: relative;
   display: flex;
+  gap: 10%;
   justify-content: space-between;
-}
-.root .logo {
-  background-color: green;
+  background-color: transparent;
 }
 .root .nav {
-  background-color: purple;
+  display: flex;
+  align-self: center;
   width: 100%;
 }
 .root .nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  list-style-type: none;
+  width: 100%;
+}
+.root .nav ul li * {
+  text-decoration: none;
+  color: #ffffff;
+}
+.root .nav ul li :hover {
+  color: #F26633;
+}
+.root .nav ul li :focus {
+  color: #F26633;
 }
 
 .toggleNavButton {

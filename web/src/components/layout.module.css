@@ -1,8 +1,16 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 
+
+.wrapper {
+  background: linear-gradient(transparent 47%,#35383F 42%, #A49D9D 49%),
+      url("../images/background1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
 .content {
-  background: var(--color-white);
+  
   min-height: calc(100% - 73px - 120px);
 
   @media (--media-min-small) {

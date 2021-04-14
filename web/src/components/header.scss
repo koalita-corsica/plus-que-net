@@ -1,23 +1,42 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 
 .root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
   position: relative;
   display: flex;
+  gap: 10%;
   justify-content: space-between;
+  background-color: transparent;
+  
 
-  .logo{
-      background-color: green;
-    }
+
   .nav{
-      background-color: purple;
-      width: 100%;
+    display: flex;
+    align-self: center;
+    width: 100%;
 
-        ul{
-            display: flex;
-            justify-content: space-around;
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        width: 100%;
+        li * {
+            text-decoration: none;
+            color: #ffffff;
         }
-    }
+        li :hover{
+            color: #F26633;
+        }
+        li :focus {
+            color: #F26633;
+        }
+        
+      }
+  }
   
 }
 
