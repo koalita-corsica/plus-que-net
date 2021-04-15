@@ -11,7 +11,7 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Wrapper from '../components/wrapper'
-const BlockContent = require('@sanity/block-content-to-react')
+import Block from '@sanity/block-content-to-react'
 
 
 
@@ -21,17 +21,11 @@ export const query = graphql`
   page: sanityPage(slug: {current: {eq: "accueil"}}) {
     id
     title
-    authors {
-      author {
-        name
+    _rawBody
+    image {
+      asset {
+        url
       }
-    }
-    body {
-      _type
-      sanityChildren {
-        text
-      }
-      _key
     }
   }
 }
@@ -53,7 +47,8 @@ const IndexPage = props => {
       <Container>
         <Wrapper>
         <h1> {page.title} </h1>
-        <BlockContent blocks={page.body} />
+        <Block blocks={page._rawBody} />
+        <img src={page.image.asset.url} alt="" /> 
         </Wrapper>
       </Container>
     </Layout>

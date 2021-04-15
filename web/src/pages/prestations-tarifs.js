@@ -10,15 +10,13 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import Block from '@sanity/block-content-to-react'
 
 export const query = graphql`
   query PrestationsPageQuery {
-  page: sanityPage(slug: {current: {eq: "prestations-tarifs"}}) {
-    id
-    title
-  }
-  services: allSanityServices {
+  service: allSanityServices {
     nodes {
+      _rawBody
       title
       mainImage {
         asset {
@@ -38,8 +36,7 @@ export const query = graphql`
 
 const PrestationPage = props => {
   const {data, errors} = props
-  const page = data && data.page;
-  const services = data && data.services;
+  const page = data && data.service;
   if (errors) {
     return (
       <Layout>
@@ -51,12 +48,13 @@ const PrestationPage = props => {
   return (
     <Layout>
       <Container>
-        <h1> {page.title} </h1>
-        {services.nodes.map((service =>
+        {page.nodes.map(( contenu => 
         <React.Fragment>
-          <p> {service.title} </p>
+            <h1> {contenu.title} </h1>
+            <Block blocks={contenu._rawBody} />
+            <img src={contenu.mainImage.asset.url} alt="" width="150" height="150"/>
           </React.Fragment>
-          ))}
+        ))}
         </Container>
     </Layout>
   )
