@@ -23,4 +23,18 @@
   position: absolute;
 }
 
+.bloc1{
+  display: flex;
+}
+
+.bloc1 img {
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.bloc1 div{
+  max-width: 420px;
+  font-size: 15px;
+}
+
 /*# sourceMappingURL=index.module.css.map */

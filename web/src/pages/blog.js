@@ -10,6 +10,7 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import Wrapper from '../components/wrapper'
 
 export const query = graphql`
   query BlogPageQuery {
@@ -59,8 +60,10 @@ const BlogPage = props => {
   return (
     <Layout>
       <Container>
+        <Wrapper>
         <h1> {page.title} </h1>
-        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}      
+        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}    
+        </Wrapper>  
         </Container>
     </Layout>
   )
