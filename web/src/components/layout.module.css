@@ -3,19 +3,18 @@
 
 
 .wrapper {
-  background: linear-gradient(transparent 47%,#35383F 42%, #A49D9D 49%),
+  background: linear-gradient(transparent 100%,#35383F 92%, #A49D9D 99%),
       url("../images/background1.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 
 }
 .content {
   
-  min-height: calc(100% - 73px - 120px);
-
-  @media (--media-min-small) {
-    min-height: calc(100% - 91px - 155px);
-  }
+  top: -13px;
+  left: 0px;
+  width: 1366px;
+  height: 768px;  
 }
 
 .footer {

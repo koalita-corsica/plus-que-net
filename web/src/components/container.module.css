@@ -2,13 +2,18 @@
 
 .root {
   box-sizing: border-box;
-  max-width: 960px;
+  width: 1366px;
+  height: 768px;
   padding: 1.5em;
   margin: 0 auto;
+  
+  
+  
   
 
   @media (--media-min-small) {
     padding: 2em;
   }
+  
 }
 

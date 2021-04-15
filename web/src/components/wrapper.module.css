@@ -1,15 +1,11 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
 .root {
-  display: flex;
-  background-color: red;
-}
-Container .wrapper {
   width: 634px;
   height: 319px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=wrapper.module.css.map */

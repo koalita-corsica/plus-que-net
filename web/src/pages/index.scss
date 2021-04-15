@@ -2,15 +2,17 @@
 @import '../styles/custom-properties.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-Container{
 
-    .root{
-        display: flex;
-        background-color: red;
-    }
-    .wrapper{
-        width: 634px;
-        height: 319px;
-        overflow: hidden;
-    }
+.titleContain{
+    
+    width: 500.68px;
+    height: 103.5px;
+    color: white;
+}
+
+.BlockContent{
+    width: 634px;
+    height: 319px;
+    overflow: scroll;
+    color: white;
 }
