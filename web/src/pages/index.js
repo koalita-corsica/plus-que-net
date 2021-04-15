@@ -11,12 +11,8 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Wrapper from '../components/wrapper'
-<<<<<<< HEAD
 import styles from '../pages/index.module.css'
 const Block = require('@sanity/block-content-to-react')
-=======
-import Block from '@sanity/block-content-to-react'
->>>>>>> 40a77a6eba1bbb8eede7b4a9b110bf7963932bbc
 
 
 
@@ -54,7 +50,6 @@ const IndexPage = props => {
             <h1 className={styles.title}>ENTREPRISE DE LAVAGES DE VITRES & GARDE-CORPS</h1>
           </div>
         <Wrapper>
-<<<<<<< HEAD
           <div className={styles.BlockContent}>
             <h2 className={styles.subtitle}>L'Histoire de plus que net</h2>
             <div className={styles.bloc1}>
@@ -70,11 +65,6 @@ const IndexPage = props => {
               <p className={styles.paragraphe3}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
           </div>
-=======
-        <h1> {page.title} </h1>
-        <Block blocks={page._rawBody} />
-        <img src={page.image.asset.url} alt="" /> 
->>>>>>> 40a77a6eba1bbb8eede7b4a9b110bf7963932bbc
         </Wrapper>
       </Container>
     </Layout>

@@ -1,11 +1,11 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-.root {
-  width: 46.46vw;
-  height: 41.01vh;
-  display: flex;
-  flex-direction: column;
-}
 
-/*# sourceMappingURL=wrapper.module.css.map */
+.root{
+    width: 65.73vw;
+    display: flex;
+    position: absolute;
+    top: 40.88vh;
+    left: 25.84vw;
+}

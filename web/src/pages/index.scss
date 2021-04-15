@@ -3,16 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
-.titleContain{
-    
-    width: 500.68px;
-    height: 103.5px;
+.titleContain {
+    position: absolute;
+    top: 25.39vh;
+    left: 47.51vw;
+    width: 501px;
+    height: 104px;
     color: white;
+    font-family: Roboto, Regular;
+  
 }
 
-.BlockContent{
+
+.BlockContent {
+    font-family: Roboto, Regular;  
+    top: 41.01vh;
+    left: 47.51vw;
     width: 634px;
-    height: 319px;
+    height: 319px;  
     overflow: scroll;
     color: white;
-}
+    position: absolute;
+  }
