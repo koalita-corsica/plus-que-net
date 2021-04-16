@@ -1,0 +1,89 @@
+.root{}
+
+.backg{
+    top: 131px;
+    left: 353px;
+    width: 735px;
+    height: 566px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    position: absolute;
+}
+
+.backg h1{
+    color: black;
+    text-align: center;
+}
+
+.mainImg img {
+    top: 88px;
+    left: 26px;
+    width: 676px;
+    height: 348px;
+    border-radius: 10px;
+    opacity: 1;
+    position: absolute;
+}
+
+.slide1 img{
+    width: 71px;
+    height: 76px;
+    border-radius: 10px;
+    position: absolute;
+    top: 370px;
+}
+
+.slide2 img{
+    width: 71px;
+    height: 76px;
+    border-radius: 10px;
+    position: absolute;
+    top: 370px;
+}
+
+.slide3 img{
+    width: 71px;
+    height: 76px;
+    border-radius: 10px;
+    position: absolute;
+    top: 370px;
+}
+
+.slide4 img{
+    width: 71px;
+    height: 76px;
+    border-radius: 10px;
+    position: absolute;
+    top: 370px;
+}
+
+.slide5 img{
+    width: 71px;
+    height: 76px;
+    border-radius: 10px;
+    position: absolute;
+    top: 370px;
+}
+
+.show {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    right: 25px;
+    position: relative;
+}
+
+.prev {
+    top: 485px;
+    left: 50px;
+    position: absolute;
+}
+
+.next {
+    position: absolute;
+    top: 485px;
+    right: 35px;
+}
