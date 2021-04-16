@@ -4,9 +4,9 @@
 .root {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
-  position: relative;
+  top: 3.25vh;
   display: flex;
-  gap: 10%;
+  gap: 5%;
   justify-content: space-between;
   background-color: transparent;
 }

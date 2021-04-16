@@ -2,8 +2,8 @@
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .root {
-  width: 46.46vw;
-  height: 41.01vh;
+  width: 33.0208333333vw;
+  height: 33.6853220697vh;
   display: flex;
   flex-direction: column;
 }

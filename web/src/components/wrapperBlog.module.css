@@ -3,8 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .root {
   width: 65.73vw;
+  max-height: 1978px;
   display: flex;
-  position: absolute;
+  justify-content: space-between;
+  margin-left: 27.65625vw;
   top: 40.88vh;
   left: 25.84vw;
 }

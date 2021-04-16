@@ -4,11 +4,8 @@
 
 
 .titleContain {
-    position: absolute;
-    top: 25.39vh;
-    left: 47.51vw;
-    width: 501px;
-    height: 104px;
+    margin-left: 43.81875vw;
+    width: 39.0625vw;
     color: white;
     font-family: Roboto, Regular;
   
@@ -16,12 +13,13 @@
 
 
 .BlockContent {
-    font-family: Roboto, Regular;  
-    top: 41.01vh;
-    left: 47.51vw;
-    width: 634px;
-    height: 319px;  
-    overflow: scroll;
-    color: white;
-    position: absolute;
-  }
+  margin-top: 4.810902896081772vh;
+  font-family: Roboto, Regular;
+  font-size: 14px;  
+  margin-left: 43.81875vw;
+  width: 39.0625vw;
+  height: 33.68532206969377vh;  
+  overflow: scroll;
+  color: white;
+  
+}

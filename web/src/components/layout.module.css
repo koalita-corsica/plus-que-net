@@ -6,15 +6,19 @@
   background: linear-gradient(transparent 100%,#35383F 92%, #A49D9D 99%),
       url("../images/background1.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-
+  background-size: 100%;
+  
+}
+.wrapperBlur{
+  background: #b80606 0% 0% no-repeat padding-box;
+  opacity: 0.67;
+  backdrop-filter: blur(30px);
 }
 .content {
-  
   top: -13px;
   left: 0px;
-  width: 1366px;
-  height: 768px;  
+  max-width: 1366px;
+  max-height: 1978px;  
 }
 
 .footer {

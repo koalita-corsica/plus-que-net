@@ -2,25 +2,21 @@
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .titleContain {
-  position: absolute;
-  top: 25.39vh;
-  left: 47.51vw;
-  width: 501px;
-  height: 104px;
+  margin-left: 43.81875vw;
+  width: 39.0625vw;
   color: white;
   font-family: Roboto, Regular;
-
 }
 
 .BlockContent {
-  font-family: Roboto, Regular;  
-  top: 41.01vh;
-  left: 47.51vw;
-  width: 634px;
-  height: 319px;  
+  margin-top: 4.8109028961vh;
+  font-family: Roboto, Regular;
+  font-size: 14px;
+  margin-left: 43.81875vw;
+  width: 39.0625vw;
+  height: 33.6853220697vh;
   overflow: scroll;
   color: white;
-  position: absolute;
 }
 
 /*# sourceMappingURL=index.module.css.map */
