@@ -11,7 +11,7 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
-import { isBrowser } from '../lib/utils'; 
+import { isBrowser } from './utils'; 
 
 
 
@@ -40,31 +40,28 @@ export const query = graphql`
 }
 `
 
-if (!isBrowser) {
-  const PartenairesPage = props => {
-    const {data, errors} = props
-    const page = data && data.page;
-    const posts = data && data.posts;
-    if (errors) {
-      return (
-        <Layout>
-          <GraphQLErrorList errors={errors} />
-        </Layout>
-      )
-    }
-  
-    const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
-  
+const PartenairesPage = props => {
+  const {data, errors} = props
+  const page = data && data.page;
+  const posts = data && data.posts;
+  if (errors) {
     return (
       <Layout>
-        <Container>
-          <h1> {page.title} </h1>
-          {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}      
-          </Container>
+        <GraphQLErrorList errors={errors} />
       </Layout>
     )
   }
-}
 
+  const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
+
+  return (
+    <Layout>
+      <Container>
+        <h1> {page.title} </h1>
+        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}      
+        </Container>
+    </Layout>
+  )
+}
 
 export default PartenairesPage
