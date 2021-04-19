@@ -15,8 +15,7 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faFacebookMessenger } from "@fortawesome/free-brands-svg-icons"
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
-import { navigate } from "gatsby"
-import {useForm} from 'react-hook-form'
+
 
 import styles from './contact.module.css'
 
@@ -42,50 +41,22 @@ const ContactPage = props => {
     return;
   }
 
-  const {data} = props
+
+  const {data, errors} = props
   const page = data && data.page;
-
-  const { register, handleSubmit, errors, reset } = useForm()
-
-  // Transforms the form data from the React Hook Form output to a format Netlify can read
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&")
-  }
-
-  // Handles the post process to Netlify so we can access their serverless functions
-  const handlePost = (formData, event) => {
-    fetch(`/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formData }),
-    })
-      .then((response) => {
-        navigate("/contact/")
-        reset()
-        alert("Merci pour le contact!");
-        console.log(response)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-    event.preventDefault()
+  if (errors) {
+    return (
+      <Layout>
+        <GraphQLErrorList errors={errors} />
+      </Layout>
+    )
   }
 
   return (
     <Layout>
       <Container>
-      <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit(handlePost)}>
-      <input type="hidden" name="form-name" value="contact" />
-      <input
-        type="hidden"
-        name="formId"
-        value="contact"
-        ref={register()}
-      />
+      <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
+        <input type="hidden" name="form-name" value="contact" />
           <div className={styles.title}>
             <h1> {page.title} </h1>
           </div>
