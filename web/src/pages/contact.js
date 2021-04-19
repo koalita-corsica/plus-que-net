@@ -84,7 +84,7 @@ const ContactPage = props => {
   return (
     <Layout>
       <Container>
-      <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit(handlePost)}>
+      <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
         <input type="hidden" name="form-name" value="contact" />
           <div className={styles.title}>
             <h1> {page.title} </h1>
