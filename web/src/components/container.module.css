@@ -3,7 +3,9 @@
 .root {
   box-sizing: border-box;
   width: 1366px;
-  height: 768px;
+  max-height: 1978px;
+  display: flex;
+  flex-direction: column;
   padding: 1.5em;
   margin: 0 auto;
   

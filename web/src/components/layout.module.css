@@ -9,11 +9,10 @@
   background-size: cover;
 }
 .content {
-  
   top: -13px;
   left: 0px;
-  width: 1366px;
-  height: 768px;  
+  max-width: 1366px;
+  max-height: 1978px;  
 }
 
 .footer {
