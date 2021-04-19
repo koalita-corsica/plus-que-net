@@ -14,6 +14,7 @@ import Wrapper from '../components/wrapper'
 import styles from '../pages/index.module.css'
 import Block from '@sanity/block-content-to-react'
 
+import { isBrowser } from '../lib/utils'; 
 
 
 export const query = graphql`
@@ -32,21 +33,13 @@ export const query = graphql`
 }
 `
 
-
-const isBrowser = typeof window !== "undefined"
-
 const IndexPage = props => {
+  if (!isBrowser) {
+    return;
+  }
+
   const {data, errors} = props
   const page = data && data.page;
-
-  let loggedIn = false
-  if (isBrowser) {
-    window.localstorage.getItem("isLoggedIn") === "true"
-  }
-
-  if (typeof window !== `undefined`) {
-    const Block = require("@sanity/block-content-to-react")
-  }
 
   if (errors) {
     return (

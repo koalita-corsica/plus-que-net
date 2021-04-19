@@ -15,6 +15,8 @@ import Block from '@sanity/block-content-to-react'
 
 import styles from '../pages/blog.module.css'
 
+import { isBrowser } from '../lib/utils'; 
+
 export const query = graphql`
   query BlogPageQuery {
   page: sanityPage(slug: {current: {eq: "blog"}}) {
@@ -51,6 +53,10 @@ export const query = graphql`
 `
 
 const BlogPage = props => {
+  if (!isBrowser) {
+    return;
+  }
+
   const {data, errors} = props
   const page = data && data.page;
   const blogPost = data && data.posts;

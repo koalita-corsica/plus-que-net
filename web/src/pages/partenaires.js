@@ -11,7 +11,7 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
-
+import { isBrowser } from '../lib/utils'; 
 
 
 export const query = graphql`
@@ -40,6 +40,9 @@ export const query = graphql`
 `
 
 const PartenairesPage = props => {
+  if (!isBrowser) {
+    return;
+}
   const {data, errors} = props
   const page = data && data.page;
   const posts = data && data.posts;

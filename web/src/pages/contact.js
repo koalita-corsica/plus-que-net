@@ -18,6 +18,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 
 import styles from './contact.module.css'
 
+import {isBrowser} from '../lib/utils'
 
 export const query = graphql`
 
@@ -35,6 +36,11 @@ export const query = graphql`
 `
 
 const ContactPage = props => {
+  if (!isBrowser) {
+    return;
+  }
+
+
   const {data, errors} = props
   const page = data && data.page;
   if (errors) {

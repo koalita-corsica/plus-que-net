@@ -15,7 +15,7 @@ import Layout from '../containers/layout'
 import {Link} from 'gatsby'
 import { navigate } from "gatsby"
 
-
+import { isBrowser } from './utils'; 
 
 export const query = graphql`
   query PrestationsPageQuery {
@@ -53,6 +53,10 @@ export const query = graphql`
 `
 
 const PrestationPage = props => {
+  if (!isBrowser) {
+    return;
+  }
+
   const {data, errors} = props
   const page = data && data.services;
   const service = data && data.service;
