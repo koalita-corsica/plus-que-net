@@ -71,7 +71,6 @@ const BlogPage = props => {
     <Layout>
       {window.onload=blur}
       <Container>
-<<<<<<< HEAD
         <div className={styles.titleContain}>
           <h1 className={styles.title}>{page.title}</h1>
         </div>
@@ -149,13 +148,6 @@ const BlogPage = props => {
           </aside>
         </WrapperBlog>
       </Container>
-=======
-        <Wrapper>
-        <h1> {page.title} </h1>
-        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}    
-        </Wrapper>  
-        </Container>
->>>>>>> 84b8e1bb570f81cf6e31a7c8fe2c3b298d54c6b2
     </Layout>
   )
 }
