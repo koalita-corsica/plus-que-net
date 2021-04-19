@@ -53,16 +53,7 @@ const BlogPage = props => {
   const {data, errors} = props
   const page = data && data.page;
   const blogPost = data && data.posts;
-  const isBrowser = typeof window !== "undefined"
 
-  let loggedIn = false
-  if (isBrowser) {
-    window.localstorage.getItem("isLoggedIn") === "true"
-  }
-
-  if (typeof window !== `undefined`) {
-    const Block = require("@sanity/block-content-to-react")
-  }
 
 
   if (errors) {
@@ -99,14 +90,14 @@ const BlogPage = props => {
               <div className={styles.lastArticleContain}>
                 <p className={styles.date}> {dados.node.publishedAt} </p>
                 <h3 className={styles.articleTitle}> {dados.node.title} </h3>
-                <p className={styles.description}> <Block blocks={dados.node._rawExcerpt} /> </p>
+                {/* <p className={styles.description}> <Block blocks={dados.node._rawExcerpt} /> </p> */}
               </div>
             </div>      
             <div className={styles.Article}>
               <img src={dados.node.mainImage.asset.url} alt={dados.node.mainImage.alt} width="289" height="169"></img>
               <p className={styles.date}> {dados.node.publishedAt} </p>
               <h3 className={styles.articleTitle}> {dados.node.title} </h3>
-              <p className={styles.description}> <Block blocks={dados.node._rawExcerpt} /> </p>
+              {/* <p className={styles.description}> <Block blocks={dados.node._rawExcerpt} /> </p> */}
             </div>      
           </div>      
           <aside className={styles.aside}>

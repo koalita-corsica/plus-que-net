@@ -11,7 +11,7 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
-import Galerie from '../components/gallery';
+// import Galerie from '../components/gallery';
 import {Link} from 'gatsby'
 import { navigate } from "gatsby"
 
@@ -54,16 +54,16 @@ const PrestationPage = props => {
   const {data, errors} = props
   const page = data && data.services;
   const service = data && data.service;
-  const isBrowser = typeof window !== "undefined"
+  // const isBrowser = typeof window !== "undefined"
 
-  let loggedIn = false
-  if (isBrowser) {
-    window.localstorage.getItem("isLoggedIn") === "true"
-  }
+  // let loggedIn = false
+  // if (isBrowser) {
+  //   window.localstorage.getItem("isLoggedIn") === "true"
+  // }
 
-  if (typeof window !== `undefined`) {
-    const Block = require("@sanity/block-content-to-react")
-  }
+  // if (typeof window !== `undefined`) {
+  //   const Block = require("@sanity/block-content-to-react")
+  // }
 
   if (errors) {
     return (

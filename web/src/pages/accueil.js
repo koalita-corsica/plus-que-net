@@ -36,16 +36,16 @@ export const query = graphql`
 const IndexPage = props => {
   const {data, errors} = props
   const page = data && data.page;
-  const isBrowser = typeof window !== "undefined"
+  // const isBrowser = typeof window !== "undefined"
 
-  let loggedIn = false
-  if (isBrowser) {
-    window.localstorage.getItem("isLoggedIn") === "true"
-  }
+  // let loggedIn = false
+  // if (isBrowser) {
+  //   window.localstorage.getItem("isLoggedIn") === "true"
+  // }
 
-  if (typeof window !== `undefined`) {
-    const Block = require("@sanity/block-content-to-react")
-  }
+  // if (typeof window !== `undefined`) {
+  //   const Block = require("@sanity/block-content-to-react")
+  // }
 
   if (errors) {
     return (
@@ -64,7 +64,7 @@ const IndexPage = props => {
         <Wrapper>
           <div className={styles.BlockContent}>
             <div className={styles.bloc1}>
-            <Block blocks={page._rawBody} />
+            {/* <Block blocks={page._rawBody} /> */}
             <img src={page.image.asset.url} alt="img" width="200" height="250"></img>
             </div>
           </div>
