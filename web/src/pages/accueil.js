@@ -12,7 +12,7 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Wrapper from '../components/wrapper'
 import styles from '../pages/index.module.css'
-const Block = require('@sanity/block-content-to-react')
+import Block from '@sanity/block-content-to-react'
 
 
 
