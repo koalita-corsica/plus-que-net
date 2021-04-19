@@ -9,7 +9,6 @@ import styles from './layout.module.css'
 const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
   <>
     <div className={styles.wrapper} id="wrapper" >
-    {window.onload = blur()}
       <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
       <div className={styles.content}>{children}</div>
       <Footer /> 

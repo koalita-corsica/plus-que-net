@@ -17,6 +17,7 @@ import { navigate } from "gatsby"
 
 import { isBrowser } from '../lib/utils'; 
 
+
 export const query = graphql`
   query PrestationsPageQuery {
   services: allSanityServices {
@@ -51,6 +52,7 @@ export const query = graphql`
    }
 }
 `
+
 
 const PrestationPage = props => {
   if (!isBrowser) {
