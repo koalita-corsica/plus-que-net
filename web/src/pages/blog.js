@@ -11,7 +11,6 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import WrapperBlog from '../components/wrapperBlog'
-import Block from '@sanity/block-content-to-react'
 
 import styles from '../pages/blog.module.css'
 
@@ -54,6 +53,18 @@ const BlogPage = props => {
   const {data, errors} = props
   const page = data && data.page;
   const blogPost = data && data.posts;
+  const isBrowser = typeof window !== "undefined"
+
+  let loggedIn = false
+  if (isBrowser) {
+    window.localstorage.getItem("isLoggedIn") === "true"
+  }
+
+  if (typeof window !== `undefined`) {
+    const Block = require("@sanity/block-content-to-react")
+  }
+
+
   if (errors) {
     return (
       <Layout>

@@ -12,8 +12,6 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Wrapper from '../components/wrapper'
 import styles from '../pages/index.module.css'
-import Block from '@sanity/block-content-to-react'
-
 
 
 export const query = graphql`
@@ -32,9 +30,23 @@ export const query = graphql`
 }
 `
 
+
+
+
 const IndexPage = props => {
   const {data, errors} = props
   const page = data && data.page;
+  const isBrowser = typeof window !== "undefined"
+
+  let loggedIn = false
+  if (isBrowser) {
+    window.localstorage.getItem("isLoggedIn") === "true"
+  }
+
+  if (typeof window !== `undefined`) {
+    const Block = require("@sanity/block-content-to-react")
+  }
+
   if (errors) {
     return (
       <Layout>
