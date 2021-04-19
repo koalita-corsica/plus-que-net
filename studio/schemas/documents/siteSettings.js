@@ -38,17 +38,14 @@ export default {
       to: [{type: 'author'}]
     },
     {
-      title: 'Menu',
       name: 'menu',
+      title: 'Menu',
       type: 'array',
       of: [
         {
-          type: 'reference',
-          to: [
-            {type: 'page'},
-          ]
+          type: 'pageReference'
         }
       ]
-    }
+    },
   ]
 }

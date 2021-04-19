@@ -11,12 +11,15 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Block from '@sanity/block-content-to-react'
-import Galerie from '../components/galerie';
+import Galerie from '../components/gallery';
+import {Link} from 'gatsby'
+import { navigate } from "gatsby"
 
 export const query = graphql`
   query PrestationsPageQuery {
   services: allSanityServices {
     nodes {
+      id
       _rawBody
       title
       mainImage {
@@ -25,9 +28,13 @@ export const query = graphql`
         }
         alt
       }
-      images {
+      images{
+        _key
         asset {
-          url
+          _id
+          assetId
+          _key
+            url
         }
       }
     }
@@ -36,20 +43,19 @@ export const query = graphql`
     title
      images{
        asset {
-         fluid {
-           src
-         }
+           url
        }
      }
    }
 }
-
 `
 
 const PrestationPage = props => {
   const {data, errors} = props
   const page = data && data.services;
   const service = data && data.service;
+
+
   if (errors) {
     return (
       <Layout>
@@ -61,15 +67,9 @@ const PrestationPage = props => {
   return (
     <Layout>
       <Container>
-      {JSON.stringify(service.images, null, 2)}
-        {page.nodes.map(( contenu => 
         <React.Fragment>
-            <h1> {contenu.title} </h1>
-            <Block blocks={contenu._rawBody} />
-            <img src={contenu.mainImage.asset.url} alt="" width="150" height="150"/>
-            <Galerie />
-          </React.Fragment>
-        ))}
+          <Galerie />
+        </React.Fragment>
         </Container>
     </Layout>
   )

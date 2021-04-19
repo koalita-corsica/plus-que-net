@@ -10,13 +10,19 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import Wrapper from '../components/wrapper'
+import WrapperBlog from '../components/wrapperBlog'
+const Block = require('@sanity/block-content-to-react')
+
+import styles from '../pages/blog.module.css'
 
 export const query = graphql`
   query BlogPageQuery {
   page: sanityPage(slug: {current: {eq: "blog"}}) {
     id
     title
+    slug {
+      current
+    }
   }
   posts: allSanityPost(
     sort: { fields: [publishedAt], order: DESC }
@@ -29,6 +35,7 @@ export const query = graphql`
         mainImage {
             asset{
                 _id
+                url
             }
             alt
           }
@@ -58,13 +65,40 @@ const BlogPage = props => {
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
 
   return (
-    <Layout>
+<Layout>
       <Container>
-        <Wrapper>
-        <h1> {page.title} </h1>
-        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}    
-        </Wrapper>  
-        </Container>
+        <div className={styles.titleContain}>
+          <h1 className={styles.title}>{page.title}</h1>
+        </div>
+        <WrapperBlog>
+          {blogPost.edges.map(( dados =>
+            <React.Fragment>
+              {console.log(dados.node.mainImage.asset.url)}
+          <div className={styles.blogContain}>
+            <h2 className={styles.allArticle}>Tous les articles</h2>
+            <div className={styles.lastArticle}>
+              <img  src={dados.node.mainImage.asset.url} alt={dados.node.mainImage.alt} width="389" height="258" className={styles.imgLastArticle}></img>
+              <div className={styles.lastArticleContain}>
+                <p className={styles.date}> {dados.node.publishedAt} </p>
+                <h3 className={styles.articleTitle}> {dados.node.title} </h3>
+                <p className={styles.description}> <Block blocks={dados.node._rawExcerpt} /> </p>
+              </div>
+            </div>      
+            <div className={styles.Article}>
+              <img src={dados.node.mainImage.asset.url} alt={dados.node.mainImage.alt} width="289" height="169"></img>
+              <p className={styles.date}> {dados.node.publishedAt} </p>
+              <h3 className={styles.articleTitle}> {dados.node.title} </h3>
+              <p className={styles.description}> <Block blocks={dados.node._rawExcerpt} /> </p>
+            </div>      
+          </div>      
+          <aside className={styles.aside}>
+            <h3 className={styles.categorie} >Thématique</h3>
+            <img src="" width="246" height="163"></img>
+          </aside>
+          </React.Fragment>
+          ))}
+        </WrapperBlog>
+      </Container>
     </Layout>
   )
 }
