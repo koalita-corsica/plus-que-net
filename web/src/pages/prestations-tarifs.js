@@ -68,7 +68,7 @@ const PrestationPage = props => {
     <Layout>
       <Container>
         <React.Fragment>
-          <Galerie />
+          {/* <Galerie /> */}
         </React.Fragment>
         </Container>
     </Layout>
