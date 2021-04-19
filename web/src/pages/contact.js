@@ -42,11 +42,7 @@ const ContactPage = props => {
   }
 
   const { register, handleSubmit, errors, reset } = useForm()
-
-  const handlePost = (formData) => {
-    console.log(formData)
-  }
-
+  
 
   // Transforms the form data from the React Hook Form output to a format Netlify can read
   const encode = (data) => {
@@ -75,7 +71,7 @@ const ContactPage = props => {
     event.preventDefault()
   }
 
-  
+
   const {data} = props
   const page = data && data.page;
   if (errors) {
