@@ -1,18 +1,13 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-.root {
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  opacity: 0.67;
-  backdrop-filter: blur(30px);
-}
-
 .titleContain {
   text-align: left;
   margin-left: 27.65625vw;
   width: 24.67vw;
   color: white;
   font-family: Roboto, Regular;
+  border-bottom: solid white 2px;
 }
 
 .blogContain {
@@ -58,18 +53,26 @@
 .blogContain .Article {
   display: flex;
   flex-direction: column;
-  gap: 1.5104166667vw;
-  width: 20.3020833333vw;
+  gap: -0.5104166667vw;
+  width: 22.578125vw;
+  height: 42.0274551214vh;
+  overflow: hidden;
 }
 .blogContain .Article .imgArticle {
   height: 17.8458289335vh;
+  width: 21.25vw;
 }
 .blogContain .Article .articleContain {
   text-align: left;
-  height: 12.9883843717vh;
-  overflow: hidden;
+  height: 29.3015332198vh;
+  width: 21.25vw;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: -2.5104166667vw;
+}
+.blogContain .Article .description {
+  overflow: hidden;
 }
 
 .date {

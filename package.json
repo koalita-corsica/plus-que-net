@@ -25,10 +25,7 @@
     "@sanity/image-url": "^0.140.22",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
     "gatsby-source-google-reviews": "0.0.7",
-<<<<<<< HEAD
+    "react-icons": "^4.2.0",
     "uniqid": "^5.3.0"
-=======
-    "react-slideshow-image": "^3.4.6"
->>>>>>> 84b8e1bb570f81cf6e31a7c8fe2c3b298d54c6b2
   }
 }

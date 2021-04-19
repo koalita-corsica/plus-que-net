@@ -2,9 +2,9 @@
 
 .root {
   box-sizing: border-box;
-  width: 1366px;
-  max-height: 1978px;
+  width: auto;
   display: flex;
+  gap: 1.7423442449841604vh;
   flex-direction: column;
   padding: 1.5em;
   margin: 0 auto;

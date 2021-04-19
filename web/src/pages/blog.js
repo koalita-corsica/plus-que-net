@@ -11,6 +11,9 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Wrapper from '../components/wrapper'
+import WrapperBlog from '../components/wrapperBlog'
+import styles from '../pages/blog.module.css'
+import imgTest from '../images/test.jpg'
 
 export const query = graphql`
   query BlogPageQuery {
@@ -57,19 +60,12 @@ const BlogPage = props => {
       </Layout>
     )
   }
-  function blur(){
-    if(data.page.slug.current == "blog"){
-      var elements = document.getElementsByClassName('layout-module--wrapper--38yAp');
-      elements.classList.add('blur')
-      console.log(elements)
-      }
-    }
+  
   
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
 
   return (
     <Layout>
-      {window.onload=blur}
       <Container>
         <div className={styles.titleContain}>
           <h1 className={styles.title}>{page.title}</h1>

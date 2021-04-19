@@ -1,0 +1,74 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.titleContain {
+  margin-left: 43.81875vw;
+  width: 39.0625vw;
+  color: white;
+  font-family: Roboto, Regular;
+  border-bottom: solid 3px;
+}
+
+.BlockContent {
+  margin-top: 4.8109028961vh;
+  font-family: Roboto, Regular;
+  font-size: 14px;
+  width: 39.0625vw;
+  height: 33.6853220697vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  color: white;
+}
+.BlockContent .menuContent {
+  margin-top: 2.2vh;
+  display: flex;
+}
+.BlockContent .menuContent .titleMenu {
+  background-color: red;
+  margin-left: 1.65625vw;
+  font-size: 25px;
+  color: var(--unnamed-color-f26633);
+  height: 5.0686378036vh;
+  letter-spacing: 0px;
+  color: #F26633;
+  opacity: 1;
+}
+.BlockContent .iconeMenu {
+  transform: rotate(45deg);
+  height: 11.6156282999vh;
+  width: 5.7291666667vw;
+  margin-left: 2vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.BlockContent .iconeMenu :hover {
+  border: 3px solid var(--unnamed-color-f26633);
+  background-color: white;
+  color: #F26633;
+}
+.BlockContent .icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.6380208333vw;
+  height: 5.348468849vh;
+  background-color: #F26633;
+  border-radius: 5px;
+  color: white;
+  gap: 0.8542766631vh;
+}
+.BlockContent .icone .icon {
+  transform: rotate(-45deg);
+}
+.BlockContent .description {
+  background-color: green;
+  overflow: hidden;
+  height: 14.2555438226vh;
+  width: 27.3958333333vw;
+  margin-left: 8.5692708333vw;
+}
+
+/*# sourceMappingURL=tarif.module.css.map */

@@ -4,11 +4,13 @@
 
 
 .titleContain {
-    margin-left: 43.81875vw;
-    width: 39.0625vw;
-    color: white;
-    font-family: Roboto, Regular;
+  margin-left: 43.81875vw;
+  width: 39.0625vw;
+  color: white;
+  font-family: Roboto, Regular;
+  border-bottom: solid 3px;
   
+
 }
 
 
@@ -16,10 +18,20 @@
   margin-top: 4.810902896081772vh;
   font-family: Roboto, Regular;
   font-size: 14px;  
-  margin-left: 43.81875vw;
   width: 39.0625vw;
-  height: 33.68532206969377vh;  
+  height: 35.68532206969377vh;  
   overflow: scroll;
   color: white;
   
+}
+.bloc1{
+  display: flex;
+}
+.bloc1 img {
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.bloc1 div{
+  max-width: 420px;
+  font-size: 15px;
 }

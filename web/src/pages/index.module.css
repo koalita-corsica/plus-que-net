@@ -6,20 +6,20 @@
   width: 39.0625vw;
   color: white;
   font-family: Roboto, Regular;
+  border-bottom: solid 3px;
 }
 
 .BlockContent {
   margin-top: 4.8109028961vh;
   font-family: Roboto, Regular;
   font-size: 14px;
-  margin-left: 43.81875vw;
   width: 39.0625vw;
-  height: 33.6853220697vh;
+  height: 35.6853220697vh;
   overflow: scroll;
   color: white;
 }
 
-.bloc1{
+.bloc1 {
   display: flex;
 }
 
@@ -28,7 +28,7 @@
   margin-left: 10px;
 }
 
-.bloc1 div{
+.bloc1 div {
   max-width: 420px;
   font-size: 15px;
 }

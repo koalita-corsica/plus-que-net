@@ -1,0 +1,82 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+.titleContain {
+    margin-left: 43.81875vw;
+    width: 39.0625vw;
+    color: white;
+    font-family: Roboto, Regular;
+    border-bottom: solid 3px;
+    
+  
+}
+
+
+.BlockContent {
+  margin-top: 4.810902896081772vh;
+  font-family: Roboto, Regular;
+  font-size: 14px;  
+  width: 39.0625vw;
+  height: 33.68532206969377vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+    
+  color: white;
+  .menuContent{
+      margin-top: 2.2vh;
+      display: flex;
+      
+      .titleMenu{
+          background-color: red;
+          margin-left: 1.65625vw;
+          font-size: 25px;
+          color: var(--unnamed-color-f26633);
+          height: 5.068637803590285vh;
+          letter-spacing: 0px;
+          color: #F26633;
+          opacity: 1;
+      }
+  }
+  .iconeMenu{
+
+      transform: rotate(45deg);
+      height: 11.615628299894404vh;
+      width: 5.729166666666667vw;
+      margin-left: 2vh;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      :hover {
+        border: 3px solid var(--unnamed-color-f26633);
+        background-color: white;
+        color: #F26633;
+      }
+  }
+  .icone{  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.6380208333333335vw;
+      height: 5.348468848996832vh;
+      background-color: #F26633;
+      border-radius: 5px;
+      color: white;
+      gap: 0.8542766631467793vh;
+        
+        .icon{
+          transform: rotate(-45deg);
+        }
+    }
+    .description{
+        background-color: green;
+        overflow: hidden;
+        height: 14.255543822597676vh;
+        width: 27.395833333333332vw;
+        margin-left: 8.569270833333333vw;
+    }
+  
+}

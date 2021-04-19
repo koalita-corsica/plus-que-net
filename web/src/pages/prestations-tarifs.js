@@ -12,6 +12,17 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Block from '@sanity/block-content-to-react'
 import Galerie from '../components/galerie';
+import Wrapper from '../components/wrapper'
+import styles from '../pages/tarif.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCity } from '@fortawesome/free-solid-svg-icons'
+import { faBrush } from '@fortawesome/free-solid-svg-icons'
+import { faShower } from '@fortawesome/free-solid-svg-icons'
+import { faDungeon } from '@fortawesome/free-solid-svg-icons'
+
+
+
+
 
 export const query = graphql`
   query PrestationsPageQuery {
@@ -61,16 +72,27 @@ const PrestationPage = props => {
   return (
     <Layout>
       <Container>
-      {JSON.stringify(service.images, null, 2)}
-        {page.nodes.map(( contenu => 
-        <React.Fragment>
-            <h1> {contenu.title} </h1>
-            <Block blocks={contenu._rawBody} />
-            <img src={contenu.mainImage.asset.url} alt="" width="150" height="150"/>
-            <Galerie />
-          </React.Fragment>
-        ))}
-        </Container>
+        <div className={styles.titleContain}>
+          <h1 className={styles.title}>Prestation & Tarifs</h1>
+        </div>
+        <Wrapper>
+          <div className={styles.BlockContent}>
+            <div className={styles.menuContent}>
+              <div className={styles.iconeMenu}>
+                <div className={styles.icone}><FontAwesomeIcon icon={faCity} className={styles.icon}/></div>
+                <div className={styles.icone}><FontAwesomeIcon icon={faBrush} className={styles.icon}/></div>
+                <div className={styles.icone}><FontAwesomeIcon icon={faShower} className={styles.icon}/></div>
+                <div className={styles.icone}><FontAwesomeIcon icon={faDungeon} className={styles.icon}/></div>
+              </div>
+              <div className={styles.titleMenu}>
+                <h2 className={styles.title}>Lavage de vitres simples</h2>
+              </div>
+            </div>
+            <div className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <button className={styles.button}>Voir la galerie</button>
+          </div>
+        </Wrapper>
+      </Container>
     </Layout>
   )
 }

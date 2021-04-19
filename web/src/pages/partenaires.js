@@ -10,6 +10,10 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import Wrapper from '../components/wrapper'
+import WrapperBlog from '../components/wrapperBlog'
+import styles from '../pages/blog.module.css'
+import imgTest from '../images/test.jpg'
 
 export const query = graphql`
   query PartenairesPageQuery {
@@ -53,9 +57,71 @@ const PartenairesPage = props => {
   return (
     <Layout>
       <Container>
-        <h1> {page.title} </h1>
-        {postNodes && postNodes.length > 0 && <BlogPostPreviewList nodes={postNodes} />}      
-        </Container>
+        <div className={styles.titleContain}>
+          <h1 className={styles.title}>{page.title}</h1>
+        </div>
+        <WrapperBlog>
+          <div className={styles.blogContain}>
+            <h2 className={styles.allArticle}>Tous les articles</h2>
+            <div className={styles.lastArticle}>
+              <img  src={imgTest}  className={styles.imgLastArticle}></img>
+              <div className={styles.lastArticleContain}>
+                <span className={styles.date}>23 juin 2020</span>
+                <h3 className={styles.articleTitle}>Last article title</h3>
+                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+              </div>
+            </div>      
+            <div className={styles.Article}>
+              <img src={imgTest} className={styles.imgArticle}></img>
+              <div className={styles.articleContain}>
+                <span className={styles.date}>23 mai 2020</span>
+                <h3 className={styles.articleTitle}>Article 1 titre</h3>
+                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+              </div>
+            </div>
+            <div className={styles.Article}>
+              <img src={imgTest} className={styles.imgArticle}></img>
+              <div className={styles.articleContain}>
+                <span className={styles.date}>23 mai 2020</span>
+                <h3 className={styles.articleTitle}>Article 1 titre</h3>
+                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+              </div>
+            </div>
+            <div className={styles.Article}>
+              <img src={imgTest} className={styles.imgArticle}></img>
+              <div className={styles.articleContain}>
+                <span className={styles.date}>23 mai 2020</span>
+                <h3 className={styles.articleTitle}>Article 1 titre</h3>
+                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+              </div>
+            </div>
+            <div className={styles.Article}>
+              <img src={imgTest} className={styles.imgArticle}></img>
+              <div className={styles.articleContain}>
+                <span className={styles.date}>23 mai 2020</span>
+                <h3 className={styles.articleTitle}>Article 1 titre</h3>
+                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+              </div>
+            </div>
+            <div className={styles.Article}>
+              <img src={imgTest} className={styles.imgArticle}></img>
+              <div className={styles.articleContain}>
+                <span className={styles.date}>23 mai 2020</span>
+                <h3 className={styles.articleTitle}>Article 1 titre</h3>
+                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+              </div>
+            </div>
+            <div className={styles.Article}>
+              <img src={imgTest} className={styles.imgArticle}></img>
+              <div className={styles.articleContain}>
+                <span className={styles.date}>23 mai 2020</span>
+                <h3 className={styles.articleTitle}>Article 1 titre</h3>
+                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+              </div>
+            </div>      
+          </div>      
+        </WrapperBlog>
+      </Container>
     </Layout>
   )
 }
