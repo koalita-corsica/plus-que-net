@@ -18,6 +18,12 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 
 import styles from './contact.module.css'
 
+import { isBrowser } from './utils'; 
+
+if (!isBrowser) {
+    return;
+}
+
 export const query = graphql`
 
   query ContactPageQuery {

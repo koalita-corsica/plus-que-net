@@ -11,6 +11,11 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import WrapperBlog from '../components/wrapperBlog'
+import { isBrowser } from './utils'; 
+
+if (!isBrowser) {
+    return;
+}
 
 import styles from '../pages/blog.module.css'
 

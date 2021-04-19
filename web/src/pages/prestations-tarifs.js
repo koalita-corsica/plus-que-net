@@ -15,6 +15,12 @@ import Layout from '../containers/layout'
 import {Link} from 'gatsby'
 import { navigate } from "gatsby"
 
+import { isBrowser } from './utils'; 
+
+if (!isBrowser) {
+    return;
+}
+
 export const query = graphql`
   query PrestationsPageQuery {
   services: allSanityServices {
@@ -54,16 +60,6 @@ const PrestationPage = props => {
   const {data, errors} = props
   const page = data && data.services;
   const service = data && data.service;
-  // const isBrowser = typeof window !== "undefined"
-
-  // let loggedIn = false
-  // if (isBrowser) {
-  //   window.localstorage.getItem("isLoggedIn") === "true"
-  // }
-
-  // if (typeof window !== `undefined`) {
-  //   const Block = require("@sanity/block-content-to-react")
-  // }
 
   if (errors) {
     return (

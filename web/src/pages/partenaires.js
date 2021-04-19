@@ -11,6 +11,12 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
+import { isBrowser } from './utils'; 
+
+if (!isBrowser) {
+    return;
+}
+
 export const query = graphql`
   query PartenairesPageQuery {
   page: sanityPage(slug: {current: {eq: "partenaires"}}) {
