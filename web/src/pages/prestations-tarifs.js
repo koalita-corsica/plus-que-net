@@ -15,7 +15,7 @@ import Layout from '../containers/layout'
 import {Link} from 'gatsby'
 import { navigate } from "gatsby"
 
-import { isBrowser } from './utils'; 
+import { isBrowser } from '../lib/utils'; 
 
 export const query = graphql`
   query PrestationsPageQuery {
