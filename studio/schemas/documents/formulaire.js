@@ -2,6 +2,7 @@ export default {
   name: "contact",
   title: "Contact submissions",
   type: "document",
+  readOnly: true,
   fields: [
     {
       name: "name",

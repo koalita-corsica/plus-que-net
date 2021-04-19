@@ -61,11 +61,12 @@ const ContactPage = props => {
     fetch(`/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact-form", ...formData }),
+      body: encode({ "form-name": "contact", ...formData }),
     })
       .then((response) => {
-        navigate("/success/")
+        navigate("/contact/")
         reset()
+        alert("Merci pour le contact!");
         console.log(response)
       })
       .catch((error) => {
@@ -77,8 +78,14 @@ const ContactPage = props => {
   return (
     <Layout>
       <Container>
-      <form name="contact" method="POST" data-netlify="true" {...handleSubmit(handlePost)}>
-        <input type="hidden" name="form-name" value="contact" ref={register()}/>
+      <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit(handlePost)}>
+      <input type="hidden" name="form-name" value="contact" />
+      <input
+        type="hidden"
+        name="formId"
+        value="contact"
+        ref={register()}
+      />
           <div className={styles.title}>
             <h1> {page.title} </h1>
           </div>
