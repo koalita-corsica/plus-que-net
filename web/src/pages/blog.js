@@ -10,19 +10,13 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-<<<<<<< HEAD
 import Wrapper from '../components/wrapper'
 import WrapperBlog from '../components/wrapperBlog'
 import styles from '../pages/blog.module.css'
 import imgTest from '../images/test.jpg'
-=======
-import WrapperBlog from '../components/wrapperBlog'
 import Block from '@sanity/block-content-to-react'
 
-import styles from '../pages/blog.module.css'
-
-import { isBrowser } from '../lib/utils'; 
->>>>>>> 93f5001f344578df6a201f84180187064bc7ee2c
+import {isBrowser} from '../lib/utils'
 
 export const query = graphql`
   query BlogPageQuery {

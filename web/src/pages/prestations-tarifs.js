@@ -11,7 +11,6 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Block from '@sanity/block-content-to-react'
-import Galerie from '../components/galerie';
 import Wrapper from '../components/wrapper'
 import styles from '../pages/tarif.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,6 +18,8 @@ import { faCity } from '@fortawesome/free-solid-svg-icons'
 import { faBrush } from '@fortawesome/free-solid-svg-icons'
 import { faShower } from '@fortawesome/free-solid-svg-icons'
 import { faDungeon } from '@fortawesome/free-solid-svg-icons'
+
+import {isBrowser} from '../lib/utils'
 
 
 
