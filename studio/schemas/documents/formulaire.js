@@ -1,15 +1,22 @@
 export default {
-    title: 'Formulaire',
-    name: 'formulaire',
-    type: 'document',
-    fields: [
-        {
-            name: 'rating',
-            title: 'Rating',
-            type: 'number',
-            options: {
-              range: {min: 0, max: 10, step: 0.2}
-            }
-          }
-    ]
+  name: "contact",
+  title: "Contact submissions",
+  type: "document",
+  fields: [
+    {
+      name: "name",
+      title: "Name",
+      type: "string",
+    },
+    {
+      name: "email",
+      title: "Email",
+      type: "string",
+    },
+    {
+      name: "message",
+      title: "Message",
+      type: "text",
+    },
+  ],
 }

@@ -15,14 +15,5 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
     </div>
   </>
 )
-function blur(){
-  if(location.pathname == "/blog/"){
-    var toto = document.getElementById("wrapper");
-    // toto.id = 'wrapperBlur';
-    console.log(toto); 
-  }else{
-    console.log("pas blog");
-  }
-  return 
-}
+
 export default Layout
