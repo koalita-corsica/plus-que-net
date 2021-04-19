@@ -15,11 +15,9 @@ import Layout from '../containers/layout'
 import {Link} from 'gatsby'
 import { navigate } from "gatsby"
 
-import { isBrowser } from './utils'; 
+import { isBrowser } from '../lib/utils'; 
 
-if (!isBrowser) {
-    return;
-}
+
 
 export const query = graphql`
   query PrestationsPageQuery {
@@ -55,29 +53,31 @@ export const query = graphql`
    }
 }
 `
-
-const PrestationPage = props => {
-  const {data, errors} = props
-  const page = data && data.services;
-  const service = data && data.service;
-
-  if (errors) {
+if (!isBrowser) {
+  const PrestationPage = props => {
+    const {data, errors} = props
+    const page = data && data.services;
+    const service = data && data.service;
+  
+    if (errors) {
+      return (
+        <Layout>
+          <GraphQLErrorList errors={errors} />
+        </Layout>
+      )
+    }
+  
     return (
       <Layout>
-        <GraphQLErrorList errors={errors} />
+        <Container>
+          <React.Fragment>
+            {/* <Galerie /> */}
+          </React.Fragment>
+          </Container>
       </Layout>
     )
   }
-
-  return (
-    <Layout>
-      <Container>
-        <React.Fragment>
-          {/* <Galerie /> */}
-        </React.Fragment>
-        </Container>
-    </Layout>
-  )
+  
 }
 
 export default PrestationPage

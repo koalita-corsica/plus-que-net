@@ -12,11 +12,9 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Wrapper from '../components/wrapper'
 import styles from '../pages/index.module.css'
-import { isBrowser } from './utils'; 
+import { isBrowser } from '../lib/utils'; 
 
-if (!isBrowser) {
-    return;
-}
+
 
 
 export const query = graphql`
@@ -36,37 +34,38 @@ export const query = graphql`
 `
 
 
-
-
-const IndexPage = props => {
-  const {data, errors} = props
-  const page = data && data.page;
-
-  if (errors) {
+if (!isBrowser) {
+  const IndexPage = props => {
+    const {data, errors} = props
+    const page = data && data.page;
+  
+    if (errors) {
+      return (
+        <Layout>
+          <GraphQLErrorList errors={errors} />
+        </Layout>
+      )
+    }
+  
     return (
       <Layout>
-        <GraphQLErrorList errors={errors} />
+        <Container>
+          <div className={styles.titleContain}>
+            <h1 className={styles.title}>ENTREPRISE DE LAVAGES DE VITRES & GARDE-CORPS</h1>
+          </div>
+          <Wrapper>
+            <div className={styles.BlockContent}>
+              <div className={styles.bloc1}>
+              {/* <Block blocks={page._rawBody} /> */}
+              <img src={page.image.asset.url} alt="img" width="200" height="250"></img>
+              </div>
+            </div>
+          </Wrapper>
+        </Container>
       </Layout>
     )
   }
 
-  return (
-    <Layout>
-      <Container>
-        <div className={styles.titleContain}>
-          <h1 className={styles.title}>ENTREPRISE DE LAVAGES DE VITRES & GARDE-CORPS</h1>
-        </div>
-        <Wrapper>
-          <div className={styles.BlockContent}>
-            <div className={styles.bloc1}>
-            {/* <Block blocks={page._rawBody} /> */}
-            <img src={page.image.asset.url} alt="img" width="200" height="250"></img>
-            </div>
-          </div>
-        </Wrapper>
-      </Container>
-    </Layout>
-  )
 }
 
 export default IndexPage
