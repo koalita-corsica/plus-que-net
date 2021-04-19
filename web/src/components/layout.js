@@ -16,5 +16,4 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
   </>
 )
 
-
 export default Layout

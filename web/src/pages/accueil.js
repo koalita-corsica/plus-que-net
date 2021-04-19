@@ -12,8 +12,9 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Wrapper from '../components/wrapper'
 import styles from '../pages/index.module.css'
-const Block = require('@sanity/block-content-to-react')
+import Block from '@sanity/block-content-to-react'
 
+import { isBrowser } from '../lib/utils'; 
 
 
 export const query = graphql`
@@ -33,8 +34,13 @@ export const query = graphql`
 `
 
 const IndexPage = props => {
+  if (!isBrowser) {
+    return;
+  }
+
   const {data, errors} = props
   const page = data && data.page;
+
   if (errors) {
     return (
       <Layout>

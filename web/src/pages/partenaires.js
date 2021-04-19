@@ -15,6 +15,9 @@ import WrapperBlog from '../components/wrapperBlog'
 import styles from '../pages/blog.module.css'
 import imgTest from '../images/test.jpg'
 
+import { isBrowser } from '../lib/utils'; 
+
+
 export const query = graphql`
   query PartenairesPageQuery {
   page: sanityPage(slug: {current: {eq: "partenaires"}}) {
@@ -41,6 +44,9 @@ export const query = graphql`
 `
 
 const PartenairesPage = props => {
+  if (!isBrowser) {
+    return;
+}
   const {data, errors} = props
   const page = data && data.page;
   const posts = data && data.posts;

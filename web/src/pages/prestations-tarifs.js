@@ -28,6 +28,7 @@ export const query = graphql`
   query PrestationsPageQuery {
   services: allSanityServices {
     nodes {
+      id
       _rawBody
       title
       mainImage {
@@ -36,9 +37,13 @@ export const query = graphql`
         }
         alt
       }
-      images {
+      images{
+        _key
         asset {
-          url
+          _id
+          assetId
+          _key
+            url
         }
       }
     }
@@ -47,20 +52,23 @@ export const query = graphql`
     title
      images{
        asset {
-         fluid {
-           src
-         }
+           url
        }
      }
    }
 }
-
 `
 
+
 const PrestationPage = props => {
+  if (!isBrowser) {
+    return;
+  }
+
   const {data, errors} = props
   const page = data && data.services;
   const service = data && data.service;
+
   if (errors) {
     return (
       <Layout>
