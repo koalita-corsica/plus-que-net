@@ -23,20 +23,8 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/image-url": "^0.140.22",
-    "gatsby-image": "^3.3.0",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
     "gatsby-source-google-reviews": "0.0.7",
-<<<<<<< HEAD
-    "react": "^17.0.2",
-    "react-slick": "^0.28.1",
-    "react-slideshow-image": "^3.4.6",
-    "slick-carousel": "^1.8.1"
-=======
-<<<<<<< HEAD
     "uniqid": "^5.3.0"
-=======
-    "react-slideshow-image": "^3.4.6"
->>>>>>> 84b8e1bb570f81cf6e31a7c8fe2c3b298d54c6b2
->>>>>>> ca1e59d7c4d09eb207f64959880c22672b72f820
   }
 }
