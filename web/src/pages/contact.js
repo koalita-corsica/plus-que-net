@@ -21,6 +21,8 @@ import styles from './contact.module.css'
 
 import {isBrowser} from '../lib/utils'
 
+import {fields} from '../_data/fields'
+
 export const query = graphql`
 
   query ContactPageQuery {
@@ -84,6 +86,7 @@ const ContactPage = props => {
   return (
     <Layout>
       <Container>
+        {console.log(fields)}
       <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
         <input type="hidden" name="form-name" value="contact" />
           <div className={styles.title}>
