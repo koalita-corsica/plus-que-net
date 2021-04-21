@@ -8,8 +8,6 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border-radius: 8px;
     opacity: 1;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
     position: absolute;
 }
 
