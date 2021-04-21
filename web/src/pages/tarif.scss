@@ -9,74 +9,120 @@
     color: white;
     font-family: Roboto, Regular;
     border-bottom: solid 3px;
-    
-  
 }
 
 
 .BlockContent {
-  margin-top: 4.810902896081772vh;
+  position: absolute;  
   font-family: Roboto, Regular;
   font-size: 14px;  
   width: 39.0625vw;
-  height: 33.68532206969377vh;
-  overflow: hidden;
+  height: 43.68532206969377vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 1vh;
-    
   color: white;
   .menuContent{
-      margin-top: 2.2vh;
+      margin-top: 2.4vh;
+      height: 8.17717206132879vh;
       display: flex;
-      
+      justify-content: space-evenly;
+      align-items: center;
       .titleMenu{
-          background-color: red;
-          margin-left: 1.65625vw;
-          font-size: 25px;
+          margin-top: 2.7vh;
+          margin-left: 2.65625vw;
+          font-size: 20px;
           color: var(--unnamed-color-f26633);
-          height: 5.068637803590285vh;
-          letter-spacing: 0px;
           color: #F26633;
           opacity: 1;
       }
+
+      
   }
   .iconeMenu{
+    margin-left: 2vw;
+    margin-top: 1.7vh;
+    height: 110px;
+    width: 110px;
+    display: grid;
+    grid-template-columns: repeat(2, 55px);
+    grid-template-rows: repeat(2, 55px);
+    transform-origin : center;
+    transform: rotate(45deg);
+    row-gap: 1.5195741056218059vh;
+    column-gap: 0.75375000000000006vw;
+    div{
+        background-color: #F26633;
+        color: white;
+        border-radius: 8px;
+        height: 8.517887563884157vh;
+        width: 3.90625vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      transform: rotate(45deg);
-      height: 11.615628299894404vh;
-      width: 5.729166666666667vw;
-      margin-left: 2vh;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      :hover {
-        border: 3px solid var(--unnamed-color-f26633);
+    }
+    div:hover{
+        transform: scale(1.2);
         background-color: white;
         color: #F26633;
-      }
+        border: #F26633 solid 4px;
+    }
+}
+.iconContent1{
+    margin: auto;
+    grid-row-start: 1;
+    grid-column-start: 1;
   }
-  .icone{  
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 2.6380208333333335vw;
-      height: 5.348468848996832vh;
-      background-color: #F26633;
-      border-radius: 5px;
-      color: white;
-      gap: 0.8542766631467793vh;
-        
-        .icon{
-          transform: rotate(-45deg);
-        }
+.iconContent2{
+    margin: auto;
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+.iconContent3{
+    margin: auto;
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+.iconContent4{
+    margin: auto;
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+  .icone1{
+      position: absolute;
+      transform: rotate(-45deg);
+    }
+  .icone2{ 
+      position: absolute;
+
+      transform: rotate(-45deg);
+    }
+  .icone3{  
+      transform: rotate(-45deg);
+      position: absolute;
+    }
+  .icone4{  
+      transform: rotate(-45deg);
+      position: absolute;
     }
     .description{
-        background-color: green;
         overflow: hidden;
-        height: 14.255543822597676vh;
+        height: 17.255543822597676vh;
         width: 27.395833333333332vw;
-        margin-left: 8.569270833333333vw;
+        margin-left: 12.569270833333333vw;
+        margin-top: 2vh;
+    }
+    .button{
+       align-self: center;
+       border: #F26633;
+       border-radius: 20px;
+       background-color: #F26633;
+       color: white;
+       height: 3.0664395229982966vh;
+       width: 9.140625vw; 
     }
   
 }
+
