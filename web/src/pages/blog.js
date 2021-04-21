@@ -103,8 +103,10 @@ const BlogPage = props => {
             </div>      
           </div>      
           <aside className={styles.aside}>
-            <h3 className={styles.categorie} >Thématique</h3>
-            <img src="" width="246" height="163"></img>
+            <h3 className={styles.categorieTitle} >Thématique</h3>
+            <div className={styles.categorie}>
+              <h2>Thèmes</h2>
+            </div>
           </aside>
           </React.Fragment>
           ))}

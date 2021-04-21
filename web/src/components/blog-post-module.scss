@@ -1,0 +1,90 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.titleContain {
+    text-align: left;
+    margin-left: 27.65625vw;
+    width: 24.67vw;
+    color: white;
+    font-family: Roboto, Regular;
+    border-bottom: solid white 2px;
+}
+.blogContain{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4.770017035775128vh;
+    width: 47.1875vw;
+    font-family: Roboto, Regular;
+    .pathContain{
+        height: 6.473594548551959vh;
+        display: flex;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        .articleTitle{
+            color: #F26633;
+        }
+    }
+    .imgArticle{
+        width: 47.1875vw;
+        height: 68.31345826235093vh;
+    }
+    P{
+        font-size: 14PX;
+        color: white;
+    }
+    h3{
+        font-size: 25px;
+        color: white;
+    }
+    .publish{
+        font-size: 9px;
+        border-bottom: solid white 2px;
+    }
+    .paraWrapper{
+        width: 46.71875vw;
+        
+        .para1{
+            grid-area: 1 / 1 / 2 / 3;
+        }
+    }
+}
+.aside{
+    display: grid;
+    grid-template-rows:  6.473594548551959vh 83.30494037478705vh;
+    font-family: Roboto, Regular;    
+    color: white;
+    width: 19.21875vw;
+    top: 46.22vh;
+    left: 72.69vw;
+    .catWrapper{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        gap: 4.770017035775128vh;
+        overflow: hidden;
+        
+        .categorie{
+            background: url('../images/test.jpg');
+            background-size:  19.21875vw 27.76831345826235vh;
+            width: 19.21875vw;
+            height: 27.76831345826235vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            h2{
+                width: 19.21875vw;
+                text-align: center;
+                background: transparent;
+                opacity: 0.8;
+                backdrop-filter: blur(30px);
+            }
+        }
+        .categorieTitle{
+            font-size: 20px;
+            height: 6.473594548551959vh;
+        }
+    }
+}
