@@ -21,8 +21,6 @@ import styles from './contact.module.css'
 
 import {isBrowser} from '../lib/utils'
 
-import {fields} from '../_data/fields'
-
 export const query = graphql`
 
   query ContactPageQuery {
@@ -42,36 +40,6 @@ const ContactPage = props => {
   if (!isBrowser) {
     return;
   }
-
-    // Initiate forms
-    const { register, handleSubmit, errors, reset } = useForm()
-  
-    // Transforms the form data from the React Hook Form output to a format Netlify can read
-    const encode = (data) => {
-      return Object.keys(data)
-        .map(
-          (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-        )
-        .join("&")
-    }
-  
-    // Handles the post process to Netlify so we can access their serverless functions
-    const handlePost = (formData, event) => {
-      fetch(`/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact-form", ...formData }),
-      })
-        .then((response) => {
-          navigate("/success/")
-          reset()
-          console.log(response)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
-      event.preventDefault()
-    }
 
   const {data} = props
   const page = data && data.page;
