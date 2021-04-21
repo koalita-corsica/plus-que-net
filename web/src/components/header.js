@@ -21,7 +21,8 @@ const Header = ({onHideNav, onShowNav, showNav, data}) => (
         {data.sanitySiteSettings.menu.map((item =>
         <React.Fragment>
         <li> 
-          <Link to={'/' + `${item.page.slug.current}` }> {item.page.title}</Link>
+          {}
+          <Link to={item.page.slug.current == "accueil" ? '/' : '/' + `${item.page.slug.current}` }> {item.page.title}</Link>
         </li>
         {/* <li>
           <Link to='/prestations-tarifs/'>Prestations e Tarifs</Link>

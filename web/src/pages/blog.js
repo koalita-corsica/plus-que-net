@@ -15,6 +15,8 @@ import WrapperBlog from '../components/wrapperBlog'
 import styles from '../pages/blog.module.css'
 import imgTest from '../images/test.jpg'
 import Block from '@sanity/block-content-to-react'
+import {buildImageObj, cn, getBlogUrl} from '../lib/helpers'
+import {Link} from 'gatsby'
 
 import {isBrowser} from '../lib/utils'
 
@@ -81,9 +83,9 @@ const BlogPage = props => {
         <WrapperBlog>
           {blogPost.edges.map(( dados =>
             <React.Fragment>
-              {console.log(dados.node.mainImage.asset.url)}
           <div className={styles.blogContain}>
             <h2 className={styles.allArticle}>Tous les articles</h2>
+            <Link to={getBlogUrl(dados.node.publishedAt, dados.node.slug.current)} >
             <div className={styles.lastArticle}>
               <img  src={dados.node.mainImage.asset.url} alt={dados.node.mainImage.alt} width="389" height="258" className={styles.imgLastArticle}></img>
               <div className={styles.lastArticleContain}>
@@ -91,7 +93,8 @@ const BlogPage = props => {
                 <h3 className={styles.articleTitle}> {dados.node.title} </h3>
                 <p className={styles.description}> <Block blocks={dados.node._rawExcerpt} /> </p>
               </div>
-            </div>      
+            </div>
+            </Link>      
             <div className={styles.Article}>
               <img src={dados.node.mainImage.asset.url} alt={dados.node.mainImage.alt} width="289" height="169"></img>
               <p className={styles.date}> {dados.node.publishedAt} </p>
