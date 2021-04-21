@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Slider from "react-slick";
+import Slider from "react-slick";
 import GraphQLErrorList from '../components/graphql-error-list'
 import { StaticQuery, graphql } from "gatsby"
 
@@ -15,6 +15,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1
 };
+
 
 const SimpleSlider = ({ data, settings }) => (
       <Wrapper>
