@@ -10,65 +10,112 @@
 }
 
 .BlockContent {
-  margin-top: 4.8109028961vh;
+  position: absolute;
   font-family: Roboto, Regular;
   font-size: 14px;
   width: 39.0625vw;
-  height: 33.6853220697vh;
-  overflow: hidden;
+  height: 43.6853220697vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 1vh;
   color: white;
 }
 .BlockContent .menuContent {
-  margin-top: 2.2vh;
+  margin-top: 2.4vh;
+  height: 8.1771720613vh;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .BlockContent .menuContent .titleMenu {
-  background-color: red;
-  margin-left: 1.65625vw;
-  font-size: 25px;
+  margin-top: 2.7vh;
+  margin-left: 2.65625vw;
+  font-size: 20px;
   color: var(--unnamed-color-f26633);
-  height: 5.0686378036vh;
-  letter-spacing: 0px;
   color: #F26633;
   opacity: 1;
 }
 .BlockContent .iconeMenu {
-  transform: rotate(45deg);
-  height: 11.6156282999vh;
-  width: 5.7291666667vw;
-  margin-left: 2vh;
-  overflow: hidden;
+  margin-left: 2vw;
+  margin-top: 1.7vh;
+  height: 110px;
+  width: 110px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 55px);
+  grid-template-rows: repeat(2, 55px);
+  transform-origin: center;
+  transform: rotate(45deg);
+  row-gap: 1.5195741056vh;
+  column-gap: 0.75375vw;
 }
-.BlockContent .iconeMenu :hover {
-  border: 3px solid var(--unnamed-color-f26633);
-  background-color: white;
-  color: #F26633;
-}
-.BlockContent .icone {
+.BlockContent .iconeMenu div {
+  background-color: #F26633;
+  color: white;
+  border-radius: 8px;
+  height: 8.5178875639vh;
+  width: 3.90625vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2.6380208333vw;
-  height: 5.348468849vh;
-  background-color: #F26633;
-  border-radius: 5px;
-  color: white;
-  gap: 0.8542766631vh;
 }
-.BlockContent .icone .icon {
+.BlockContent .iconeMenu div:hover {
+  transform: scale(1.2);
+  background-color: white;
+  color: #F26633;
+  border: #F26633 solid 4px;
+}
+.BlockContent .iconContent1 {
+  margin: auto;
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+.BlockContent .iconContent2 {
+  margin: auto;
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+.BlockContent .iconContent3 {
+  margin: auto;
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+.BlockContent .iconContent4 {
+  margin: auto;
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+.BlockContent .icone1 {
+  position: absolute;
   transform: rotate(-45deg);
 }
+.BlockContent .icone2 {
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.BlockContent .icone3 {
+  transform: rotate(-45deg);
+  position: absolute;
+}
+.BlockContent .icone4 {
+  transform: rotate(-45deg);
+  position: absolute;
+}
 .BlockContent .description {
-  background-color: green;
   overflow: hidden;
-  height: 14.2555438226vh;
+  height: 17.2555438226vh;
   width: 27.3958333333vw;
-  margin-left: 8.5692708333vw;
+  margin-left: 12.5692708333vw;
+  margin-top: 2vh;
+}
+.BlockContent .button {
+  align-self: center;
+  border: #F26633;
+  border-radius: 20px;
+  background-color: #F26633;
+  color: white;
+  height: 3.066439523vh;
+  width: 9.140625vw;
 }
 
 /*# sourceMappingURL=tarif.module.css.map */

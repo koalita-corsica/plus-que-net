@@ -83,8 +83,9 @@ const PrestationPage = props => {
       </Layout>
     )
   }
-
+  
   return (
+    
     <Layout>
       <Container>
         <div className={styles.titleContain}>
@@ -94,10 +95,18 @@ const PrestationPage = props => {
           <div className={styles.BlockContent}>
             <div className={styles.menuContent}>
               <div className={styles.iconeMenu}>
-                <div className={styles.icone}><FontAwesomeIcon icon={faCity} className={styles.icon}/></div>
-                <div className={styles.icone}><FontAwesomeIcon icon={faBrush} className={styles.icon}/></div>
-                <div className={styles.icone}><FontAwesomeIcon icon={faShower} className={styles.icon}/></div>
-                <div className={styles.icone}><FontAwesomeIcon icon={faDungeon} className={styles.icon}/></div>
+                <div className={styles.iconContent1} onClick={rotateClick1} class="iconContent1">
+                  <span className={styles.icone1}><FontAwesomeIcon icon={faCity} className={styles.icon}/></span>
+                  </div>
+                <div className={styles.iconContent2} onClick={rotateClick2} class="iconContent2">
+                  <span className={styles.icone2}><FontAwesomeIcon icon={faBrush} className={styles.icon}/></span>
+                </div>
+                <div className={styles.iconContent3} onClick={rotateClick3} class="iconContent3">
+                  <span className={styles.icone3}><FontAwesomeIcon icon={faShower} className={styles.icon}/></span>
+                </div>
+                <div className={styles.iconContent4} onClick={rotateClick4} class="iconContent4">
+                  <span className={styles.icone4}><FontAwesomeIcon icon={faDungeon} className={styles.icon}/></span>
+                </div>
               </div>
               <div className={styles.titleMenu}>
                 <h2 className={styles.title}>Lavage de vitres simples</h2>
@@ -111,6 +120,7 @@ const PrestationPage = props => {
       </Container>
     </Layout>
   )
+  
 }
 
 export default PrestationPage
