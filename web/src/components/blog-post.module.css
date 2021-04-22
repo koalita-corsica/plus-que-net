@@ -44,10 +44,15 @@
   border-bottom: solid white 2px;
 }
 .blogContain .paraWrapper {
+  height: 140.0340715503vh;
   width: 46.71875vw;
 }
 .blogContain .paraWrapper .para1 {
   grid-area: 1/1/2/3;
+}
+.blogContain .paraWrapper .imgPara {
+  width: 24.140625vw;
+  height: 40.8858603066vh;
 }
 
 .aside {
