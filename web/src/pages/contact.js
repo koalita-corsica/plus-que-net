@@ -52,6 +52,7 @@ const ContactPage = props => {
   }
 
   return (
+    <Layout>
     <form name="contact" method="POST" data-netlify="true">
     <div class="field">
       <label class="label">Your Name:
@@ -81,6 +82,7 @@ const ContactPage = props => {
       <button class="button is-primary is-medium" type="submit">Send</button>
     </div>
   </form>
+  </Layout>
   )
 }
 
