@@ -43,10 +43,14 @@
         border-bottom: solid white 2px;
     }
     .paraWrapper{
+        height: 140.03407155025553vh;
         width: 46.71875vw;
-        
         .para1{
             grid-area: 1 / 1 / 2 / 3;
+        }
+        .imgPara{
+            width: 24.140625vw;
+            height: 40.885860306643956vh;
         }
     }
 }
