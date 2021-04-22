@@ -18,6 +18,7 @@ import { faCity } from '@fortawesome/free-solid-svg-icons'
 import { faBrush } from '@fortawesome/free-solid-svg-icons'
 import { faShower } from '@fortawesome/free-solid-svg-icons'
 import { faDungeon } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import Galerie from '../components/gallery'
 
 import {isBrowser} from '../lib/utils'
@@ -178,10 +179,10 @@ const PrestationPage = props => {
               </div>
             </div>
             <div className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-            <button className={styles.button} onClick={clickHandler}>Voir la galerie</button>
-            {open ? "" : <Galerie />}
           </div>
         </Wrapper>
+        <button className={styles.button} onClick={clickHandler}>Voir la galerie</button>
+          {open ? "" : <div className={styles.galery}><Galerie /></div>}
       </Container>
     </Layout>
   )

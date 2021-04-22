@@ -1,24 +1,59 @@
-.root{}
-
-.backg{
-    top: 131px;
-    left: 353px;
-    width: 735px;
-    height: 566px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius: 8px;
-    opacity: 1;
-    position: absolute;
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.root {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 8px;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
 }
 
-.backg h1{
-    color: black;
-    text-align: center;
+.titleContent {
+  display: flex;
+  justify-content: space-evenly;
+}
+.titleContent .title {
+  color: white;
+  font-family: Roboto, Regular;
+  font-size: 40px;
+}
+.titleContent button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+  color: red;
+  font-size: 25px;
+  margin-left: 8vw;
 }
 
-.center {
-    display: flex !important;
-    position: relative !important;
-    justify-content: center !important;
-    right: 35px;
+.selectedImg {
+  align-self: center;
+  width: 52.8125vw;
+  height: 49.2844974446vh;
 }
+
+.sliderContent {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sliderContent .imgSlider {
+  width: 5.9375vw;
+  height: 11.0954003407vh;
+  margin: 1vw;
+}
+.sliderContent button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=galerie.module.css.map */

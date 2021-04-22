@@ -3,6 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
+.galery{
+  left: 23.578125vw;
+  top: 22.31686541737649vh;
+  width: 63.421875vw;
+  height: 76.42248722316866vh;
+  position: absolute;  
+  z-index: 1000;
+  
+}
+
 .titleContain {
     margin-left: 43.81875vw;
     width: 39.0625vw;
@@ -10,7 +20,15 @@
     font-family: Roboto, Regular;
     border-bottom: solid 3px;
 }
-
+.button{
+  align-self: center;
+  border: #F26633;
+  border-radius: 20px;
+  background-color: #F26633;
+  color: white;
+  height: 3.0664395229982966vh;
+  width: 9.140625vw; 
+}
 
 .BlockContent {
   position: absolute;  
@@ -109,20 +127,12 @@
     }
     .description{
         overflow: hidden;
-        height: 17.255543822597676vh;
+        height: 26.255543822597676vh;
         width: 27.395833333333332vw;
         margin-left: 12.569270833333333vw;
         margin-top: 2vh;
     }
-    .button{
-       align-self: center;
-       border: #F26633;
-       border-radius: 20px;
-       background-color: #F26633;
-       color: white;
-       height: 3.0664395229982966vh;
-       width: 9.140625vw; 
-    }
+    
   
 }
 

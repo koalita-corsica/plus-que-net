@@ -9,13 +9,31 @@
   border-bottom: solid 3px;
 }
 
+.BlockContent::-webkit-scrollbar-thumb {
+  background-color: #F26633;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+}
+
+.BlockContent::-webkit-scrollbar-track {
+  background: white;
+  /* color of the tracking area */
+  border-radius: 20px;
+}
+
+.BlockContent::-webkit-scrollbar {
+  width: 0.4vw;
+  /* width of the entire scrollbar */
+}
+
 .BlockContent {
   margin-top: 4.8109028961vh;
   font-family: Roboto, Regular;
   font-size: 14px;
   width: 39.0625vw;
   height: 35.6853220697vh;
-  overflow: scroll;
+  overflow-y: scroll;
   color: white;
 }
 
