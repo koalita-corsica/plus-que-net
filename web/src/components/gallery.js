@@ -42,19 +42,7 @@ const settings = {
 //           </React.Fragment>
 //       </WrapperGalery>
 // )
-const SimpleSlider = ({ data, settings }) => {
-
-  
-  
-  const [open, setOpen] = useState(true);
-  
-  
-  
-  
-  const clickHandler = () => {
-    setOpen(!open);
-  };
-  
+const SimpleSlider = ({ data, settings }) => {  
   
   return (
   
@@ -63,7 +51,7 @@ const SimpleSlider = ({ data, settings }) => {
       <div className={styles.root}>
         <div className={styles.titleContent}>
           <div className={styles.title}>Lavage de vitre acrobatique</div>
-          <button className={styles.closed} onClick={clickHandler}><FontAwesomeIcon icon={faTimes} className={styles.icon}/></button>
+          <button className={styles.closed} ><FontAwesomeIcon icon={faTimes} className={styles.icon}/></button>
             {open ? "" : setOpen(!open) == false}
         </div>
         <img src={imgTest} className={styles.selectedImg}></img>
