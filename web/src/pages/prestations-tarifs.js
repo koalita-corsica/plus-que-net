@@ -71,6 +71,71 @@ const PrestationPage = props => {
     setOpen(!open);
   };
 
+   //movenment controls
+   function rotateClick4() {
+    //Variable
+    const icons1 = document.querySelector('.iconContent1');
+    console.log(icons1);
+    const icons2 = document.querySelector('.iconContent2');
+    console.log(icons2);
+    const icons3 = document.querySelector('.iconContent3');
+    console.log(icons3);
+    const icons4 = document.querySelector('.iconContent4');
+    console.log(icons4);
+    icons4.setAttribute("style", 'grid-area: 1 / 2 / 2 / 3;');
+    icons3.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;');
+    icons1.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;');
+    icons2.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;');
+    return "ok";
+  };
+  function rotateClick3() {
+    //Variable
+    const icons1 = document.querySelector('.iconContent1');
+    console.log(icons1);
+    const icons2 = document.querySelector('.iconContent2');
+    console.log(icons2);
+    const icons3 = document.querySelector('.iconContent3');
+    console.log(icons3);
+    const icons4 = document.querySelector('.iconContent4');
+    console.log(icons4);
+    icons3.setAttribute("style", 'grid-area: 1 / 2 / 2 / 3;' );
+    icons2.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;' );
+    icons1.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;' );
+    icons4.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;' );
+    return "ok";
+  };
+  function rotateClick2() {
+    //Variable
+    const icons1 = document.querySelector('.iconContent1');
+    console.log(icons1);
+    const icons2 = document.querySelector('.iconContent2');
+    console.log(icons2);
+    const icons3 = document.querySelector('.iconContent3');
+    console.log(icons3);
+    const icons4 = document.querySelector('.iconContent4');
+    console.log(icons4);
+    icons2.setAttribute("style", 'grid-area: 1 / 2 / 2 / 3;' );
+    icons1.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;' );
+    icons3.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;' );
+    icons4.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;' );
+    return "ok";
+  };
+  function rotateClick1() {
+    //Variable
+    const icons1 = document.querySelector('.iconContent1');
+    console.log(icons1);
+    const icons2 = document.querySelector('.iconContent2');
+    console.log(icons2);
+    const icons3 = document.querySelector('.iconContent3');
+    console.log(icons3);
+    const icons4 = document.querySelector('.iconContent4');
+    console.log(icons4);
+    icons1.setAttribute("style", 'grid-area: 1 / 2 / 2 / 3;' );
+    icons2.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;' );
+    icons4.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;' );
+    icons3.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;' );
+    return "ok";
+  };
 
   const {data, errors} = props
   const page = data && data.services;
