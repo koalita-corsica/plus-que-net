@@ -11,8 +11,8 @@ import {isBrowser} from '../lib/utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Galerie from '../components/gallery'
 
-// import "slick-carousel/slick/slick.css"; 
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import styles from './galerie.module.css'
 import imgTest from '../images/test.jpg'
 const settings = {
@@ -23,6 +23,7 @@ const settings = {
 };
 
 
+<<<<<<< HEAD
 // const SimpleSlider = ({ data, settings }) => (
 //       <WrapperGalery>
 //             <React.Fragment>
@@ -80,6 +81,29 @@ const SimpleSlider = ({ data, settings }) => {
     </React.Fragment>
   )
 }
+=======
+
+const SimpleSlider = ({ data, settings }) => (
+
+      <Wrapper>
+            <React.Fragment>
+              {console.log(data.sanityServices.images)}
+            <div className={styles.backg}>
+              <h1> {data.sanityServices.title} </h1>
+              <Slider {...settings}>
+                {data.sanityServices.images.map((item =>
+                <ul>
+                  <li key={item.asset._id} className={styles.center}>
+                    <h3><img src={item.asset.url} width="676" height="348"/></h3>
+                  </li>
+                </ul>
+                  ))}
+              </Slider>
+            </div>
+          </React.Fragment>
+      </Wrapper>
+)
+>>>>>>> e3fe50358397c5b6687bfd999748ac200444a32a
 
 export default function mySimpleSlider(props) {
   

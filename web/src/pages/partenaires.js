@@ -69,14 +69,14 @@ const PartenairesPage = props => {
         <WrapperBlog>
           <div className={styles.blogContain}>
             <h2 className={styles.allArticle}>Tous les articles</h2>
-            <div className={styles.lastArticle}>
-              <img  src={imgTest}  className={styles.imgLastArticle}></img>
-              <div className={styles.lastArticleContain}>
-                <span className={styles.date}>23 juin 2020</span>
-                <h3 className={styles.articleTitle}>Last article title</h3>
-                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
-              </div>
-            </div>      
+              <div className={styles.lastArticle}>
+                  <img  src={imgTest}  className={styles.imgLastArticle}></img>
+                    <div className={styles.lastArticleContain}>
+                        <span className={styles.date}>23 juin 2020</span>
+                          <h3 className={styles.articleTitle}>Last article title</h3>
+                        <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+                    </div>
+              </div>      
             <div className={styles.Article}>
               <img src={imgTest} className={styles.imgArticle}></img>
               <div className={styles.articleContain}>

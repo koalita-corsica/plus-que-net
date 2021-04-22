@@ -21,6 +21,7 @@ import authorReference from './objects/authorReference'
 import thematiques from './documents/thematiques'
 import pageReference from './objects/pageReference'
 import formulaire from './documents/formulaire'
+import data from './objects/data'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -44,7 +45,8 @@ export default createSchema({
     bioPortableText,
     excerptPortableText,
     pageReference,
-    formulaire
+    formulaire,
+    data
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
