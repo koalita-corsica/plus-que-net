@@ -4,8 +4,8 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import { StaticQuery, graphql } from "gatsby"
 
 
-// import "slick-carousel/slick/slick.css"; 
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import styles from './galerie.module.css'
 import Wrapper from "./wrapper";
 
@@ -17,7 +17,9 @@ const settings = {
 };
 
 
+
 const SimpleSlider = ({ data, settings }) => (
+
       <Wrapper>
             <React.Fragment>
               {console.log(data.sanityServices.images)}
