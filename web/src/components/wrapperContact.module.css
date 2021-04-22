@@ -1,0 +1,15 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
+.root{
+
+    margin-top: 49.23339011925042vh;
+    
+    height: 55.877342419080065vh;  
+    display: flex;
+    flex-direction: column;
+    
+}

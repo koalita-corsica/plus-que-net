@@ -1,12 +1,31 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.galery {
+  left: 23.578125vw;
+  top: 22.3168654174vh;
+  width: 63.421875vw;
+  height: 76.4224872232vh;
+  position: absolute;
+  z-index: 1000;
+}
+
 .titleContain {
   margin-left: 43.81875vw;
   width: 39.0625vw;
   color: white;
   font-family: Roboto, Regular;
   border-bottom: solid 3px;
+}
+
+.button {
+  align-self: center;
+  border: #F26633;
+  border-radius: 20px;
+  background-color: #F26633;
+  color: white;
+  height: 3.066439523vh;
+  width: 9.140625vw;
 }
 
 .BlockContent {
@@ -103,19 +122,10 @@
 }
 .BlockContent .description {
   overflow: hidden;
-  height: 17.2555438226vh;
+  height: 26.2555438226vh;
   width: 27.3958333333vw;
   margin-left: 12.5692708333vw;
   margin-top: 2vh;
-}
-.BlockContent .button {
-  align-self: center;
-  border: #F26633;
-  border-radius: 20px;
-  background-color: #F26633;
-  color: white;
-  height: 3.066439523vh;
-  width: 9.140625vw;
 }
 
 /*# sourceMappingURL=tarif.module.css.map */

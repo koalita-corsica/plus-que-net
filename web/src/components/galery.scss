@@ -1,0 +1,58 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.root{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+    border-radius: 8px;
+    opacity: 1;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+.titleContent{
+    display: flex;
+    justify-content: space-evenly;
+    .title{
+        color: white;
+        font-family: Roboto, Regular;
+        font-size: 40px;
+    }
+    
+    button {
+        border: none;
+        background-color: transparent;
+        font-family: inherit;
+        padding: 0;
+        cursor: pointer;
+        color: red;
+        font-size: 25px;
+        margin-left: 8vw;
+    }
+}
+.selectedImg{
+    align-self: center;
+    width: 52.8125vw;
+    height: 49.28449744463373vh;
+}
+.sliderContent{
+    display: flex;
+    justify-content: space-evenly;
+    .imgSlider{
+        width: 5.9375vw;
+        height: 11.095400340715502vh;
+        margin: 1vw;
+    }
+    button {
+        border: none;
+        background-color: transparent;
+        font-family: inherit;
+        padding: 0;
+        cursor: pointer;
+        color: white;
+        font-size: 25px;
+    }
+}
