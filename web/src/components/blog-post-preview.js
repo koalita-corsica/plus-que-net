@@ -32,7 +32,7 @@ function BlogPostPreview (props) {
           <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
           {props._rawExcerpt && (
             <div className={styles.excerpt}>
-              <PortableText blocks={props._rawExcerpt} />
+              <PortableText blocks={props._rawExcerpt}  />
             </div>
           )}
         </div>
