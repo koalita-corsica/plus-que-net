@@ -5,7 +5,7 @@ import {
   filterOutDocsWithoutSlugs,
   filterOutDocsPublishedInTheFuture
 } from '../lib/helpers'
-import BlogPostPreviewList from '../components/blog-post-preview-list'
+import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
@@ -61,6 +61,8 @@ const BlogPage = props => {
   const {data, errors} = props
   const page = data && data.page;
   const blogPost = data && data.posts;
+  const items = blogPost.edges
+  const articles = items.node
   if (errors) {
     return (
       <Layout>
@@ -68,20 +70,21 @@ const BlogPage = props => {
       </Layout>
     )
   }
-  
+
   
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
 
   return (
     <Layout>
       <Container>
-        <div className={styles.titleContain}>
+        {/* <div className={styles.titleContain}>
           <h1 className={styles.title}>{page.title}</h1>
         </div>
         <WrapperBlog>
-            <React.Fragment>
               <div className={styles.blogContain}>
             <h2 className={styles.allArticle}>Tous les articles</h2>
+
+              <React.Fragment>
               <div className={styles.lastArticle}>
                   <img  src={imgTest}  className={styles.imgLastArticle}></img>
                     <div className={styles.lastArticleContain}>
@@ -90,6 +93,7 @@ const BlogPage = props => {
                         <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
                     </div>
               </div>      
+
             <div className={styles.Article}>
               <img src={imgTest} className={styles.imgArticle}></img>
               <div className={styles.articleContain}>
@@ -129,21 +133,16 @@ const BlogPage = props => {
                 <h3 className={styles.articleTitle}>Article 1 titre</h3>
                 <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
               </div>
-            </div>
-            <div className={styles.Article}>
-              <img src={imgTest} className={styles.imgArticle}></img>
-              <div className={styles.articleContain}>
-                <span className={styles.date}>23 mai 2020</span>
-                <h3 className={styles.articleTitle}>Article 1 titre</h3>
-                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
-              </div>
-            </div>      
+            </div>  
+            </React.Fragment>  
           </div>      
-          <aside className={styles.aside}>
+        </WrapperBlog> */}
+        <WrapperBlog>
+        {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
+        <aside className={styles.aside}>
             <h3 className={styles.categorie} >Thématique</h3>
             <img src="" width="246" height="163"></img>
           </aside>
-          </React.Fragment>
         </WrapperBlog>
       </Container>
     </Layout>
