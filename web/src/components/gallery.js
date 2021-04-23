@@ -49,21 +49,31 @@ const SimpleSlider = ({ data, settings }) => {
   
     <React.Fragment>
       <div className={styles.root}>
+      <Slider {...settings}>
         <div className={styles.titleContent}>
-          <div className={styles.title}>Lavage de vitre acrobatique</div>
+          <div className={styles.title}> {data.title} </div>
           <button className={styles.closed} ><FontAwesomeIcon icon={faTimes} className={styles.icon}/></button>
             {open ? "" : setOpen(!open) == false}
         </div>
-        <img src={imgTest} className={styles.selectedImg}></img>
-        <div className={styles.sliderContent}>
-          <button className={styles.arrowLeft}><FontAwesomeIcon icon={faChevronLeft} className={styles.icon}/></button>
-          <img src={imgTest} className={styles.imgSlider}></img>
-          <img src={imgTest} className={styles.imgSlider}></img>
-          <img src={imgTest} className={styles.imgSlider}></img>
-          <img src={imgTest} className={styles.imgSlider}></img>
-          <img src={imgTest} className={styles.imgSlider}></img>
-          <button className={styles.arrowRight}><FontAwesomeIcon icon={faChevronRight} className={styles.icon}/></button>
+        <div>
+          <img src={imgTest} className={styles.selectedImg}></img>
         </div>
+          <div>
+            <img src={imgTest} className={styles.imgSlider}></img>
+          </div>
+          <div>
+            <img src={imgTest} className={styles.imgSlider}></img>
+          </div>
+          <div>
+            <img src={imgTest} className={styles.imgSlider}></img>
+          </div>
+          <div>
+            <img src={imgTest} className={styles.imgSlider}></img>
+          </div>
+          <div>
+            <img src={imgTest} className={styles.imgSlider}></img>
+          </div>
+        </Slider>
       </div>
     </React.Fragment>
   )
@@ -75,7 +85,7 @@ export default function mySimpleSlider(props) {
     <StaticQuery
     query={graphql`
     query ServiceQuery {
-      sanityServices(slug: {current: {eq: "service1"}}) {
+      sanityServices(slug: {current: {}}) {
         title
         images {
           _key

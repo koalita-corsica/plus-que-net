@@ -16,6 +16,7 @@
 
 .grid {
   margin: 0;
+  background-color: chocolate;
   padding: 0;
   list-style: none;
   display: grid;
