@@ -65,15 +65,13 @@
   grid-template-rows: repeat(2, 55px);
   transform-origin: center;
   transform: rotate(45deg);
-  row-gap: 1.5195741056vh;
-  column-gap: 0.75375vw;
+  gap: 5px;
 }
 .BlockContent .iconeMenu div {
   background-color: #F26633;
   color: white;
   border-radius: 8px;
-  height: 8.5178875639vh;
-  width: 3.90625vw;
+  
   display: flex;
   justify-content: center;
   align-items: center;
