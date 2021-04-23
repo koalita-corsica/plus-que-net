@@ -140,7 +140,7 @@ const BlogPage = props => {
         <WrapperBlog>
         {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
         <aside className={styles.aside}>
-            <h3 className={styles.categorie} >Thématique</h3>
+            <h3 className={styles.categorie} >Thématique </h3>
             <img src="" width="246" height="163"></img>
           </aside>
         </WrapperBlog>
