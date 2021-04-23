@@ -3,7 +3,7 @@
   "name": "sanity-gatsby-blog",
   "version": "1.0.17",
   "scripts": {
-    "build": "lerna run build --parallel",
+    "build": "CI = lerna run build --parallel",
     "dev": "lerna run dev --parallel",
     "format": "lerna run format",
     "build-studio": "lerna bootstrap && cd studio && npm run build",
