@@ -80,7 +80,7 @@ const BlogPage = props => {
         <div className={styles.titleContain}>
           <h1 className={styles.title}>{page.title}</h1>
         </div>
-        <WrapperBlog>
+        {/* <WrapperBlog>
           <div className={styles.blogContain}>
             <h2 className={styles.allArticle}>Tous les articles</h2>
             <div className={styles.lastArticle}>
@@ -133,19 +133,12 @@ const BlogPage = props => {
             </div>  
  
           </div>      
-          <aside className={styles.aside}>
-            <h2 className={styles.categorieTitle} >Thématique</h2>
-            <div className={styles.catWrapper}>
-              <div className={styles.categorie}>
-                <h2>Thèmes</h2>
-              </div>
-              <div className={styles.categorie}>
-                <h2>Thèmes</h2>
-              </div>
-              <div className={styles.categorie}>
-                <h2>Thèmes</h2>
-              </div>
-            </div>
+        </WrapperBlog> */} 
+        <WrapperBlog>
+        {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
+        <aside className={styles.aside}>
+            <h3 className={styles.categorie} >Thématique</h3>
+            <img src="" width="246" height="163"></img>
           </aside>
         </WrapperBlog>
       </Container>
