@@ -58,40 +58,43 @@
 
 .aside {
   display: grid;
-  grid-template-rows: 6.4735945486vh 83.3049403748vh;
+  grid-template-rows: 6.4735945486vh 1fr;
   font-family: Roboto, Regular;
   color: white;
   width: 19.21875vw;
-  top: 46.22vh;
-  left: 72.69vw;
 }
 .aside .catWrapper {
-  display: flex;
-  justify-content: space-around;
+  
+  display: flex; 
   flex-direction: column;
-  align-items: center;
+  width: 19.21875vw;
   gap: 4.7700170358vh;
   overflow: hidden;
 }
 .aside .catWrapper .categorie {
-  background: url("../images/test.jpg");
-  background-size: 19.21875vw 27.7683134583vh;
   width: 19.21875vw;
-  height: 27.7683134583vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  max-height: 27.7683134583vh;
 }
 .aside .catWrapper .categorie h2 {
   width: 19.21875vw;
+  height: 9.562180579216355vh;
+  position: relative;
+  top: -17.206132879045995vh;
+  padding-top: 1vh;
   text-align: center;
   background: transparent;
-  opacity: 0.8;
+  opacity: 0.9;
   backdrop-filter: blur(30px);
 }
-.aside .catWrapper .categorieTitle {
+.aside .categorieTitle {
+  text-align: center;
   font-size: 20px;
   height: 6.4735945486vh;
+  align-self: center;
+}
+.aside .catWrapper .categorie .imgTheme{
+  width: 19.21875vw;
+  height: 27.7683134583vh;
 }
 
 /*# sourceMappingURL=blog-post.module.css.map */

@@ -35,12 +35,15 @@ function BlogPost (props) {
           <h3 className={styles.categorieTitle} >Thématique</h3>
           <div className={styles.catWrapper}>
             <div className={styles.categorie}>
+              <img src={imgTest} className={styles.imgTheme}></img>
               <h2>Thèmes</h2>
             </div>
             <div className={styles.categorie}>
+              <img src={imgTest} className={styles.imgTheme}></img>
               <h2>Thèmes</h2>
             </div>
             <div className={styles.categorie}>
+              <img src={imgTest} className={styles.imgTheme}></img>
               <h2>Thèmes</h2>
             </div>
           </div>
