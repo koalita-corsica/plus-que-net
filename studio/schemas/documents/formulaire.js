@@ -1,28 +1,22 @@
 export default {
-  name: 'submission.form',
-  type: 'document',
-  title: 'Form submission',
-  readOnly: true,
+  name: "contact",
+  title: "Contact submissions",
+  type: "document",
   fields: [
     {
-      name: 'title',
-      type: 'string',
-      title: 'Title'
+      name: "name",
+      title: "Name",
+      type: "string",
     },
     {
-      name: 'number',
-      type: 'number',
-      title: 'Number'
+      name: "email",
+      title: "Email",
+      type: "string",
     },
     {
-      name: 'created_at',
-      type: 'datetime',
-      title: 'Created at'
+      name: "message",
+      title: "Message",
+      type: "text",
     },
-    {
-      name: 'data',
-      title: 'Data',
-      type: 'data'
-    }
-  ]
+  ],
 }
