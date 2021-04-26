@@ -17,7 +17,7 @@ function BlogPostPreviewGrid (props) {
                 <BlogLastArticle {...node} />
               </li>
               <li key={node.id}>
-                <BlogPostPreview {...node} />
+                <BlogPostPreview {...node} /> 
               </li>
             </React.Fragment>
           ))}
