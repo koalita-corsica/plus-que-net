@@ -10,7 +10,6 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import Block from '@sanity/block-content-to-react'
 import Wrapper from '../components/wrapper'
 import styles from '../pages/tarif.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,6 +19,7 @@ import { faShower } from '@fortawesome/free-solid-svg-icons'
 import { faDungeon } from '@fortawesome/free-solid-svg-icons'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import Galerie from '../components/gallery'
+import Block from '@sanity/block-content-to-react'
 
 import {isBrowser} from '../lib/utils'
 
@@ -49,8 +49,9 @@ export const query = graphql`
       }
     }
   }
-  service: sanityServices(slug: {current: {eq: "service1"}}) {
+  service: sanityServices(slug: { current: { ne: null } }) {
     title
+    _rawBody
      images{
        asset {
            url
@@ -72,70 +73,51 @@ const PrestationPage = props => {
     setOpen(!open);
   };
 
+
    //movenment controls
    function rotateClick4() {
     //Variable
     const icons1 = document.querySelector('.iconContent1');
-    console.log(icons1);
     const icons2 = document.querySelector('.iconContent2');
-    console.log(icons2);
     const icons3 = document.querySelector('.iconContent3');
-    console.log(icons3);
     const icons4 = document.querySelector('.iconContent4');
-    console.log(icons4);
     icons4.setAttribute("style", 'grid-area: 1 / 2 / 2 / 3;');
     icons3.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;');
     icons1.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;');
     icons2.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;');
-    return "ok";
   };
   function rotateClick3() {
     //Variable
     const icons1 = document.querySelector('.iconContent1');
-    console.log(icons1);
     const icons2 = document.querySelector('.iconContent2');
-    console.log(icons2);
     const icons3 = document.querySelector('.iconContent3');
-    console.log(icons3);
     const icons4 = document.querySelector('.iconContent4');
-    console.log(icons4);
     icons3.setAttribute("style", 'grid-area: 1 / 2 / 2 / 3;' );
     icons2.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;' );
     icons1.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;' );
     icons4.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;' );
-    return "ok";
   };
   function rotateClick2() {
     //Variable
     const icons1 = document.querySelector('.iconContent1');
-    console.log(icons1);
     const icons2 = document.querySelector('.iconContent2');
-    console.log(icons2);
     const icons3 = document.querySelector('.iconContent3');
-    console.log(icons3);
     const icons4 = document.querySelector('.iconContent4');
-    console.log(icons4);
     icons2.setAttribute("style", 'grid-area: 1 / 2 / 2 / 3;' );
     icons1.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;' );
     icons3.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;' );
     icons4.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;' );
-    return "ok";
   };
   function rotateClick1() {
     //Variable
     const icons1 = document.querySelector('.iconContent1');
-    console.log(icons1);
     const icons2 = document.querySelector('.iconContent2');
-    console.log(icons2);
     const icons3 = document.querySelector('.iconContent3');
-    console.log(icons3);
     const icons4 = document.querySelector('.iconContent4');
-    console.log(icons4);
     icons1.setAttribute("style", 'grid-area: 1 / 2 / 2 / 3;' );
     icons2.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;' );
     icons4.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;' );
     icons3.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;' );
-    return "ok";
   };
 
   const {data, errors} = props
@@ -175,10 +157,10 @@ const PrestationPage = props => {
                 </div>
               </div>
               <div className={styles.titleMenu}>
-                <h2 className={styles.title}>Lavage de vitres simples</h2>
+                <h2 className={styles.title}> {service.title} </h2>
               </div>
             </div>
-            <div className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <div className={styles.description}> <Block blocks={service._rawBody} /> </div>
           </div>
         </Wrapper>
         <button className={styles.button} onClick={clickHandler}>Voir la galerie</button>
