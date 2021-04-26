@@ -76,7 +76,7 @@ const ContactPage = props => {
               </div>
             </div>
             <div class="field">
-              <label class="label">Message:
+              <label class="label">Message :
                 <textarea class="textarea" name="message"></textarea>
               </label>
             </div>
