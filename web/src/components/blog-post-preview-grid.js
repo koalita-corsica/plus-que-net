@@ -1,6 +1,7 @@
 import {Link} from 'gatsby'
 import React from 'react'
 import BlogPostPreview from './blog-post-preview'
+import BlogLastArticle from './blog-last-article'
 
 import styles from './blog-post-preview-grid.module.css'
 
@@ -11,9 +12,14 @@ function BlogPostPreviewGrid (props) {
       <ul className={styles.grid}>
         {props.nodes &&
           props.nodes.map(node => (
-            <li key={node.id}>
-              <BlogPostPreview {...node} />
-            </li>
+            <React.Fragment>
+              <li key={node.id}>
+                <BlogLastArticle {...node} />
+              </li>
+              <li key={node.id}>
+                <BlogPostPreview {...node} />
+              </li>
+            </React.Fragment>
           ))}
       </ul>
       {props.browseMoreHref && (
