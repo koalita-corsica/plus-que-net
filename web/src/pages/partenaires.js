@@ -12,7 +12,7 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Wrapper from '../components/wrapper'
 import WrapperBlog from '../components/wrapperBlog'
-import styles from '../pages/blog.module.css'
+import styles from '../pages/partenaire.module.css'
 import imgTest from '../images/test.jpg'
 
 import { isBrowser } from '../lib/utils'; 

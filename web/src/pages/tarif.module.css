@@ -15,7 +15,15 @@
   width: 39.0625vw;
   color: white;
   font-family: Roboto, Regular;
-  border-bottom: solid 3px;
+}
+.titleContain h1:after {
+  content: "";
+  display: block;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: white;
+  background-image: linear-gradient(to right, white 20%, #F26633 20%, #F26633 40%, white 40%);
 }
 
 .button {
@@ -65,13 +73,15 @@
   grid-template-rows: repeat(2, 55px);
   transform-origin: center;
   transform: rotate(45deg);
-  gap: 5px;
+  row-gap: 1.5195741056vh;
+  column-gap: 0.75375vw;
 }
 .BlockContent .iconeMenu div {
   background-color: #F26633;
   color: white;
   border-radius: 8px;
-  
+  height: 8.5178875639vh;
+  width: 3.90625vw;
   display: flex;
   justify-content: center;
   align-items: center;

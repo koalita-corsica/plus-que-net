@@ -13,7 +13,7 @@ function BlogPostPreviewGrid (props) {
         {props.nodes &&
           props.nodes.map(node => (
             <React.Fragment>
-              <li key={node.id}>
+              <li key={node.id} className={styles.lastArticle}>
                 <BlogLastArticle {...node} />
               </li>
               <li key={node.id}>

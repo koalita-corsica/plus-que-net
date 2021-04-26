@@ -1,5 +1,6 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
+
 .root {
   margin: 2em 0 4em;
 }
@@ -11,27 +12,41 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 2rem 0;
+  
 }
 
+// .grid {
+//   font-size: 14px;
+//   background-color: red;
+//   display:grid;
+//   grid-template-columns: repeat(2, 22.578125vw);
+//   gap: 1.875vw;
+//   font-family: Roboto, Regular;    
+//   color: white;
+//   width: 46.875vw;
+//   list-style-type: none;
+
+//   .lastArticle{
+//     grid-column: 1/3;
+//   }
+// }
+
+
 .browseMoreNav {
-  composes: small from "./typography.module.css";
+  composes: small from './typography.module.css';
   margin-top: 1rem;
   text-align: right;
-}
-@nest & a {
-  .browseMoreNav {
+
+  @nest & a {
     display: inline-block;
     padding: 0.5rem 0;
     color: inherit;
     text-decoration: none;
-  }
-  @media (hover: hover) {
-    @nest &:hover {
-      .browseMoreNav {
+
+    @media (hover: hover) {
+      @nest &:hover {
         color: var(--color-accent);
       }
     }
   }
 }
-
-/*# sourceMappingURL=blog-post-preview-grid.module.css.map */

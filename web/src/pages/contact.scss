@@ -8,7 +8,16 @@
     width: 39.0625vw;
     color: white;
     font-family: Roboto, Regular;
-    border-bottom: solid 3px;
+    h1:after{
+        content: "";
+        display: block;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background-color: white;
+        background-image: linear-gradient(to left, #F26633 20%, white 20%);
+        
+      }
 }
 
 .contactWrapper{

@@ -70,14 +70,3 @@
   color: var(--color-gray);
 }
 
-.blogContain {
-  font-size: 14px;
-  display: grid;
-  grid-template-columns: repeat(2, 22.578125vw);
-  gap: 1.875vw;
-  font-family: Roboto, Regular;
-  color: white;
-  width: 46.875vw;
-  top: 46.22vh;
-  left: 27.578125vw;
-}

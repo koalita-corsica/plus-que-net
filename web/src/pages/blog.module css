@@ -4,18 +4,9 @@
 .titleContain {
   text-align: left;
   margin-left: 27.65625vw;
-  width: 39.0625vw;
-  color: white;
+  width: 24.67vw;
+  color: red;
   font-family: Roboto, Regular;
-}
-.titleContain h1:after {
-  content: "";
-  display: block;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  background-color: white;
-  background-image: linear-gradient(to right, white 40%, #F26633 40%, #F26633 60%, white 60%);
 }
 
 .aside {
@@ -56,4 +47,4 @@
   height: 6.4735945486vh;
 }
 
-/*# sourceMappingURL=blog.module.css.map */
+/*# sourceMappingURL=blog.module%20css.map */
