@@ -14,6 +14,9 @@ export const query = graphql`
       publishedAt
       mainImage {
         alt
+        asset {
+          _id
+        }
       }
       title
       slug {

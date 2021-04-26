@@ -19,16 +19,43 @@ function BlogPost (props) {
       <WrapperBlog>
         <div className={styles.blogContain}>
           <div className={styles.pathContain}>
-            <div className={styles.path}>Tous les Articles {'>'}  </div>
-            <div className={styles.articleTitle}> {props.title}</div>
+            <div className={styles.path}>Tous les Articles {'> '}  </div>
+            <div className={styles.articleTitle}> {title}</div>
           </div>
-          <img src={imgTest} className={styles.imgArticle}></img>
-          <p className={styles.publish}>Publié 23 juin 2020</p>
-          <h3 className={styles.subtitle}>LOREM IPSUM DOLOR SIT AMET, CONSETETUR</h3>
+          {mainImage && mainImage.asset && (
+          <img
+            src={imageUrlFor(buildImageObj(mainImage))
+              .fit('crop')
+              .auto('format')
+              .url()}
+            alt={mainImage.alt}
+            className={styles.imgArticle}
+          />
+      )}
+       {publishedAt && (
+              <div className={styles.publish}>
+                {differenceInDays(new Date(publishedAt), new Date()) > 3
+                  ? distanceInWords(new Date(publishedAt), new Date())
+                  : format(new Date(publishedAt), 'MMMM Do, YYYY')}
+              </div>
+            )}
+          <h3 className={styles.subtitle}> {title} </h3>
           <div className={styles.paraWrapper}>
-            <p className={styles.para}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <img src={imgTest} className={styles.imgPara}></img>
-            <p className={styles.para}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          {props._rawExcerpt && (
+            <div className={styles.excerpt}>
+            {mainImage && mainImage.asset && (
+              <img
+                src={imageUrlFor(buildImageObj(mainImage))
+                  .fit('crop')
+                  .auto('format')
+                  .url()}
+                alt={mainImage.alt}
+                className={styles.imgPara}
+              />
+            )}
+               {_rawBody && <PortableText blocks={_rawBody} />}
+            </div>
+          )}
           </div>
         </div>  
         <aside className={styles.aside}>
