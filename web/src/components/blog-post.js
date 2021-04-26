@@ -9,6 +9,10 @@ import imgTest from '../images/test.jpg'
 import styles from './blog-post.module.css'
 import WrapperBlog from './wrapperBlog'
 import Layout from '../containers/layout'
+import { Link } from 'gatsby'
+
+
+
 function BlogPost (props) {
   const {_rawBody, authors, categories, title, mainImage, publishedAt} = props
   return (

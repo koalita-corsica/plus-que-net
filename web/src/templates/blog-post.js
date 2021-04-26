@@ -9,7 +9,7 @@ import {toPlainText} from '../lib/helpers'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
-    post: sanityPost(id: {eq: $id}) {
+    post: sanityPost(id: {eq: $id} ) {
       id
       publishedAt
       mainImage {
