@@ -54,7 +54,8 @@ const ContactPage = props => {
 
   return (
     <Layout>
-         <form name="contact" method="POST" data-netlify="true">
+         <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
+           <input type="hidden" name="form-name" value="contact" />
             <div class="field">
               <label class="label">Your Name:
                 <input class="input" type="text" name="name" />
