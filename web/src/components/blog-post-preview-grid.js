@@ -3,7 +3,6 @@ import React from 'react'
 import BlogPostPreview from './blog-post-preview'
 import BlogLastArticle from './blog-last-article'
 import {cn, getBlogUrl} from '../lib/helpers'
-import Try from '../components/try'
 
 import styles from './blog-post-preview-grid.module.css'
 

@@ -1,6 +1,7 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 .titleContain {
   text-align: left;
   margin-left: 27.65625vw;
