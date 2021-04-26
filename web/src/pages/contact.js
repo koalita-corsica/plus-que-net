@@ -89,7 +89,6 @@ const handlePost = (formData, event) => {
       method="POST"
       action="/success/"
       data-netlify="true"
-      netlify-honeypot="got-ya"
     >
       <input type="hidden" name="form-name" value="contact-form" />
       <input
@@ -108,10 +107,7 @@ const handlePost = (formData, event) => {
         {errors.email && <span>Please format email correctly</span>}
         <input
           name="email"
-          ref={register({
-            required: true,
-            pattern: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
-          })}
+          ref={register()}
         />
       </label>
       <label htmlFor="message">
