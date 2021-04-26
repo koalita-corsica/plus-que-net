@@ -12,6 +12,7 @@ function BlogLastArticle (props) {
   return (
       <div className={styles.blogContain}>
         <div className={styles.lastArticle}> 
+        {console.log(props)}
           {props.mainImage && props.mainImage.asset && (
             <img
               src={imageUrlFor(buildImageObj(props.mainImage))
