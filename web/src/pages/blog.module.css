@@ -4,18 +4,47 @@
 .titleContain {
   text-align: left;
   margin-left: 27.65625vw;
-  width: 39.0625vw;
+  width: 24.67vw;
   color: white;
   font-family: Roboto, Regular;
+  border-bottom: solid white 2px;
 }
-.titleContain h1:after {
-  content: "";
-  display: block;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  background-color: white;
-  background-image: linear-gradient(to right, white 40%, #F26633 40%, #F26633 60%, white 60%);
+
+.blogContain {
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 22.578125vw);
+  gap: 1.875vw;
+  font-family: Roboto, Regular;
+  color: white;
+  width: 46.875vw;
+}
+.blogContain .allArticle {
+  grid-column: 1/3;
+  align-items: center;
+}
+.blogContain .lastArticle {
+  display: flex;
+  gap: 1.796875vw;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  width: 45.078125vw;
+}
+.blogContain .Article {
+  display: flex;
+  flex-direction: column;
+  gap: -0.5104166667vw;
+  width: 22.578125vw;
+  height: 42.0274551214vh;
+  overflow: hidden;
+}
+
+.date {
+  font-size: 9px;
+}
+
+.articleTitle {
+  font-size: 17px;
 }
 
 .aside {
@@ -25,7 +54,7 @@
   color: white;
   width: 19.21875vw;
   text-align: center;
-  gap: 3.7700170358vh;
+  gap: 4.7700170358vh;
 }
 .aside .catWrapper {
   display: flex;

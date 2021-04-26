@@ -105,10 +105,16 @@ const BlogPage = props => {
           <h1 className={styles.title}>{page.title}</h1>
         </div>
         <WrapperBlog>
-        <h2 className={styles.allArticle}>Tous les articles</h2>
-          {lastNodes && lastNodes.length > 0 && <BlogPostPreviewGrid nodes={lastNodes}/>}
-          {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
-        <aside className={styles.aside}>
+          <div className={styles.blogContain}>
+            <h2 className={styles.allArticle}>Tous les articles</h2>
+            <div className={styles.lastArticle}>
+              {lastNodes && lastNodes.length > 0 && <BlogLastArticle nodes={lastNodes}/>}
+            </div>
+            <div className={styles.Article}>
+              {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}  
+            </div>
+          </div>
+          <aside className={styles.aside}>
             <h3 className={styles.categorie} >Thématique</h3>
             <img src="" width="246" height="163"></img>
           </aside>

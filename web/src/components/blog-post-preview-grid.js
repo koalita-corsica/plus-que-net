@@ -15,9 +15,9 @@ function BlogPostPreviewGrid (props) {
         {props.nodes &&
           props.nodes.map(node => (
             <React.Fragment>
-              <li key={node.id} className={styles.lastArticle}>
+              <li key={node.id} className={styles.article}>
                 <Link to={getBlogUrl(node.publishedAt, node.slug.current)}>
-                  <BlogLastArticle {...node} />
+                  <BlogPostPreview {...node} />
                 </Link>
               </li>
             </React.Fragment>
