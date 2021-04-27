@@ -14,6 +14,8 @@ import Wrapper from '../components/wrapper'
 import WrapperBlog from '../components/wrapperBlog'
 import styles from '../pages/partenaire.module.css'
 import imgTest from '../images/test.jpg'
+import BlogLastArticle from '../components/blog-last-article'
+import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 
 import { isBrowser } from '../lib/utils'; 
 
@@ -24,18 +26,42 @@ export const query = graphql`
     id
     title
   }
-  posts: allSanityPost(filter: {thematiques: {title: {eq: "theme1"}}}) {
-    nodes {
-      title
-      authors {
-        author {
-          name
+  partenaires: allSanityPartenaire(sort: {fields: [publishedAt], order: DESC}, filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}, skip: 1) {
+    edges {
+      node {
+        id
+        publishedAt
+        mainImage {
+          asset {
+            _id
+            url
+          }
+          alt
+        }
+        title
+        _rawExcerpt
+        slug {
+          current
         }
       }
-      publishedAt
-      mainImage {
-        asset {
-          url
+    }
+  }
+  lastPartenaire: allSanityPartenaire(sort: {fields: publishedAt, order: DESC}, filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}, limit: 1,) {
+    edges {
+      node {
+        id
+        publishedAt
+        mainImage {
+          asset {
+            _id
+            url
+          }
+          alt
+        }
+        title
+        _rawExcerpt
+        slug {
+          current
         }
       }
     }
@@ -49,7 +75,7 @@ const PartenairesPage = props => {
 }
   const {data, errors} = props
   const page = data && data.page;
-  const posts = data && data.posts;
+  const posts = data && data.partenaires;
   if (errors) {
     return (
       <Layout>
@@ -58,77 +84,27 @@ const PartenairesPage = props => {
     )
   }
 
-  const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
+  const postNodes = data && data.partenaires && mapEdgesToNodes(data.partenaires)
+  const lastNodes = data && data.lastPartenaire && mapEdgesToNodes(data.lastPartenaire)
 
   return (
     <Layout>
-      <Container>
-        <div className={styles.titleContain}>
-          <h1 className={styles.title}>{page.title}</h1>
+    <Container>
+      <div className={styles.titleContain}>
+        <h1 className={styles.title}>{page.title}</h1>
+      </div>
+      <WrapperBlog>
+        <div className={styles.blogContain}>
+          <h2 className={styles.allArticle}>Tous les articles</h2>
+          <div className={styles.lastArticle}>
+            <BlogLastArticle nodes={lastNodes} />
+          </div>
+            {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}  
+
         </div>
-        <WrapperBlog>
-          <div className={styles.blogContain}>
-            <h2 className={styles.allArticle}>Tous les articles</h2>
-              <div className={styles.lastArticle}>
-                  <img  src={imgTest}  className={styles.imgLastArticle}></img>
-                    <div className={styles.lastArticleContain}>
-                        <span className={styles.date}>23 juin 2020</span>
-                          <h3 className={styles.articleTitle}>Last article title</h3>
-                        <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
-                    </div>
-              </div>      
-            <div className={styles.Article}>
-              <img src={imgTest} className={styles.imgArticle}></img>
-              <div className={styles.articleContain}>
-                <span className={styles.date}>23 mai 2020</span>
-                <h3 className={styles.articleTitle}>Article 1 titre</h3>
-                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
-              </div>
-            </div>
-            <div className={styles.Article}>
-              <img src={imgTest} className={styles.imgArticle}></img>
-              <div className={styles.articleContain}>
-                <span className={styles.date}>23 mai 2020</span>
-                <h3 className={styles.articleTitle}>Article 1 titre</h3>
-                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
-              </div>
-            </div>
-            <div className={styles.Article}>
-              <img src={imgTest} className={styles.imgArticle}></img>
-              <div className={styles.articleContain}>
-                <span className={styles.date}>23 mai 2020</span>
-                <h3 className={styles.articleTitle}>Article 1 titre</h3>
-                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
-              </div>
-            </div>
-            <div className={styles.Article}>
-              <img src={imgTest} className={styles.imgArticle}></img>
-              <div className={styles.articleContain}>
-                <span className={styles.date}>23 mai 2020</span>
-                <h3 className={styles.articleTitle}>Article 1 titre</h3>
-                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
-              </div>
-            </div>
-            <div className={styles.Article}>
-              <img src={imgTest} className={styles.imgArticle}></img>
-              <div className={styles.articleContain}>
-                <span className={styles.date}>23 mai 2020</span>
-                <h3 className={styles.articleTitle}>Article 1 titre</h3>
-                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
-              </div>
-            </div>
-            <div className={styles.Article}>
-              <img src={imgTest} className={styles.imgArticle}></img>
-              <div className={styles.articleContain}>
-                <span className={styles.date}>23 mai 2020</span>
-                <h3 className={styles.articleTitle}>Article 1 titre</h3>
-                <span className={styles.description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
-              </div>
-            </div>      
-          </div>      
-        </WrapperBlog>
-      </Container>
-    </Layout>
+      </WrapperBlog>
+    </Container>
+  </Layout>
   )
 }
 

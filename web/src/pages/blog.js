@@ -19,7 +19,6 @@ import Block from '@sanity/block-content-to-react'
 import {isBrowser} from '../lib/utils'
 import BlogLastArticle from '../components/blog-last-article'
 import BlogPostPreview from '../components/blog-post-preview'
-import Try from '../components/try'
 
 export const query = graphql`
   query BlogPageQuery {
@@ -109,7 +108,7 @@ const BlogPage = props => {
           <div className={styles.blogContain}>
             <h2 className={styles.allArticle}>Tous les articles</h2>
             <div className={styles.lastArticle}>
-              {JSON.stringify(lastNodes)}
+              <BlogLastArticle nodes={lastNodes} />
             </div>
               {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}  
 
