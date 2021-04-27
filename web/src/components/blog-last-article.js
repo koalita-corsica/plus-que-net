@@ -25,7 +25,7 @@ function BlogLastArticle (props) {
                 <div className={styles.lastArticleContain}>
                   <span className={styles.date}> {format(node.publishedAt, 'MMMM Do, YYYY')} </span>
                     <h3 className={styles.articleTitle}> {node.title} </h3>
-                  <span className={styles.description}> <PortableText block={node._rawExcerpt}/> </span>
+                  <span className={styles.description}> <PortableText blocks={node._rawExcerpt} /> </span>
                 </div>
               </Link>
             </div>
