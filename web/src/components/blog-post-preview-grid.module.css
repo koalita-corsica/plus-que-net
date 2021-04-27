@@ -11,7 +11,6 @@
 
 .grid {
   font-size: 14px;
-  background-color: red;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.875vw;
@@ -21,8 +20,13 @@
   list-style-type: none;
 }
 .grid .article {
+  margin-left: -2.675vw;
   width: 22.578125vw;
   height: 59.7955706985vh;
+}
+.grid .article a {
+  text-decoration: none;
+  color: white;
 }
 
 .browseMoreNav {

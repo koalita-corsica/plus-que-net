@@ -17,7 +17,6 @@
 
 .grid {
   font-size: 14px;
-  background-color: red;
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.875vw;
@@ -27,8 +26,13 @@
   list-style-type: none;
 
   .article{
+    margin-left: -2.675vw;
     width: 22.578125vw;
     height: 59.79557069846678vh;
+    a{
+      text-decoration: none;
+      color: white;
+    }
   }
 
   

@@ -7,10 +7,19 @@
 .titleContain {
     text-align: left;
     margin-left:  27.65625vw;
-    width: 24.67vw;
+    width: 47.03125vw;
     color: white;
     font-family: Roboto, Regular;
-    border-bottom: solid white 2px;
+    h1:after{
+        content: "";
+        display: block;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background-color: white;
+        background-image: linear-gradient(to right, white 40%, #F26633 40%, #F26633 60%, white 60%);
+        
+      }
     
 }
 .blogContain{
