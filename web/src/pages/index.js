@@ -13,6 +13,8 @@ import Layout from '../containers/layout'
 import Wrapper from '../components/wrapper'
 import styles from '../pages/index.module.css'
 import Block from '@sanity/block-content-to-react'
+import urlBuilder from "@sanity/image-url";
+import PortableText from '../components/portableText'
 
 import { isBrowser } from '../lib/utils'; 
 
@@ -41,6 +43,26 @@ const IndexPage = props => {
   const {data, errors} = props
   const page = data && data.page;
 
+  const urlFor = source =>
+  urlBuilder({ projectId: "og13jxpg", dataset: "production" }).image(source);
+
+const serializer = {
+  types: {
+    mainImage: props => (
+      <figure>
+        <img
+          src={urlFor(props.node.asset)
+            .width(600)
+            .url()}
+          alt={props.node.alt}
+        />
+
+        <figcaption>{props.node.caption}</figcaption>
+      </figure>
+    )
+  }
+}
+
   if (errors) {
     return (
       <Layout>
@@ -58,8 +80,8 @@ const IndexPage = props => {
         <Wrapper>
           <div className={styles.BlockContent}>
             <div className={styles.bloc1}>
-              <img className={styles.imgIndex}src={page.image.asset.url} alt="img" ></img>
-              <Block blocks={page._rawBody} />
+            <PortableText serializers={serializer} blocks={page._rawBody} />
+            <img src={page.image.asset.url} alt="img" width="200" height="250"></img>
             </div>
           </div>
         </Wrapper>
