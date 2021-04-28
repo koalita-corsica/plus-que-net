@@ -20,8 +20,16 @@ import { faDungeon } from '@fortawesome/free-solid-svg-icons'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import Galerie from '../components/gallery'
 import Block from '@sanity/block-content-to-react'
+import Modal from 'react-modal'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import imgTest from '../images/test.jpg'
+import Service from '../components/services'
+import {Link} from 'gatsby'
 
 import {isBrowser} from '../lib/utils'
+
 
 
 
@@ -32,7 +40,7 @@ export const query = graphql`
       id
       _rawBody
       title
-      mainImage {
+      icon {
         asset {
           url
         }
@@ -49,11 +57,54 @@ export const query = graphql`
       }
     }
   }
-  service: sanityServices(slug: { current: { ne: null } }) {
+  service1: sanityServices(slug: { current: { eq: "service1" } }) {
+    id
+    _id
     title
     _rawBody
      images{
        asset {
+         _id
+          id
+           url
+       }
+     }
+   }
+   service2: sanityServices(slug: { current: { eq: "service2" } }) {
+    id
+    _id
+    title
+    _rawBody
+     images{
+       asset {
+         _id
+          id
+           url
+       }
+     }
+   }
+   service3: sanityServices(slug: { current: { eq: "service3" } }) {
+    id
+    _id
+    title
+    _rawBody
+     images{
+       asset {
+         _id
+          id
+           url
+       }
+     }
+   }
+   service4: sanityServices(slug: { current: { eq: "service-4" } }) {
+    id
+    _id
+    title
+    _rawBody
+     images{
+       asset {
+         _id
+          id
            url
        }
      }
@@ -67,12 +118,25 @@ const PrestationPage = props => {
     return;
   }
 
-  const [open, setOpen] = useState(true);
+  const [modalIsOpen,setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
 
-  const clickHandler = () => {
-    setOpen(!open);
+  
+
+  function closeModal(){
+    setIsOpen(false);
+  }
+
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
   };
 
+  const [qual, setQual] = useState("service1")
 
    //movenment controls
    function rotateClick4() {
@@ -85,6 +149,7 @@ const PrestationPage = props => {
     icons3.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;');
     icons1.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;');
     icons2.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;');
+    setQual("service4")
   };
   function rotateClick3() {
     //Variable
@@ -96,6 +161,7 @@ const PrestationPage = props => {
     icons2.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;' );
     icons1.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;' );
     icons4.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;' );
+    setQual("service3")
   };
   function rotateClick2() {
     //Variable
@@ -107,6 +173,7 @@ const PrestationPage = props => {
     icons1.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;' );
     icons3.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;' );
     icons4.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;' );
+    setQual("service2")
   };
   function rotateClick1() {
     //Variable
@@ -118,11 +185,17 @@ const PrestationPage = props => {
     icons2.setAttribute("style", 'grid-area: 2 / 2 / 3 / 3;' );
     icons4.setAttribute("style", 'grid-area: 2 / 1 / 3 / 2;' );
     icons3.setAttribute("style", 'grid-area: 1 / 1 / 2 / 2;' );
+    setQual("service1")
   };
 
   const {data, errors} = props
   const page = data && data.services;
-  const service = data && data.service;
+  const service1 = data && data.service1;
+  const service2 = data && data.service2;
+  const service3 = data && data.service3;
+  const service4 = data && data.service4;
+
+  
 
   if (errors) {
     return (
@@ -131,6 +204,7 @@ const PrestationPage = props => {
       </Layout>
     )
   }
+  
   
   return (
     
@@ -141,11 +215,11 @@ const PrestationPage = props => {
         </div>
         <Wrapper>
           <div className={styles.BlockContent}>
-            <div className={styles.menuContent}>
               <div className={styles.iconeMenu}>
+                <React.Fragment>
                 <div className={styles.iconContent1} onClick={rotateClick1} class="iconContent1">
-                  <span className={styles.icone1}><FontAwesomeIcon icon={faCity} className={styles.icon}/></span>
-                  </div>
+                  <span className={styles.icone1}><FontAwesomeIcon icon={faBrush} className={styles.icon}/></span>
+                </div>
                 <div className={styles.iconContent2} onClick={rotateClick2} class="iconContent2">
                   <span className={styles.icone2}><FontAwesomeIcon icon={faBrush} className={styles.icon}/></span>
                 </div>
@@ -155,20 +229,17 @@ const PrestationPage = props => {
                 <div className={styles.iconContent4} onClick={rotateClick4} class="iconContent4">
                   <span className={styles.icone4}><FontAwesomeIcon icon={faDungeon} className={styles.icon}/></span>
                 </div>
-              </div>
-              <div className={styles.titleMenu}>
-                <h2 className={styles.title}> {service.title} </h2>
-              </div>
+                </React.Fragment>
             </div>
-            <div className={styles.description}> <Block blocks={service._rawBody} /> </div>
+          {qual === "service1" && <Service data={service1}/> }
+          {qual === "service2" && <Service data={service2}/> }
+          {qual === "service3" && <Service data={service4}/> }
+          {qual === "service4" && <Service data={service4}/> }
           </div>
         </Wrapper>
-        <button className={styles.button} onClick={clickHandler}>Voir la galerie</button>
-          {open ? "" : <div className={styles.galery}><Galerie /></div>}
       </Container>
     </Layout>
   )
-  
 }
 
 export default PrestationPage
