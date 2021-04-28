@@ -3,27 +3,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .galery {
   left: 23.578125vw;
-  top: 22.3168654174vh;
-  width: 63.421875vw;
-  height: 76.4224872232vh;
+  top: 15.3168654174vh;
+  width: 60vw;
+  height: 68.4224872232vh;
   position: absolute;
-  z-index: 1000;
+}
+
+.galery button{
+  float: right;
+  margin-top: 3vh;
 }
 
 .titleContain {
-  margin-left: 43.81875vw;
-  width: 39.0625vw;
+  margin-left: 3.81875vw;
+  margin-top: -15vh;
+  width: 10.0625vw;
   color: white;
   font-family: Roboto, Regular;
-}
-.titleContain h1:after {
-  content: "";
-  display: block;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  background-color: white;
-  background-image: linear-gradient(to right, white 20%, #F26633 20%, #F26633 40%, white 40%);
 }
 
 .button {
@@ -34,18 +30,21 @@
   color: white;
   height: 3.066439523vh;
   width: 9.140625vw;
+  margin-top: 3vh;
 }
 
+
 .BlockContent {
-  position: absolute;
   font-family: Roboto, Regular;
   font-size: 14px;
   width: 39.0625vw;
   height: 43.6853220697vh;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   gap: 1vh;
   color: white;
+  background-color: violet;
 }
 .BlockContent .menuContent {
   margin-top: 2.4vh;
@@ -127,15 +126,15 @@
   transform: rotate(-45deg);
   position: absolute;
 }
+
 .BlockContent .description {
-  overflow: hidden;
-  height: 26.2555438226vh;
-  width: 27.3958333333vw;
-  margin-left: 12.5692708333vw;
-  margin-top: 2vh;
+    color: white;
+    height: 26.2555438226vh;
+    width: 20.3958333333vw;
+    margin-top: 17vh;
+    margin-left: -11vw;
 }
 
-.contenu {
-  margin-left: 3vw;
-}
+
+
 /*# sourceMappingURL=tarif.module.css.map */

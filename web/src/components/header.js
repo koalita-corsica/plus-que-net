@@ -14,28 +14,14 @@ const Header = ({onHideNav, onShowNav, showNav, data}) => (
       <img src={data.sanitySiteSettings.mainImage.asset.url} width="256" heigth="169" alt="Plus-que-net" id="logo"/>
     </div>
     <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
-      <Icon symbol='hamburger' />
     </button>
     <div className={styles.nav}>
       <ul>
         {data.sanitySiteSettings.menu.map((item =>
         <React.Fragment>
         <li> 
-          {}
           <Link to={item.page.slug.current == "accueil" ? '/' : '/' + `${item.page.slug.current}` }> {item.page.title}</Link>
         </li>
-        {/* <li>
-          <Link to='/prestations-tarifs/'>Prestations e Tarifs</Link>
-        </li>
-        <li>
-          <Link to='/blog/'>Blog</Link>
-        </li>
-        <li>
-          <Link to='/partenaires/'>Partenaires</Link>   
-        </li>
-        <li>
-          <Link to='/contact/'>Contact</Link>
-        </li> */}
         </React.Fragment>
       ))}
       </ul>

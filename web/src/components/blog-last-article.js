@@ -17,7 +17,6 @@ function BlogLastArticle (props) {
     <ul className={styles.grid}>
       {props.nodes &&
         props.nodes.map(node => (
-          console.log(node),
           <React.Fragment>
             <div key={node.id} className={styles.lastArticle}>
             <Link to={getBlogUrl(node.publishedAt, node.slug.current)}>

@@ -81,7 +81,6 @@ const serializer = {
           <div className={styles.BlockContent}>
             <div className={styles.bloc1}>
             <PortableText serializers={serializer} blocks={page._rawBody} />
-            <img src={page.image.asset.url} alt="img" width="200" height="250"></img>
             </div>
           </div>
         </Wrapper>

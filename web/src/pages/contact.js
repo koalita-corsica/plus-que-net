@@ -42,15 +42,15 @@ const ContactPage = props => {
     return;
   }
 
-  const {data} = props
+  const {data, errors} = props
   const page = data && data.page;
-//   if (errors) {
-//     return (
-//       <Layout>
-//         <GraphQLErrorList errors={errors} />
-//       </Layout>
-//     )
-//   }
+  if (errors) {
+    return (
+      <Layout>
+        <GraphQLErrorList errors={errors} />
+      </Layout>
+    )
+  }
 
   return (
     // <Layout>
