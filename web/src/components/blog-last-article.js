@@ -14,23 +14,21 @@ function BlogLastArticle (props) {
   return (
     <div className={styles.root}>
     {props.title && <h2 className={styles.headline}>{props.title}</h2>}
-    <ul className={styles.grid}>
       {props.nodes &&
         props.nodes.map(node => (
           <React.Fragment>
-            <div key={node.id} className={styles.lastArticle}>
             <Link to={getBlogUrl(node.publishedAt, node.slug.current)}>
-            <img  src={node.mainImage.asset.url}  className={styles.imgLastArticle} width="400" height="400"></img>
-                <div className={styles.lastArticleContain}>
-                  <span className={styles.date}> {format(node.publishedAt, 'MMMM Do, YYYY')} </span>
-                    <h3 className={styles.articleTitle}> {node.title} </h3>
-                  <span className={styles.description}> <PortableText blocks={node._rawExcerpt} /> </span>
-                </div>
-              </Link>
-            </div>
+              <div key={node.id} className={styles.lastArticle}>
+                  <img  src={node.mainImage.asset.url}  className={styles.imgLastArticle} width="400" height="250"></img>
+                  <div className={styles.lastArticleContain}>
+                    <div className={styles.dataWrapper}><span className={styles.publish}>Publié<li></li> </span>  <span className={styles.date}>{format(node.publishedAt, 'MMMM Do, YYYY')} </span></div>
+                      <h3 className={styles.articleTitle}> {node.title} </h3>
+                    <span className={styles.description}> <PortableText blocks={node._rawExcerpt} /> </span>
+                  </div>
+              </div>
+            </Link>
           </React.Fragment>
         ))}
-    </ul>
     {props.browseMoreHref && (
       <div className={styles.browseMoreNav}>
         <Link to={props.browseMoreHref}>Browse more</Link>

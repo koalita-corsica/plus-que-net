@@ -2,21 +2,12 @@
 
 .root {
   box-sizing: border-box;
-  width: auto;
   display: flex;
-  gap: 1.7423442449841604vh;
   flex-direction: column;
-  
   margin: 0 auto;
-  min-height: 100%;
-  
-
-  
-  
-  
-  
-
-  
   
 }
+/* @media (max-width: 450px){
+  
+} */
 

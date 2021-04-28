@@ -3,82 +3,50 @@
 
 .root {
   display: block;
-  color: inherit;
+  width: 46.875vw;
+}
+
+a{
   text-decoration: none;
 }
+.lastArticle{
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  .imgLastArticle{
+    width: 30.390625vw;
+    height: 43.95229982964225vh;
+    justify-self: left;
+  }
+  .lastArticleContain{
+    height: 43.95229982964225vh;
+    width: 14.6875vw;
+    .dataWrapper{
+      display: inline-flex;
+      gap: 0.5vw;
+      .publish{
+        color: white;
+        display: inline-flex;
+        gap: 0.5vw;
 
-
-.inList {
-  composes: root;
-
-  @media (--media-min-medium) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 2em;
+      }
+    }
+    .articleTitle {
+      color: white;
+    }
+    .description{
+      color: white;
+    }
   }
 }
-
-.inGrid {
-  composes: root;
+.date {
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-line-height);
+  color: var(--color-gray);
 }
 
 
 
 
-.blogContain{
-    
-  font-size: 14px;
-  display: grid;
-  grid-template-columns: repeat(2, 22.578125vw);
-  gap: 1.875vw;
-  font-family: Roboto, Regular;
-  color: white;
-  width: 46.875vw;
-  top: 46.22vh;
-  left: 27.578125vw;
-  background-color: red;
-    
-  // .allArticle{
-  //     grid-column: 1/3;
-  //     align-items: center;
 
-  // }
-  // .lastArticle{
-  //   grid-column: 1/3;
-  //   display: flex;
-  //   gap: 1.796875vw;
-  //   width: 45.078125vw;
-  //   overflow: hidden;
-  //   height: 43.95229982964225vh;
-    
-  //   .imgLastArticle{
-  //     width: 30.390625vw;
-  //     height: 43.95229982964225vh;
-  //   }
-  //   .lastArticleContain{
-  //     text-align: left;
-  //     display: flex;
-  //     flex-direction: column;
-  //     width: 14.6875vw;   
-  //   }
-  //   .date {
-  //     font-size: var(--font-small-size);
-  //     line-height: var(--font-small-line-height);
-  //     color: var(--color-gray);
-  //   }
-  //   .articleTitle{
 
-  //     @media (hover: hover) {
-  //       @nest .root:hover & {
-  //         text-decoration: underline;
-  //       }
-  //     }
-      
-  //     @media (--media-min-medium) {
-  //       @nest .inList & {
-  //         margin-top: 0;
-  //       }
-  //     }
-  //   }
-  // }
-}

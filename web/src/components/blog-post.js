@@ -23,8 +23,8 @@ function BlogPost (props) {
       <WrapperBlog>
         <div className={styles.blogContain}>
           <div className={styles.pathContain}>
-            <div className={styles.path}>Tous les Articles {'> '}  </div>
-            <div className={styles.articleTitle}> {title}</div>
+            <h3 className={styles.path}>Tous les Articles {'> '}  </h3>
+            <h3 className={styles.articleTitle}> {title}</h3>
           </div>
           {mainImage && mainImage.asset && (
           <img
@@ -37,7 +37,7 @@ function BlogPost (props) {
           />
       )}
        {publishedAt && (
-              <div className={styles.publish}>
+              <div className={styles.publish}><span>Publié <li></li></span>
                 {differenceInDays(new Date(publishedAt), new Date()) > 3
                   ? distanceInWords(new Date(publishedAt), new Date())
                   : format(new Date(publishedAt), 'MMMM Do, YYYY')}

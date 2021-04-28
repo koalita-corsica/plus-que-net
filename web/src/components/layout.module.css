@@ -6,51 +6,24 @@
   background: url("../images/background1.jpg"),linear-gradient(#35383F, #35383F);
   background-repeat: no-repeat;
   background-size:100vw 110vh, 100% 100%;
-  min-height: 100%;
-  
 
 }
-
-
-.content {
-  top: 0px;
-  margin-left: 0px;
-  
-}
-
-.footer {
-  border-top: 1px solid var(--color-very-light-gray);
-
-  @nest & a {
-    color: inherit;
-    text-decoration: none;
-
-    @media (hover: hover) {
-      @nest &:hover {
-        color: var(--color-accent);
-      }
-    }
+@media (max-width: 450px){
+  .wrapper{
+    opacity: 0.75;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
   }
-}
-
-.footerWrapper {
-  box-sizing: border-box;
-  max-width: 960px;
-  padding: 4.5em 1.5em 1.5em;
-  margin: 0 auto;
-
-  @media (--media-min-small) {
-    padding: 6em 2em 2em;
+  .wrapper Footer.root{
+    background-color: #fff;
   }
+    
+}
+.content{
+  min-height: 80vh;
 }
 
-.companyAddress {
-  text-align: center;
-  margin: 0 0 1rem;
-}
 
-.siteInfo {
-  text-align: center;
-  font-size: var(--font-small-size);
-  line-height: var(--font-small-line-height);
-}
+
+
+

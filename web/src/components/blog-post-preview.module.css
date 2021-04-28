@@ -35,6 +35,16 @@
     object-fit: cover;
   }
 }
+.dataWrapper{
+  display: inline-flex;
+  gap: 0.5vw;
+}
+.publish{
+  display: inline-flex;
+  color: white;
+  gap: 0.5vw;
+
+}
 
 .text {
   /* empty */

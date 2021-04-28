@@ -3,17 +3,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .root {
   font-family: "Roboto", sans-serif;
-  font-size: 17px;
-  top: 3.25vh;
+  font-size: 2.7257240204vh;
   display: flex;
-  gap: 5%;
-  justify-content: space-between;
-  background-color: transparent;
+  height: 11.5843270869vh;
+}
+@media (max-width: 450px) {
+  .root {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    height: 123px;
+  }
 }
 .root .nav {
   display: flex;
   align-self: center;
   width: 100%;
+}
+@media (max-width: 450px) {
+  .root .nav {
+    display: none;
+  }
 }
 .root .nav ul {
   display: flex;
@@ -31,6 +43,14 @@
 .root .nav ul li :focus {
   color: #F26633;
 }
+.root .logo {
+  align-self: center;
+}
+@media (max-width: 450px) {
+  .root .logo {
+    margin-right: 8.328125vw;
+  }
+}
 
 .toggleNavButton {
   appearance: none;
@@ -41,14 +61,17 @@
   padding: calc(14 / 17 / 2 * 1rem);
   outline: none;
   color: inherit;
+  display: none;
 }
 .toggleNavButton svg {
   display: block;
   fill: inherit;
 }
-@media (--media-min-small) {
+@media (max-width: 450px) {
   .toggleNavButton {
-    display: none;
+    display: block;
+    color: white;
+    justify-self: right;
   }
 }
 

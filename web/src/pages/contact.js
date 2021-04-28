@@ -85,6 +85,10 @@ const ContactPage = props => {
     //       </form>
     // </Layout>
     <Layout>
+      <Container>
+        <div className={styles.titleContain}>
+          <h1 className={styles.title}>{page.title}</h1>
+        </div>
             <div className={styles.contactWrapper}>
               <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
                   <input type="hidden" name="form-name" value="contact" />
@@ -129,7 +133,7 @@ const ContactPage = props => {
                   </div> 
               </form>
           </div>
-    
+    </Container>
   </Layout>
 )
   }
