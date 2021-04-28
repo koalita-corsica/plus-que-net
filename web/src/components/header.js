@@ -11,7 +11,7 @@ import styles from './header.module.css'
 const Header = ({onHideNav, onShowNav, showNav, data}) => (
   <div className={styles.root}>
     <div className={styles.logo}>
-      <img src={data.sanitySiteSettings.mainImage.asset.url} width="256" heigth="169" alt="Plus-que-net" id="logo"/>
+      <img src={data.sanitySiteSettings.mainImage.asset.url} width="256"  alt="Plus-que-net" id="logo"/>
     </div>
     <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
       <Icon symbol='hamburger' />

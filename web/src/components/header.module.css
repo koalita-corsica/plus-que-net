@@ -4,19 +4,14 @@
 .root {
   font-family: "Roboto", sans-serif;
   font-size: 2.7257240204vh;
-  top: 3.25vh;
   display: flex;
-  gap: 5%;
-  justify-content: space-between;
-  background-color: transparent;
+  height: 11.5843270869vh;
 }
 @media (max-width: 450px) {
   .root {
     flex-direction: row-reverse;
-    justify-content: space-around;
     align-items: center;
-    background: transparent;
-    opacity: 1;
+    justify-content: space-around;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     height: 123px;
@@ -48,9 +43,12 @@
 .root .nav ul li :focus {
   color: #F26633;
 }
+.root .logo {
+  align-self: center;
+}
 @media (max-width: 450px) {
   .root .logo {
-    margin-right: 27.328125vw;
+    margin-right: 8.328125vw;
   }
 }
 
@@ -73,7 +71,7 @@
   .toggleNavButton {
     display: block;
     color: white;
-    margin-left: 10vw;
+    justify-self: right;
   }
 }
 
