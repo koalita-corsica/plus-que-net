@@ -3,11 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .root {
   margin-left: 43.8020833333vw;
-  margin-top: 1.7423444vh;
-  width: 33.0208333333vw;
-  height: 43.6853220697vh;
+  width: 49.53125vw;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 450px) {
+  .root {
+    margin-left: 2.109375vw;
+    margin-right: 3.4296875vw;
+    width: fit-content;
+  }
 }
 
 /*# sourceMappingURL=wrapper.module.css.map */

@@ -5,19 +5,32 @@
 
 .root {
   font-family: 'Roboto', sans-serif;
-  font-size: 17px;
+  font-size: 2.72572402044293vh;
   top: 3.25vh;
   display: flex;
   gap: 5%;
   justify-content: space-between;
   background-color: transparent;
   
+  @media (max-width: 450px) {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    background:  transparent;
+    opacity: 1;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    height: 123px;
+  }
 
 
   .nav{
     display: flex;
     align-self: center;
     width: 100%;
+    @media (max-width: 450px) {
+      display: none;
+    }
 
     ul{
         display: flex;
@@ -38,6 +51,13 @@
       }
   }
   
+  .logo{
+    @media (max-width: 450px) {
+      margin-right: 27.328125vw;
+      
+    }
+  }
+  
 }
 
 
@@ -53,6 +73,7 @@
   padding: calc(14 / 17 / 2 * 1rem);
   outline: none;
   color: inherit;
+  display: none;
   
 
   & svg {
@@ -60,8 +81,11 @@
     fill: inherit;
   }
 
-  @media (--media-min-small) {
-    display: none;
+  @media (max-width: 450px) {
+    display: block;
+    color: white;
+    margin-left: 10vw;
+    
   }
 }
 

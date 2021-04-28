@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["blog-last-article.scss"],"names":[],"mappings":"AAAQ;AACA;AAER;EACE;EACA;EACA;;;AAIF;EACE;;AAEA;EAHF;IAII;IACA;IACA;;;;AAIJ;EACE;;;AAMF;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA","file":"blog-last-article.module.css"}
+{"version":3,"sourceRoot":"","sources":["blog-last-article.scss"],"names":[],"mappings":"AAAQ;AACA;AAER;EACE;EACA;;;AAGF;EACE;;;AAEF;EACE;EACA;EACA;;AACA;EACE;EACA;EACA;;AAEF;EACE;EACA;;AACA;EACE;EACA;;AACA;EACE;EACA;EACA;;AAIJ;EACE;;AAEF;EACE;;;AAIN;EACE;EACA;EACA","file":"blog-last-article.module.css"}

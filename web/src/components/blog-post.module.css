@@ -4,25 +4,30 @@
 .titleContain {
   text-align: left;
   margin-left: 27.65625vw;
-  width: 24.67vw;
+  width: 47.03125vw;
   color: white;
   font-family: Roboto, Regular;
-  border-bottom: solid white 2px;
+}
+.titleContain h1:after {
+  content: "";
+  display: block;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: white;
+  background-image: linear-gradient(to right, white 40%, #F26633 40%, #F26633 60%, white 60%);
 }
 
 .blogContain {
   display: flex;
   flex-direction: column;
-  margin-right: 4.7700170358vh;
   width: 47.1875vw;
   font-family: Roboto, Regular;
+  gap: 1.875vw;
 }
 .blogContain .pathContain {
-  height: 6.4735945486vh;
-  display: flex;
+  display: inline-flex;
   color: white;
-  font-size: 17px;
-  font-weight: bold;
 }
 .blogContain .pathContain .articleTitle {
   color: #F26633;
@@ -32,16 +37,20 @@
   height: 68.3134582624vh;
 }
 .blogContain P {
-  font-size: 14PX;
   color: white;
 }
 .blogContain h3 {
-  font-size: 25px;
   color: white;
 }
 .blogContain .publish {
-  font-size: 9px;
-  border-bottom: solid white 2px;
+  display: inline-flex;
+  gap: 0.5vw;
+  border-bottom: solid white 3px;
+}
+.blogContain .publish span {
+  color: white;
+  display: inline-flex;
+  gap: 0.5vw;
 }
 .blogContain .paraWrapper {
   height: 140.0340715503vh;
@@ -57,42 +66,44 @@
 }
 
 .aside {
-  display: grid;
-  grid-template-rows: 6.4735945486vh 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875vw;
   font-family: Roboto, Regular;
   color: white;
   width: 19.21875vw;
 }
+
 .aside .catWrapper {
-  
-  display: flex; 
+  display: flex;
   flex-direction: column;
   width: 19.21875vw;
   gap: 4.7700170358vh;
   overflow: hidden;
 }
+
 .aside .catWrapper .categorie {
   width: 19.21875vw;
   max-height: 27.7683134583vh;
 }
+
 .aside .catWrapper .categorie h2 {
   width: 19.21875vw;
-  height: 9.562180579216355vh;
+  height: 9.5621805792vh;
   position: relative;
-  top: -17.206132879045995vh;
+  top: -17.206132879vh;
   padding-top: 1vh;
   text-align: center;
   background: transparent;
   opacity: 0.9;
   backdrop-filter: blur(30px);
 }
+
 .aside .categorieTitle {
   text-align: center;
-  font-size: 20px;
-  height: 6.4735945486vh;
-  align-self: center;
 }
-.aside .catWrapper .categorie .imgTheme{
+
+.aside .catWrapper .categorie .imgTheme {
   width: 19.21875vw;
   height: 27.7683134583vh;
 }

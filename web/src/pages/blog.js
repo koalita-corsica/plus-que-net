@@ -114,9 +114,22 @@ const BlogPage = props => {
 
           </div>
           <aside className={styles.aside}>
-            <h3 className={styles.categorie} >Thématique</h3>
-            <img src="" width="246" height="163"></img>
-          </aside>
+          <h2 className={styles.categorieTitle} >Thématique</h2>
+          <div className={styles.catWrapper}>
+            <div className={styles.categorie}>
+              <img src={imgTest} className={styles.imgTheme}></img>
+              <h2>Thèmes</h2>
+            </div>
+            <div className={styles.categorie}>
+              <img src={imgTest} className={styles.imgTheme}></img>
+              <h2>Thèmes</h2>
+            </div>
+            <div className={styles.categorie}>
+              <img src={imgTest} className={styles.imgTheme}></img>
+              <h2>Thèmes</h2>
+            </div>
+          </div>
+        </aside>
         </WrapperBlog>
       </Container>
     </Layout>

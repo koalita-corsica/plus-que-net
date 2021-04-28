@@ -6,12 +6,13 @@
 
 .root{
     margin-left: 43.802083333333336vw;
-    margin-top: 1.7423444vh;
-    width: 33.020833333333336vw;
-    height: 43.68532206969377vh;  
+    width: 49.53125vw;
     display: flex;
     flex-direction: column;
-    
+    @media (max-width: 450px){
+        margin-left: 2.109375vw;
+        margin-right: 3.4296875vw;
+        width: fit-content;
+    }
 }
 
-    

@@ -8,6 +8,10 @@
   width: 39.0625vw;
   color: white;
   font-family: Roboto, Regular;
+  @media (max-width: 450px){
+    margin-left: 2.109375vw;
+    width: 19.609375vw;
+  }
   h1:after{
     content: "";
     display: block;
@@ -18,8 +22,13 @@
     background-image: linear-gradient(to right, #F26633 20%, white 20%);
     
   }
-  
-
+  h1{
+    font-size: 6.814310051107325vh;
+    @media (max-width: 450px){
+    font-size: 3.4071550255536627vh;
+    width: 49.53125vw;
+    }
+  }
 }
 
 .BlockContent::-webkit-scrollbar-thumb {
@@ -34,25 +43,40 @@
   width: 0.4vw; /* width of the entire scrollbar */
 }
 .BlockContent {
-  margin-top: 4.810902896081772vh;
+  display: flex;
+  flex-direction: column;
   font-family: Roboto, Regular;
-  font-size: 14px;  
-  width: 39.0625vw;
-  height: 35.68532206969377vh;  
+  font-size: 2.385008517887564vh;  
+  height: 54.34412265758092vh;  
   overflow-y: scroll;
-  // scrollbar-color: #F26633 white;
-  // scrollbar-width: thin ;
   color: white;
 
-}
-.bloc1{
-  display: flex;
-}
-.bloc1 img {
-  margin-top: 40px;
-  margin-left: 10px;
-}
-.bloc1 div{
-  max-width: 420px;
-  font-size: 15px;
+  @media (max-width: 450px){
+    font-size: 3.4071550255536627vh;
+    display: block;
+    height: auto;
+    overflow-y: unset;
+    }
+  .bloc1{
+    display: block;
+    @media (max-width: 450px){
+      font-size: 2.5553662691652472vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .imgIndex {
+      width: 151px; 
+      height: 240px;
+      margin-top: 14.814310051107325vh;
+      float: right;
+      @media (max-width: 450px){
+        left: 9.609375vw;
+        width: 151px; 
+        height: 240px;
+        
+      }
+    }
+  }
 }

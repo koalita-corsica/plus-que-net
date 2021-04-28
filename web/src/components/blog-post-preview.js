@@ -27,7 +27,7 @@ function BlogPostPreview (props) {
             />
           )}
         </div>
-        <div className={styles.date}>{format(props.publishedAt, 'MMMM Do, YYYY')}</div>
+        <div className={styles.dataWrapper}><span className={styles.publish}>Publié  <span>•</span> </span> <span className={styles.date}>{format(props.publishedAt, 'MMMM Do, YYYY')} </span></div>
         <div className={styles.text}>
           <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
           {props._rawExcerpt && (

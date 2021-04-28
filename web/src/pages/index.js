@@ -58,8 +58,8 @@ const IndexPage = props => {
         <Wrapper>
           <div className={styles.BlockContent}>
             <div className={styles.bloc1}>
-            <Block blocks={page._rawBody} />
-            <img src={page.image.asset.url} alt="img" width="200" height="250"></img>
+              <img className={styles.imgIndex}src={page.image.asset.url} alt="img" ></img>
+              <Block blocks={page._rawBody} />
             </div>
           </div>
         </Wrapper>
