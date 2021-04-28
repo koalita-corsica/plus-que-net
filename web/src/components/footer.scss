@@ -46,6 +46,7 @@
     }
     @media (max-width: 450px){
         background-color: #262626;
+        z-index: +1;
         display: grid;
         height: 24.787052810902896vh;
         grid-template-columns: repeat(2, 1fr);
