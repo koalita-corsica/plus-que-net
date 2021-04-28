@@ -39,7 +39,9 @@ export default {
             of: [
                 {
                     type: 'block',
-                    of: []
+                },
+                {
+                    type: 'image'
                 }
             ]
         },
