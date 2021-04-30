@@ -10,7 +10,7 @@ function BlogPostPreviewGrid (props) {
   return (
     <div className={styles.root}>
       {props.title && <h2 className={styles.headline}>{props.title}</h2>}
-      <ul className={styles.grid}>
+      <div className={styles.grid}>
         {props.nodes &&
           props.nodes.map(node => (
             <React.Fragment>
@@ -21,7 +21,7 @@ function BlogPostPreviewGrid (props) {
               </div>
             </React.Fragment>
           ))}
-      </ul>
+      </div>
       {props.browseMoreHref && (
         <div className={styles.browseMoreNav}>
           <Link to={props.browseMoreHref}>Browse more</Link>
@@ -32,7 +32,7 @@ function BlogPostPreviewGrid (props) {
   )
 }
 
-BlogPostPreviewGrid.defaultProps = {
+BlogPostPreviewGrid.defadivtProps = {
   title: '',
   nodes: [],
   browseMoreHref: ''

@@ -23,7 +23,8 @@ function BlogPost (props) {
       <WrapperBlog>
         <div className={styles.blogContain}>
           <div className={styles.pathContain}>
-            <h3 className={styles.path}>Tous les Articles {'> '}  </h3>
+            <h3 className={styles.path}>Tous les Articles</h3>
+            <h3>{'> '}</h3>
             <h3 className={styles.articleTitle}> {title}</h3>
           </div>
           {mainImage && mainImage.asset && (
@@ -63,7 +64,7 @@ function BlogPost (props) {
           </div>
         </div>  
         <aside className={styles.aside}>
-          <h3 className={styles.categorieTitle} >Thématique</h3>
+          <h2 className={styles.categorieTitle} >Thématique</h2>
           <div className={styles.catWrapper}>
             <div className={styles.categorie}>
               <img src={imgTest} className={styles.imgTheme}></img>

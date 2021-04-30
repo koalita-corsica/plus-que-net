@@ -4,6 +4,11 @@
 .root {
   display: block;
   width: 46.875vw;
+  
+  @media (max-width: 450px){
+    width: 100%;
+    display: flex;
+  }
 }
 
 a{
@@ -13,14 +18,29 @@ a{
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  @media (max-width: 450px){
+      flex-direction: column;
+  }
   .imgLastArticle{
     width: 30.390625vw;
     height: 43.95229982964225vh;
     justify-self: left;
+    @media (max-width: 450px){
+      width: 90%;
+      margin-left: 5%;
+      height: auto;
+      justify-self: center;
+    }
   }
   .lastArticleContain{
     height: 43.95229982964225vh;
     width: 14.6875vw;
+    @media (max-width: 450px){
+      width: 90%;
+      margin-left: 5%;
+      height: auto;
+      justify-self: center;
+    }
     .dataWrapper{
       display: inline-flex;
       gap: 0.5vw;

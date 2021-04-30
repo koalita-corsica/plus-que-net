@@ -9,6 +9,7 @@
   font-size: 2.7257240204vh;
   margin-right: 3vh;
   margin-left: 3vh;
+  background-color: transparent;
 }
 .root .plan {
   grid-area: 1, 1, 2, 2;
@@ -44,11 +45,13 @@
 }
 @media (max-width: 450px) {
   .root {
-    background-color: #262626;
+    background-color: black;
     display: grid;
     height: 24.7870528109vh;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    margin-right: 0;
+    margin-left: 0;
   }
   .root .google {
     grid-area: 1/1/2/3;

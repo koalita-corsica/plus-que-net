@@ -99,8 +99,9 @@ const PartenairesPage = props => {
           <div className={styles.lastArticle}>
             <BlogLastArticle nodes={lastNodes} />
           </div>
+          <div className={styles.article}>
             {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}  
-
+          </div>
         </div>
       </WrapperBlog>
     </Container>

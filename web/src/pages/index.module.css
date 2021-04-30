@@ -9,8 +9,8 @@
 }
 @media (max-width: 450px) {
   .titleContain {
-    margin-left: 2.109375vw;
-    width: 19.609375vw;
+    margin-left: 5%;
+    width: 85%;
   }
 }
 .titleContain h1:after {
@@ -28,7 +28,7 @@
 @media (max-width: 450px) {
   .titleContain h1 {
     font-size: 3.4071550256vh;
-    width: 49.53125vw;
+    width: 85%;
   }
 }
 
@@ -58,6 +58,7 @@
   height: 54.3441226576vh;
   overflow-y: scroll;
   color: white;
+  margin-right: 3.4296875vw;
 }
 @media (max-width: 450px) {
   .BlockContent {
@@ -65,6 +66,8 @@
     display: block;
     height: auto;
     overflow-y: unset;
+    margin-left: 5%;
+    width: 85%;
   }
 }
 .BlockContent .bloc1 {
@@ -73,23 +76,31 @@
 @media (max-width: 450px) {
   .BlockContent .bloc1 {
     font-size: 2.5553662692vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
-.BlockContent .bloc1 .imgIndex {
+@media (max-width: 450px) {
+  .BlockContent .bloc1 div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.BlockContent .bloc1 div img {
   width: 151px;
   height: 240px;
-  margin-top: 14.8143100511vh;
   float: right;
 }
 @media (max-width: 450px) {
-  .BlockContent .bloc1 .imgIndex {
-    left: 9.609375vw;
-    width: 151px;
-    height: 240px;
+  .BlockContent .bloc1 div img {
+    float: none;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
+}
+.BlockContent .bloc1 div p:nth-child(3) {
+  order: -1;
+}
+.BlockContent .bloc1 div h1:nth-child(1) {
+  order: -2;
 }
 
 /*# sourceMappingURL=index.module.css.map */

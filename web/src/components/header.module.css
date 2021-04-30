@@ -27,20 +27,20 @@
     display: none;
   }
 }
-.root .nav ul {
+.root .nav div {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
   width: 100%;
 }
-.root .nav ul li * {
+.root .nav div div * {
   text-decoration: none;
   color: #ffffff;
 }
-.root .nav ul li :hover {
+.root .nav div div :hover {
   color: #F26633;
 }
-.root .nav ul li :focus {
+.root .nav div div :focus {
   color: #F26633;
 }
 .root .logo {

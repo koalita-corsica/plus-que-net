@@ -6,7 +6,6 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin: 2rem 0;
 }
 
 .grid {
@@ -16,38 +15,25 @@
   gap: 1.875vw;
   font-family: Roboto, Regular;
   color: white;
-  width: 46.875vw;
   list-style-type: none;
 }
-.grid .article {
-  margin-left: -2.675vw;
-  width: 22.578125vw;
-  height: 59.7955706985vh;
+@media (max-width: 450px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 450px) {
+  .grid .article {
+    width: 75%;
+    margin-left: 5%;
+    height: auto;
+    justify-self: center;
+  }
 }
 .grid .article a {
   text-decoration: none;
   color: white;
-}
-
-.browseMoreNav {
-  composes: small from "./typography.module.css";
-  margin-top: 1rem;
-  text-align: right;
-}
-@nest & a {
-  .browseMoreNav {
-    display: inline-block;
-    padding: 0.5rem 0;
-    color: inherit;
-    text-decoration: none;
-  }
-  @media (hover: hover) {
-    @nest &:hover {
-      .browseMoreNav {
-        color: var(--color-accent);
-      }
-    }
-  }
 }
 
 /*# sourceMappingURL=blog-post-preview-grid.module.css.map */

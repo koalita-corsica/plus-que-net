@@ -17,13 +17,13 @@ const Header = ({onHideNav, onShowNav, showNav, data}) => (
       <Icon symbol='hamburger' />
     </button>
     <div className={styles.nav}>
-      <ul>
+      <div>
         {data.sanitySiteSettings.menu.map((item =>
         <React.Fragment>
-        <li> 
+        <div> 
           {}
           <Link to={item.page.slug.current == "accueil" ? '/' : '/' + `${item.page.slug.current}` }> {item.page.title}</Link>
-        </li>
+        </div>
         {/* <li>
           <Link to='/prestations-tarifs/'>Prestations e Tarifs</Link>
         </li>
@@ -38,7 +38,7 @@ const Header = ({onHideNav, onShowNav, showNav, data}) => (
         </li> */}
         </React.Fragment>
       ))}
-      </ul>
+      </div>
     </div>
   </div>
 )

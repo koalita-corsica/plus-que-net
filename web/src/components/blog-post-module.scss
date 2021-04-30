@@ -8,6 +8,10 @@
     width: 47.03125vw;
     color: white;
     font-family: Roboto, Regular;
+    @media (max-width: 450px){
+        margin-left: 5%;
+        width: 85%;
+      }
     h1:after{
         content: "";
         display: block;
@@ -17,25 +21,49 @@
         background-color: white;
         background-image: linear-gradient(to right, white 40%, #F26633 40%, #F26633 60%, white 60%);
         
+    }
+    h1{
+        font-size: 6.814310051107325vh;
+        @media (max-width: 450px){
+        font-size: 3.4071550255536627vh;
+        width: 90%;
+        }
       }
     
 }
 .blogContain{
     display: flex;
     flex-direction: column;
-    width: 47.1875vw;
+    width: 46.875vw;
     font-family: Roboto, Regular;
     gap: 1.875vw;
+    @media (max-width: 450px){
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 13px;
+      }
     .pathContain{ 
         display: inline-flex;
         color: white;
+        gap: 1vw;
+        @media (max-width: 450px){
+            width: 90%;
+            display: flex;
+
+        }
         .articleTitle{
             color: #F26633;
         }
     }
     .imgArticle{
-        width: 47.1875vw;
+        width: 46.875vw;
         height: 68.31345826235093vh;
+        @media (max-width: 450px){
+            width: 90%;
+            height: auto;
+        }
     }
     P{
         color: white;
@@ -47,22 +75,40 @@
         display: inline-flex;
         gap: 0.5vw;
         border-bottom: solid white 3px;
+        @media (max-width: 450px){
+            width: 90%;
+            height: auto;
+        }
         span{
             color: white;
             display: inline-flex;
             gap: 0.5vw;
+            
         }
     }
     .paraWrapper{
         height: 140.03407155025553vh;
         width: 46.71875vw;
+        font-family: Roboto, Regular;
+        @media (max-width: 450px){
+            width: 90%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
         .para1{
             grid-area: 1 / 1 / 2 / 3;
+            font-family: Roboto, Regular;
         }
         .imgPara{
             float: right;
             width: 24.140625vw;
             height: 40.885860306643956vh;
+            @media (max-width: 450px){
+                width: 100%;
+                height: auto;
+                float: none;
+            }
         }
     }
 }
@@ -75,34 +121,56 @@
     font-family: Roboto, Regular;
     color: white;
     width: 19.21875vw;
-  }
-  .aside .catWrapper {
-    
-    display: flex; 
-    flex-direction: column;
-    width: 19.21875vw;
-    gap: 4.7700170358vh;
-    overflow: hidden;
-  }
-  .aside .catWrapper .categorie {
-    width: 19.21875vw;
-    max-height: 27.7683134583vh;
-  }
-  .aside .catWrapper .categorie h2 {
-    width: 19.21875vw;
-    height: 9.562180579216355vh;
-    position: relative;
-    top: -17.206132879045995vh;
-    padding-top: 1vh;
-    text-align: center;
-    background: transparent;
-    opacity: 0.9;
-    backdrop-filter: blur(30px);
-  }
-  .aside .categorieTitle {
-    text-align: center;
-  }
-  .aside .catWrapper .categorie .imgTheme{
-    width: 19.21875vw;
-    height: 27.7683134583vh;
-  }
+    @media (max-width: 450px){
+      display: block;
+      width: 100%;
+    }
+  
+    }
+    .aside .catWrapper {
+      
+      display: flex; 
+      flex-direction: column;
+      width: 19.21875vw;
+      gap: 4.7700170358vh;
+      overflow: hidden;
+      @media (max-width: 450px){
+        flex-direction: row;
+        width: 100%;
+        overflow-x: scroll;
+        gap: 1vh;
+      }
+    }
+    .aside .catWrapper .categorie {
+      width: 19.21875vw;
+      max-height: 27.7683134583vh;
+      @media (max-width: 450px){
+        width: 100%;
+        height: auto;
+        margin-left: 3vw;
+      }
+    }
+    .aside .catWrapper .categorie h2 {
+      width: 19.21875vw;
+      position: relative;
+      top: -17.206132879045995vh;
+      text-align: center;
+      background: transparent;
+      opacity: 0.9;
+      backdrop-filter: blur(30px);
+      @media (max-width: 450px){
+        width: 100%;
+        height: auto;
+      }
+    }
+    .aside .categorieTitle {
+      text-align: center;
+    }
+    .aside .catWrapper .categorie .imgTheme{
+      width: 19.21875vw;
+      height: 27.7683134583vh;
+      @media (max-width: 450px){
+        width: 50vw;
+        height: 21.12436115843271vh;
+      }
+    }

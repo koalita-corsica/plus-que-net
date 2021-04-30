@@ -17,6 +17,7 @@ import { faCity } from '@fortawesome/free-solid-svg-icons'
 import { faBrush } from '@fortawesome/free-solid-svg-icons'
 import { faShower } from '@fortawesome/free-solid-svg-icons'
 import { faDungeon } from '@fortawesome/free-solid-svg-icons'
+
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import Galerie from '../components/gallery'
 import Block from '@sanity/block-content-to-react'

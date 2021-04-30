@@ -9,8 +9,8 @@
   color: white;
   font-family: Roboto, Regular;
   @media (max-width: 450px){
-    margin-left: 2.109375vw;
-    width: 19.609375vw;
+    margin-left: 5%;
+    width: 85%;
   }
   h1:after{
     content: "";
@@ -26,7 +26,7 @@
     font-size: 6.814310051107325vh;
     @media (max-width: 450px){
     font-size: 3.4071550255536627vh;
-    width: 49.53125vw;
+    width: 85%;
     }
   }
 }
@@ -50,33 +50,94 @@
   height: 54.34412265758092vh;  
   overflow-y: scroll;
   color: white;
+  margin-right: 3.4296875vw;
 
   @media (max-width: 450px){
     font-size: 3.4071550255536627vh;
     display: block;
     height: auto;
     overflow-y: unset;
+    margin-left: 5%;
+    width: 85%;
     }
   .bloc1{
     display: block;
     @media (max-width: 450px){
-      font-size: 2.5553662691652472vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      font-size: 2.5553662691652472vh;      
     }
-    
-    .imgIndex {
-      width: 151px; 
-      height: 240px;
-      margin-top: 14.814310051107325vh;
-      float: right;
+    div{
       @media (max-width: 450px){
-        left: 9.609375vw;
+        display: flex;
+        flex-direction: column;
+      }
+      img{
         width: 151px; 
         height: 240px;
-        
+        float: right;
+        @media (max-width: 450px){
+          float: none;
+
+
+          margin-left: 10vw;
+          margin-right: 10vw;
+        }
       }
+      p:nth-child(3){
+        order: -1;
+      }
+      h1:nth-child(1){
+        order: -2;
+      }  
     }
   }
+  // .bloc1 div p:first-child{
+  //   background-color: green;
+  //   @media (max-width: 450px){
+  //     order: 2;
+  //     background-color: green;
+      
+      
+  //   }
+  // }
+      // p{
+      //   @media (max-width: 450px){
+      //     position: relative;
+      //     top: -95vh;
+      //   }
+      // }
+      //premier paragraphe
+      // //2ieme paragraphe
+      // p:nth-child(5){
+      //   @media (max-width: 450px){
+      //     position: relative;
+      //     margin-top: 100vh;
+          
+      //   }
+      // }
+      // //3ieme paragraphe
+      // p:nth-child(7){
+      //   @media (max-width: 450px){
+      //     position: relative;
+      //     margin-top: 100vh;
+          
+      //   }
+      // }
+      // //2ieme titre
+      // h1:nth-child(4){
+      //   @media (max-width: 450px){
+      //     position: relative;
+      //     margin-top: -40vh;
+          
+      //   }
+      // }
+      // h1:nth-child(6){
+      //   @media (max-width: 450px){
+      //     position: relative;
+      //     margin-top: -90vh;
+          
+      //   }
+      // }
+       
+    // }
+  
 }

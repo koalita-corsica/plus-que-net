@@ -4,6 +4,12 @@
   display: block;
   width: 46.875vw;
 }
+@media (max-width: 450px) {
+  .root {
+    width: 100%;
+    display: flex;
+  }
+}
 
 a {
   text-decoration: none;
@@ -14,14 +20,35 @@ a {
   justify-content: space-between;
   overflow: hidden;
 }
+@media (max-width: 450px) {
+  .lastArticle {
+    flex-direction: column;
+  }
+}
 .lastArticle .imgLastArticle {
   width: 30.390625vw;
   height: 43.9522998296vh;
   justify-self: left;
 }
+@media (max-width: 450px) {
+  .lastArticle .imgLastArticle {
+    width: 90%;
+    margin-left: 5%;
+    height: auto;
+    justify-self: center;
+  }
+}
 .lastArticle .lastArticleContain {
   height: 43.9522998296vh;
   width: 14.6875vw;
+}
+@media (max-width: 450px) {
+  .lastArticle .lastArticleContain {
+    width: 90%;
+    margin-left: 5%;
+    height: auto;
+    justify-self: center;
+  }
 }
 .lastArticle .lastArticleContain .dataWrapper {
   display: inline-flex;
