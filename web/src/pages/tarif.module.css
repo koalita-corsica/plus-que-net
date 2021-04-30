@@ -78,6 +78,7 @@
   transform: rotate(45deg);
   row-gap: 1.5195741056vh;
   column-gap: 0.75375vw;
+  z-index: -1;
 }
 @media (max-width: 450px) {
   .BlockContent .iconeMenu {
