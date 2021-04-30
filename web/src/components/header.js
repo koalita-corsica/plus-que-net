@@ -35,7 +35,7 @@ const MenuIcon = styled.button`
       transform: ${({nav}) => nav ? 'rotate(45deg)' : 'rotate(0)'}
     }
     :nth-child(2){
-      opacity: ${({nav}) => nav ? "0" : "1"}
+      opacity: ${({nav}) => nav ? "0" : "1" }
     }
     :nth-child(3) {
       transform: ${({nav}) => nav ? 'rotate(-45deg)' : 'rotate(0)'}
