@@ -7,10 +7,23 @@
   flex-direction: column;
   margin-left: 2vw;
 }
+@media (max-width: 450px) {
+  .root {
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .imgCentered {
   width: auto;
   height: 59.2844974446vh;
+}
+@media (max-width: 450px) {
+  .imgCentered {
+    width: 95%;
+    height: 49.2844974446vh;
+    margin-top: 10vh;
+  }
 }
 
 .selectedImg {

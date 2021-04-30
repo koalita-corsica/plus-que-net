@@ -11,38 +11,54 @@
   backdrop-filter: blur(30px);
   
 }
-/* @media (max-width: 450px){
+@media (max-width: 450px){
   .galery{
-    background-color: green;
-    width: 85%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
   }
-} */
+}
 .titleContent{
   width: 100%;
 }
-/* @media (max-width: 450px){
+@media (max-width: 450px){
   .titleContent{
-    background-color: black;
-    width: 85%;
-    height: auto;
+    width: auto;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    
+    
   }
-} */
+}
+
 .titleService{
   text-align: center;
   color: white;
   font-family: Roboto, Regular;
   width: 100%;
 }
+@media (max-width: 450px){
+  .titleService{
+    
+  }
+}
 .buttonClose{
   float: right;
-  color: red;
+  color: green;
   background-color: transparent;
   font-size: 5vh; 
 }
 .buttonClose:hover{
   color: red;
   background-color: transparent;
+}
+@media (max-width: 450px){
+  .buttonClose{
+    float: none;
+    
+    
+  }
 }
 
 

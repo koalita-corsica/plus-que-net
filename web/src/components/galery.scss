@@ -7,13 +7,21 @@
     width: auto;
     flex-direction: column;
     margin-left: 2vw;
-    
+    @media (max-width: 450px){
+        width: 100%;
+        height: 100%;
+    }
       
 }
 
 .imgCentered{
     width: auto;
     height: 59.28449744463373vh;
+    @media (max-width: 450px){
+        width: 95%;
+        height: 49.28449744463373vh;
+        margin-top: 10vh;
+    }
 }
 .selectedImg{
     width: 100%;
