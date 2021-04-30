@@ -63,7 +63,7 @@ const ContactPage = props => {
   justify-content: center;
   border-radius: 5px;
   @media (max-width: 768px) {
-    width: 38px;
+     width: 38px;
     height: 38px;
     justify-self: left;
   }
