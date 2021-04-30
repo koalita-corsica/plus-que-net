@@ -7,6 +7,7 @@ import logo from '../images/logo.png'
 import styled from "styled-components"
 import styles from './header.module.css'
 const MenuIcon = styled.button`
+  display: none;
 @media (max-width: 768px) {
   position: fixed;
   top: 2rem;
@@ -44,6 +45,8 @@ const MenuIcon = styled.button`
 }
 `
 const MenuLinks = styled.nav`
+  display: none;
+@media (max-width: 768px) {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -75,6 +78,7 @@ const MenuLinks = styled.nav`
       color: orange;
     }
   }
+}
 `
 const Header = ({nav, showNav, data}) => (
   <React.Fragment>
