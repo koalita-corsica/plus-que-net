@@ -45,7 +45,7 @@
 }
 .buttonClose{
   float: right;
-  color: green;
+  color: red;
   background-color: transparent;
   font-size: 5vh; 
 }
