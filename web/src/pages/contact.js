@@ -62,6 +62,11 @@ const ContactPage = props => {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  @media (max-width: 768px) {
+    width: 38px;
+    height: 38px;
+    justify-self: left;
+  }
 `;
 
   const hiddenFileInput = React.useRef(null);
