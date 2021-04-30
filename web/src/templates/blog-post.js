@@ -52,12 +52,27 @@ export const query = graphql`
         }
       }
     }
+    thematiques: allSanityThematiques {
+      edges {
+        node {
+          id
+          title
+          image {
+            asset {
+              url
+              id
+            }
+          }
+        }
+      }
+    }
   }
 `
 
 const BlogPostTemplate = props => {
   const {data, errors} = props
   const post = data && data.post
+  const thema = data && data.thematiques
   return (
     <Layout>
       {errors && <SEO title='GraphQL Error' />}
@@ -69,7 +84,7 @@ const BlogPostTemplate = props => {
         </Container>
       )}
 
-      {post && <BlogPost {...post} />}
+      {post && <BlogPost thema={thema} {...post} />}
     </Layout>
   )
 }

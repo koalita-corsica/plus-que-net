@@ -23,7 +23,7 @@ function BlogPost (props) {
       <WrapperBlog>
         <div className={styles.blogContain}>
           <div className={styles.pathContain}>
-            <h3 className={styles.path}>Tous les Articles {'> '}  </h3>
+            <h3 className={styles.path}>Tous les Articles  {' > '}  </h3>
             <h3 className={styles.articleTitle}> {title}</h3>
           </div>
           {mainImage && mainImage.asset && (
@@ -65,18 +65,12 @@ function BlogPost (props) {
         <aside className={styles.aside}>
           <h3 className={styles.categorieTitle} >Thématique</h3>
           <div className={styles.catWrapper}>
+          {props.thema.edges.map(element =>
             <div className={styles.categorie}>
-              <img src={imgTest} className={styles.imgTheme}></img>
-              <h2>Thèmes</h2>
+              <img  src={element.node.image.asset.url} className={styles.imgTheme}></img>
+              <h2> {element.node.title} </h2>
             </div>
-            <div className={styles.categorie}>
-              <img src={imgTest} className={styles.imgTheme}></img>
-              <h2>Thèmes</h2>
-            </div>
-            <div className={styles.categorie}>
-              <img src={imgTest} className={styles.imgTheme}></img>
-              <h2>Thèmes</h2>
-            </div>
+            )}
           </div>
         </aside>
       </WrapperBlog>
