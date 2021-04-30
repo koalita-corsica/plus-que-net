@@ -47,7 +47,7 @@ const MenuIcon = styled.button`
 const MenuLinks = styled.nav`
   display: none;
 @media (max-width: 768px) {
-  display: flex;
+  display: ${({nav}) => (nav ? "flex" : "none")};
   flex-direction: column;
   justify-content: start;
   align-items: center;
