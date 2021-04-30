@@ -40,12 +40,16 @@ function Services (data) {
         {item.node._rawBody && <PortableText blocks={item.node._rawBody} />}
         <button onClick={openModal} className={styles.button}>Voir la galerie</button>
         <Modal
+          style={{overlay: {backgroundColor: "transparent"}}}
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           ariaHideApp={false}
           data={data.data} 
           className={styles.galery}>
-              <button  ><FontAwesomeIcon icon={faTimes} onClick={closeModal} /></button>
+            <div className={styles.titleContent}>
+              <h1 className={styles.titleService}> {item.node.title}</h1>
+              <button  className={styles.buttonClose}><FontAwesomeIcon icon={faTimes} onClick={closeModal} /></button>
+            </div>
           <Galerie data={data.data}/>
         </Modal>
     </React.Fragment>

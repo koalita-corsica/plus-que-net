@@ -364,12 +364,14 @@ const BlogPage = props => {
               {theme === "theme4" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme4Last} /> : ""} 
               {theme === "theme5" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme5Last} /> : ""} 
             </div>
+            <div className={styles.article}>
               {theme === "none" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ""}
               {theme === "theme1" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme1All} /> : ""}  
               {theme === "theme2" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme2All} /> : ""} 
               {theme === "theme3" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme3All} /> : ""} 
               {theme === "theme4" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme4All} /> : ""} 
               {theme === "theme5" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme5All} /> : ""} 
+            </div>
           </div>
           <aside className={styles.aside}>
           <h2 className={styles.categorieTitle} >Thématique</h2>

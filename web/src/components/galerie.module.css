@@ -3,53 +3,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .root {
   display: flex;
-  justify-content: space-around;
+  width: auto;
   flex-direction: column;
-  border-radius: 8px;
-  opacity: 1;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  margin-left: 2vw;
 }
 
-.root .imgCentered {
-  margin-left: 4vw;
-  margin-top: 2vh;
-}
-
-
-.titleContent {
-  display: flex;
-  justify-content: space-evenly;
-  color: black;
-}
-.titleContent .title {
-  color: black;
-  font-family: Roboto, Regular;
-  font-size: 40px;
-}
-.titleContent button {
-  border: none;
-  background-color: transparent;
-  font-family: inherit;
-  padding: 0;
-  cursor: pointer;
-  font-size: 25px;
-  margin-left: 8vw;
+.imgCentered {
+  width: auto;
+  height: 59.2844974446vh;
 }
 
 .selectedImg {
-  width: 50vw;
-  height: 50vh;
-}
-
-.sliderContent button {
-  border: none;
-  background-color: transparent;
-  font-family: inherit;
-  padding: 0;
-  cursor: pointer;
-  color: white;
-  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  border-radius: 17px;
 }
 
 /*# sourceMappingURL=galerie.module.css.map */

@@ -43,30 +43,15 @@
   position: absolute;  
   font-family: Roboto, Regular;
   font-size: 14px;  
-  width: 39.0625vw;
-  height: 43.68532206969377vh;
+  width: 48.90625vw;
+  height: 54.68483816013629vh;
   display: flex;
-  flex-direction: column;
+  
   justify-content: space-around;
-  gap: 1vh;
+  gap: 2vw;
   color: white;
-  .menuContent{
-      margin-top: 2.4vh;
-      height: 8.17717206132879vh;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      .titleMenu{
-          margin-top: 2.7vh;
-          margin-left: 2.65625vw;
-          font-size: 20px;
-          color: var(--unnamed-color-f26633);
-          color: #F26633;
-          opacity: 1;
-      }
-
-      
-  }
+  
+  
   .iconeMenu{
     margin-left: 2vw;
     margin-top: 1.7vh;

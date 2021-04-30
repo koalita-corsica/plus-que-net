@@ -38,7 +38,7 @@ const SimpleSlider = ({ data, settings }) => {
         element.node.images.map(i =>
           <React.Fragment>
               <div key={element.id} className={styles.imgCentered}>
-                <img src={i.asset.url} className={styles.imgCentered} width="565" height="450" />
+                <img src={i.asset.url} className={styles.selectedImg}  />
             </div>
           </React.Fragment>
           ),)}
