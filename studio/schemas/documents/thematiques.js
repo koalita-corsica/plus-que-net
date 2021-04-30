@@ -11,7 +11,8 @@ export default {
       {
         name: 'slug',
         type: 'string',
-        title: 'Slug'
+        title: 'Slug',
+        readOnly: true
       },
       {
         name: 'description',

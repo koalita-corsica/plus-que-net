@@ -82,7 +82,7 @@ const ContactPage = props => {
                     <label for="adresse" className={styles.adresse}> adresse </label>
                     <input name="adresse" placeholder="Votre Adresse" className={styles.adresseInput}></input>
                     <label for="message" className={styles.msgLabel}> message </label>
-                    <textarea name="message" placeholder="Votre Message" rows="6" className={styles.msgArea}></textarea>
+                    <textarea name="message" placeholder="Votre Message" rows="3" className={styles.msgArea}></textarea>
                     <div className={styles.addItem}>
                       <div className={styles.imgPreview}><img src={imgTest} alt="s"></img></div>
                       <button className={styles.addBtn}><FontAwesomeIcon icon={faPlusSquare} className={styles.add}/></button>

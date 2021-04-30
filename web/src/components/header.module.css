@@ -1,39 +1,80 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-.root {
-  font-family: "Roboto", sans-serif;
-  font-size: 2.7257240204vh;
-  display: flex;
-  height: 11.5843270869vh;
+ .root {
+   font-family: "Roboto", sans-serif;
+   font-size: 2.7257240204vh;
+   top: 3.25vh;
+   display: flex;
+   gap: 5%;
+   justify-content: space-between;
+   background-color: transparent;
+   height: 11.5843270869vh;
+ }
+ @media (max-width: 450px) {
+   .root {
+     flex-direction: row-reverse;
+     justify-content: space-around;
+     align-items: center;
+     background: transparent;
+     opacity: 1;
+     justify-content: space-around;
+     backdrop-filter: blur(30px);
+     -webkit-backdrop-filter: blur(30px);
+     height: 123px;
+  }
 }
-
 .root .nav {
   display: flex;
   align-self: center;
   width: 100%;
 }
-
+@media (max-width: 450px) {
+  .root .nav {
+    display: none;
+  }
+}
 .root .nav ul {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
   width: 100%;
 }
-.root .nav div div * {
+.root .nav ul li * {
   text-decoration: none;
   color: #ffffff;
 }
-.root .nav div div :hover {
+.root .nav ul li :hover {
   color: #F26633;
 }
-.root .nav div div :focus {
-  color: #F26633;
-}
-.root .logo {
-  align-self: center;
+ .root .nav ul li :focus {
+   color: #F26633;
+ }
+ .root .logo {
+   align-self: center;
+ }
+ @media (max-width: 450px) {
+   .root .logo {
+     margin-right: 27.328125vw;
+     margin-right: 8.328125vw;
+     display: none;
+   }
+ }
+
+.navBar img{
+  display: none;
 }
 
+  @media (max-width: 450px) {
+    .navBar {
+    position: fixed;
+    z-index: -1;
+    }
+    .navBar img {
+      display: inline;
+      margin-top: -2vh;
+    }
+  }
 
 .toggleNavButton {
   appearance: none;
@@ -50,30 +91,16 @@
   display: block;
   fill: inherit;
 }
-
-
 @media (max-width: 450px) {
-  .root .logo {
-    margin-right: 8.328125vw;
-  }
-}
+   .toggleNavButton {
+     display: block;
+     color: white;
+     margin-left: 10vw;
+     justify-self: right;
+   }
+ }
 
-@media (max-width: 450px) {
-  .root .nav {
-    display: none;
-    z-index: -5;
-  }
+.showNav {
+  display: inline-block;
 }
-@media (max-width: 450px) {
-  .root {
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-around;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    height: 123px;
-    z-index: -5;
-  }
-}
-
 /*# sourceMappingURL=header.module.css.map */

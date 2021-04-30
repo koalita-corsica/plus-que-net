@@ -322,8 +322,6 @@ const BlogPage = props => {
   const lastOne = data && data.lastPost
   const thematique = data && data.thematiques
 
-  console.log(blogPost)
-
   if (errors) {
     return (
       <Layout>
@@ -355,7 +353,7 @@ const BlogPage = props => {
         </div>
         <WrapperBlog>
           <div className={styles.blogContain}>
-            <h2 className={styles.allArticle}>Tous les articles</h2>
+            <h2 onClick={() => setTheme("none")} className={styles.allArticle}>Tous les articles</h2>
             <div className={styles.lastArticle}>
             {theme === "none" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={lastNodes} /> : ""}
               {theme === "theme1" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme1Last} /> : ""}  
@@ -378,8 +376,8 @@ const BlogPage = props => {
           <div className={styles.catWrapper}>
             {thematique.edges.map(element =>
             <div onClick={() => setTheme(element.node.slug)} className={styles.categorie}>
-              <img  src={element.node.image.asset.url} className={styles.imgTheme}></img>
-              <h2> {element.node.title} </h2>
+              <img onClick={() => setTheme(element.node.slug)}  src={element.node.image.asset.url} className={styles.imgTheme}></img>
+              <h2 onClick={() => setTheme(element.node.slug)}> {element.node.title} </h2>
             </div>
             )}
           </div>
