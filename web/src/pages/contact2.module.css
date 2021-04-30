@@ -282,9 +282,6 @@
 .addItem .add {
   font-size: 5vh;
   border-radius: 5px;
-  color: #F26633;
-  width: 3.359375vw;
-  height: 7.3253833049vh;
   margin: 0;
   opacity: 1;
 }
@@ -294,15 +291,16 @@
     height: auto;
   }
 }
-.addItem .add:hover {
+/* .addItem .add:hover {
   border-radius: 5px;
   border: 2px solid #F26633;
-}
+} */
 .addItem .imgPreview {
   background-color: white;
   height: 6.9846678024vh;
   width: 3.203125vw;
   border-radius: 5px;
+  color: white;
   opacity: 1;
   border: 2px solid gray;
   grid-column: 1;
@@ -434,7 +432,9 @@ button {
 }
 
 button:hover {
-  background-color: #F26633;
+  border-radius: 5px;
+  border: 2px solid #F26633;
 }
+
 
 /*# sourceMappingURL=contact2.module.css.map */
