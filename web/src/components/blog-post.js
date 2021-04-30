@@ -66,18 +66,12 @@ function BlogPost (props) {
         <aside className={styles.aside}>
           <h2 className={styles.categorieTitle} >Thématique</h2>
           <div className={styles.catWrapper}>
+          {props.thema.edges.map(element =>
             <div className={styles.categorie}>
-              <img src={imgTest} className={styles.imgTheme}></img>
-              <h2>Thèmes</h2>
+              <img  src={element.node.image.asset.url} className={styles.imgTheme}></img>
+              <h2> {element.node.title} </h2>
             </div>
-            <div className={styles.categorie}>
-              <img src={imgTest} className={styles.imgTheme}></img>
-              <h2>Thèmes</h2>
-            </div>
-            <div className={styles.categorie}>
-              <img src={imgTest} className={styles.imgTheme}></img>
-              <h2>Thèmes</h2>
-            </div>
+            )}
           </div>
         </aside>
       </WrapperBlog>

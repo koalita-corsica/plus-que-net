@@ -18,44 +18,41 @@ import Modal from 'react-modal'
 import Container from '../components/container'
 import Layout from '../containers/layout'
 
+import styles from './services.module.css'
 
 
 function Services (data) {
+  const {_rawBody, authors, categories, title, mainImage, publishedAt} = data.data
   const [modalIsOpen,setIsOpen] = React.useState(false);
   function openModal() {
     setIsOpen(true);
   }
 
-
   function closeModal(){
     setIsOpen(false);
   }
 
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
-
-  console.log(data.title)
-
   return (
-      <Wrapper>
-        <h1> {data.data.title} </h1>
-        <p> <PortableText blocks={data.data._rawBody}/> </p>
-      </Wrapper>
+    <React.Fragment>
+    {data.data.edges.map(item =>
+    <React.Fragment>
+        <h1> {item.node.title} </h1>
+        {item.node._rawBody && <PortableText blocks={item.node._rawBody} />}
+        <button onClick={openModal} className={styles.button}>Voir la galerie</button>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          ariaHideApp={false}
+          data={data.data} 
+          className={styles.galery}>
+              <button  ><FontAwesomeIcon icon={faTimes} onClick={closeModal} /></button>
+          <Galerie data={data.data}/>
+        </Modal>
+    </React.Fragment>
+    )}  
+    </React.Fragment>
   );
 }
 
 export default Services
 
-
-{/* <Modal
-isOpen={modalIsOpen}
-onRequestClose={closeModal}
-className={styles.galery}
-data={props} >
-   <button className={styles.closed} ><FontAwesomeIcon icon={faTimes} onClick={closeModal} className={styles.icon}/></button>
-  <Galerie data={props}/>
-</Modal> */}

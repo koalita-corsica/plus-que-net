@@ -24,15 +24,23 @@
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.8.0",
     "@sanity/image-url": "^0.140.22",
+    "babel-plugin-styled-components": "^1.12.0",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
+    "gatsby-plugin-styled-components": "^4.4.0",
     "gatsby-source-google-reviews": "0.0.7",
     "react": "^16.14.0",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.2.1",
     "react-icons": "^4.2.0",
     "react-modal": "^3.13.1",
+<<<<<<< HEAD
+=======
+    "react-native-modal": "^11.10.0",
+    "react-native-web": "^0.16.1",
+>>>>>>> 6b8febff9ee4e950df7cbc41c9246878083412fc
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.2.3",
     "uniqid": "^5.3.0"
   }
 }

@@ -15,88 +15,37 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from './galerie.module.css'
 import imgTest from '../images/test.jpg'
+
 const settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 1,
-  slidesToScroll: 1
-};
+  slidesToScroll: 1,
+  arrows: true
+}
 
 
-// const SimpleSlider = ({ data, settings }) => (
-//       <WrapperGalery>
-//             <React.Fragment>
-//               {console.log(data.sanityServices.images)}
-//             <div className={styles.backg}>
-//               <h1> {data.sanityServices.title} </h1>
-//               <Slider {...settings}>
-//                 {data.sanityServices.images.map((item =>
-//                 <ul>
-//                   <li key={item.asset._id} className={styles.center}>
-//                     <h3><img src={item.asset.url} width="676" height="348"/></h3>
-//                   </li>
-//                 </ul>
-//                   ))}
-//               </Slider>
-//             </div>
-//           </React.Fragment>
-//       </WrapperGalery>
-// )
 const SimpleSlider = ({ data, settings }) => {  
-  
   return (
-  
-  
+
     <React.Fragment>
       <div className={styles.root}>
-      <Slider {...settings}>
         <div className={styles.titleContent}>
-          <div className={styles.title}> {data.title} </div>
-          <button className={styles.closed} ><FontAwesomeIcon icon={faTimes} className={styles.icon}/></button>
-            {open ? "" : setOpen(!open) == false}
+            <div className={styles.title}> {data.title} </div>
         </div>
-        <div>
-          <img src={imgTest} className={styles.selectedImg}></img>
-        </div>
-          <div>
-            <img src={imgTest} className={styles.imgSlider}></img>
-          </div>
-          <div>
-            <img src={imgTest} className={styles.imgSlider}></img>
-          </div>
-          <div>
-            <img src={imgTest} className={styles.imgSlider}></img>
-          </div>
-          <div>
-            <img src={imgTest} className={styles.imgSlider}></img>
-          </div>
-          <div>
-            <img src={imgTest} className={styles.imgSlider}></img>
-          </div>
+      <Slider  {...settings}>
+      {data.edges.map(element =>
+        element.node.images.map(i =>
+          <React.Fragment>
+              <div key={element.id} className={styles.imgCentered}>
+                <img src={i.asset.url} className={styles.imgCentered} width="565" height="450" />
+            </div>
+          </React.Fragment>
+          ),)}
         </Slider>
       </div>
     </React.Fragment>
   )
 }
 
-export default function mySimpleSlider(props) {
-  
-  return (
-    <StaticQuery
-    query={graphql`
-    query ServiceQuery {
-      sanityServices(slug: {current: {}}) {
-        title
-        images {
-          _key
-          asset {
-            url
-          }
-          }
-        }
-      }
-      `}
-      render={data => <SimpleSlider data={data} {...props} />}
-    />
-  )
-}
+export default SimpleSlider

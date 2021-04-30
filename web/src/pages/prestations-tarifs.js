@@ -58,57 +58,73 @@ export const query = graphql`
       }
     }
   }
-  service1: sanityServices(slug: { current: { eq: "service1" } }) {
-    id
-    _id
-    title
-    _rawBody
-     images{
-       asset {
-         _id
-          id
-           url
-       }
-     }
+  service1: allSanityServices(filter: {slug: {current: {eq: "service1"}}}) {
+    edges {
+      node {
+        _id
+        id
+        title
+        _rawBody
+        images {
+          asset {
+            _id
+            id
+            url
+          }
+        }
+      }
+    }
    }
-   service2: sanityServices(slug: { current: { eq: "service2" } }) {
-    id
-    _id
-    title
-    _rawBody
-     images{
-       asset {
-         _id
-          id
-           url
-       }
-     }
+   service2: allSanityServices(filter: {slug: {current: {eq: "service2"}}}) {
+    edges {
+      node {
+        _id
+        id
+        title
+        _rawBody
+        images {
+          asset {
+            _id
+            id
+            url
+          }
+        }
+      }
+    }
    }
-   service3: sanityServices(slug: { current: { eq: "service3" } }) {
-    id
-    _id
-    title
-    _rawBody
-     images{
-       asset {
-         _id
-          id
-           url
-       }
-     }
+   service3: allSanityServices(filter: {slug: {current: {eq: "service3"}}}) {
+    edges {
+      node {
+        _id
+        id
+        title
+        _rawBody
+        images {
+          asset {
+            _id
+            id
+            url
+          }
+        }
+      }
+    }
    }
-   service4: sanityServices(slug: { current: { eq: "service-4" } }) {
-    id
-    _id
-    title
-    _rawBody
-     images{
-       asset {
-         _id
-          id
-           url
-       }
-     }
+   service4: allSanityServices(filter: {slug: {current: {eq: "service-4"}}}) {
+    edges {
+      node {
+        _id
+        id
+        title
+        _rawBody
+        images {
+          asset {
+            _id
+            id
+            url
+          }
+        }
+      }
+    }
    }
 }
 `
@@ -137,7 +153,7 @@ const PrestationPage = props => {
     slidesToScroll: 1
   };
 
-  const [qual, setQual] = useState("service1")
+  const [qual, setQual] = useState("service2")
 
    //movenment controls
    function rotateClick4() {
@@ -217,9 +233,9 @@ const PrestationPage = props => {
         <Wrapper>
           <div className={styles.BlockContent}>
               <div className={styles.iconeMenu}>
-                <React.Fragment>
+
                 <div className={styles.iconContent1} onClick={rotateClick1} class="iconContent1">
-                  <span className={styles.icone1}><FontAwesomeIcon icon={faBrush} className={styles.icon}/></span>
+                  <span className={styles.icone1}><FontAwesomeIcon icon={faCity} className={styles.icon}/></span>
                 </div>
                 <div className={styles.iconContent2} onClick={rotateClick2} class="iconContent2">
                   <span className={styles.icone2}><FontAwesomeIcon icon={faBrush} className={styles.icon}/></span>
@@ -230,12 +246,13 @@ const PrestationPage = props => {
                 <div className={styles.iconContent4} onClick={rotateClick4} class="iconContent4">
                   <span className={styles.icone4}><FontAwesomeIcon icon={faDungeon} className={styles.icon}/></span>
                 </div>
-                </React.Fragment>
-            </div>
-          {qual === "service1" && <Service data={service1}/> }
-          {qual === "service2" && <Service data={service2}/> }
-          {qual === "service3" && <Service data={service4}/> }
-          {qual === "service4" && <Service data={service4}/> }
+                </div>
+                <div className={styles.contenu}>
+                {qual === "service1" && <Service data={service1}/> }
+                {qual === "service2" && <Service data={service2}/> }
+                {qual === "service3" && <Service data={service3}/> }
+                {qual === "service4" && <Service data={service4}/> }
+                </div>
           </div>
         </Wrapper>
       </Container>

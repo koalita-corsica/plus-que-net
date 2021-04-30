@@ -16,7 +16,6 @@ function BlogLastArticle (props) {
     {props.title && <h2 className={styles.headline}>{props.title}</h2>}
       {props.nodes &&
         props.nodes.map(node => (
-          console.log(node),
           <React.Fragment>
             <Link to={getBlogUrl(node.publishedAt, node.slug.current)}>
               <div key={node.id} className={styles.lastArticle}>
