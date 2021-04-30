@@ -2,25 +2,67 @@
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .galery {
-  left: 23.578125vw;
-  top: 15.3168654174vh;
-  width: 60vw;
-  height: 68.4224872232vh;
-  position: absolute;
+  margin-top: 15vh;
+  margin-left: 18vw;
+  height: 75vh;
+  width:75vw;
+  border-radius: 17px;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  
+}
+@media (max-width: 450px){
+  .galery{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+.titleContent{
+  width: 100%;
+}
+@media (max-width: 450px){
+  .titleContent{
+    width: auto;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    
+    
+  }
 }
 
-.galery button{
-  float: right;
-  margin-top: 3vh;
-}
-
-.titleContain {
-  margin-left: 3.81875vw;
-  margin-top: -15vh;
-  width: 10.0625vw;
+.titleService{
+  text-align: center;
   color: white;
   font-family: Roboto, Regular;
+  width: 100%;
 }
+@media (max-width: 450px){
+  .titleService{
+    
+  }
+}
+.buttonClose{
+  float: right;
+  color: red;
+  background-color: transparent;
+  font-size: 5vh; 
+}
+.buttonClose:hover{
+  color: red;
+  background-color: transparent;
+}
+@media (max-width: 450px){
+  .buttonClose{
+    float: none;
+    
+    
+  }
+}
+
+
+
 
 .button {
   align-self: center;
@@ -28,112 +70,18 @@
   border-radius: 20px;
   background-color: #F26633;
   color: white;
-  height: 3.066439523vh;
-  width: 9.140625vw;
-  margin-top: 3vh;
+  height: auto;
+  width: auto;
+  
 }
-
-
-.BlockContent {
-  font-family: Roboto, Regular;
-  font-size: 14px;
-  width: 39.0625vw;
-  height: 43.6853220697vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 1vh;
-  color: white;
-  background-color: violet;
-}
-.BlockContent .menuContent {
-  margin-top: 2.4vh;
-  height: 8.1771720613vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.BlockContent .menuContent .titleMenu {
-  margin-top: 2.7vh;
-  margin-left: 2.65625vw;
-  font-size: 20px;
-  color: var(--unnamed-color-f26633);
-  color: #F26633;
-  opacity: 1;
-}
-.BlockContent .iconeMenu {
-  margin-left: 2vw;
-  margin-top: 1.7vh;
-  height: 110px;
-  width: 110px;
-  display: grid;
-  grid-template-columns: repeat(2, 55px);
-  grid-template-rows: repeat(2, 55px);
-  transform-origin: center;
-  transform: rotate(45deg);
-  row-gap: 1.5195741056vh;
-  column-gap: 0.75375vw;
-}
-.BlockContent .iconeMenu div {
-  background-color: #F26633;
-  color: white;
-  border-radius: 8px;
-  height: 8.5178875639vh;
-  width: 3.90625vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.BlockContent .iconeMenu div:hover {
-  transform: scale(1.2);
+.button:hover{
   background-color: white;
   color: #F26633;
-  border: #F26633 solid 4px;
-}
-.BlockContent .iconContent1 {
-  margin: auto;
-  grid-row-start: 1;
-  grid-column-start: 1;
-}
-.BlockContent .iconContent2 {
-  margin: auto;
-  grid-row-start: 1;
-  grid-column-start: 2;
-}
-.BlockContent .iconContent3 {
-  margin: auto;
-  grid-row-start: 2;
-  grid-column-start: 1;
-}
-.BlockContent .iconContent4 {
-  margin: auto;
-  grid-row-start: 2;
-  grid-column-start: 2;
-}
-.BlockContent .icone1 {
-  position: absolute;
-  transform: rotate(-45deg);
-}
-.BlockContent .icone2 {
-  position: absolute;
-  transform: rotate(-45deg);
-}
-.BlockContent .icone3 {
-  transform: rotate(-45deg);
-  position: absolute;
-}
-.BlockContent .icone4 {
-  transform: rotate(-45deg);
-  position: absolute;
+  border: solid 2px #F26633;
 }
 
-.BlockContent .description {
-    color: white;
-    height: 26.2555438226vh;
-    width: 20.3958333333vw;
-    margin-top: 17vh;
-    margin-left: -11vw;
-}
+
+
 
 
 
