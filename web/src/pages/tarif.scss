@@ -18,6 +18,11 @@
   width: 39.0625vw;
   color: white;
   font-family: Roboto, Regular;
+  @media (max-width: 450px){
+    margin-left: 5%;
+    width: 85%;
+  }
+  
   h1:after{
     content: "";
     display: block;
@@ -26,7 +31,12 @@
     height: 3px;
     background-color: white;
     background-image: linear-gradient(to right, white 20%, #F26633 20%, #F26633 40%, white 40%);
-    
+  }
+  h1{
+    @media (max-width: 450px){
+    font-size: 3.4071550255536627vh;
+    width: 85%;
+    }
   }
 }
 .button{
@@ -39,22 +49,26 @@
   width: 9.140625vw; 
 }
 
-.BlockContent {
-  position: absolute;  
+.BlockContent { 
   font-family: Roboto, Regular;
   font-size: 14px;  
-  width: 48.90625vw;
-  height: 54.68483816013629vh;
+  width: 100%;
+  height: 56.218057921635435vh;
   display: flex;
-  
   justify-content: space-around;
-  gap: 2vw;
+  align-items: center;
+  gap: 2.3vw;
   color: white;
+  @media (max-width: 450px){
+    flex-direction: column;
+    gap: 5vh;
+    width: 100%;
+    height: auto;
+  }
   
   
   .iconeMenu{
-    margin-left: 2vw;
-    margin-top: 1.7vh;
+    margin-top: -25vh;
     height: 110px;
     width: 110px;
     display: grid;
@@ -64,6 +78,10 @@
     transform: rotate(45deg);
     row-gap: 1.5195741056218059vh;
     column-gap: 0.75375000000000006vw;
+    @media (max-width: 450px){
+      margin-top: 3vh;
+      gap: 5vw;
+    }
     div{
         background-color: #F26633;
         color: white;
@@ -73,6 +91,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (max-width: 450px){
+          width: 100%;
+          height: 100%;
+        }
 
     }
     div:hover{
@@ -80,7 +102,25 @@
         background-color: white;
         color: #F26633;
         border: #F26633 solid 4px;
+        @media (max-width: 450px){
+          margin-top: -1vh;
+        }
     }
+}
+.contenu{
+  width: auto;
+  height: 100%;
+  h1{
+    color: #F26633;
+  }
+  @media (max-width: 450px){
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    *{
+      margin:5vh auto;
+    }
+  }
 }
 .iconContent1{
     margin: auto;
@@ -102,30 +142,23 @@
     grid-row-start: 2;
     grid-column-start: 2;
   }
-  .icone1{
-      position: absolute;
-      transform: rotate(-45deg);
-    }
-  .icone2{ 
-      position: absolute;
-
-      transform: rotate(-45deg);
-    }
-  .icone3{  
-      transform: rotate(-45deg);
-      position: absolute;
-    }
-  .icone4{  
-      transform: rotate(-45deg);
-      position: absolute;
-    }
-    .description{
-        overflow: hidden;
-        height: 26.255543822597676vh;
-        width: 27.395833333333332vw;
-        margin-left: 12.569270833333333vw;
-        margin-top: 2vh;
-    }
+.icone1{
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.icone2{ 
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.icone3{  
+  transform: rotate(-45deg);
+  position: absolute;
+}
+.icone4{  
+  transform: rotate(-45deg);
+  position: absolute;
+}
+    
     
   
 }

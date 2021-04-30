@@ -60,7 +60,7 @@ const MenuLinks = styled.nav`
    transition: transform 300ms;
    transform: ${({nav}) => (nav ? "translateX(0)" : "translateX(100%)")};
    background-color: #262626;
-   z-index: 1;
+   z-index: -1;
 
    ul {
      list-style-type: none;
