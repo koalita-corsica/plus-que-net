@@ -14,7 +14,8 @@ export default {
             title: 'Slug',
             option: {
                 source: 'title'
-            }
+            },
+            readOnly: true,
         },
         {
             name: 'icon',

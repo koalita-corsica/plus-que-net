@@ -355,7 +355,7 @@ const BlogPage = props => {
         </div>
         <WrapperBlog>
           <div className={styles.blogContain}>
-            <h2 className={styles.allArticle}>Tous les articles</h2>
+            <h2 onClick={() => setTheme("none")} className={styles.allArticle}>Tous les articles</h2>
             <div className={styles.lastArticle}>
             {theme === "none" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={lastNodes} /> : ""}
               {theme === "theme1" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme1Last} /> : ""}  
@@ -364,20 +364,22 @@ const BlogPage = props => {
               {theme === "theme4" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme4Last} /> : ""} 
               {theme === "theme5" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme5Last} /> : ""} 
             </div>
+            <div className={styles.article}>
               {theme === "none" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ""}
               {theme === "theme1" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme1All} /> : ""}  
               {theme === "theme2" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme2All} /> : ""} 
               {theme === "theme3" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme3All} /> : ""} 
               {theme === "theme4" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme4All} /> : ""} 
               {theme === "theme5" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme5All} /> : ""} 
+            </div>
           </div>
           <aside className={styles.aside}>
           <h2 className={styles.categorieTitle} >Thématique</h2>
           <div className={styles.catWrapper}>
             {thematique.edges.map(element =>
             <div onClick={() => setTheme(element.node.slug)} className={styles.categorie}>
-              <img  src={element.node.image.asset.url} className={styles.imgTheme}></img>
-              <h2> {element.node.title} </h2>
+              <img onClick={() => setTheme(element.node.slug)}  src={element.node.image.asset.url} className={styles.imgTheme}></img>
+              <h2 onClick={() => setTheme(element.node.slug)}> {element.node.title} </h2>
             </div>
             )}
           </div>
