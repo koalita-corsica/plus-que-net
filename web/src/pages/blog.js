@@ -322,8 +322,6 @@ const BlogPage = props => {
   const lastOne = data && data.lastPost
   const thematique = data && data.thematiques
 
-  console.log(blogPost)
-
   if (errors) {
     return (
       <Layout>
