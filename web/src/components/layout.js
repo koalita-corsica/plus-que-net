@@ -6,10 +6,10 @@ import styles from './layout.module.css'
 
 
 
-const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
+const Layout = ({children, nav, showNav, siteTitle}) => (
   <>
     <div className={styles.wrapper}>
-      <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
+      <Header siteTitle={siteTitle} nav={nav} showNav={showNav} />
       <div className={styles.content}>{children}</div>
       <Footer /> 
     </div>

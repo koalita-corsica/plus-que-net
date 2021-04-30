@@ -135,6 +135,11 @@
   margin-top: 2vh;
 }
 
+.BlockContent .icon {
+  width: 7vw;
+  height: 3.5vh;
+}
+
 .contenu {
   margin-left: 3vw;
 }

@@ -234,7 +234,7 @@ const PrestationPage = props => {
               <div className={styles.iconeMenu}>
 
                 <div className={styles.iconContent1} onClick={rotateClick1} class="iconContent1">
-                  <span className={styles.icone1}><FontAwesomeIcon icon={faBrush} className={styles.icon}/></span>
+                  <span className={styles.icone1}><FontAwesomeIcon icon={faCity} className={styles.icon}/></span>
                 </div>
                 <div className={styles.iconContent2} onClick={rotateClick2} class="iconContent2">
                   <span className={styles.icone2}><FontAwesomeIcon icon={faBrush} className={styles.icon}/></span>
