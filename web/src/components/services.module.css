@@ -52,6 +52,7 @@
 .buttonClose:hover{
   color: red;
   background-color: transparent;
+  border: none;
 }
 @media (max-width: 450px){
   .buttonClose{
@@ -64,7 +65,7 @@
 
 
 
-.button {
+.buttonGalerie {
   align-self: center;
   border: #F26633;
   border-radius: 20px;
@@ -74,11 +75,12 @@
   width: auto;
   
 }
-.button:hover{
+.buttonGalerie:hover{
   background-color: white;
   color: #F26633;
-  border: solid 2px #F26633;
+  /* border: solid 2px #F26633; */
 }
+
 
 
 

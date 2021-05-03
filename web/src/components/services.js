@@ -38,7 +38,7 @@ function Services (data) {
     <React.Fragment>
         <h1> {item.node.title} </h1>
         {item.node._rawBody && <PortableText blocks={item.node._rawBody} />}
-        <button onClick={openModal} className={styles.button}>Voir la galerie</button>
+        <button onClick={openModal} className={styles.buttonGalerie}>Voir la galerie</button>
         <Modal
           style={{overlay: {backgroundColor: "transparent"}}}
           isOpen={modalIsOpen}

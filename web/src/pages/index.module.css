@@ -16,14 +16,12 @@
 .titleContain h1:after {
   content: "";
   display: block;
-  bottom: 0;
-  left: 0;
   height: 3px;
   background-color: white;
   background-image: linear-gradient(to right, #F26633 20%, white 20%);
 }
 .titleContain h1 {
-  font-size: 6.8143100511vh;
+  font-size: 5.8143100511vh;
 }
 @media (max-width: 450px) {
   .titleContain h1 {
@@ -55,7 +53,7 @@
   flex-direction: column;
   font-family: Roboto, Regular;
   font-size: 2.3850085179vh;
-  height: 54.3441226576vh;
+  height: 53.3441226576vh;
   overflow-y: scroll;
   color: white;
   margin-right: 3.4296875vw;
@@ -69,9 +67,6 @@
     margin-left: 5%;
     width: 85%;
   }
-}
-.BlockContent .bloc1 {
-  display: block;
 }
 @media (max-width: 450px) {
   .BlockContent .bloc1 {

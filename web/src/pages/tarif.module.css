@@ -25,11 +25,12 @@
 .titleContain h1:after {
   content: "";
   display: block;
-  bottom: 0;
-  left: 0;
   height: 3px;
   background-color: white;
   background-image: linear-gradient(to right, white 20%, #F26633 20%, #F26633 40%, white 40%);
+}
+.titleContain h1 {
+  font-size: 5.8143100511vh;
 }
 @media (max-width: 450px) {
   .titleContain h1 {
@@ -38,7 +39,7 @@
   }
 }
 
-.button {
+.buttonGalerie {
   align-self: center;
   border: #F26633;
   border-radius: 20px;
@@ -51,57 +52,38 @@
 .BlockContent {
   font-family: Roboto, Regular;
   font-size: 14px;
-  width: 100%;
-  height: 56.2180579216vh;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2.3vw;
   color: white;
 }
 @media (max-width: 450px) {
   .BlockContent {
     flex-direction: column;
-    gap: 5vh;
-    width: 100%;
-    height: auto;
   }
 }
 .BlockContent .iconeMenu {
-  margin-top: -25vh;
-  height: 110px;
-  width: 110px;
   display: grid;
   grid-template-columns: repeat(2, 55px);
   grid-template-rows: repeat(2, 55px);
-  transform-origin: center;
   transform: rotate(45deg);
-  row-gap: 1.5195741056vh;
-  column-gap: 0.75375vw;
-  z-index: 0;
+  gap: 1.5195741056vh;
+  margin: 5vh;
+  width: 110px;
+  height: 110px;
 }
 @media (max-width: 450px) {
   .BlockContent .iconeMenu {
-    margin-top: 3vh;
-    gap: 5vw;
+    align-self: center;
   }
 }
 .BlockContent .iconeMenu div {
   background-color: #F26633;
   color: white;
   border-radius: 8px;
-  height: 8.5178875639vh;
-  width: 3.90625vw;
+  height: 50px;
+  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 450px) {
-  .BlockContent .iconeMenu div {
-    width: 100%;
-    height: 100%;
-    
-  }
 }
 .BlockContent .iconeMenu div:hover {
   transform: scale(1.2);
@@ -114,40 +96,30 @@
     margin-top: -1vh;
   }
 }
-.BlockContent .contenu {
-  width: auto;
-  height: 100%;
-}
 .BlockContent .contenu h1 {
   color: #F26633;
 }
 @media (max-width: 450px) {
   .BlockContent .contenu {
-    width: 100%;
-    height: 100%;
     text-align: center;
   }
-  .BlockContent .contenu * {
-    margin: 5vh auto;
+  .BlockContent .contenu button {
+    margin: 2vh;
   }
 }
 .BlockContent .iconContent1 {
-  margin: auto;
   grid-row-start: 1;
   grid-column-start: 1;
 }
 .BlockContent .iconContent2 {
-  margin: auto;
   grid-row-start: 1;
   grid-column-start: 2;
 }
 .BlockContent .iconContent3 {
-  margin: auto;
   grid-row-start: 2;
   grid-column-start: 1;
 }
 .BlockContent .iconContent4 {
-  margin: auto;
   grid-row-start: 2;
   grid-column-start: 2;
 }

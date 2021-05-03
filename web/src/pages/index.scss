@@ -15,15 +15,13 @@
   h1:after{
     content: "";
     display: block;
-    bottom: 0;
-    left: 0;
     height: 3px;
     background-color: white;
     background-image: linear-gradient(to right, #F26633 20%, white 20%);
     
   }
   h1{
-    font-size: 6.814310051107325vh;
+    font-size: 5.814310051107325vh;
     @media (max-width: 450px){
     font-size: 3.4071550255536627vh;
     width: 85%;
@@ -47,7 +45,7 @@
   flex-direction: column;
   font-family: Roboto, Regular;
   font-size: 2.385008517887564vh;  
-  height: 54.34412265758092vh;  
+  height: 53.34412265758092vh;  
   overflow-y: scroll;
   color: white;
   margin-right: 3.4296875vw;
@@ -61,7 +59,7 @@
     width: 85%;
     }
   .bloc1{
-    display: block;
+    
     @media (max-width: 450px){
       font-size: 2.5553662691652472vh;      
     }
@@ -89,55 +87,5 @@
         order: -2;
       }  
     }
-  }
-  // .bloc1 div p:first-child{
-  //   background-color: green;
-  //   @media (max-width: 450px){
-  //     order: 2;
-  //     background-color: green;
-      
-      
-  //   }
-  // }
-      // p{
-      //   @media (max-width: 450px){
-      //     position: relative;
-      //     top: -95vh;
-      //   }
-      // }
-      //premier paragraphe
-      // //2ieme paragraphe
-      // p:nth-child(5){
-      //   @media (max-width: 450px){
-      //     position: relative;
-      //     margin-top: 100vh;
-          
-      //   }
-      // }
-      // //3ieme paragraphe
-      // p:nth-child(7){
-      //   @media (max-width: 450px){
-      //     position: relative;
-      //     margin-top: 100vh;
-          
-      //   }
-      // }
-      // //2ieme titre
-      // h1:nth-child(4){
-      //   @media (max-width: 450px){
-      //     position: relative;
-      //     margin-top: -40vh;
-          
-      //   }
-      // }
-      // h1:nth-child(6){
-      //   @media (max-width: 450px){
-      //     position: relative;
-      //     margin-top: -90vh;
-          
-      //   }
-      // }
-       
-    // }
-  
+  } 
 }

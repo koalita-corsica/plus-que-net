@@ -105,25 +105,25 @@ const ContactPage = props => {
                     <label for="photo" className={styles.jointe}> pièces jointes </label>
                     <input name="name" placeholder="Votre Nom Prenom" className={styles.nameInput}/>
                     <input name="numero" placeholder="Votre Numero" className={styles.telInput}/>  
-                    <input name="photo" placeholder="maphoto.jpg" className={styles.jointeInput}/> 
                     <label for="mail"className={styles.mail}> email </label>
                     <input name="mail" placeholder="Votre mail" className={styles.mailInput}></input>
                     <label for="adresse" className={styles.adresse}> adresse </label>
                     <input name="adresse" placeholder="Votre Adresse" className={styles.adresseInput}></input>
                     <label for="message" className={styles.msgLabel}> message </label>
                     <textarea name="message" placeholder="Votre Message" rows="3" className={styles.msgArea}></textarea>
-                    <div className={styles.addItem}>
+                    <div className={styles.imgPreviewContain}>
                       <div className={styles.imgPreview}><img id="prev" src={imgTest} alt="s"></img></div>
-                      <Button onClick={handleClick}>
-                      <FontAwesomeIcon icon={faPlusSquare} className={styles.add} size='90x'/>
-                      </Button>
-                      <input type="file"
-                            ref={hiddenFileInput}
-                            onChange={handleChange}
-                            style={{display:'none'}} 
-                      />
-                      
                     </div>
+                    <Button onClick={handleClick} className={styles.addIcon}>
+                    <FontAwesomeIcon icon={faPlusSquare} className={styles.add} size='90x'/>
+                    </Button>
+                    <input type="file"
+                          ref={hiddenFileInput}
+                          onChange={handleChange}
+                          style={{display:'none'}} 
+                    />
+                      
+  
                     <button type="submit" className={styles.btnEnvoyer}> Envoyer! </button>  
                 </div> 
               </form>

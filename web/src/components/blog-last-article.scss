@@ -2,44 +2,39 @@
 @import '../styles/custom-properties.css';
 
 .root {
-  display: block;
-  width: 46.875vw;
+  font-family: Roboto, Regular;
   
-  @media (max-width: 450px){
-    width: 100%;
-    display: flex;
-  }
 }
 
 a{
   text-decoration: none;
+  color: white;
 }
 .lastArticle{
   display: flex;
-  justify-content: space-between;
   overflow: hidden;
+  height: 50.95229982964225vh;
+  gap: 2vh;
+  
   @media (max-width: 450px){
       flex-direction: column;
+      height: auto;
   }
   .imgLastArticle{
     width: 30.390625vw;
-    height: 43.95229982964225vh;
-    justify-self: left;
+    height: auto;
     @media (max-width: 450px){
       width: 90%;
       margin-left: 5%;
-      height: auto;
-      justify-self: center;
+      
     }
   }
   .lastArticleContain{
-    height: 43.95229982964225vh;
-    width: 14.6875vw;
+    
     @media (max-width: 450px){
       width: 90%;
       margin-left: 5%;
-      height: auto;
-      justify-self: center;
+      
     }
     .dataWrapper{
       display: inline-flex;
@@ -47,15 +42,8 @@ a{
       .publish{
         color: white;
         display: inline-flex;
-        gap: 0.5vw;
-
+        gap: 6px;
       }
-    }
-    .articleTitle {
-      color: white;
-    }
-    .description{
-      color: white;
     }
   }
 }

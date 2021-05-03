@@ -1,30 +1,16 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 
-.root {
-  
-}
 
-.headline {
-  font-size: var(--font-micro-size);
-  line-height: var(--font-micro-line-height);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  
-  
-}
+
+
 
 .grid {
-  font-size: 14px;
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.875vw;
   font-family: Roboto, Regular;    
   color: white;
-  list-style-type: none;
-  
-  
   @media (max-width: 450px){
     display: flex;
     flex-direction: column;
@@ -32,10 +18,8 @@
 
   .article{
     @media (max-width: 450px){
-      width: 75%;
+      width: 77%;
       margin-left: 5%;
-      height: auto;
-      justify-self: center;
     }
     
     a{

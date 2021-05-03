@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .root {
   display: flex;
-  width: auto;
   flex-direction: column;
   margin-left: 2vw;
 }
@@ -13,16 +12,18 @@
     height: 100%;
   }
 }
+.root div:nth-child(2) button:hover {
+  border: none;
+}
 
 .imgCentered {
   width: auto;
-  height: 59.2844974446vh;
+  height: 60vh;
 }
 @media (max-width: 450px) {
   .imgCentered {
     width: 95%;
-    height: 49.2844974446vh;
-    margin-top: 10vh;
+    margin-top: 5vh;
   }
 }
 
