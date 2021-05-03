@@ -22,7 +22,9 @@
     margin-left: 5%;
     width: 85%;
   }
-  
+  .title span{
+    display: block;
+  }
   h1:after{
     content: "";
     display: block;
@@ -50,6 +52,7 @@
 
 .BlockContent { 
   font-family: Roboto, Regular;
+  
   font-size: 14px;  
   display: flex;
   color: white;
@@ -60,22 +63,23 @@
   
   .iconeMenu{
     display: grid;
-    grid-template-columns: repeat(2, 55px);
-    grid-template-rows: repeat(2, 55px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     transform: rotate(45deg);
-    gap: 1.5195741056218059vh;
-    margin: 5vh;
-    width: 110px;
-    height: 110px;
+    gap: 1vh;
+    margin-right: 2.8vw;
+    width: 60px;
+    height: 60px;
+    align-self: flex-start;
     @media (max-width: 450px){
       align-self: center;
     }
     div{
       background-color: #F26633;
-      color: white;
-      border-radius: 8px;
-      height: 50px;
-      width: 50px;
+      border: #F26633 solid 4px;
+      border-radius: 4px;
+      height: 30px;
+      width: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -83,14 +87,42 @@
     div:hover{
         transform: scale(1.2);
         background-color: white;
-        color: #F26633;
         border: #F26633 solid 4px;
         @media (max-width: 450px){
           margin-top: -1vh;
         }
+        .ic1{
+          display: block;
+        }
+        .ic2{
+          display: block;
+        }
+        .ic3{
+          display: block;
+        }
+        .ic4{
+          display: block;
+        }
+        .ic12{
+          display: none;
+        }
+        .ic22{
+          display: none;
+        }
+        .ic32{
+          display: none;
+        }
+        .ic42{
+          display: none;
+        }
+    }
+    img{
+      width: 25px;
+      height: auto;
     }
 }
 .contenu{
+  margin-top: 1vh;
   h1{
     color: #F26633;
   }
@@ -132,6 +164,18 @@
 .icone4{  
   transform: rotate(-45deg);
   position: absolute;
+}
+.ic1{
+  display: none;
+}
+.ic2{
+  display: none;
+}
+.ic3{
+  display: none;
+}
+.ic4{
+  display: none;
 }
     
     

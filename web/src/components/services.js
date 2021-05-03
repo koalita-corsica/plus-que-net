@@ -47,8 +47,8 @@ function Services (data) {
           data={data.data} 
           className={styles.galery}>
             <div className={styles.titleContent}>
-              <h1 className={styles.titleService}> {item.node.title}</h1>
               <button  className={styles.buttonClose}><FontAwesomeIcon icon={faTimes} onClick={closeModal} /></button>
+              <h1 className={styles.titleService}> {item.node.title}</h1>
             </div>
           <Galerie data={data.data}/>
         </Modal>

@@ -103,7 +103,7 @@ const ContactPage = props => {
                     <label for="message" className={styles.msgLabel}> message </label>
                     <textarea name="message" placeholder="Votre Message" rows="3" className={styles.msgArea}></textarea>
                     <div className={styles.imgPreviewContain}>
-                      <div className={styles.imgPreview}><img id="prev" src={imgTest} alt="s"></img></div>
+                      <div className={styles.imgPreview}><img id="prev"  alt="s"></img></div>
                     </div>
                     <Button onClick={handleClick} className={styles.addIcon}>
                     <FontAwesomeIcon icon={faPlusSquare} className={styles.add} size='90x'/>

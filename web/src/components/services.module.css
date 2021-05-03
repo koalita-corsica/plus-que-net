@@ -3,12 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .galery {
   margin-top: 15vh;
-  margin-left: 18vw;
+  margin-left: 28vw;
   height: 75vh;
-  width:75vw;
-  border-radius: 17px;
+  width:65vw;
+  border-radius: 8px;
   opacity: 1;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(40px);
   
 }
 @media (max-width: 450px){
@@ -20,6 +20,7 @@
 }
 .titleContent{
   width: 100%;
+  
 }
 @media (max-width: 450px){
   .titleContent{

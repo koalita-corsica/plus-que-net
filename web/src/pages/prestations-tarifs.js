@@ -25,9 +25,13 @@ import 'slick-carousel/slick/slick-theme.css'
 import imgTest from '../images/test.jpg'
 import Service from '../components/services'
 import ic1 from '../images/barrier.png'
+import ic12 from '../images/barrier2.png'
 import ic2 from '../images/carrycot.png'
+import ic22 from '../images/carrycot2.png'
 import ic3 from '../images/Window.png'
+import ic32 from '../images/Window2.png'
 import ic4 from '../images/window_cleaner.png'
+import ic42 from '../images/window_cleaner2.png'
 
 import {isBrowser} from '../lib/utils'
 
@@ -219,23 +223,23 @@ const PrestationPage = props => {
     <Layout>
       <Container>
         <div className={styles.titleContain}>
-          <h1 className={styles.title}>Prestation &<span> Tarifs </span> </h1>
+          <h1 className={styles.title}>PRESTATIONS &<span> TARIFS</span> </h1>
         </div>
         <Wrapper>
           <div className={styles.BlockContent}>
             <div className={styles.iconeMenu}>
 
               <div className={styles.iconContent1} onClick={rotateClick1} className='iconContent1'>
-                <span className={styles.icone1}> <img className={styles.ww} src={ic1} alt='' width='40px' height='40px' /> </span>
+                <span className={styles.icone1}> <img className={styles.ic1} src={ic1} alt=''  /><img className={styles.ic12} src={ic12} alt=''  /> </span>
               </div>
               <div className={styles.iconContent2} onClick={rotateClick2} className='iconContent2'>
-                <span className={styles.icone2}> <img className={styles.ww} src={ic2} alt='' width='40px' height='40px' /> </span>
+                <span className={styles.icone2}> <img className={styles.ic2} src={ic2} alt=''  /><img className={styles.ic22} src={ic22} alt=''  /> </span>
               </div>
               <div className={styles.iconContent3} onClick={rotateClick3} className='iconContent3'>
-                <span className={styles.icone3}> <img className={styles.ww} src={ic3} alt='' width='40px' height='40px' /> </span>
+                <span className={styles.icone3}> <img className={styles.ic3} src={ic3} alt=''  /><img className={styles.ic32} src={ic32} alt=''  /> </span>
               </div>
               <div className={styles.iconContent4} onClick={rotateClick4} className='iconContent4'>
-                <span className={styles.icone4}> <img className={styles.ww} src={ic4} alt='' width='40px' height='40px' /> </span>
+                <span className={styles.icone4}> <img className={styles.ic4} src={ic4} alt=''  /><img className={styles.ic42} src={ic42} alt=''  /> </span>
               </div>
             </div>
             <div className={styles.contenu}>
