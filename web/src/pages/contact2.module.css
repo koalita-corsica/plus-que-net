@@ -1,6 +1,11 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+form {
+  z-index: -1;
+}
+
 .titleContain {
   text-align: left;
   margin-left: 27.65625vw;
@@ -35,6 +40,11 @@
   background: linear-gradient(to left, rgba(255, 255, 255, 0.6) -100%, transparent 65%);
   backdrop-filter: blur(20px);
 }
+@media (max-width: 450px) {
+  .contactWrapper {
+    z-index: -1;
+  }
+}
 
 .container {
   width: 62.65625vw;
@@ -55,6 +65,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(13, 1fr);
     column-gap: 8vw;
+    margin-left: 6vw;
   }
 }
 

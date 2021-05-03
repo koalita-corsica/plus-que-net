@@ -1,26 +1,14 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import {graphql} from 'gatsby'
-import {
-  mapEdgesToNodes,
-  filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture
-} from '../lib/helpers'
-import BlogPostPreviewList from '../components/blog-post-preview-list'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
-import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook } from "@fortawesome/free-brands-svg-icons"
-import { faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { faFacebookMessenger } from "@fortawesome/free-brands-svg-icons"
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
-import { useForm } from "react-hook-form"
-import { faPlusSquare } from '@fortawesome/free-solid-svg-icons'
-import imgTest from '../images/test.jpg'
-import styles from './contact2.module.css'
-import styled from 'styled-components';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faFacebook, faInstagram, faFacebookMessenger, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 
+import {faPlusSquare} from '@fortawesome/free-solid-svg-icons'
+import styles from './contact2.module.css'
+import styled from 'styled-components'
 
 import {isBrowser} from '../lib/utils'
 
@@ -41,11 +29,11 @@ export const query = graphql`
 
 const ContactPage = props => {
   if (!isBrowser) {
-    return;
+    return
   }
 
   const {data, errors} = props
-  const page = data && data.page;
+  const page = data && data.page
   if (errors) {
     return (
       <Layout>
@@ -67,22 +55,25 @@ const ContactPage = props => {
     height: 38px;
     justify-self: left;
   }
-`;
+`
 
-  const hiddenFileInput = React.useRef(null);
-  
+  const hiddenFileInput = React.useRef(null)
+
   const handleClick = event => {
-    hiddenFileInput.current.click();
-  };
+    hiddenFileInput.current.click()
+  }
   const handleChange = event => {
-    const fileUploaded = event.target.files[0];
-    document.getElementById("prev").src= window.URL.createObjectURL(event.target.files[0]);
-    console.log(fileUploaded)
-  };
+    var prev = document.getElementById('photoPreview')
 
+    for (let i = 0; i < event.target.files.length; i++) {
+      var x = document.createElement('IMG')
+      x.src = window.URL.createObjectURL(event.target.files[i])
+      prev.appendChild(x)
+    }
+  }
 
   return (
-    
+
     <Layout>
       <Container>
         <div className={styles.titleContain}>
@@ -135,4 +126,14 @@ const ContactPage = props => {
 
 export default ContactPage
 
+              </div>
+              <button type='submit' className={styles.btnEnvoyer}> Envoyer! </button>
+            </div>
+          </form>
+        </div>
+      </Container>
+    </Layout>
+  )
+}
 
+export default ContactPage

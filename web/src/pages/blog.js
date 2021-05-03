@@ -19,7 +19,7 @@ import Block from '@sanity/block-content-to-react'
 import {isBrowser} from '../lib/utils'
 import BlogLastArticle from '../components/blog-last-article'
 import BlogPostPreview from '../components/blog-post-preview'
-import { faZhihu } from '@fortawesome/free-brands-svg-icons'
+import {faZhihu} from '@fortawesome/free-brands-svg-icons'
 
 export const query = graphql`
   query BlogPageQuery {
@@ -312,12 +312,12 @@ export const query = graphql`
 
 const BlogPage = props => {
   if (!isBrowser) {
-    return;
+    return
   }
 
   const {data, errors} = props
-  const page = data && data.page;
-  const blogPost = data && data.posts;
+  const page = data && data.page
+  const blogPost = data && data.posts
   const items = blogPost.edges
   const lastOne = data && data.lastPost
   const thematique = data && data.thematiques
@@ -330,8 +330,8 @@ const BlogPage = props => {
     )
   }
 
-  const [theme, setTheme] = useState("none")
-  
+  const [theme, setTheme] = useState('none')
+
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
   const lastNodes = data && data.lastPost && mapEdgesToNodes(data.lastPost)
   const theme1Last = data && data.lastPost1 && mapEdgesToNodes(data.lastPost1)
@@ -340,10 +340,10 @@ const BlogPage = props => {
   const theme4Last = data && data.lastPost4 && mapEdgesToNodes(data.lastPost4)
   const theme5Last = data && data.lastPos5 && mapEdgesToNodes(data.lastPost5)
   const theme1All = data && data.posts1 && mapEdgesToNodes(data.posts1)
-  const theme2All = data && data.posts1 && mapEdgesToNodes(data.posts1)
-  const theme3All = data && data.posts1 && mapEdgesToNodes(data.posts1)
-  const theme4All = data && data.posts1 && mapEdgesToNodes(data.posts1)
-  const theme5All = data && data.posts1 && mapEdgesToNodes(data.posts1)
+  const theme2All = data && data.posts1 && mapEdgesToNodes(data.posts2)
+  const theme3All = data && data.posts1 && mapEdgesToNodes(data.posts3)
+  const theme4All = data && data.posts1 && mapEdgesToNodes(data.posts4)
+  const theme5All = data && data.posts1 && mapEdgesToNodes(data.posts5)
 
   return (
     <Layout>
@@ -353,35 +353,45 @@ const BlogPage = props => {
         </div>
         <WrapperBlog>
           <div className={styles.blogContain}>
-            <h2 onClick={() => setTheme("none")} className={styles.allArticle}>Tous les articles</h2>
+            <h2 onClick={() => setTheme('none')} className={styles.allArticle}>Tous les articles</h2>
             <div className={styles.lastArticle}>
-            {theme === "none" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={lastNodes} /> : ""}
-              {theme === "theme1" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme1Last} /> : ""}  
-              {theme === "theme2" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme2Last} />  : ""} 
-              {theme === "theme3" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme3Last} /> : ""} 
-              {theme === "theme4" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme4Last} /> : ""} 
-              {theme === "theme5" ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={theme5Last} /> : ""} 
+              {theme === 'none' ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+              {theme === 'theme1' ? theme1Last && theme1Last.length > 0 && <BlogLastArticle nodes={theme1Last} /> : ''}
+              {theme === 'theme1' ? theme1Last && theme1Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+              {theme === 'theme2' ? theme2Last && theme2Last.length > 0 && <BlogLastArticle nodes={theme2Last} /> : ''}
+              {theme === 'theme2' ? theme2Last && theme2Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+              {theme === 'theme3' ? theme3Last && theme3Last.length > 0 && <BlogLastArticle nodes={theme3Last} /> : ''}
+              {theme === 'theme3' ? theme3Last && theme3Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+              {theme === 'theme4' ? theme4Last && theme4Last.length > 0 && <BlogLastArticle nodes={theme4Last} /> : ''}
+              {theme === 'theme4' ? theme4Last && theme4Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+              {theme === 'theme5' ? theme5Last && theme5Last.length > 0 && <BlogLastArticle nodes={theme5Last} /> : ''}
+              {theme === 'theme5' ? theme5Last && theme5Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
             </div>
             <div className={styles.article}>
-              {theme === "none" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ""}
-              {theme === "theme1" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme1All} /> : ""}  
-              {theme === "theme2" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme2All} /> : ""} 
-              {theme === "theme3" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme3All} /> : ""} 
-              {theme === "theme4" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme4All} /> : ""} 
-              {theme === "theme5" ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme5All} /> : ""} 
+              {theme === 'none' ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
+              {theme === 'theme1' ? theme1All && theme1All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme1All} /> : ''}
+              {theme === 'theme1' ? theme1All && theme1All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
+              {theme === 'theme2' ? theme2All && theme2All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme2All} /> : ''}
+              {theme === 'theme2' ? theme2All && theme2All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
+              {theme === 'theme3' ? theme3All && theme3All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme3All} /> : ''}
+              {theme === 'theme3' ? theme3All && theme3All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
+              {theme === 'theme4' ? theme4All && theme4All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme4All} /> : ''}
+              {theme === 'theme4' ? theme4All && theme4All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
+              {theme === 'theme5' ? theme5All && theme5All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme5All} /> : ''}
+              {theme === 'theme5' ? theme5All && theme5All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
             </div>
           </div>
           <aside className={styles.aside}>
-          <h2 className={styles.categorieTitle} >Thématique</h2>
-          <div className={styles.catWrapper}>
-            {thematique.edges.map(element =>
-            <div onClick={() => setTheme(element.node.slug)} className={styles.categorie}>
-              <img onClick={() => setTheme(element.node.slug)}  src={element.node.image.asset.url} className={styles.imgTheme}></img>
-              <h2 onClick={() => setTheme(element.node.slug)}> {element.node.title} </h2>
+            <h2 className={styles.categorieTitle} >Thématique</h2>
+            <div className={styles.catWrapper}>
+              {thematique.edges.map(element =>
+                <div onClick={() => setTheme(element.node.slug)} className={styles.categorie}>
+                  <img onClick={() => setTheme(element.node.slug)} src={element.node.image.asset.url} className={styles.imgTheme} />
+                  <h2 onClick={() => setTheme(element.node.slug)}> {element.node.title} </h2>
+                </div>
+              )}
             </div>
-            )}
-          </div>
-        </aside>
+          </aside>
         </WrapperBlog>
       </Container>
     </Layout>
