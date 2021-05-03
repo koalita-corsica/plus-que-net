@@ -21,7 +21,7 @@ function BlogLastArticle (props) {
               <div key={node.id} className={styles.lastArticle}>
                 <img src={node.mainImage.asset.url} className={styles.imgLastArticle} width='400' height='250' />
                 <div className={styles.lastArticleContain}>
-                  <div className={styles.dataWrapper}><span className={styles.publish}>Publié<li /> </span>  <span className={styles.date}>{format(node.publishedAt, 'MMMM Do, YYYY')} </span></div>
+                  <div className={styles.dataWrapper}><span className={styles.publish}>Publié • </span>  <span className={styles.date}>{format(node.publishedAt, 'MMMM Do, YYYY')} </span></div>
                   <h3 className={styles.articleTitle}> {node.title} </h3>
                   <span className={styles.description}> <PortableText blocks={node._rawExcerpt} /> </span>
                 </div>

@@ -79,49 +79,48 @@ const ContactPage = props => {
         <div className={styles.titleContain}>
           <h1 className={styles.title}>{page.title}</h1>
         </div>
-            <div className={styles.contactWrapper}>
-              <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
-                  <input type="hidden" name="form-name" value="contact" />
-                  <div className={styles.container}>   
-                    <button className={styles.contact}> contact </button>
-                    <button className={styles.devis}> demande de devis </button>
-                    <div className={styles.social}>
-                      <FontAwesomeIcon icon={faFacebook} className={styles.fb}/>
-                      <FontAwesomeIcon icon={faInstagram} className={styles.insta}/>
-                      <FontAwesomeIcon icon={faFacebookMessenger} className={styles.messenger}/>
-                      <FontAwesomeIcon icon={faWhatsapp} className={styles.whatsapp}/>
-                    </div>
-                    <label for="name" className={styles.name}> nom prenom</label>
-                    <label for="numero" className={styles.tel}> téléphone</label>
-                    <label for="photo" className={styles.jointe}> pièces jointes </label>
-                    <input name="name" placeholder="Votre Nom Prenom" className={styles.nameInput}/>
-                    <input name="numero" placeholder="Votre Numero" className={styles.telInput}/>  
-                    <label for="mail"className={styles.mail}> email </label>
-                    <input name="mail" placeholder="Votre mail" className={styles.mailInput}></input>
-                    <label for="adresse" className={styles.adresse}> adresse </label>
-                    <input name="adresse" placeholder="Votre Adresse" className={styles.adresseInput}></input>
-                    <label for="message" className={styles.msgLabel}> message </label>
-                    <textarea name="message" placeholder="Votre Message" rows="3" className={styles.msgArea}></textarea>
-                    <div className={styles.imgPreviewContain}>
-                      <div className={styles.imgPreview}><img id="prev" src={imgTest} alt="s"></img></div>
-                    </div>
-                    <Button onClick={handleClick} className={styles.addIcon}>
-                    <FontAwesomeIcon icon={faPlusSquare} className={styles.add} size='90x'/>
-                    </Button>
-                    <input type="file"
-                          ref={hiddenFileInput}
-                          onChange={handleChange}
-                          style={{display:'none'}} 
-                    />
-                      
-  
-                    <button type="submit" className={styles.btnEnvoyer}> Envoyer! </button>  
-                </div> 
-              </form>
-          </div>
-    </Container>
-  </Layout>
-)
-  }
+        <div className={styles.contactWrapper}>
+          <form name='contact' method='POST' data-netlify='true' onSubmit='submit'>
+            <input type='hidden' name='form-name' value='contact' />
+            <div className={styles.container}>
+              <button className={styles.contact}> contact </button>
+              <button className={styles.devis}> demande de devis </button>
+              <div className={styles.social}>
+                <FontAwesomeIcon icon={faFacebook} className={styles.fb} />
+                <FontAwesomeIcon icon={faInstagram} className={styles.insta} />
+                <FontAwesomeIcon icon={faFacebookMessenger} className={styles.messenger} />
+                <FontAwesomeIcon icon={faWhatsapp} className={styles.whatsapp} />
+              </div>
+              <label htmlFor='name' className={styles.name}> nom prenom</label>
+              <label htmlFor='numero' className={styles.tel}> téléphone</label>
+              <label htmlFor='photo' className={styles.jointe}> pièces jointes </label>
+              <input name='name' placeholder='Votre Nom Prenom' className={styles.nameInput} />
+              <input name='numero' placeholder='Votre Numero' className={styles.telInput} />
+              <label htmlFor='mail'className={styles.mail}> email </label>
+              <input name='mail' placeholder='Votre mail' className={styles.mailInput} />
+              <label htmlFor='adresse' className={styles.adresse}> adresse </label>
+              <input name='adresse' placeholder='Votre Adresse' className={styles.adresseInput} />
+              <label htmlFor='message' className={styles.msgLabel}> message </label>
+              <textarea name='message' placeholder='Votre Message' rows='3' className={styles.msgArea} />
+              <div className={styles.imgPreviewContain}>
+                <div id='photoPreview' className={styles.imgPreview}> </div>
+              </div>
+              <Button onClick={handleClick} className={styles.addIcon}>
+                <FontAwesomeIcon icon={faPlusSquare} className={styles.add} size='90x' />
+              </Button>
+              <input type='file'
+                ref={hiddenFileInput}
+                onChange={handleChange}
+                style={{display: 'none'}}
+              />
+
+              <button type='submit' className={styles.btnEnvoyer}> Envoyer! </button>
+            </div>
+          </form>
+        </div>
+      </Container>
+    </Layout>
+  )
+}
 
 export default ContactPage

@@ -8,6 +8,13 @@
   color: white;
   font-family: Roboto, Regular;
 }
+
+.titleContain h1 {
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 @media (max-width: 450px) {
   .titleContain {
     margin-left: 5%;
@@ -29,6 +36,12 @@
     font-size: 3.4071550256vh;
     width: 90%;
   }
+}
+
+.blogContain h2 {
+  text-transform: uppercase;
+  font-size: 17px !important;
+  font-weight: 300 !important;
 }
 
 .blogContain {
@@ -87,7 +100,8 @@
 @media (max-width: 450px) {
   .aside .catWrapper .categorie {
     height: auto;
-  }
+    cursor: pointer;
+    }
 }
 
 .aside .catWrapper .categorie h2 {
@@ -115,4 +129,19 @@
   }
 }
 
+@media (max-width: 450px) {
+  .allArticle {
+    cursor: pointer;
+  }
+}
+.catWrapper h2{
+  text-transform: uppercase;
+  font-size: 13px !important;
+}
+
+.catWrapper h2 span{
+  display: block;
+  font-size: 10px !important;
+  color: #F26633;
+}
 /*# sourceMappingURL=blog.module.css.map */

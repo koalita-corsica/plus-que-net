@@ -1,53 +1,49 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 .root {
-  display: block;
-  width: 46.875vw;
+  font-family: Roboto, Regular;
 }
-@media (max-width: 450px) {
-  .root {
-    width: 100%;
-    display: flex;
-  }
+
+.root h2 {
+  font-size: 17px !important;
+  text-transform: uppercase !important;
 }
 
 a {
   text-decoration: none;
+  color: white;
+}
+
+.description {
+  font-size: 14px;
 }
 
 .lastArticle {
   display: flex;
-  justify-content: space-between;
   overflow: hidden;
+  height: 50.9522998296vh;
+  gap: 2vh;
 }
 @media (max-width: 450px) {
   .lastArticle {
     flex-direction: column;
+    height: auto;
   }
 }
 .lastArticle .imgLastArticle {
   width: 30.390625vw;
-  height: 43.9522998296vh;
-  justify-self: left;
+  height: auto;
 }
 @media (max-width: 450px) {
   .lastArticle .imgLastArticle {
     width: 90%;
     margin-left: 5%;
-    height: auto;
-    justify-self: center;
   }
-}
-.lastArticle .lastArticleContain {
-  height: 43.9522998296vh;
-  width: 14.6875vw;
 }
 @media (max-width: 450px) {
   .lastArticle .lastArticleContain {
     width: 90%;
     margin-left: 5%;
-    height: auto;
-    justify-self: center;
   }
 }
 .lastArticle .lastArticleContain .dataWrapper {
@@ -57,17 +53,15 @@ a {
 .lastArticle .lastArticleContain .dataWrapper .publish {
   color: white;
   display: inline-flex;
-  gap: 0.5vw;
-}
-.lastArticle .lastArticleContain .articleTitle {
-  color: white;
-}
-.lastArticle .lastArticleContain .description {
-  color: white;
+  gap: 6px;
+  font-size: 9px !important;
 }
 
 .date {
   font-size: var(--font-small-size);
   line-height: var(--font-small-line-height);
   color: var(--color-gray);
+  font-size: 9px !important;
 }
+
+/*# sourceMappingURL=blog-last-article.module.css.map */

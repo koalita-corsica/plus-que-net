@@ -1,5 +1,10 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
+
+.root h2 {
+  text-transform: uppercase;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

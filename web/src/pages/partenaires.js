@@ -93,7 +93,7 @@ const PartenairesPage = props => {
         </div>
         <WrapperBlog>
           <div className={styles.blogContain}>
-            <h2 className={styles.allArticle}>Tous les articles</h2>
+            <br />
             <div className={styles.lastArticle}>
               <PartenaireLastArticle nodes={lastNodes} />
             </div>

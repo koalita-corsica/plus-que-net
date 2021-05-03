@@ -36,7 +36,7 @@ function PartenairePost (props) {
             />
           )}
           {publishedAt && (
-            <div className={styles.publish}><span>Publié <li /></span>
+            <div className={styles.publish}><span>Publié </span>
               {differenceInDays(new Date(publishedAt), new Date()) > 3
                 ? distanceInWords(new Date(publishedAt), new Date())
                 : format(new Date(publishedAt), 'MMMM Do, YYYY')}

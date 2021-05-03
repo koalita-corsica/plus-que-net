@@ -21,7 +21,7 @@ function BlogPost (props) {
       <WrapperBlog>
         <div className={styles.blogContain}>
           <div className={styles.pathContain}>
-            <h3 className={styles.path}>Tous les Articles</h3>
+            <Link to='/blog/'> <h3 className={styles.path}>Tous les Articles</h3> </Link>
             <h3>{'> '}</h3>
             <h3 className={styles.articleTitle}> {title}</h3>
           </div>

@@ -4,9 +4,18 @@
   font-family: Roboto, Regular;
 }
 
+.root h2 {
+  text-transform: uppercase !important;
+  font-size: 17px;
+}
+
 a {
   text-decoration: none;
   color: white;
+}
+
+.description {
+  font-size: 14px;
 }
 
 .lastArticle {
@@ -45,12 +54,14 @@ a {
   color: white;
   display: inline-flex;
   gap: 6px;
+  font-size: 9px !important;
 }
 
 .date {
   font-size: var(--font-small-size);
   line-height: var(--font-small-line-height);
   color: var(--color-gray);
+  font-size: 9px !important;
 }
 
 /*# sourceMappingURL=blog-last-article.module.css.map */

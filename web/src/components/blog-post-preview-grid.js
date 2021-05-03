@@ -7,6 +7,7 @@ import {cn, getBlogUrl} from '../lib/helpers'
 import styles from './blog-post-preview-grid.module.css'
 
 function BlogPostPreviewGrid (props) {
+  console.log(props.browseMoreHref)
   return (
     <div className={styles.root}>
       {props.title && <h2 className={styles.headline}>{props.title}</h2>}
@@ -24,7 +25,7 @@ function BlogPostPreviewGrid (props) {
       </div>
       {props.browseMoreHref && (
         <div className={styles.browseMoreNav}>
-          <Link to={props.browseMoreHref}>Browse more</Link>
+          <Link to={props.browseMoreHref}>VOIR PLUS</Link>
         </div>
       )}
     </div>

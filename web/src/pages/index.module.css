@@ -11,7 +11,7 @@
 }
 
 .titleContain h1 {
-  font-size: 43px !important;
+  font-size: 40px !important;
   font-weight: 300 !important;
 }
 @media (max-width: 450px) {
@@ -60,11 +60,7 @@
   flex-direction: column;
   font-family: Roboto, Regular;
   font-size: 2.3850085179vh;
-<<<<<<< HEAD
-  height: 53.3441226576vh;
-=======
   height: 45.3441226576vh;
->>>>>>> c7ea414055f246ccfc20d25f318e71dfbdd4f95a
   overflow-y: scroll;
   color: white;
   margin-right: 3.4296875vw;
@@ -79,13 +75,10 @@
     width: 85%;
   }
 }
-<<<<<<< HEAD
-=======
 .BlockContent .bloc1 {
   display: block;
   font-size: 12px;
 }
->>>>>>> c7ea414055f246ccfc20d25f318e71dfbdd4f95a
 @media (max-width: 450px) {
   .BlockContent .bloc1 {
     font-size: 2.5553662692vh;

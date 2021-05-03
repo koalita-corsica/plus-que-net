@@ -22,8 +22,11 @@
   background-image: linear-gradient(to right, white 60%, #F26633 60%, #F26633 80%, white 80%);
 }
 .titleContain h1 {
-  font-size: 5.8143100511vh;
+  font-size: 40px !important;
+  font-weight: 200 !important;
+  text-transform: uppercase;
 }
+
 @media (max-width: 450px) {
   .titleContain h1 {
     font-size: 3.4071550256vh;
