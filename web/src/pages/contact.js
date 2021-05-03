@@ -125,15 +125,3 @@ const ContactPage = props => {
   }
 
 export default ContactPage
-
-              </div>
-              <button type='submit' className={styles.btnEnvoyer}> Envoyer! </button>
-            </div>
-          </form>
-        </div>
-      </Container>
-    </Layout>
-  )
-}
-
-export default ContactPage
