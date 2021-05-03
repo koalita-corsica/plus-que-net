@@ -15,23 +15,15 @@
   width: 39.0625vw;
   color: white;
   font-family: Roboto, Regular;
-  text-transform: uppercase;
 }
-
-.titleContain h1 {
-  font-size: 40px !important;
-  font-weight: 400 !important;
-}
-
-.titleContain h1 span {
-  display: block;
-}
-
 @media (max-width: 450px) {
   .titleContain {
     margin-left: 5%;
     width: 85%;
   }
+}
+.titleContain .title span {
+  display: block;
 }
 .titleContain h1:after {
   content: "";
@@ -73,41 +65,26 @@
 }
 .BlockContent .iconeMenu {
   display: grid;
-  grid-template-columns: repeat(2, 55px);
-  grid-template-rows: repeat(2, 55px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   transform: rotate(45deg);
-  row-gap: 1.5195741056vh;
-  column-gap: 0.75375vw;
+  gap: 1vh;
+  margin-right: 2.8vw;
+  width: 60px;
+  height: 60px;
+  align-self: flex-start;
 }
 @media (max-width: 450px) {
   .BlockContent .iconeMenu {
     align-self: center;
   }
 }
-
-@media (max-width: 450px) {
-  .iconeMenu {
-    z-index: -1;
-  }
-}
-
 .BlockContent .iconeMenu div {
   background-color: #F26633;
-  color: white;
-  border-radius: 8px;
-  height: 8.5178875639vh;
-  width: 3.90625vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.BlockContent .iconeMenu div {
-  background-color: #F26633;
-  color: white;
-  border-radius: 8px;
-  height: 50px;
-  width: 50px;
+  border: #F26633 solid 4px;
+  border-radius: 4px;
+  height: 30px;
+  width: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,13 +92,43 @@
 .BlockContent .iconeMenu div:hover {
   transform: scale(1.2);
   background-color: white;
-  color: #F26633;
   border: #F26633 solid 4px;
 }
 @media (max-width: 450px) {
   .BlockContent .iconeMenu div:hover {
     margin-top: -1vh;
   }
+}
+.BlockContent .iconeMenu div:hover .ic1 {
+  display: block;
+}
+.BlockContent .iconeMenu div:hover .ic2 {
+  display: block;
+}
+.BlockContent .iconeMenu div:hover .ic3 {
+  display: block;
+}
+.BlockContent .iconeMenu div:hover .ic4 {
+  display: block;
+}
+.BlockContent .iconeMenu div:hover .ic12 {
+  display: none;
+}
+.BlockContent .iconeMenu div:hover .ic22 {
+  display: none;
+}
+.BlockContent .iconeMenu div:hover .ic32 {
+  display: none;
+}
+.BlockContent .iconeMenu div:hover .ic42 {
+  display: none;
+}
+.BlockContent .iconeMenu img {
+  width: 25px;
+  height: auto;
+}
+.BlockContent .contenu {
+  margin-top: 1vh;
 }
 .BlockContent .contenu h1 {
   color: #F26633;
@@ -166,6 +173,17 @@
   transform: rotate(-45deg);
   position: absolute;
 }
-
+.BlockContent .ic1 {
+  display: none;
+}
+.BlockContent .ic2 {
+  display: none;
+}
+.BlockContent .ic3 {
+  display: none;
+}
+.BlockContent .ic4 {
+  display: none;
+}
 
 /*# sourceMappingURL=tarif.module.css.map */
