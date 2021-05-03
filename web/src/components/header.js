@@ -1,12 +1,10 @@
-import {Link} from 'gatsby'
+import {Link, StaticQuery, graphql} from 'gatsby'
 import React, {useState} from 'react'
-import Icon from './icon'
-import { StaticQuery, graphql } from "gatsby"
-import {cn} from '../lib/helpers'
-import logo from '../images/logo.png'
-import styled from "styled-components"
+
+import styled from 'styled-components'
 import styles from './header.module.css'
-const MenuIcon = styled.button`
+
+const MenuIcon = styled.div`
   display: none;
 @media (max-width: 768px) {
   position: fixed;
@@ -36,7 +34,7 @@ const MenuIcon = styled.button`
       transform: ${({nav}) => nav ? 'rotate(45deg)' : 'rotate(0)'}
     }
     :nth-child(2){
-      opacity: ${({nav}) => nav ? "0" : "1" }
+      opacity: ${({nav}) => nav ? '0' : '1'}
     }
     :nth-child(3) {
       transform: ${({nav}) => nav ? 'rotate(-45deg)' : 'rotate(0)'}
@@ -45,9 +43,9 @@ const MenuIcon = styled.button`
 }
 `
 const MenuLinks = styled.nav`
-  display: none;
+  display: ${(nav) => (nav ? 'none' : 'block')};
 @media (max-width: 768px) {
-  display: ${({nav}) => (nav ? "flex" : "none")};
+  display: ${({nav}) => (nav ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: start;
   align-items: center;
@@ -58,7 +56,7 @@ const MenuLinks = styled.nav`
   top: 0;
   left: 0;
    transition: transform 300ms;
-   transform: ${({nav}) => (nav ? "translateX(0)" : "translateX(100%)")};
+   transform: ${({nav}) => (nav ? 'translateX(0)' : 'translateX(100%)')};
    background-color: #262626;
    z-index: 2;
 
@@ -82,47 +80,46 @@ const MenuLinks = styled.nav`
 `
 const Header = ({nav, showNav, data}) => (
   <React.Fragment>
-    <div>
-    </div>
-  <div className={styles.root}>
+    <div />
+    <div className={styles.root}>
       <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
-            <div />
-            <div />
-            <div />
+        <div />
+        <div />
+        <div />
       </MenuIcon>
-    <div className={styles.navBar}>  
-      <img src={data.sanitySiteSettings.mainImage.asset.url} width="256"  alt="Plus-que-net" id="logo"/>
-    </div>
-    <MenuLinks nav={nav}>
-        <img src={data.sanitySiteSettings.mainImage.asset.url} width="256"  alt="Plus-que-net" id="logo"/>
+      <div className={styles.navBar}>
+        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
+      </div>
+      <MenuLinks nav={nav}>
+        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
         <ul>
-          {data.sanitySiteSettings.menu.map((item =>
+          {data.sanitySiteSettings.menu.map(item =>
             <React.Fragment>
-              <li> 
-                <Link to={item.page.slug.current == "accueil" ? '/' : '/' + `${item.page.slug.current}` }> {item.page.title}</Link>
+              <li>
+                <Link to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`}> {item.page.title}</Link>
               </li>
             </React.Fragment>
-          ))}
+          )}
         </ul>
       </MenuLinks>
-    <div className={styles.logo}>
-      <img src={data.sanitySiteSettings.mainImage.asset.url} width="256"  alt="Plus-que-net" id="logo"/>
+      <div className={styles.logo}>
+        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
+      </div>
+      <div className={styles.nav}>
+        <ul>
+          {data.sanitySiteSettings.menu.map(item =>
+            <React.Fragment>
+              <li>
+                <Link to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`}> {item.page.title}</Link>
+              </li>
+            </React.Fragment>
+          )}
+        </ul>
+      </div>
     </div>
-    <div className={styles.nav}>
-      <ul>
-        {data.sanitySiteSettings.menu.map((item =>
-        <React.Fragment>
-        <li> 
-          <Link to={item.page.slug.current == "accueil" ? '/' : '/' + `${item.page.slug.current}` }> {item.page.title}</Link>
-        </li>
-        </React.Fragment>
-      ))}
-      </ul>
-    </div>
-  </div>
   </React.Fragment>
 )
-export default function MyHeader(props) {
+export default function MyHeader (props) {
   return (
     <StaticQuery
       query={graphql`

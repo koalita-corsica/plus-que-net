@@ -1,18 +1,18 @@
 import {format} from 'date-fns'
 import {Link} from 'gatsby'
 import React from 'react'
-import {buildImageObj, cn, getBlogUrl} from '../lib/helpers'
+import {buildImageObj, cn, getPartenaireUrl} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
 
 import styles from './blog-post-preview.module.css'
 import {responsiveTitle3} from './typography.module.css'
 
-function BlogPostPreview (props) {
+function PartenairePostPreview (props) {
   return (
     <Link
       className={props.isInList ? styles.inList : styles.inGrid}
-      to={getBlogUrl(props.publishedAt, props.slug.current)}
+      to={getPartenaireUrl(props.publishedAt, props.slug.current)}
     >
       <div className={styles.blogContain}> 
         <div className={styles.leadMediaThumb}>
@@ -41,4 +41,4 @@ function BlogPostPreview (props) {
   )
 }
 
-export default BlogPostPreview
+export default PartenairePostPreview

@@ -1,7 +1,7 @@
 import {format} from 'date-fns'
 import {Link} from 'gatsby'
 import React from 'react'
-import {buildImageObj, cn, getBlogUrl} from '../lib/helpers'
+import {buildImageObj, cn, getBlogUrl, getPartenaireUrl} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
 import BlogPostPreview from './blog-post-preview'
@@ -10,14 +10,14 @@ import Block from '@sanity/block-content-to-react'
 import styles from './blog-last-article.module.css'
 import {responsiveTitle3} from './typography.module.css'
 
-function BlogLastArticle (props) {
+function PartenaireLastArticle (props) {
   return (
     <div className={styles.root}>
       {props.title && <h2 className={styles.headline}>{props.title}</h2>}
       {props.nodes &&
         props.nodes.map(node => (
           <React.Fragment>
-            <Link to={getBlogUrl(node.publishedAt, node.slug.current)}>
+            <Link to={getPartenaireUrl(node.publishedAt, node.slug.current)}>
               <div key={node.id} className={styles.lastArticle}>
                 <img src={node.mainImage.asset.url} className={styles.imgLastArticle} width='400' height='250' />
                 <div className={styles.lastArticleContain}>
@@ -39,4 +39,4 @@ function BlogLastArticle (props) {
   )
 }
 
-export default BlogLastArticle
+export default PartenaireLastArticle

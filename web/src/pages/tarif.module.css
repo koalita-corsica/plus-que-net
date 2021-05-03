@@ -15,7 +15,18 @@
   width: 39.0625vw;
   color: white;
   font-family: Roboto, Regular;
+  text-transform: uppercase;
 }
+
+.titleContain h1 {
+  font-size: 40px !important;
+  font-weight: 400 !important;
+}
+
+.titleContain h1 span {
+  display: block;
+}
+
 @media (max-width: 450px) {
   .titleContain {
     margin-left: 5%;
@@ -78,7 +89,6 @@
   transform: rotate(45deg);
   row-gap: 1.5195741056vh;
   column-gap: 0.75375vw;
-  z-index: 0;
 }
 @media (max-width: 450px) {
   .BlockContent .iconeMenu {
@@ -86,6 +96,24 @@
     gap: 5vw;
   }
 }
+
+@media (max-width: 450px) {
+  .iconeMenu {
+    z-index: -1;
+  }
+}
+
+.BlockContent .iconeMenu div {
+  background-color: #F26633;
+  color: white;
+  border-radius: 8px;
+  height: 8.5178875639vh;
+  width: 3.90625vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .BlockContent .iconeMenu div {
   background-color: #F26633;
   color: white;
@@ -114,6 +142,7 @@
     margin-top: -1vh;
   }
 }
+
 .BlockContent .contenu {
   width: auto;
   height: 100%;
@@ -167,5 +196,6 @@
   transform: rotate(-45deg);
   position: absolute;
 }
+
 
 /*# sourceMappingURL=tarif.module.css.map */

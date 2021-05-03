@@ -46,22 +46,60 @@ async function createBlogPostPages (graphql, actions) {
     })
 }
 
+async function createPartenairePostPages (graphql, actions) {
+  const {createPage} = actions
+  const result = await graphql(`
+    {
+      allSanityPartenaire(
+        filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
+      ) {
+        edges {
+          node {
+            id
+            publishedAt
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `)
 
+  if (result.errors) throw result.errors
+
+  const postEdges = (result.data.allSanityPartenaire || {}).edges || []
+
+  postEdges
+    .filter(edge => !isFuture(edge.node.publishedAt))
+    .forEach((edge, index) => {
+      const {id, slug = {}, publishedAt} = edge.node
+      const dateSegment = format(publishedAt, 'YYYY/MM')
+      const path = `/partenaire/${dateSegment}/${slug.current}/`
+
+      createPage({
+        path,
+        component: require.resolve('./src/templates/partenaires.js'),
+        context: {id}
+      })
+    })
+}
 exports.createPages = async ({graphql, actions}) => {
   await createBlogPostPages(graphql, actions)
+  await createPartenairePostPages(graphql, actions)
 }
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html") {
+exports.onCreateWebpackConfig = ({stage, loaders, actions}) => {
+  if (stage === 'build-html') {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
             test: /offending-module/,
-            use: loaders.null(),
-          },
-        ],
-      },
+            use: loaders.null()
+          }
+        ]
+      }
     })
   }
 }

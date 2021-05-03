@@ -14,11 +14,10 @@ import Wrapper from '../components/wrapper'
 import WrapperBlog from '../components/wrapperBlog'
 import styles from '../pages/partenaire.module.css'
 import imgTest from '../images/test.jpg'
-import BlogLastArticle from '../components/blog-last-article'
-import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
+import PartenaireLastArticle from '../components/partenaires-last-article'
+import PartenairePostPreviewGrid from '../components/partenaire-post-preview-grid'
 
-import { isBrowser } from '../lib/utils'; 
-
+import {isBrowser} from '../lib/utils'
 
 export const query = graphql`
   query PartenairesPageQuery {
@@ -71,11 +70,10 @@ export const query = graphql`
 
 const PartenairesPage = props => {
   if (!isBrowser) {
-    return;
-}
+    return
+  }
   const {data, errors} = props
-  const page = data && data.page;
-  const posts = data && data.partenaires;
+  const page = data && data.page
   if (errors) {
     return (
       <Layout>
@@ -89,23 +87,23 @@ const PartenairesPage = props => {
 
   return (
     <Layout>
-    <Container>
-      <div className={styles.titleContain}>
-        <h1 className={styles.title}>{page.title}</h1>
-      </div>
-      <WrapperBlog>
-        <div className={styles.blogContain}>
-          <h2 className={styles.allArticle}>Tous les articles</h2>
-          <div className={styles.lastArticle}>
-            <BlogLastArticle nodes={lastNodes} />
-          </div>
-          <div className={styles.article}>
-            {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}  
-          </div>
+      <Container>
+        <div className={styles.titleContain}>
+          <h1 className={styles.title}>{page.title}</h1>
         </div>
-      </WrapperBlog>
-    </Container>
-  </Layout>
+        <WrapperBlog>
+          <div className={styles.blogContain}>
+            <h2 className={styles.allArticle}>Tous les articles</h2>
+            <div className={styles.lastArticle}>
+              <PartenaireLastArticle nodes={lastNodes} />
+            </div>
+            <div className={styles.article}>
+              {postNodes && postNodes.length > 0 && <PartenairePostPreviewGrid nodes={postNodes} />}
+            </div>
+          </div>
+        </WrapperBlog>
+      </Container>
+    </Layout>
   )
 }
 

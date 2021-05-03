@@ -11,17 +11,17 @@ import WrapperBlog from './wrapperBlog'
 import Layout from '../containers/layout'
 import {Link} from 'gatsby'
 
-function BlogPost (props) {
+function PartenairePost (props) {
   const {_rawBody, authors, categories, title, mainImage, publishedAt} = props
   return (
     <Container>
       <div className={styles.titleContain}>
-        <h1 className={styles.title}>Blog</h1>
+        <h1 className={styles.title}>Partenaires</h1>
       </div>
       <WrapperBlog>
         <div className={styles.blogContain}>
           <div className={styles.pathContain}>
-            <h3 className={styles.path}>Tous les Articles</h3>
+            <h3 className={styles.path}>Tous les Posts</h3>
             <h3>{'> '}</h3>
             <h3 className={styles.articleTitle}> {title}</h3>
           </div>
@@ -61,20 +61,9 @@ function BlogPost (props) {
             )}
           </div>
         </div>
-        <aside className={styles.aside}>
-          <h2 className={styles.categorieTitle} >Thématique</h2>
-          <div className={styles.catWrapper}>
-            {props.thema.edges.map(element =>
-              <div className={styles.categorie}>
-                <img src={element.node.image.asset.url} className={styles.imgTheme} />
-                <h2> {element.node.title} </h2>
-              </div>
-            )}
-          </div>
-        </aside>
       </WrapperBlog>
     </Container>
   )
 }
 
-export default BlogPost
+export default PartenairePost

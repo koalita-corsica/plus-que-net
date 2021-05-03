@@ -13,6 +13,11 @@
     width: 85%;
   }
 }
+
+form {
+  z-index: -1;
+}
+
 .titleContain h1:after {
   content: "";
   display: block;
@@ -35,6 +40,7 @@
 .contactWrapper {
   background: linear-gradient(to left, rgba(255, 255, 255, 0.6) -100%, transparent 65%);
   backdrop-filter: blur(20px);
+  z-index: -1;
 }
 
 .container {

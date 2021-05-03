@@ -2,14 +2,14 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
-import BlogPost from '../components/blog-post'
+import PartenairePost from '../components/partenaire-post'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import {toPlainText} from '../lib/helpers'
 
 export const query = graphql`
-  query BlogPostTemplateQuery($id: String!) {
-    post: sanityPost(id: {eq: $id} ) {
+  query PartenairesTemplateQuery($id: String!) {
+    post: sanityPartenaire(id: {eq: $id} ) {
       id
       publishedAt
       mainImage {
@@ -52,27 +52,13 @@ export const query = graphql`
         }
       }
     }
-    thematiques: allSanityThematiques {
-      edges {
-        node {
-          id
-          title
-          image {
-            asset {
-              url
-              id
-            }
-          }
-        }
-      }
-    }
   }
 `
 
-const BlogPostTemplate = props => {
+const PartenairesTemplate = props => {
   const {data, errors} = props
   const post = data && data.post
-  const thema = data && data.thematiques
+
   return (
     <Layout>
       {errors && <SEO title='GraphQL Error' />}
@@ -84,9 +70,9 @@ const BlogPostTemplate = props => {
         </Container>
       )}
 
-      {post && <BlogPost thema={thema} {...post} />}
+      {post && <PartenairePost {...post} />}
     </Layout>
   )
 }
 
-export default BlogPostTemplate
+export default PartenairesTemplate
