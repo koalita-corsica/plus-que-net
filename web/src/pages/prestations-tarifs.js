@@ -248,6 +248,12 @@ const PrestationPage = props => {
               {qual === 'service3' && <Service data={service3} /> }
               {qual === 'service4' && <Service data={service4} /> }
             </div>
+            <div className={styles.btnBlanc}>
+              <div className={styles.btn1}>1</div>
+              <div className={styles.btn2}>2</div>
+              <div className={styles.btn3}>3</div>
+              <div className={styles.btn4}>4</div>
+            </div>
           </div>
         </Wrapper>
       </Container>
