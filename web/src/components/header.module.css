@@ -19,7 +19,6 @@
      background: transparent;
      opacity: 1;
      justify-content: space-around;
-     backdrop-filter: blur(30px);
      -webkit-backdrop-filter: blur(30px);
      height: 123px;
   }
@@ -68,7 +67,6 @@
   @media (max-width: 450px) {
     .navBar {
     position: fixed;
-    z-index: -1;
     }
     .navBar img {
       display: inline;
@@ -103,4 +101,5 @@
 .showNav {
   display: inline-block;
 }
+
 /*# sourceMappingURL=header.module.css.map */

@@ -116,4 +116,28 @@
   color: white;
 }
 
+@media (max-width: 450px) {
+  .categorie h2 {
+    margin-left: 15vw;
+  }
+  .categorie {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 450px) {
+  .allArticle {
+    cursor: pointer;
+  }
+}
+.catWrapper h2{
+  text-transform: uppercase;
+  font-size: 13px !important;
+}
+
+.catWrapper h2 span{
+  display: block;
+  font-size: 10px !important;
+  color: #F26633;
+}
 /*# sourceMappingURL=blog.module.css.map */

@@ -16,6 +16,11 @@
   color: white;
   font-family: Roboto, Regular;
 }
+
+.titleContain h1 {
+  font-weight: 300;
+}
+
 @media (max-width: 450px) {
   .titleContain {
     margin-left: 5%;
@@ -80,7 +85,7 @@
 }
 @media (max-width: 450px) {
   .BlockContent .iconeMenu {
-    align-self: center;
+    align-self: center; 
   }
 }
 .BlockContent .iconeMenu div {

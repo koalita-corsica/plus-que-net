@@ -230,16 +230,16 @@ const PrestationPage = props => {
             <div className={styles.iconeMenu}>
 
               <div className={styles.iconContent1} onClick={rotateClick1} className='iconContent1'>
-                <span className={styles.icone1}> <img className={styles.ic1} src={ic1} alt=''  /><img className={styles.ic12} src={ic12} alt=''  /> </span>
+                <span className={styles.icone1}> <img className={styles.ic1} src={ic1} alt='' /><img className={styles.ic12} src={ic12} alt='' /> </span>
               </div>
               <div className={styles.iconContent2} onClick={rotateClick2} className='iconContent2'>
-                <span className={styles.icone2}> <img className={styles.ic2} src={ic2} alt=''  /><img className={styles.ic22} src={ic22} alt=''  /> </span>
+                <span className={styles.icone2}> <img className={styles.ic2} src={ic2} alt='' /><img className={styles.ic22} src={ic22} alt='' /> </span>
               </div>
               <div className={styles.iconContent3} onClick={rotateClick3} className='iconContent3'>
-                <span className={styles.icone3}> <img className={styles.ic3} src={ic3} alt=''  /><img className={styles.ic32} src={ic32} alt=''  /> </span>
+                <span className={styles.icone3}> <img className={styles.ic3} src={ic3} alt='' /><img className={styles.ic32} src={ic32} alt='' /> </span>
               </div>
               <div className={styles.iconContent4} onClick={rotateClick4} className='iconContent4'>
-                <span className={styles.icone4}> <img className={styles.ic4} src={ic4} alt=''  /><img className={styles.ic42} src={ic42} alt=''  /> </span>
+                <span className={styles.icone4}> <img className={styles.ic4} src={ic4} alt='' /><img className={styles.ic42} src={ic42} alt='' /> </span>
               </div>
             </div>
             <div className={styles.contenu}>

@@ -6,7 +6,7 @@ import styles from './header.module.css'
 
 const MenuIcon = styled.div`
   display: none;
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   position: fixed;
   top: 2rem;
   left: ${({nav}) => nav ? '' : '2rem'};
@@ -43,8 +43,8 @@ const MenuIcon = styled.div`
 }
 `
 const MenuLinks = styled.nav`
-  display: ${(nav) => (nav ? 'none' : 'block')};
-@media (max-width: 768px) {
+  display: ${({show}) => show === false ? 'none' : 'none'};
+@media (max-width: 450px) {
   display: ${({nav}) => (nav ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: start;
@@ -55,10 +55,9 @@ const MenuLinks = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-   transition: transform 300ms;
-   transform: ${({nav}) => (nav ? 'translateX(0)' : 'translateX(100%)')};
+   display: ${({nav}) => (nav ? 'block' : 'none')};
    background-color: #262626;
-   z-index: 2;
+   z-index: 90;
 
    ul {
      list-style-type: none;
@@ -73,12 +72,12 @@ const MenuLinks = styled.nav`
     font-size: 1.5rem;
     transition: color 300ms;
     :hover{
-      color: orange;
+      color: #f26633;
     }
   }
 }
 `
-const Header = ({nav, showNav, data}) => (
+const Header = ({nav, showNav, show, data}) => (
   <React.Fragment>
     <div />
     <div className={styles.root}>
@@ -90,7 +89,7 @@ const Header = ({nav, showNav, data}) => (
       <div className={styles.navBar}>
         <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
       </div>
-      <MenuLinks nav={nav}>
+      <MenuLinks show={show} nav={nav}>
         <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
         <ul>
           {data.sanitySiteSettings.menu.map(item =>

@@ -20,6 +20,8 @@ function LayoutContainer (props) {
     setShowNav(false)
   }
 
+  const [show, showShow] = useState(false)
+
   return (
     <StaticQuery
       query={query}
@@ -35,6 +37,7 @@ function LayoutContainer (props) {
             showNav={showNav}
             siteTitle={data.site.title}
             nav={nav}
+            show={show}
           />
         )
       }}
