@@ -7,6 +7,8 @@
   width: 47.03125vw;
   color: white;
   font-family: Roboto, Regular;
+  line-height: 1;
+  text-transform: uppercase;
 }
 @media (max-width: 450px) {
   .titleContain {
@@ -18,15 +20,15 @@
   content: "";
   display: block;
   height: 3px;
+  margin-top: 3vh;
   background-color: white;
   background-image: linear-gradient(to right, white 40%, #F26633 40%, #F26633 60%, white 60%);
 }
 .titleContain h1 {
-  font-size: 5.8143100511vh;
+  font-size: 40px;
 }
 @media (max-width: 450px) {
   .titleContain h1 {
-    font-size: 3.4071550256vh;
     width: 90%;
   }
 }
