@@ -30,8 +30,7 @@
     background-color: grey;
     display: flex;
     align-items: center;
-    
-    
+
   }
 }
 
@@ -41,11 +40,7 @@
   font-family: Roboto, Regular;
   width: 100%;
 }
-@media (max-width: 450px){
-  .titleService{
-    
-  }
-}
+
 .buttonClose{
   float: right;
   color: red;
@@ -76,7 +71,14 @@
   color: white;
   height: 4.599659284497444vh;
   width: 11.796875vw;
-  
+}
+
+@media (max-width: 450px) {
+  .buttonGalerie {
+    width: 40%;
+    height: 5%;
+    margin-top: -5vh;
+  }
 }
 .buttonGalerie:hover{
   background-color: white;

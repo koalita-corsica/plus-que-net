@@ -22,13 +22,17 @@ const MenuIcon = styled.div`
    z-index: 100;
 
    div {
-     width: 1.5rem;
+    width: 1.5rem;
     height: .33rem;
     background: ${({nav}) => nav ? '#f26633' : 'white'};
     border-radius: 5px;
     transform-origin: 1px;
     transition: transform 300ms;
     z-index: 900;
+
+    :nth-child(3) {
+      width: ${({nav}) => nav ? '1.5rem' : '1rem'}
+    }
 
     :first-child{
       transform: ${({nav}) => nav ? 'rotate(45deg)' : 'rotate(0)'}

@@ -10,12 +10,7 @@
   text-transform: uppercase;
   font-family: Roboto, Regular;
 }
-@media (max-width: 450px) {
-  .titleContain {
-    margin-left: 5%;
-    width: 85%;
-  }
-}
+
 .titleContain h1:after {
   content: "";
   display: block;
@@ -26,6 +21,9 @@
 }
 .titleContain h1 {
   font-size: 40px;
+}
+.active {
+  background-color: #F26633;
 }
 
 .contactWrapper {
@@ -43,17 +41,6 @@
   grid-template-columns: repeat(3, 18.5vw);
   grid-template-rows: repeat(9, 7vh);
 }
-@media (max-width: 450px) {
-  .container {
-    width: 85%;
-    height: auto;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    column-gap: 8vw;
-  }
-}
 
 .contact {
   margin-top: 2vh;
@@ -61,26 +48,12 @@
   height: 5.1107325383vh;
   grid-area: 1/1/2/2;
 }
-@media (max-width: 450px) {
-  .contact {
-    grid-area: 1/1/2/2;
-    width: 100%;
-    height: auto;
-  }
-}
 
 .devis {
   margin-top: 2vh;
   width: 13.75vw;
   grid-area: 1/1/2/3;
   justify-self: center;
-}
-@media (max-width: 450px) {
-  .devis {
-    grid-area: 1/2/2/3;
-    width: 100%;
-    height: auto;
-  }
 }
 
 .devis:hover {
@@ -104,20 +77,14 @@
 }
 
 .social {
-  margin-top: 2vh;
+  margin-top: 3vh;
   grid-area: 1/2/2/4;
   justify-self: center;
   color: white;
-  font-size: 5vh;
+  font-size: 2.5vh;
   display: flex;
-  gap: 2vw;
-}
-@media (max-width: 450px) {
-  .social {
-    grid-area: 13/1/14/3;
-    width: auto;
-    height: auto;
-  }
+  gap: 1vw;
+  margin-left: -10vw;
 }
 
 .social .fb:hover {
@@ -140,42 +107,20 @@
   margin-top: 2vh;
   grid-area: 2/1/3/2;
 }
-@media (max-width: 450px) {
-  .name {
-    grid-area: 2/1/3/2;
-    margin-top: 3.4071550256vh;
-  }
-}
 
 .nameInput {
   margin-top: -2vh;
   grid-area: 3/1/4/2;
-}
-@media (max-width: 450px) {
-  .nameInput {
-    grid-area: 3/1/4/2;
-  }
 }
 
 .tel {
   grid-area: 2/2/3/3;
   margin-top: 2vh;
 }
-@media (max-width: 450px) {
-  .tel {
-    grid-area: 4/2/5/3;
-    margin-top: 3.4071550256vh;
-  }
-}
 
 .telInput {
   margin-top: -2vh;
   grid-area: 3/2/4/3;
-}
-@media (max-width: 450px) {
-  .telInput {
-    grid-area: 5/2/6/3;
-  }
 }
 
 .jointe {
@@ -183,74 +128,35 @@
   grid-area: 2/3/3/4;
   justify-self: center;
 }
-@media (max-width: 450px) {
-  .jointe {
-    grid-area: 6/1/7/2;
-    margin-top: 3.4071550256vh;
-    justify-self: left;
-  }
-}
 
 .mail {
   grid-area: 4/1/5/2;
-}
-@media (max-width: 450px) {
-  .mail {
-    grid-area: 2/2/3/3;
-    margin-top: 3.4071550256vh;
-  }
 }
 
 .mailInput {
   margin-top: -4vh;
   grid-area: 5/1/6/2;
 }
-@media (max-width: 450px) {
-  .mailInput {
-    grid-area: 3/2/4/3;
-  }
-}
 
 .adresse {
   grid-area: 6/1/7/2;
 }
-@media (max-width: 450px) {
-  .adresse {
-    grid-area: 4/1/5/2;
-    margin-top: 3.4071550256vh;
-  }
-}
+
 
 .adresseInput {
   margin-top: -4vh;
   grid-area: 7/1/8/2;
 }
-@media (max-width: 450px) {
-  .adresseInput {
-    grid-area: 5/1/6/2;
-  }
-}
+
 
 .msgLabel {
   grid-area: 4/2/5/3;
-}
-@media (max-width: 450px) {
-  .msgLabel {
-    grid-area: 8/1/9/3;
-    margin-top: 3.4071550256vh;
-    margin-left: 5vw;
-  }
 }
 
 .msgArea {
   margin-top: -4vh;
   grid-area: 5/2/7/3;
   margin-bottom: -2vh;
-}
-@media (max-width: 450px) {
-  .msgArea {
-    grid-area: 9/1/12/3;
-  }
 }
 
 .addIcon {
@@ -264,7 +170,7 @@
   border-radius: 5px;
   margin: 0 auto;
   width: 95%;
-  height: 95%;
+  height: 55%;
 }
 
 .addIcon:hover {
@@ -281,35 +187,18 @@
 
 .imgPreview {
   height: 6.9846678024vh;
-  width: 7.203125vw;
+  width: 15.203125vw;
   border-radius: 5px;
   opacity: 1;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
-@media (max-width: 450px) {
-  .imgPreview {
-    width: 38px;
-    height: 38px;
-    justify-self: left;
-  }
-}
+
 .imgPreview img {
   margin-left: 0;
   height: 6.9846678024vh;
   width: 3.203125vw;
-}
-@media (max-width: 450px) {
-  .imgPreview img {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-.imgPreview:hover {
-  border-radius: 5px;
-  border: 2px solid #F26633;
 }
 
 .btnEnvoyer {
@@ -327,13 +216,7 @@
   grid-area: 7/3/6/4;
   color: white;
 }
-@media (max-width: 450px) {
-  .btnEnvoyer {
-    grid-area: 12/1/13/3;
-    width: auto;
-    height: auto;
-  }
-}
+
 
 .btnEnvoyer:hover {
   background-color: white;
@@ -348,15 +231,10 @@ input {
   border-radius: 5px;
   opacity: 1;
 }
-@media (max-width: 450px) {
-  input {
-    width: 100%;
-    height: 5.1107325383vh;
-  }
-}
+
 
 input:focus {
-  outline: none !important;
+  outline: none ;
   border-radius: 5px;
   border: 2px solid #F26633;
 }
@@ -373,12 +251,6 @@ label {
   text-transform: uppercase;
   opacity: 1;
 }
-@media (max-width: 450px) {
-  label {
-    width: auto;
-    font-size: 14px;
-  }
-}
 
 textarea {
   width: 19.140625vw;
@@ -387,15 +259,9 @@ textarea {
   border-radius: 5px;
   opacity: 1;
 }
-@media (max-width: 450px) {
-  textarea {
-    width: 100%;
-    height: auto;
-  }
-}
 
 textarea:focus {
-  outline: none !important;
+  outline: none ;
   border-radius: 5px;
   border: 2px solid #F26633;
 }
@@ -414,33 +280,158 @@ button {
   text-transform: uppercase;
   opacity: 1;
 }
+
+
+input[type="text"]{
+    font-size: 1.8vh ;
+    
+}
+
+input[type="number"]{
+    font-size: 1.8vh ;
+}
+
+input[type="email"]{
+    font-size: 1.8vh ;
+}
+
+input[type="button"]{
+    font-size: 1.8vh ;
+}
+textarea { 
+  font-size: 1.8vh ; 
+}
+
+.myImgWBtn {
+  position: relative;
+}
+
+.myImgWBtn img{
+  display: block;
+}
+
+.myImgWBtn span {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 @media (max-width: 450px) {
+  .titleContain {
+    margin-left: 5%;
+    width: 85%;
+    margin-bottom: 3vh;
+  }
+  .titleContain h1 {
+    font-size: 20px;
+    font-weight: 200;
+  }
+  .container {
+    margin-left: 7vw;
+    width: 85%;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    column-gap: 4vw;
+  }
+  .contact {
+    grid-area: 1/1/2/2;
+    width: 105px;
+    height: 30px;
+  }
+  .devis {
+    grid-area: 1/2/2/3;
+    width: 175px;
+    height: 30px;
+    margin-left: -30vw;
+  }
+  .social {
+    grid-area: 13/1/14/3;
+    width: 60vw;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    gap: 5vw;
+    margin-left: 1vw;
+    margin-bottom: 3vh;
+    font-size: 5vh;
+  }
+  .name {
+    grid-area: 2/1/3/2;
+    margin-bottom: 2vh;
+  }
+  .nameInput {
+    grid-area: 3/1/4/2;
+  }
+  .mail {
+    grid-area: 2/2/3/3;
+    margin-top: 2vh;
+  }
+  .mailInput {
+    grid-area: 3/2/4/3;
+    margin-top: -2.1vh;
+  }
+  .adresse {
+    grid-area: 4/1/5/2;
+    margin-top: 2vh;
+  }
+  .adresseInput {
+    grid-area: 5/1/6/2;
+    margin-top: -1vh;
+  }
+  .tel {
+    grid-area: 4/2/5/3;
+  }
+  .telInput {
+    grid-area: 5/2/6/3;
+    margin-top: -1vh;
+  }
+  .jointe {
+    grid-area: 6/1/7/2;
+    justify-self: left;
+  }
+  .addIcon {
+    margin-top: 5vh;
+  }
+  .imgPreview {
+    width: 50vw;
+    height: 4.2vh;
+    margin-top: 5vh;
+    margin-left: -50vw;
+  }
+  .imgPreview img {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 10vh;
+  }
+  .msgLabel {
+    grid-area: 10/1/12/3;
+    margin-top: -7vh;
+  }
+  .msgArea {
+    grid-area: 10/1/12/3;
+  }
+  .btnEnvoyer {
+    grid-area: 12/1/13/3;
+    width: auto;
+    height: auto;
+  }
+  input {
+    width: 100%;
+    height: 5.1107325383vh;
+  }
+  label {
+    width: auto;
+    font-size: 14px;
+  }
   button {
     width: 100%;
     height: 5.1107325383vh;
   }
+  textarea {
+    width: 100%;
+    height: auto;
+  }
 }
-
-input[type="text"]
-{
-    font-size: 1.8vh !important;
-    
-}
-
-input[type="number"]
-{
-    font-size: 1.8vh !important;
-}
-
-input[type="email"]
-{
-    font-size: 1.8vh !important;
-}
-
-input[type="button"]
-{
-    font-size: 1.8vh !important;
-}
-
-
 /*# sourceMappingURL=contact2.module.css.map */

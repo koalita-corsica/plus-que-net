@@ -5,10 +5,11 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import Layout from '../containers/layout'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faFacebook, faInstagram, faFacebookMessenger, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
-
 import {faPlus} from '@fortawesome/free-solid-svg-icons'
 import styles from './contact2.module.css'
 import styled from 'styled-components'
+import {RiMessengerLine} from '@react-icons/all-files/ri/RiMessengerLine'
+import {IoIosCloseCircle} from '@react-icons/all-files/io/IoIosCloseCircle'
 
 import {isBrowser} from '../lib/utils'
 
@@ -64,12 +65,28 @@ const ContactPage = props => {
   }
   const handleChange = event => {
     var prev = document.getElementById('photoPreview')
+    var myDiv = document.createElement('div')
+    myDiv.classList.add(styles.myImgWBtn)
+    var mySpan = document.createElement('span')
+    mySpan.innerHTML = <IoIosCloseCircle />
 
     for (let i = 0; i < event.target.files.length; i++) {
       var x = document.createElement('IMG')
       x.src = window.URL.createObjectURL(event.target.files[i])
-      prev.appendChild(x)
+      myDiv.appendChild(x)
+      myDiv.appendChild(mySpan)
+      prev.appendChild(myDiv)
     }
+  }
+
+  const actContact = () => {
+    document.getElementById('inpContact').classList.add(styles.active)
+    document.getElementById('inpDevis').classList.remove(styles.active)
+  }
+
+  const actDevis = () => {
+    document.getElementById('inpDevis').classList.add(styles.active)
+    document.getElementById('inpContact').classList.remove(styles.active)
   }
 
   return (
@@ -83,12 +100,12 @@ const ContactPage = props => {
           <form name='contact' method='POST' data-netlify='true' onSubmit='submit'>
             <input type='hidden' name='form-name' value='contact' />
             <div className={styles.container}>
-              <input id='inpContact' type='button' className={styles.contact} value='CONTACT' />
-              <input id='inpDevis' type='button' className={styles.devis} value='DEMANDE DE DEVIS' />
+              <input id='inpContact' type='button' className={styles.contact} value='CONTACT' onClick={actContact} />
+              <input id='inpDevis' type='button' className={styles.devis} value='DEMANDE DE DEVIS' onClick={actDevis} />
               <div className={styles.social}>
                 <FontAwesomeIcon icon={faFacebook} className={styles.fb} />
                 <FontAwesomeIcon icon={faInstagram} className={styles.insta} />
-                <FontAwesomeIcon icon={faFacebookMessenger} className={styles.messenger} />
+                <RiMessengerLine className={styles.messenger} />
                 <FontAwesomeIcon icon={faWhatsapp} className={styles.whatsapp} />
               </div>
               <label htmlFor='name' className={styles.name}> nom prenom</label>
