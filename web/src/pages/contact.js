@@ -72,8 +72,6 @@ const ContactPage = props => {
     }
   }
 
- 
-
   return (
 
     <Layout>
@@ -96,25 +94,25 @@ const ContactPage = props => {
               <label htmlFor='name' className={styles.name}> nom prenom</label>
               <label htmlFor='numero' className={styles.tel}> téléphone</label>
               <label htmlFor='photo' className={styles.jointe}> pièces jointes </label>
-              <input name='name' placeholder='Votre Nom Prenom' className={styles.nameInput} />
-              <input name='numero' placeholder='Votre Numero' className={styles.telInput} />
+              <input type='text' name='name' placeholder='Votre Nom Prenom' className={styles.nameInput} />
+              <input type='number' name='numero' placeholder='Votre Numero' className={styles.telInput} />
               <label htmlFor='mail'className={styles.mail}> email </label>
-              <input name='mail' placeholder='Votre mail' className={styles.mailInput} />
+              <input type='email' name='mail' placeholder='Votre mail' className={styles.mailInput} />
               <label htmlFor='adresse' className={styles.adresse}> adresse </label>
-              <input name='adresse' placeholder='Votre Adresse' className={styles.adresseInput} />
+              <input type='text' name='adresse' placeholder='Votre Adresse' className={styles.adresseInput} />
               <label htmlFor='message' className={styles.msgLabel}> message </label>
               <textarea name='message' placeholder='Votre Message' rows='3' className={styles.msgArea} />
               <div className={styles.imgPreviewContain}>
                 <div id='photoPreview' className={styles.imgPreview}> </div>
+                <Button onClick={handleClick} className={styles.addIcon}>
+                  <FontAwesomeIcon icon={faPlus} className={styles.add} size='90x' />
+                </Button>
+                <input type='file'
+                  ref={hiddenFileInput}
+                  onChange={handleChange}
+                  style={{display: 'none'}}
+                />
               </div>
-              <Button onClick={handleClick} className={styles.addIcon}>
-                <FontAwesomeIcon icon={faPlus} className={styles.add} size='90x' />
-              </Button>
-              <input type='file'
-                ref={hiddenFileInput}
-                onChange={handleChange}
-                style={{display: 'none'}}
-              />
 
               <button type='submit' className={styles.btnEnvoyer}> Envoyer! </button>
             </div>
