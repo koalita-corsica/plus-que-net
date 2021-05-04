@@ -118,6 +118,9 @@
   .categorie h2 {
     margin-left: 15vw;
   }
+  .categorie {
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 450px) {

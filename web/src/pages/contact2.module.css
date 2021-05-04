@@ -39,7 +39,12 @@
 .contactWrapper {
   background: linear-gradient(to left, rgba(255, 255, 255, 0.6) -100%, transparent 65%);
   backdrop-filter: blur(20px);
-  
+}
+
+@media (max-width: 450px) {
+  .contactWrapper{
+    margin-left: 10vw;
+  }
 }
 
 .container {
@@ -53,6 +58,8 @@
   grid-template-rows: repeat(7, 1fr);
   z-index: 1;
 }
+
+
 @media (max-width: 450px) {
   .container {
     width: 85%;
@@ -158,7 +165,6 @@
 }
 
 .nameInput {
-  margin-top: -2vh;
   grid-area: 3/1/4/2;
 }
 @media (max-width: 450px) {
@@ -169,7 +175,6 @@
 
 .tel {
   grid-area: 2/2/3/3;
-  margin-top: 2vh;
 }
 @media (max-width: 450px) {
   .tel {
@@ -179,7 +184,7 @@
 }
 
 .telInput {
-  margin-top: -2vh;
+
   grid-area: 3/2/4/3;
 }
 @media (max-width: 450px) {
@@ -212,7 +217,6 @@
 }
 
 .mailInput {
-  margin-top: -4vh;
   grid-area: 5/1/6/2;
 }
 @media (max-width: 450px) {
@@ -232,7 +236,6 @@
 }
 
 .adresseInput {
-  margin-top: -4vh;
   grid-area: 7/1/8/2;
 }
 @media (max-width: 450px) {
@@ -288,14 +291,35 @@
   gap: 1vw;
 }
 
+@media (max-width: 450px) {
+  .imgPreviewContain {
+    grid-area: 7/1/13/1;
+    display: flex;
+    justify-self: center;
+    gap: 1vw;
+  }
+  .addIcon {
+    grid-area: 7/2/7/2;
+    display: flex;
+    justify-self: center;
+    gap: 1vw;
+  }
+}
+
 .imgPreview {
-  background-color: white;
   height: 6.9846678024vh;
-  width: 3.203125vw;
+  width: 20.203125vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.imgPreview img {
   border-radius: 5px;
   opacity: 1;
   border: 2px solid gray;
 }
+
 @media (max-width: 450px) {
   .imgPreview {
     width: 38px;
@@ -313,11 +337,6 @@
     width: 38px;
     height: 38px;
   }
-}
-
-.imgPreview:hover {
-  border-radius: 5px;
-  border: 2px solid #F26633;
 }
 
 .btnEnvoyer {

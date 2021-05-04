@@ -6,7 +6,7 @@ import Layout from '../containers/layout'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faFacebook, faInstagram, faFacebookMessenger, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 
-import {faPlusSquare} from '@fortawesome/free-solid-svg-icons'
+import {faPlus} from '@fortawesome/free-solid-svg-icons'
 import styles from './contact2.module.css'
 import styled from 'styled-components'
 
@@ -68,9 +68,11 @@ const ContactPage = props => {
     for (let i = 0; i < event.target.files.length; i++) {
       var x = document.createElement('IMG')
       x.src = window.URL.createObjectURL(event.target.files[i])
-       prev.appendChild(x)
+      prev.appendChild(x)
     }
   }
+
+ 
 
   return (
 
@@ -83,8 +85,8 @@ const ContactPage = props => {
           <form name='contact' method='POST' data-netlify='true' onSubmit='submit'>
             <input type='hidden' name='form-name' value='contact' />
             <div className={styles.container}>
-              <button className={styles.contact}> contact </button>
-              <button className={styles.devis}> demande de devis </button>
+              <input id='inpContact' type='button' className={styles.contact} value='CONTACT' />
+              <input id='inpDevis' type='button' className={styles.devis} value='DEMANDE DE DEVIS' />
               <div className={styles.social}>
                 <FontAwesomeIcon icon={faFacebook} className={styles.fb} />
                 <FontAwesomeIcon icon={faInstagram} className={styles.insta} />
@@ -103,10 +105,10 @@ const ContactPage = props => {
               <label htmlFor='message' className={styles.msgLabel}> message </label>
               <textarea name='message' placeholder='Votre Message' rows='3' className={styles.msgArea} />
               <div className={styles.imgPreviewContain}>
-                <div className={styles.imgPreview}><img id='prev' alt='s' /></div>
+                <div id='photoPreview' className={styles.imgPreview}> </div>
               </div>
               <Button onClick={handleClick} className={styles.addIcon}>
-                <FontAwesomeIcon icon={faPlusSquare} className={styles.add} size='90x' />
+                <FontAwesomeIcon icon={faPlus} className={styles.add} size='90x' />
               </Button>
               <input type='file'
                 ref={hiddenFileInput}
