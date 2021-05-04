@@ -10,6 +10,8 @@
   width: 47.03125vw;
   color: white;
   font-family: Roboto, Regular;
+  line-height: 1;
+  text-transform: uppercase;
   @media (max-width: 450px){
     margin-left: 5%;
     width: 85%;
@@ -18,15 +20,12 @@
     content: "";
     display: block;
     height: 3px;
+    margin-top: 3vh;
     background-color: white;
     background-image: linear-gradient(to right, white 60%, #F26633 60%, #F26633 80%, white 80%); 
   }
   h1{
-    font-size: 5.814310051107325vh;
-    @media (max-width: 450px){
-    font-size: 3.4071550255536627vh;
-    width: 90%;
-    }
+    font-size: 40px;
   } 
 }
 //container last article + liste des articles

@@ -6,18 +6,17 @@
 .root{
     display: grid;
     align-items: center;
-    grid-template-columns: 15% 40% 20% 15% 10%;
+    grid-template-columns: 10% 40% 20% 15% 15%;
     font-family: 'Roboto', sans-serif, bold;
-    font-size: 2.72572402044293vh;
-    margin-right: 3vh;
-    margin-left: 3vh;
+    font-size: 16px;
+    margin-right: 5.5vh;
+    margin-left: 5.5vh;
     background-color: transparent;
     .plan{
         grid-area: 1,1,2,2;
         text-align: right;
         padding-right: 20px;
         color: white;
-        font-weight: bold;
         
     }
     .space{
@@ -30,7 +29,7 @@
         grid-area: 1,3,2,4;
         text-align: center;
         color: white;
-        font-weight: bold;
+        
     }
     .link{
         grid-area: 1,4,2,5;
@@ -42,7 +41,7 @@
         color: white;
         grid-area: 1,5,2,6;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         :hover{
             color: #F26633;
         }

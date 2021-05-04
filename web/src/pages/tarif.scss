@@ -15,29 +15,29 @@
 
 .titleContain {
   margin-left: 43.81875vw;
-  width: 39.0625vw;
+  width: 43.0625vw;
   color: white;
   font-family: Roboto, Regular;
+  line-height: 1;
+  text-transform: uppercase;
   @media (max-width: 450px){
     margin-left: 5%;
     width: 85%;
-  }
-  .title span{
-    display: block;
   }
   h1:after{
     content: "";
     display: block;
     height: 3px;
+    margin-top: 3vh;
     background-color: white;
     background-image: linear-gradient(to right, white 20%, #F26633 20%, #F26633 40%, white 40%);
   }
+  .title span{
+    display: block;
+  }
   h1{
-    font-size: 5.814310051107325vh;
-    @media (max-width: 450px){
-    font-size: 3.4071550255536627vh;
-    width: 85%;
-    }
+    font-size: 40px;
+    
   }
 }
 .buttonGalerie{
@@ -81,14 +81,14 @@
       background-color: #F26633;
       border: #F26633 solid 4px;
       border-radius: 4px;
-      height: 5.1107325383304945vh;
-      width: 5.1107325383304945vh;
+      height: 40px;
+      width: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     div:hover{
-        transform: scale(1.2);
+        transform: scale(1.5);
         background-color: white;
         border: #F26633 solid 4px;
         @media (max-width: 450px){
@@ -120,7 +120,7 @@
         }
     }
     img{
-      width: 25px;
+      width: 35px;
       height: auto;
     }
 }

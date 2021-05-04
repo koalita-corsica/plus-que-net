@@ -12,39 +12,31 @@
 
 .titleContain {
   margin-left: 43.81875vw;
-  width: 39.0625vw;
+  width: 43.0625vw;
   color: white;
   font-family: Roboto, Regular;
+  line-height: 1;
+  text-transform: uppercase;
 }
-
-.titleContain h1 {
-  font-weight: 300;
-}
-
 @media (max-width: 450px) {
   .titleContain {
     margin-left: 5%;
     width: 85%;
   }
 }
-.titleContain .title span {
-  display: block;
-}
 .titleContain h1:after {
   content: "";
   display: block;
   height: 3px;
+  margin-top: 3vh;
   background-color: white;
   background-image: linear-gradient(to right, white 20%, #F26633 20%, #F26633 40%, white 40%);
 }
-.titleContain h1 {
-  font-size: 5.8143100511vh;
+.titleContain .title span {
+  display: block;
 }
-@media (max-width: 450px) {
-  .titleContain h1 {
-    font-size: 3.4071550256vh;
-    width: 85%;
-  }
+.titleContain h1 {
+  font-size: 40px;
 }
 
 .buttonGalerie {
@@ -85,21 +77,21 @@
 }
 @media (max-width: 450px) {
   .BlockContent .iconeMenu {
-    align-self: center; 
+    align-self: center;
   }
 }
 .BlockContent .iconeMenu div {
   background-color: #F26633;
   border: #F26633 solid 4px;
   border-radius: 4px;
-  height: 5.1107325383vh;
-  width: 5.1107325383vh;
+  height: 40px;
+  width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .BlockContent .iconeMenu div:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
   background-color: white;
   border: #F26633 solid 4px;
 }
@@ -133,7 +125,7 @@
   display: none;
 }
 .BlockContent .iconeMenu img {
-  width: 25px;
+  width: 35px;
   height: auto;
 }
 .BlockContent .contenu {

@@ -3,9 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .titleContain {
   margin-left: 43.81875vw;
-  width: 39.0625vw;
+  text-transform: uppercase;
+  width: 43.0625vw;
   color: white;
   font-family: Roboto, Regular;
+  line-height: 1;
 }
 @media (max-width: 450px) {
   .titleContain {
@@ -13,21 +15,16 @@
     width: 85%;
   }
 }
+.titleContain h1 {
+  font-size: 40px;
+}
 .titleContain h1:after {
   content: "";
   display: block;
   height: 3px;
+  margin-top: 3vh;
   background-color: white;
   background-image: linear-gradient(to right, #F26633 20%, white 20%);
-}
-.titleContain h1 {
-  font-size: 5.8143100511vh;
-}
-@media (max-width: 450px) {
-  .titleContain h1 {
-    font-size: 3.4071550256vh;
-    width: 85%;
-  }
 }
 
 .BlockContent::-webkit-scrollbar-thumb {

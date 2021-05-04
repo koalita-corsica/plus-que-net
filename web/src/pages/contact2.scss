@@ -7,6 +7,8 @@
     margin-left:  27.65625vw;
     width: 47.03125vw;
     color: white;
+    line-height: 1;
+    text-transform: uppercase;
     font-family: Roboto, Regular;
     @media (max-width: 450px){
       margin-left: 5%;
@@ -16,15 +18,12 @@
       content: "";
       display: block;
       height: 3px;
+      margin-top: 3vh;
       background-color: white;
       background-image: linear-gradient(to left, #F26633 20%, white 20%);
     }
     h1{
-      font-size: 5.814310051107325vh;
-      @media (max-width: 450px){
-      font-size: 3.4071550255536627vh;
-      width: 90%;
-      }
+      font-size: 40px;
     } 
   }
 

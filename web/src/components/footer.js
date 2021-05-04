@@ -9,10 +9,10 @@ import styles from './footer.module.css'
 
 const Footer = ({}) => (
   <div className={styles.root}>
-    <p className={styles.plan}> Plan du site </p>
+    <Link to='/plandusite' className={styles.plan}> Plan du site </Link>
     <div className={styles.space}> </div>
     <p className={styles.google}> Google avis 5,0 ⭐⭐⭐⭐⭐ </p>
-    <Link to='/mentionslegales' className={styles.link}> Mentions Legales </Link>
+    <Link to='/mentionslegales' className={styles.link}> Mentions Légales </Link>
     <div className={styles.icon}>
       <FontAwesomeIcon icon={faInstagram} className={styles.insta} />
       <FontAwesomeIcon icon={faFacebookF} className={styles.fb} />
