@@ -160,6 +160,7 @@ const PrestationPage = props => {
     const icons2 = document.querySelector('.iconContent2')
     const icons3 = document.querySelector('.iconContent3')
     const icons4 = document.querySelector('.iconContent4')
+    icons4.classList.add(styles.active)
     icons4.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3;')
     icons3.setAttribute('style', 'grid-area: 2 / 2 / 3 / 3;')
     icons1.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')

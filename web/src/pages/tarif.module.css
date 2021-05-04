@@ -74,7 +74,14 @@
   width: 10.2214650767vh;
   height: 10.2214650767vh;
   align-self: flex-start;
+  padding-top: 20px;
+  margin-left: 2vw;
 }
+
+.contenu {
+  margin-left: -2.5vw;
+}
+
 @media (max-width: 450px) {
   .BlockContent .iconeMenu {
     align-self: center;
@@ -91,10 +98,23 @@
   align-items: center;
 }
 .BlockContent .iconeMenu div:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
   background-color: white;
   border: #F26633 solid 4px;
 }
+
+.active {
+  transform: scale(1.3);
+  background-color: white;
+  border: #F26633 solid 4px;
+}
+
+.BlockContent .iconeMenu div:active {
+  transform: scale(1.3);
+  background-color: white !important;
+  border: #F26633 solid 4px !important;
+}
+
 @media (max-width: 450px) {
   .BlockContent .iconeMenu div:hover {
     margin-top: -1vh;
