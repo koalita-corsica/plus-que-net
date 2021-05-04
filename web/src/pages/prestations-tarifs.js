@@ -250,6 +250,12 @@ const PrestationPage = props => {
               {qual === 'service4' && <Service data={service4} /> }
             </div>
           </div>
+          <div className={styles.btnBlanc}>
+              <div className={styles.btn1} onClick={() => setQual('service1')}></div>
+              <div className={styles.btn2} onClick={() => setQual('service2')}></div>
+              <div className={styles.btn3} onClick={() => setQual('service3')}></div>
+              <div className={styles.btn4} onClick={() => setQual('service4')}></div>
+            </div>
         </Wrapper>
       </Container>
     </Layout>

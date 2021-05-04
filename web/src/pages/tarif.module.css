@@ -30,7 +30,6 @@
   background-color: white !important;
   border: #F26633 solid 4px !important;
 }
-
 .titleContain h1:after {
   content: "";
   display: block;
