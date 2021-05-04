@@ -41,12 +41,6 @@
   backdrop-filter: blur(20px);
 }
 
-@media (max-width: 450px) {
-  .contactWrapper{
-    margin-left: 10vw;
-  }
-}
-
 .container {
   width: 62.65625vw;
   margin-left: 29.0625vw;
@@ -322,7 +316,7 @@
 
 @media (max-width: 450px) {
   .imgPreview {
-    width: 38px;
+    width: 90px;
     height: 38px;
     justify-self: left;
   }
