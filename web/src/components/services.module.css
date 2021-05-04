@@ -8,7 +8,9 @@
   width:65vw;
   border-radius: 8px;
   opacity: 1;
+  background-color: transparent ;
   backdrop-filter: blur(40px);
+  
   
 }
 @media (max-width: 450px){

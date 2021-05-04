@@ -8,6 +8,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  
   gap: 1.875vw;
   font-family: Roboto, Regular;
   color: white;
@@ -27,6 +28,9 @@
 .grid .article a {
   text-decoration: none;
   color: white;
+}
+.article{
+  
 }
 
 /*# sourceMappingURL=blog-post-preview-grid.module.css.map */

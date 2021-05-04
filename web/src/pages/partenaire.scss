@@ -1,7 +1,7 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
+ 
 
 
 .titleContain {
@@ -31,6 +31,7 @@
 }
 //container last article + liste des articles
 .blogContain{
+  grid-area: 2 / 1 / 3 / 2;
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.875vw;

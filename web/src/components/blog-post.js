@@ -19,12 +19,13 @@ function BlogPost (props) {
         <h1 className={styles.title}>Blog</h1>
       </div>
       <WrapperBlog>
+        <div className={styles.pathContain}>
+          <Link to='/blog/'> <h2 className={styles.path}>Tous les Articles</h2> </Link>
+          <h2>{'> '}</h2>
+          <h2 className={styles.articleTitle}> {title}</h2>
+        </div>
+        <h2 className={styles.categorieTitle} >Thématique</h2>
         <div className={styles.blogContain}>
-          <div className={styles.pathContain}>
-            <Link to='/blog/'> <h3 className={styles.path}>Tous les Articles</h3> </Link>
-            <h3>{'> '}</h3>
-            <h3 className={styles.articleTitle}> {title}</h3>
-          </div>
           {mainImage && mainImage.asset && (
             <img
               src={imageUrlFor(buildImageObj(mainImage))
@@ -36,7 +37,7 @@ function BlogPost (props) {
             />
           )}
           {publishedAt && (
-            <div className={styles.publish}><span>Publié <li /></span>
+            <div className={styles.publish}><span>Publié •</span>
               {differenceInDays(new Date(publishedAt), new Date()) > 3
                 ? distanceInWords(new Date(publishedAt), new Date())
                 : format(new Date(publishedAt), 'MMMM Do, YYYY')}
@@ -62,7 +63,6 @@ function BlogPost (props) {
           </div>
         </div>
         <aside className={styles.aside}>
-          <h2 className={styles.categorieTitle} >Thématique</h2>
           <div className={styles.catWrapper}>
             {props.thema.edges.map(element =>
               <div className={styles.categorie}>

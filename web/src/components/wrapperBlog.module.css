@@ -3,8 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .root {
   display: grid;
-  grid-template-columns: 46.875vw 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 3vw;
+  column-gap: 6vh;
   margin-left: 27.65625vw;
 }
 @media (max-width: 450px) {

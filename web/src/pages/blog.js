@@ -352,8 +352,9 @@ const BlogPage = props => {
           <h1 className={styles.title}>{page.title}</h1>
         </div>
         <WrapperBlog>
+          <h2 onClick={() => setTheme('none')} className={styles.allArticle}>Tous les articles</h2>
+          <h2 className={styles.categorieTitle} >Thématique</h2>
           <div className={styles.blogContain}>
-            <h2 onClick={() => setTheme('none')} className={styles.allArticle}>Tous les articles</h2>
             <div className={styles.lastArticle}>
               {theme === 'none' ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
               {theme === 'theme1' ? theme1Last && theme1Last.length > 0 && <BlogLastArticle nodes={theme1Last} /> : ''}
@@ -382,7 +383,6 @@ const BlogPage = props => {
             </div>
           </div>
           <aside className={styles.aside}>
-            <h2 className={styles.categorieTitle} >Thématique</h2>
             <div className={styles.catWrapper}>
               {thematique.edges.map(element =>
                 <div onClick={() => setTheme(element.node.slug)} className={styles.categorie}>

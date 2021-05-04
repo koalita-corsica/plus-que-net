@@ -54,6 +54,8 @@
 
 .BlockContent {
   font-family: Roboto, Regular;
+  justify-content: space-between;
+  column-gap: 2.5vw;
   font-size: 14px;
   display: flex;
   color: white;
@@ -61,6 +63,8 @@
 @media (max-width: 450px) {
   .BlockContent {
     flex-direction: column;
+    row-gap: 5vh;
+    margin-top: 1vh;
   }
 }
 .BlockContent .iconeMenu {
@@ -70,8 +74,8 @@
   transform: rotate(45deg);
   gap: 1vh;
   margin-right: 2.8vw;
-  width: 60px;
-  height: 60px;
+  width: 10.2214650767vh;
+  height: 10.2214650767vh;
   align-self: flex-start;
 }
 @media (max-width: 450px) {
@@ -83,8 +87,8 @@
   background-color: #F26633;
   border: #F26633 solid 4px;
   border-radius: 4px;
-  height: 30px;
-  width: 30px;
+  height: 5.1107325383vh;
+  width: 5.1107325383vh;
   display: flex;
   justify-content: center;
   align-items: center;
