@@ -130,6 +130,12 @@
 }
 
 @media (max-width: 450px) {
+  .categorie h2 {
+    margin-left: 15vw;
+  }
+}
+
+@media (max-width: 450px) {
   .allArticle {
     cursor: pointer;
   }
