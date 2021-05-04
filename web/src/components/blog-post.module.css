@@ -24,7 +24,7 @@
   background-image: linear-gradient(to right, white 40%, #F26633 40%, #F26633 60%, white 60%);
 }
 .titleContain h1 {
-  font-size: 6.8143100511vh;
+  font-size: 5.8143100511vh;
 }
 @media (max-width: 450px) {
   .titleContain h1 {
@@ -38,7 +38,7 @@
   flex-direction: column;
   width: 46.875vw;
   font-family: Roboto, Regular;
-  gap: 1.875vw;
+  
 }
 @media (max-width: 450px) {
   .blogContain {
@@ -52,7 +52,8 @@
 .blogContain .pathContain {
   display: inline-flex;
   color: white;
-  gap: 1vw;
+  row-gap: 1vw;
+  font-size: 1.5em;
 }
 @media (max-width: 450px) {
   .blogContain .pathContain {
@@ -186,6 +187,7 @@
 
 .aside .categorieTitle {
   text-align: center;
+  font-size: 1.5em;
 }
 
 .aside .catWrapper .categorie .imgTheme {

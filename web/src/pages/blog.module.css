@@ -8,13 +8,6 @@
   color: white;
   font-family: Roboto, Regular;
 }
-
-.titleContain h1 {
-  font-size: 40px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
 @media (max-width: 450px) {
   .titleContain {
     margin-left: 5%;
@@ -36,12 +29,6 @@
     font-size: 3.4071550256vh;
     width: 90%;
   }
-}
-
-.blogContain h2 {
-  text-transform: uppercase;
-  font-size: 17px !important;
-  font-weight: 300 !important;
 }
 
 .blogContain {
@@ -95,13 +82,11 @@
 
 .aside .catWrapper .categorie {
   max-height: 27.7683134583vh;
-  cursor: pointer;
 }
 @media (max-width: 450px) {
   .aside .catWrapper .categorie {
     height: auto;
-    cursor: pointer;
-    }
+  }
 }
 
 .aside .catWrapper .categorie h2 {
