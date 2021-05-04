@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import styles from './header.module.css'
 
 const MenuIcon = styled.div`
-  display: none;
+  display: ${({show}) => show === false ? 'none' : 'none'};
 @media (max-width: 450px) {
   position: fixed;
   top: 2rem;

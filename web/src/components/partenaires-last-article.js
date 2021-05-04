@@ -8,18 +8,17 @@ import BlogPostPreview from './blog-post-preview'
 import Block from '@sanity/block-content-to-react'
 
 import styles from './blog-last-article.module.css'
-import {responsiveTitle3} from './typography.module.css'
 
 function PartenaireLastArticle (props) {
   return (
     <div className={styles.root}>
-      {props.title && <h2 className={styles.headline}>{props.title}</h2>}
+      <h2 className={styles.headline}>{props.title}</h2>
       {props.nodes &&
         props.nodes.map(node => (
           <React.Fragment>
-            <Link to={getPartenaireUrl(node.publishedAt, node.slug.current)}>
+            <Link to={getBlogUrl(node.publishedAt, node.slug.current)}>
               <div key={node.id} className={styles.lastArticle}>
-                <img src={node.mainImage.asset.url} className={styles.imgLastArticle} width='400' height='250' />
+                <img src={node.mainImage.asset.url} className={styles.imgLastArticle} />
                 <div className={styles.lastArticleContain}>
                   <div className={styles.dataWrapper}><span className={styles.publish}>Publié • </span>  <span className={styles.date}>{format(node.publishedAt, 'MMMM Do, YYYY')} </span></div>
                   <h3 className={styles.articleTitle}> {node.title} </h3>

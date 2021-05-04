@@ -5,8 +5,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 3vw;
-  column-gap: 6vh;
-  margin-left: 27.65625vw;
+  column-gap: 9vh;
+  margin-left: 27vw;
 }
 @media (max-width: 450px) {
   .root {

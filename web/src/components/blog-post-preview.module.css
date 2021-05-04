@@ -9,12 +9,12 @@
 }
 
 .title {
-  font-size: 17px !important;
+  font-size: 2.5vh !important;
   text-transform: uppercase;
 }
 
-.description {
-  font-size: 14px !important;
+.excerpt {
+  font-size: 2vh !important;
   font-weight: 100 !important;
 }
 
@@ -54,7 +54,7 @@
   display: inline-flex;
   color: white;
   gap: 0.5vw;
-  font-size: 9px !important;
+  font-size: 1.3vh !important;
 }
 
 .text {
@@ -89,6 +89,7 @@
   font-size: var(--font-small-size);
   line-height: var(--font-small-line-height);
   color: var(--color-gray);
-  font-size: 9px !important;
+  font-size: 1.3vh !important;
 }
+
 
