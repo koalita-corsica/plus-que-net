@@ -6,7 +6,7 @@ import styles from './header.module.css'
 
 const MenuIcon = styled.div`
   display: none;
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   position: fixed;
   top: 2rem;
   left: ${({nav}) => nav ? '' : '2rem'};
@@ -44,7 +44,7 @@ const MenuIcon = styled.div`
 `
 const MenuLinks = styled.nav`
   display: ${({show}) => show === false ? 'none' : 'none'};
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   display: ${({nav}) => (nav ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: start;
