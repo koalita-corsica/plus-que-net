@@ -249,13 +249,13 @@ const PrestationPage = props => {
               {qual === 'service3' && <Service data={service3} /> }
               {qual === 'service4' && <Service data={service4} /> }
             </div>
-            <div className={styles.btnBlanc}>
-              <div className={styles.btn1}>1</div>
-              <div className={styles.btn2}>2</div>
-              <div className={styles.btn3}>3</div>
-              <div className={styles.btn4}>4</div>
-            </div>
           </div>
+          <div className={styles.btnBlanc}>
+              <div className={styles.btn1} onClick={() => setQual('service1')}></div>
+              <div className={styles.btn2} onClick={() => setQual('service2')}></div>
+              <div className={styles.btn3} onClick={() => setQual('service3')}></div>
+              <div className={styles.btn4} onClick={() => setQual('service4')}></div>
+            </div>
         </Wrapper>
       </Container>
     </Layout>
