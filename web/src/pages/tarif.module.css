@@ -214,9 +214,6 @@
     margin: 6vh auto;
   }
 }
-.btnBlanc div:link {
-  background-color: white;
-}
 .btnBlanc div:hover {
   background-color: #F26633;
 }
