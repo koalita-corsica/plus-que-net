@@ -4,9 +4,10 @@
   font-family: Roboto, Regular;
 }
 
-.root h2 {
-  font-size: 17px !important;
-  text-transform: uppercase !important;
+.root h2{
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-top: -2vh;
 }
 
 a {
@@ -16,6 +17,7 @@ a {
 
 .description {
   font-size: 14px;
+  font-weight: 0;
 }
 
 .lastArticle {
@@ -54,14 +56,29 @@ a {
   color: white;
   display: inline-flex;
   gap: 6px;
-  font-size: 9px !important;
+  font-size: 1.3vh !important;
+  margin-top: 2vh;
 }
 
 .date {
   font-size: var(--font-small-size);
   line-height: var(--font-small-line-height);
   color: var(--color-gray);
-  font-size: 9px !important;
+  font-size: 1.3vh !important;
+  margin-top: 2vh;
 }
 
+.dataWrapper {
+  margin-top: 1vh;
+}
+
+.description p{
+  font-size: 2.2vh !important;
+}
+
+.lastArticle img {
+  border-radius: 5px;
+  width: 28.5vw;
+  height: 37.2vh;
+}
 /*# sourceMappingURL=blog-last-article.module.css.map */

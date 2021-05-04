@@ -8,7 +8,7 @@ import styles from './blog-post-preview-grid.module.css'
 function PartenairePostPreviewGrid (props) {
   return (
     <div className={styles.root}>
-      {props.title && <h2 className={styles.headline}>{props.title}</h2>}
+      <h2 className={styles.headline}>{props.title}</h2>
       <div className={styles.grid}>
         {props.nodes &&
           props.nodes.map(node => (

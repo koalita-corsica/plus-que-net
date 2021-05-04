@@ -50,13 +50,28 @@
   flex-direction: column;
   font-family: Roboto, Regular;
   font-size: 2.3850085179vh;
-  height: 53.3441226576vh;
+  height: 46vh;
   overflow-y: scroll;
   color: white;
   margin-right: 3.4296875vw;
   scrollbar-width: thin;
   scrollbar-color: #F26633 white;
+  margin-top: -3vh;
 }
+
+.BlockContent .bloc1 h1{
+  font-family: Roboto, Regular;
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+.BlockContent .bloc1 p{
+  font-family: Roboto;
+  width: 45vw;
+  font-size: 16px;
+  font-weight: lighter !important;
+}
+
 @media (max-width: 450px) {
   .BlockContent {
     font-size: 3.4071550256vh;
@@ -79,9 +94,11 @@
   }
 }
 .BlockContent .bloc1 div img {
-  width: 151px;
-  height: 240px;
+  width: 154px;
+  height: 245px;
   float: right;
+  padding-left: 2vw;
+  margin-top: 1vh;
 }
 @media (max-width: 450px) {
   .BlockContent .bloc1 div img {

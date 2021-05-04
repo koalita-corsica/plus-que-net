@@ -5,14 +5,11 @@ import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
 import AuthorList from './author-list'
 import imgTest from '../images/test.jpg'
-import { Link } from 'gatsby'
+import {Link} from 'gatsby'
 import Wrapper from './wrapper.js'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCity } from '@fortawesome/free-solid-svg-icons'
-import { faBrush } from '@fortawesome/free-solid-svg-icons'
-import { faShower } from '@fortawesome/free-solid-svg-icons'
-import { faDungeon } from '@fortawesome/free-solid-svg-icons'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faCity, faBrush, faShower, faDungeon, faTimes} from '@fortawesome/free-solid-svg-icons'
+
 import Galerie from '../components/gallery'
 import Modal from 'react-modal'
 import Container from '../components/container'
@@ -20,43 +17,43 @@ import Layout from '../containers/layout'
 
 import styles from './services.module.css'
 
-
 function Services (data) {
   const {_rawBody, authors, categories, title, mainImage, publishedAt} = data.data
-  const [modalIsOpen,setIsOpen] = React.useState(false);
-  function openModal() {
-    setIsOpen(true);
+  const [modalIsOpen, setIsOpen] = React.useState(false)
+  function openModal () {
+    setIsOpen(true)
   }
 
-  function closeModal(){
-    setIsOpen(false);
+  function closeModal () {
+    setIsOpen(false)
   }
 
   return (
     <React.Fragment>
-    {data.data.edges.map(item =>
-    <React.Fragment>
-        <h1> {item.node.title} </h1>
-        {item.node._rawBody && <PortableText blocks={item.node._rawBody} />}
-        <button onClick={openModal} className={styles.buttonGalerie}>Voir la galerie</button>
-        <Modal
-          style={{overlay: {backgroundColor: "transparent"}}}
-          isOpen={modalIsOpen}
-          onRequestClose={closeModal}
-          ariaHideApp={false}
-          data={data.data} 
-          className={styles.galery}>
+      {data.data.edges.map(item =>
+        <React.Fragment>
+          <div className={styles.title}> <h1> {item.node.title} </h1> </div>
+          <div className={styles.desc} >
+            {item.node._rawBody && <PortableText blocks={item.node._rawBody} />}
+          </div>
+          <button onClick={openModal} className={styles.buttonGalerie}>Voir la galerie</button>
+          <Modal
+            style={{overlay: {backgroundColor: 'transparent'}}}
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            ariaHideApp={false}
+            data={data.data}
+            className={styles.galery}>
             <div className={styles.titleContent}>
-              <button  className={styles.buttonClose}><FontAwesomeIcon icon={faTimes} onClick={closeModal} /></button>
+              <button className={styles.buttonClose}><FontAwesomeIcon icon={faTimes} onClick={closeModal} /></button>
               <h1 className={styles.titleService}> {item.node.title}</h1>
             </div>
-          <Galerie data={data.data}/>
-        </Modal>
+            <Galerie data={data.data} />
+          </Modal>
+        </React.Fragment>
+      )}
     </React.Fragment>
-    )}  
-    </React.Fragment>
-  );
+  )
 }
 
 export default Services
-
