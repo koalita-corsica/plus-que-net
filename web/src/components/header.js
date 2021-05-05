@@ -81,6 +81,11 @@ const MenuLinks = styled.nav`
   }
 }
 `
+
+const isActive = () => {
+  document.getElementById('link').classList.add(styles.active)
+}
+
 const Header = ({nav, showNav, show, data}) => (
   <React.Fragment>
     <div />
@@ -95,10 +100,10 @@ const Header = ({nav, showNav, show, data}) => (
       </div>
       <MenuLinks show={show} nav={nav}>
         <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
-        <ul>
+        <ul >
           {data.sanitySiteSettings.menu.map(item =>
             <React.Fragment>
-              <li>
+              <li id='link' onClick={isActive}>
                 <Link to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`}> {item.page.title}</Link>
               </li>
             </React.Fragment>

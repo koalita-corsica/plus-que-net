@@ -8,7 +8,7 @@ import {RiMessengerLine} from '@react-icons/all-files/ri/RiMessengerLine'
 
 import styles from './footer.module.css'
 
-const Footer = ({}) => (
+const Footer = () => (
   <div className={styles.root}>
     <Link to='/plandusite' className={styles.plan}> Plan du site </Link>
     <div className={styles.space}> </div>
