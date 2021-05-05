@@ -378,53 +378,59 @@ const BlogPage = props => {
   return (
     <Layout>
       <Container>
-        <div className={styles.root}>
-          <div className={styles.titleContain}>
-            <h1 className={styles.title}>{page.title}</h1>
-          </div>
-          <WrapperBlog>
-            <h2 onClick={() => setTheme('none')} className={styles.allArticle}>Tous les articles</h2>
-            <h2 className={styles.categorieTitle} >Thématiques</h2>
-            <div className={styles.blogContain}>
-              <div className={styles.lastArticle}>
-                {theme === 'none' ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
-                {theme === 'theme1' ? theme1Last && theme1Last.length > 0 && <BlogLastArticle nodes={theme1Last} /> : ''}
-                {theme === 'theme1' ? theme1Last && theme1Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
-                {theme === 'theme2' ? theme2Last && theme2Last.length > 0 && <BlogLastArticle nodes={theme2Last} /> : ''}
-                {theme === 'theme2' ? theme2Last && theme2Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
-                {theme === 'theme3' ? theme3Last && theme3Last.length > 0 && <BlogLastArticle nodes={theme3Last} /> : ''}
-                {theme === 'theme3' ? theme3Last && theme3Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
-                {theme === 'theme4' ? theme4Last && theme4Last.length > 0 && <BlogLastArticle nodes={theme4Last} /> : ''}
-                {theme === 'theme4' ? theme4Last && theme4Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
-                {theme === 'theme5' ? theme5Last && theme5Last.length > 0 && <BlogLastArticle nodes={theme5Last} /> : ''}
-                {theme === 'theme5' ? theme5Last && theme5Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
-              </div>
-              <div className={styles.article}>
-                {theme === 'none' ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={list} /> : ''}
-                {theme === 'theme1' ? theme1All && theme1All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme1All} /> : ''}
-                {theme === 'theme1' ? theme1All && theme1All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
-                {theme === 'theme2' ? theme2All && theme2All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme2All} /> : ''}
-                {theme === 'theme2' ? theme2All && theme2All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
-                {theme === 'theme3' ? theme3All && theme3All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme3All} /> : ''}
-                {theme === 'theme3' ? theme3All && theme3All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
-                {theme === 'theme4' ? theme4All && theme4All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme4All} /> : ''}
-                {theme === 'theme4' ? theme4All && theme4All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
-                {theme === 'theme5' ? theme5All && theme5All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme5All} /> : ''}
-                {theme === 'theme5' ? theme5All && theme5All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
-              </div>
-            </div>
-            <aside className={styles.aside}>
-              <div className={styles.catWrapper}>
-                {thematique.edges.map(element =>
-                  <div onClick={() => setTheme(element.node.slug)} className={styles.categorie}>
-                    <img onClick={() => setTheme(element.node.slug)} src={element.node.image.asset.url} className={styles.imgTheme} />
-                    <h2 onClick={() => setTheme(element.node.slug)}> {element.node.title}  <span> Voir </span> </h2>
-                  </div>
-                )}
-              </div>
-            </aside>
-          </WrapperBlog>
+        <div className={styles.titleContain}>
+          <h1 className={styles.title}>{page.title}</h1>
         </div>
+        <WrapperBlog>
+          <h2 onClick={() => setTheme('none')} className={styles.allArticle}>Tous les articles</h2>
+          <h2 className={styles.categorieTitle} >Thématiques</h2>
+          <div className={styles.blogContain}>
+            <div className={styles.lastArticle}>
+              {theme === 'none' ? postNodes && postNodes.length > 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+              {theme === 'theme1' ? theme1Last && theme1Last.length > 0 && <BlogLastArticle nodes={theme1Last} /> : ''}
+              {theme === 'theme1' ? theme1Last && theme1Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+              {theme === 'theme2' ? theme2Last && theme2Last.length > 0 && <BlogLastArticle nodes={theme2Last} /> : ''}
+              {theme === 'theme2' ? theme2Last && theme2Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+              {theme === 'theme3' ? theme3Last && theme3Last.length > 0 && <BlogLastArticle nodes={theme3Last} /> : ''}
+              {theme === 'theme3' ? theme3Last && theme3Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+              {theme === 'theme4' ? theme4Last && theme4Last.length > 0 && <BlogLastArticle nodes={theme4Last} /> : ''}
+              {theme === 'theme4' ? theme4Last && theme4Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+              {theme === 'theme5' ? theme5Last && theme5Last.length > 0 && <BlogLastArticle nodes={theme5Last} /> : ''}
+              {theme === 'theme5' ? theme5Last && theme5Last.length === 0 && <BlogLastArticle nodes={lastNodes} /> : ''}
+            </div>
+            <div className={styles.article}>
+              {theme === 'none' ? postNodes && postNodes.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={list} /> : ''}
+              {theme === 'theme1' ? theme1All && theme1All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme1All} /> : ''}
+              {theme === 'theme1' ? theme1All && theme1All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
+              {theme === 'theme2' ? theme2All && theme2All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme2All} /> : ''}
+              {theme === 'theme2' ? theme2All && theme2All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
+              {theme === 'theme3' ? theme3All && theme3All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme3All} /> : ''}
+              {theme === 'theme3' ? theme3All && theme3All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
+              {theme === 'theme4' ? theme4All && theme4All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme4All} /> : ''}
+              {theme === 'theme4' ? theme4All && theme4All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
+              {theme === 'theme5' ? theme5All && theme5All.length > 0 && <BlogPostPreviewGrid thema={thematique} nodes={theme5All} /> : ''}
+              {theme === 'theme5' ? theme5All && theme5All.length === 0 && <BlogPostPreviewGrid thema={thematique} nodes={postNodes} /> : ''}
+            </div>
+          </div>
+          <aside className={styles.aside}>
+            <div className={styles.catWrapper}>
+              {thematique.edges.map(element =>
+                <div onClick={() => setTheme(element.node.slug)} className={styles.categorie}>
+                  <img onClick={() => setTheme(element.node.slug)} src={element.node.image.asset.url} className={styles.imgTheme} />
+                  <h2 onClick={() => setTheme(element.node.slug)}> {element.node.title}  <span> Voir </span> </h2>
+                </div>
+              )}
+            </div>
+          </aside>
+          {hasMore ? (
+            <button className={styles.btnSeeMore} onClick={handleLoadMore}> VOIR PLUS D'ARTICLE </button>
+          ) : (
+            <div className={styles.mySpace} />
+          )}
+          <div className={styles.end}>
+            <Link to='/blog'> <BiUpArrowCircle /> <span> Retour haut de page </span> </Link>
+          </div>
+        </WrapperBlog>
       </Container>
     </Layout>
   )
