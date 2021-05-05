@@ -46,6 +46,7 @@ function BlogPost (props) {
           <h3 className={styles.subtitle}> {title} </h3>
           <div className={styles.paraWrapper}>
             {props._rawExcerpt && (
+            <React.Fragment>
               <div className={styles.excerpt}>
                 {mainImage && mainImage.asset && (
                   <img
@@ -57,8 +58,11 @@ function BlogPost (props) {
                     className={styles.imgPara}
                   />
                 )}
+              </div>
+              <div className={styles.para1}>
                 {_rawBody && <PortableText blocks={_rawBody} />}
               </div>
+              </React.Fragment>
             )}
           </div>
         </div>
