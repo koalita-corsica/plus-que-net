@@ -94,6 +94,7 @@
 }
 
 .title h1 {
+  font-family: Roboto, Regular;
   font-size: 5.8vh;
 }
 
@@ -102,7 +103,14 @@
   font-size: 2.2vh;
 }
 
-
+@media (max-width: 450px) {
+  .title h1 {
+    font-size: 20px;
+  }
+  .desc p {
+    font-size: 20px;
+  }
+}
 
 
 /*# sourceMappingURL=tarif.module.css.map */

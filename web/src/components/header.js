@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-return-assign */
 import {Link, StaticQuery, graphql} from 'gatsby'
 import React, {useState} from 'react'
@@ -81,20 +82,11 @@ const MenuLinks = styled.nav`
   }
 }
 `
-const isActive = () => {
-  var lien = document.getElementById('link')
-  var which = lien.dataset.id
-  console.log(which)
-  if (window.location.pathname === which) {
-    lien.style.color = '#F26633'
-  }
-}
 
 const Header = ({nav, showNav, show, data}) => (
   <React.Fragment>
-    {window.onload = isActive}
     <div className={styles.root}>
-      <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
+      <MenuIcon nav={nav} onClick={() => showNav(!nav)} styles={{display: 'none'}}>
         <div />
         <div />
         <div />
@@ -102,13 +94,13 @@ const Header = ({nav, showNav, show, data}) => (
       <div className={styles.navBar}>
         <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
       </div>
-      <MenuLinks show={show} nav={nav}>
+      <MenuLinks nav={nav} styles={{display: 'none'}}>
         <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
         <ul>
           {data.sanitySiteSettings.menu.map(item =>
             <React.Fragment>
               <li>
-                <Link id='link' data-id={item.page.slug.current} to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`}> {item.page.title}</Link>
+                <Link activeStyle={{color: '#F26633'}} to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`}> {item.page.title}</Link>
               </li>
             </React.Fragment>
           )}
@@ -123,7 +115,7 @@ const Header = ({nav, showNav, show, data}) => (
           {data.sanitySiteSettings.menu.map(item =>
             <React.Fragment>
               <li>
-                <Link to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`}> {item.page.title}</Link>
+                <Link activeStyle={{color: '#F26633'}} to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`} > {item.page.title}</Link>
               </li>
             </React.Fragment>
           )}
