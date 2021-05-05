@@ -10,6 +10,11 @@
   z-index: 1000;
 }
 
+.activated {
+  background-color: #F26633 !important;
+}
+
+
 .titleContain {
   margin-left: 43.81875vw;
   width: 43.0625vw;
@@ -209,5 +214,35 @@
 .BlockContent .ic4 {
   display: none;
 }
+
+.btnBlanc {
+  display: flex;
+  width: 20.34375vw;
+  gap: 1.328125vw;
+}
+@media (max-width: 450px) {
+  .btnBlanc {
+    width: 80%;
+    margin-left: 10%;
+    justify-content: space-between;
+  }
+}
+.btnBlanc div {
+  cursor: pointer;
+  width: 4.453125vw;
+  content: "";
+  height: 6px;
+  margin-top: 6vh;
+  background-color: white;
+}
+@media (max-width: 450px) {
+  .btnBlanc div {
+    width: 20%;
+    margin: 6vh auto;
+  }
+}
+
+
+
 
 /*# sourceMappingURL=tarif.module.css.map */
