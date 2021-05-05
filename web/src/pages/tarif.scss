@@ -4,12 +4,11 @@
 
 
 .galery{
-  left: 23.578125vw;
-  top: 22.31686541737649vh;
-  width: 63.421875vw;
-  height: 76.42248722316866vh;
-  position: absolute;  
-  z-index: 1000;
+  
+  height: 96.42248722316866vh;
+  width:57.421875vw;
+   
+  
   
 }
 
@@ -202,6 +201,9 @@
       width: 20%;
       margin: 6vh auto;
     }
+  }
+  div{
+    background-color: white;
   }
   div:hover{
     background-color: #F26633;

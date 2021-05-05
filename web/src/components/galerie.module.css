@@ -18,8 +18,9 @@
 .imgCentered {
   padding-right: 2vw;
   padding-left: 2vw;
-  width: auto;
-  height: 60vh;
+  padding-bottom: 2vw;
+  width: 52.8125vw;
+  height: 59.2844974446vh;
 }
 @media (max-width: 450px) {
   .imgCentered {

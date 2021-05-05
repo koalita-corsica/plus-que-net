@@ -3,16 +3,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .galery {
   margin-top: 15vh;
-  margin-left: 28vw;
-  height: 75vh;
-  width:65vw;
+  margin-left: 30vw;
   border-radius: 8px;
   opacity: 1;
-  background-color: transparent ;
+  width:57.421875vw;
+  
   backdrop-filter: blur(40px);
   
   
 }
+
+
 @media (max-width: 450px){
   .galery{
     width: 100%;
@@ -22,6 +23,7 @@
 }
 .titleContent{
   width: 100%;
+  
   
 }
 @media (max-width: 450px){
@@ -39,13 +41,16 @@
   color: white;
   font-family: Roboto, Regular;
   width: 100%;
+  padding-top: 2vh;
 }
 
 .buttonClose{
   float: right;
   color: red;
   background-color: transparent;
-  font-size: 5vh; 
+  font-size: 3.5vh;
+  padding-top: 5vh;
+  padding-right: 1vw; 
 }
 .buttonClose:hover{
   color: red;
