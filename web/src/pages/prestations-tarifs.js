@@ -166,6 +166,7 @@ const PrestationPage = props => {
     icons1.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons2.setAttribute('style', 'grid-area: 1 / 1 / 2 / 2;')
     setQual('service4')
+    myBtn4()
   };
   function rotateClick3 () {
     // Variable
@@ -178,6 +179,7 @@ const PrestationPage = props => {
     icons1.setAttribute('style', 'grid-area: 2 / 2 / 3 / 3;')
     icons4.setAttribute('style', 'grid-area: 1 / 1 / 2 / 2;')
     setQual('service3')
+    myBtn3()
   };
   function rotateClick2 () {
     // Variable
@@ -190,6 +192,7 @@ const PrestationPage = props => {
     icons3.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons4.setAttribute('style', 'grid-area: 2 / 2 / 3 / 3;')
     setQual('service2')
+    myBtn2()
   };
   function rotateClick1 () {
     // Variable
@@ -202,7 +205,40 @@ const PrestationPage = props => {
     icons4.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons3.setAttribute('style', 'grid-area: 1 / 1 / 2 / 2;')
     setQual('service1')
+    myBtn1()
   };
+
+  const myBtn1 = () => {
+    setQual('service1')
+    document.getElementById('btn1').classList.add(styles.activated)
+    document.getElementById('btn2').classList.remove(styles.activated)
+    document.getElementById('btn3').classList.remove(styles.activated)
+    document.getElementById('btn4').classList.remove(styles.activated)
+  }
+
+  const myBtn2 = () => {
+    setQual('service2')
+    document.getElementById('btn1').classList.remove(styles.activated)
+    document.getElementById('btn2').classList.add(styles.activated)
+    document.getElementById('btn3').classList.remove(styles.activated)
+    document.getElementById('btn4').classList.remove(styles.activated)
+  }
+
+  const myBtn3 = () => {
+    setQual('service3')
+    document.getElementById('btn1').classList.remove(styles.activated)
+    document.getElementById('btn2').classList.remove(styles.activated)
+    document.getElementById('btn3').classList.add(styles.activated)
+    document.getElementById('btn4').classList.remove(styles.activated)
+  }
+
+  const myBtn4 = () => {
+    setQual('service4')
+    document.getElementById('btn1').classList.remove(styles.activated)
+    document.getElementById('btn2').classList.remove(styles.activated)
+    document.getElementById('btn3').classList.remove(styles.activated)
+    document.getElementById('btn4').classList.add(styles.activated)
+  }
 
   const {data, errors} = props
   const page = data && data.services
@@ -251,10 +287,10 @@ const PrestationPage = props => {
             </div>
           </div>
           <div className={styles.btnBlanc}>
-            <div className={styles.btn1} onClick={() => setQual('service1')} />
-            <div className={styles.btn2} onClick={() => setQual('service2')} />
-            <div className={styles.btn3} onClick={() => setQual('service3')} />
-            <div className={styles.btn4} onClick={() => setQual('service4')} />
+            <div id='btn1' className={styles.btn1} onClick={myBtn1} />
+            <div id='btn2' className={styles.btn2} onClick={myBtn2} />
+            <div id='btn3' className={styles.btn3} onClick={myBtn3} />
+            <div id='btn4' className={styles.btn4} onClick={myBtn4} />
           </div>
         </Wrapper>
       </Container>

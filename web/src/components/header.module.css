@@ -1,7 +1,12 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
- .root {
+
+.active a{
+  color: #F26633 !important;
+}
+
+.root {
    font-family: "Roboto", sans-serif;
    font-size: 2.7257240204vh;
    top: 3.25vh;
@@ -46,9 +51,6 @@
 .root .nav ul li :hover {
   color: #F26633;
 }
- .root .nav ul li :focus {
-   color: #F26633;
- }
  .root .logo {
    align-self: center;
  }
