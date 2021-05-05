@@ -21,6 +21,7 @@
 }
 .titleContain h1 {
   font-size: 40px;
+  font-weight: normal;
 }
 .active {
   background-color: #F26633;
@@ -199,6 +200,7 @@
   margin-left: 0;
   height: 6.9846678024vh;
   width: 3.203125vw;
+  border: 2px solid #F26633;
 }
 
 .btnEnvoyer {
@@ -250,6 +252,7 @@ label {
   color: #FFFFFF;
   text-transform: uppercase;
   opacity: 1;
+  line-height: 1;
 }
 
 textarea {
@@ -316,7 +319,7 @@ textarea {
   top: 0;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 730px) {
   .titleContain {
     margin-left: 5%;
     width: 85%;

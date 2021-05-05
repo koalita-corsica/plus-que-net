@@ -73,6 +73,7 @@ const ContactPage = props => {
     for (let i = 0; i < event.target.files.length; i++) {
       var x = document.createElement('IMG')
       x.src = window.URL.createObjectURL(event.target.files[i])
+      x.classList.add(styles.imgPreview)
       myDiv.appendChild(x)
       myDiv.appendChild(mySpan)
       prev.appendChild(myDiv)
