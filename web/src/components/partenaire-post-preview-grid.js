@@ -30,7 +30,7 @@ function PartenairePostPreviewGrid (props) {
   )
 }
 
-PartenairePostPreviewGrid.defadivtProps = {
+PartenairePostPreviewGrid.defaultProps = {
   title: '',
   nodes: [],
   browseMoreHref: ''

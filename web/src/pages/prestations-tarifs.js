@@ -209,6 +209,9 @@ const PrestationPage = props => {
   };
 
   const myBtn1 = () => {
+    if (qual === 'service1') {
+      document.getElementById('btn1').classList.add(styles.activated)
+    }
     setQual('service1')
     document.getElementById('btn1').classList.add(styles.activated)
     document.getElementById('btn2').classList.remove(styles.activated)
@@ -217,6 +220,9 @@ const PrestationPage = props => {
   }
 
   const myBtn2 = () => {
+    if (qual === 'service2') {
+      document.getElementById('btn2').classList.add(styles.activated)
+    }
     setQual('service2')
     document.getElementById('btn1').classList.remove(styles.activated)
     document.getElementById('btn2').classList.add(styles.activated)
@@ -225,6 +231,9 @@ const PrestationPage = props => {
   }
 
   const myBtn3 = () => {
+    if (qual === 'service3') {
+      document.getElementById('btn3').classList.add(styles.activated)
+    }
     setQual('service3')
     document.getElementById('btn1').classList.remove(styles.activated)
     document.getElementById('btn2').classList.remove(styles.activated)
@@ -233,6 +242,9 @@ const PrestationPage = props => {
   }
 
   const myBtn4 = () => {
+    if (qual === 'service4') {
+      document.getElementById('btn4').classList.add(styles.activated)
+    }
     setQual('service4')
     document.getElementById('btn1').classList.remove(styles.activated)
     document.getElementById('btn2').classList.remove(styles.activated)

@@ -1,3 +1,4 @@
+/* eslint-disable no-return-assign */
 import {Link, StaticQuery, graphql} from 'gatsby'
 import React, {useState} from 'react'
 
@@ -7,7 +8,7 @@ import styles from './header.module.css'
 const MenuIcon = styled.div`
   display: ${({show}) => show === false ? 'none' : 'none'};
 @media (max-width: 450px) {
-  position: fixed;
+  position: absolute;
   top: 2rem;
   left: ${({nav}) => nav ? '' : '2rem'};
   right: ${({nav}) => nav ? '2rem' : ''};
@@ -16,7 +17,6 @@ const MenuIcon = styled.div`
   justify-content: space-around;
   width: 1.5rem;
   height: 1.5rem;
-   background: transparent;
    border: none;
    cursor: pointer;
    z-index: 100;
@@ -81,14 +81,18 @@ const MenuLinks = styled.nav`
   }
 }
 `
-
 const isActive = () => {
-  document.getElementById('link').classList.add(styles.active)
+  var lien = document.getElementById('link')
+  var which = lien.dataset.id
+  console.log(which)
+  if (window.location.pathname === which) {
+    lien.style.color = '#F26633'
+  }
 }
 
 const Header = ({nav, showNav, show, data}) => (
   <React.Fragment>
-    <div />
+    {window.onload = isActive}
     <div className={styles.root}>
       <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
         <div />
@@ -100,16 +104,17 @@ const Header = ({nav, showNav, show, data}) => (
       </div>
       <MenuLinks show={show} nav={nav}>
         <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
-        <ul >
+        <ul>
           {data.sanitySiteSettings.menu.map(item =>
             <React.Fragment>
-              <li id='link' onClick={isActive}>
-                <Link to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`}> {item.page.title}</Link>
+              <li>
+                <Link id='link' data-id={item.page.slug.current} to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`}> {item.page.title}</Link>
               </li>
             </React.Fragment>
           )}
         </ul>
       </MenuLinks>
+
       <div className={styles.logo}>
         <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
       </div>

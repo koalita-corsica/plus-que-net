@@ -2,10 +2,6 @@
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-.active a{
-  color: #F26633 !important;
-}
-
 .root {
    font-family: "Roboto", sans-serif;
    font-size: 2.7257240204vh;
@@ -13,19 +9,20 @@
    display: flex;
    gap: 5%;
    justify-content: space-between;
-   background-color: transparent;
    height: 11.5843270869vh;
  }
  @media (max-width: 450px) {
    .root {
-     flex-direction: row-reverse;
-     justify-content: space-around;
+     position: sticky;
+     justify-content: center;
      align-items: center;
-     background: transparent;
-     opacity: 1;
-     justify-content: space-around;
-     -webkit-backdrop-filter: blur(30px);
-     height: 123px;
+     width: 100vw;
+     top: 0;
+     background:  linear-gradient(to left, rgba(79, 83, 94, 0.8) 100%, transparent 10% );
+     z-index: 999;
+  }
+  .root img {
+    margin-top: 10vh;
   }
 }
 .root .nav {
@@ -68,7 +65,7 @@
 
   @media (max-width: 450px) {
     .navBar {
-    position: fixed;
+    position: absolute;
     }
     .navBar img {
       display: inline;

@@ -1,5 +1,5 @@
 import {Link} from 'gatsby'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import BlogPostPreview from './blog-post-preview'
 import BlogLastArticle from './blog-last-article'
 import {cn, getBlogUrl} from '../lib/helpers'
@@ -7,7 +7,6 @@ import {cn, getBlogUrl} from '../lib/helpers'
 import styles from './blog-post-preview-grid.module.css'
 
 function BlogPostPreviewGrid (props) {
-  console.log(props.browseMoreHref)
   return (
     <div className={styles.root}>
       {props.title && <h2 className={styles.headline}>{props.title}</h2>}
@@ -32,7 +31,7 @@ function BlogPostPreviewGrid (props) {
   )
 }
 
-BlogPostPreviewGrid.defadivtProps = {
+BlogPostPreviewGrid.defaultProps = {
   title: '',
   nodes: [],
   browseMoreHref: ''
