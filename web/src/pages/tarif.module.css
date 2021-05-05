@@ -39,6 +39,20 @@
   font-size: 40px;
 }
 
+@media (max-width: 450px) {
+  .titleContain h1 {
+    font-size: 20px;
+  }
+  .titleContain .title span {
+    display: inline-flex;
+  }
+  .titleContain {
+    margin-bottom: 4vh;
+    line-height: 0;
+  }
+  
+}
+
 .buttonGalerie {
   align-self: center;
   border: #F26633;
@@ -177,7 +191,8 @@
 @media (max-width: 450px) {
   .btnBlanc div {
     width: 20%;
-    margin: 6vh auto;
+    margin-top: 2.2vh;
+    margin-bottom: 4vh;
   }
 }
 

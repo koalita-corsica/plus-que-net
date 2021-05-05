@@ -151,10 +151,10 @@ const PrestationPage = props => {
     slidesToScroll: 1
   }
   const mystyle = {
-    gridArea: "1 / 2 / 2 / 3", 
-    backgroundColor: "white", 
-    transform: "scale(1.3)"
-  };
+    gridArea: '1 / 2 / 2 / 3',
+    backgroundColor: 'white',
+    transform: 'scale(1.3)'
+  }
   const [qual, setQual] = useState('service2')
 
   // movenment controls
@@ -186,7 +186,10 @@ const PrestationPage = props => {
     ic4.setAttribute('style', 'display: block;')
     ic42.setAttribute('style', 'display: none;')
     setQual('service4')
-    myBtn4()
+    document.getElementById('btn1').classList.remove(styles.activated)
+    document.getElementById('btn2').classList.remove(styles.activated)
+    document.getElementById('btn3').classList.remove(styles.activated)
+    document.getElementById('btn4').classList.add(styles.activated)
   };
   function rotateClick3 () {
     // Variable
@@ -215,7 +218,10 @@ const PrestationPage = props => {
     ic4.setAttribute('style', 'display: none;')
     ic42.setAttribute('style', 'display: block;')
     setQual('service3')
-    myBtn3()
+    document.getElementById('btn1').classList.remove(styles.activated)
+    document.getElementById('btn2').classList.remove(styles.activated)
+    document.getElementById('btn3').classList.add(styles.activated)
+    document.getElementById('btn4').classList.remove(styles.activated)
   };
   function rotateClick2 () {
     // Variable
@@ -244,7 +250,10 @@ const PrestationPage = props => {
     icons3.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons4.setAttribute('style', 'grid-area: 2 / 2 / 3 / 3;')
     setQual('service2')
-    myBtn2()
+    document.getElementById('btn1').classList.remove(styles.activated)
+    document.getElementById('btn2').classList.add(styles.activated)
+    document.getElementById('btn3').classList.remove(styles.activated)
+    document.getElementById('btn4').classList.remove(styles.activated)
   };
   function rotateClick1 () {
     // Variable
@@ -273,52 +282,11 @@ const PrestationPage = props => {
     icons4.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons3.setAttribute('style', 'grid-area: 1 / 1 / 2 / 2;')
     setQual('service1')
-    myBtn1()
-  };
-  
-  const myBtn1 = () => {
-    if (qual === 'service1') {
-      document.getElementById('btn1').classList.add(styles.activated)
-    }
-    setQual('service1')
     document.getElementById('btn1').classList.add(styles.activated)
     document.getElementById('btn2').classList.remove(styles.activated)
     document.getElementById('btn3').classList.remove(styles.activated)
     document.getElementById('btn4').classList.remove(styles.activated)
-  }
-
-  const myBtn2 = () => {
-    if (qual === 'service2') {
-      document.getElementById('btn2').classList.add(styles.activated)
-    }
-    setQual('service2')
-    document.getElementById('btn1').classList.remove(styles.activated)
-    document.getElementById('btn2').classList.add(styles.activated)
-    document.getElementById('btn3').classList.remove(styles.activated)
-    document.getElementById('btn4').classList.remove(styles.activated)
-  }
-
-  const myBtn3 = () => {
-    if (qual === 'service3') {
-      document.getElementById('btn3').classList.add(styles.activated)
-    }
-    setQual('service3')
-    document.getElementById('btn1').classList.remove(styles.activated)
-    document.getElementById('btn2').classList.remove(styles.activated)
-    document.getElementById('btn3').classList.add(styles.activated)
-    document.getElementById('btn4').classList.remove(styles.activated)
-  }
-
-  const myBtn4 = () => {
-    if (qual === 'service4') {
-      document.getElementById('btn4').classList.add(styles.activated)
-    }
-    setQual('service4')
-    document.getElementById('btn1').classList.remove(styles.activated)
-    document.getElementById('btn2').classList.remove(styles.activated)
-    document.getElementById('btn3').classList.remove(styles.activated)
-    document.getElementById('btn4').classList.add(styles.activated)
-  }
+  };
 
   const {data, errors} = props
   const page = data && data.services
@@ -347,16 +315,16 @@ const PrestationPage = props => {
             <div className={styles.iconeMenu}>
 
               <div className={styles.iconContent1} onClick={rotateClick1} className='iconContent1' >
-                <span className={styles.icone1}> <img className={styles.ic1} src={ic1} alt=''  className='ic1'style={{display: 'none'}}/><img className={styles.ic12} src={ic12} alt='' className='ic12'/> </span>
+                <span className={styles.icone1}> <img className={styles.ic1} src={ic1} alt='' className='ic1'style={{display: 'none'}} /><img className={styles.ic12} src={ic12} alt='' className='ic12' /> </span>
               </div>
               <div className={styles.iconContent2} onClick={rotateClick2} className='iconContent2' style={mystyle}>
-                <span className={styles.icone2}> <img className={styles.ic2} src={ic2} alt='' className='ic2' /><img className={styles.ic22} src={ic22} alt='' className='ic22' style={{display: 'none'}}/> </span>
+                <span className={styles.icone2}> <img className={styles.ic2} src={ic2} alt='' className='ic2' /><img className={styles.ic22} src={ic22} alt='' className='ic22' style={{display: 'none'}} /> </span>
               </div>
               <div className={styles.iconContent3} onClick={rotateClick3} className='iconContent3' >
-                <span className={styles.icone3}> <img className={styles.ic3} src={ic3} alt='' className='ic3' style={{display: 'none'}}/><img className={styles.ic32} src={ic32} alt='' className='ic32'/> </span>
+                <span className={styles.icone3}> <img className={styles.ic3} src={ic3} alt='' className='ic3' style={{display: 'none'}} /><img className={styles.ic32} src={ic32} alt='' className='ic32' /> </span>
               </div>
               <div className={styles.iconContent4} onClick={rotateClick4} className='iconContent4' >
-                <span className={styles.icone4}> <img className={styles.ic4} src={ic4} alt='' className='ic4' style={{display: 'none'}}/><img className={styles.ic42} src={ic42} alt='' className='ic42'/> </span>
+                <span className={styles.icone4}> <img className={styles.ic4} src={ic4} alt='' className='ic4' style={{display: 'none'}} /><img className={styles.ic42} src={ic42} alt='' className='ic42' /> </span>
               </div>
             </div>
             <div className={styles.contenu}>
@@ -367,10 +335,10 @@ const PrestationPage = props => {
             </div>
           </div>
           <div className={styles.btnBlanc}>
-            <div id='btn1' className={styles.btn1} onClick={myBtn1} />
-            <div id='btn2' className={styles.btn2} onClick={myBtn2} />
-            <div id='btn3' className={styles.btn3} onClick={myBtn3} />
-            <div id='btn4' className={styles.btn4} onClick={myBtn4} />
+            <div id='btn1' className={styles.btn1} onClick={rotateClick1} />
+            <div id='btn2' className={styles.btn2} onClick={rotateClick2} />
+            <div id='btn3' className={styles.btn3} onClick={rotateClick3} />
+            <div id='btn4' className={styles.btn4} onClick={rotateClick4} />
           </div>
         </Wrapper>
       </Container>
