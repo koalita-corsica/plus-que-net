@@ -423,14 +423,14 @@ const BlogPage = props => {
             </div>
           </aside>
         </WrapperBlog>
-          {hasMore ? (
-            <button className={styles.btnSeeMore} onClick={handleLoadMore}> VOIR PLUS D'ARTICLE </button>
-          ) : (
-            <div className={styles.mySpace} />
-          )}
-          <div className={styles.end}>
-            <Link to='/blog'> <BiUpArrowCircle /> <span> Retour haut de page </span> </Link>
-          </div>
+        {hasMore ? (
+          <button className={styles.btnSeeMore} onClick={handleLoadMore}> VOIR PLUS D'ARTICLE </button>
+        ) : (
+          <div className={styles.mySpace} />
+        )}
+        <div className={styles.end}>
+          <Link to='/blog'> <BiUpArrowCircle /> <span> Retour haut de page </span> </Link>
+        </div>
       </Container>
     </Layout>
   )
