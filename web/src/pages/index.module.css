@@ -17,6 +17,7 @@
 }
 .titleContain h1 {
   font-size: 40px;
+  font-weight: normal;
 }
 .titleContain h1:after {
   content: "";
