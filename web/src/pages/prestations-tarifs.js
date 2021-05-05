@@ -150,7 +150,11 @@ const PrestationPage = props => {
     slidesToShow: 1,
     slidesToScroll: 1
   }
-
+  const mystyle = {
+    gridArea: "1 / 2 / 2 / 3", 
+    backgroundColor: "white", 
+    transform: "scale(1.3)"
+  };
   const [qual, setQual] = useState('service2')
 
   // movenment controls
@@ -160,11 +164,27 @@ const PrestationPage = props => {
     const icons2 = document.querySelector('.iconContent2')
     const icons3 = document.querySelector('.iconContent3')
     const icons4 = document.querySelector('.iconContent4')
+    const ic1 = document.querySelector('.ic1')
+    const ic12 = document.querySelector('.ic12')
+    const ic2 = document.querySelector('.ic2')
+    const ic22 = document.querySelector('.ic22')
+    const ic3 = document.querySelector('.ic3')
+    const ic32 = document.querySelector('.ic32')
+    const ic4 = document.querySelector('.ic4')
+    const ic42 = document.querySelector('.ic42')
     icons4.classList.add(styles.active)
-    icons4.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3;')
+    icons4.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3; background-color: white; transform: scale(1.3)')
     icons3.setAttribute('style', 'grid-area: 2 / 2 / 3 / 3;')
     icons1.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons2.setAttribute('style', 'grid-area: 1 / 1 / 2 / 2;')
+    ic1.setAttribute('style', 'display: none;')
+    ic12.setAttribute('style', 'display: block;')
+    ic2.setAttribute('style', 'display: none;')
+    ic22.setAttribute('style', 'display: block;')
+    ic3.setAttribute('style', 'display: none;')
+    ic32.setAttribute('style', 'display: block;')
+    ic4.setAttribute('style', 'display: block;')
+    ic42.setAttribute('style', 'display: none;')
     setQual('service4')
     myBtn4()
   };
@@ -174,10 +194,26 @@ const PrestationPage = props => {
     const icons2 = document.querySelector('.iconContent2')
     const icons3 = document.querySelector('.iconContent3')
     const icons4 = document.querySelector('.iconContent4')
-    icons3.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3;')
+    const ic1 = document.querySelector('.ic1')
+    const ic12 = document.querySelector('.ic12')
+    const ic2 = document.querySelector('.ic2')
+    const ic22 = document.querySelector('.ic22')
+    const ic3 = document.querySelector('.ic3')
+    const ic32 = document.querySelector('.ic32')
+    const ic4 = document.querySelector('.ic4')
+    const ic42 = document.querySelector('.ic42')
+    icons3.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3; background-color: white; transform: scale(1.3)')
     icons2.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons1.setAttribute('style', 'grid-area: 2 / 2 / 3 / 3;')
     icons4.setAttribute('style', 'grid-area: 1 / 1 / 2 / 2;')
+    ic1.setAttribute('style', 'display: none;')
+    ic12.setAttribute('style', 'display: block;')
+    ic2.setAttribute('style', 'display: none;')
+    ic22.setAttribute('style', 'display: block;')
+    ic3.setAttribute('style', 'display: block;')
+    ic32.setAttribute('style', 'display: none;')
+    ic4.setAttribute('style', 'display: none;')
+    ic42.setAttribute('style', 'display: block;')
     setQual('service3')
     myBtn3()
   };
@@ -187,7 +223,23 @@ const PrestationPage = props => {
     const icons2 = document.querySelector('.iconContent2')
     const icons3 = document.querySelector('.iconContent3')
     const icons4 = document.querySelector('.iconContent4')
-    icons2.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3;')
+    const ic1 = document.querySelector('.ic1')
+    const ic12 = document.querySelector('.ic12')
+    const ic2 = document.querySelector('.ic2')
+    const ic22 = document.querySelector('.ic22')
+    const ic3 = document.querySelector('.ic3')
+    const ic32 = document.querySelector('.ic32')
+    const ic4 = document.querySelector('.ic4')
+    const ic42 = document.querySelector('.ic42')
+    icons2.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3; background-color: white; transform: scale(1.3)')
+    ic1.setAttribute('style', 'display: none;')
+    ic12.setAttribute('style', 'display: block;')
+    ic2.setAttribute('style', 'display: block;')
+    ic22.setAttribute('style', 'display: none;')
+    ic3.setAttribute('style', 'display: none;')
+    ic32.setAttribute('style', 'display: block;')
+    ic4.setAttribute('style', 'display: none;')
+    ic42.setAttribute('style', 'display: block;')
     icons1.setAttribute('style', 'grid-area: 1 / 1 / 2 / 2;')
     icons3.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons4.setAttribute('style', 'grid-area: 2 / 2 / 3 / 3;')
@@ -200,14 +252,30 @@ const PrestationPage = props => {
     const icons2 = document.querySelector('.iconContent2')
     const icons3 = document.querySelector('.iconContent3')
     const icons4 = document.querySelector('.iconContent4')
-    icons1.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3;')
+    const ic1 = document.querySelector('.ic1')
+    const ic12 = document.querySelector('.ic12')
+    const ic2 = document.querySelector('.ic2')
+    const ic22 = document.querySelector('.ic22')
+    const ic3 = document.querySelector('.ic3')
+    const ic32 = document.querySelector('.ic32')
+    const ic4 = document.querySelector('.ic4')
+    const ic42 = document.querySelector('.ic42')
+    icons1.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3; background-color: white; transform: scale(1.3)')
+    ic1.setAttribute('style', 'display: block;')
+    ic12.setAttribute('style', 'display: none;')
+    ic2.setAttribute('style', 'display: none;')
+    ic22.setAttribute('style', 'display: block;')
+    ic3.setAttribute('style', 'display: none;')
+    ic32.setAttribute('style', 'display: block;')
+    ic4.setAttribute('style', 'display: none;')
+    ic42.setAttribute('style', 'display: block;')
     icons2.setAttribute('style', 'grid-area: 2 / 2 / 3 / 3;')
     icons4.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons3.setAttribute('style', 'grid-area: 1 / 1 / 2 / 2;')
     setQual('service1')
     myBtn1()
   };
-
+  
   const myBtn1 = () => {
     if (qual === 'service1') {
       document.getElementById('btn1').classList.add(styles.activated)
@@ -278,17 +346,17 @@ const PrestationPage = props => {
           <div className={styles.BlockContent}>
             <div className={styles.iconeMenu}>
 
-              <div className={styles.iconContent1} onClick={rotateClick1} className='iconContent1'data-pos="a1">
-                <span className={styles.icone1}> <img className={styles.ic1} src={ic1} alt='' /><img className={styles.ic12} src={ic12} alt='' /> </span>
+              <div className={styles.iconContent1} onClick={rotateClick1} className='iconContent1' >
+                <span className={styles.icone1}> <img className={styles.ic1} src={ic1} alt=''  className='ic1'style={{display: 'none'}}/><img className={styles.ic12} src={ic12} alt='' className='ic12'/> </span>
               </div>
-              <div className={styles.iconContent2} onClick={rotateClick2} className='iconContent2'data-pos="a2">
-                <span className={styles.icone2}> <img className={styles.ic2} src={ic2} alt='' /><img className={styles.ic22} src={ic22} alt='' /> </span>
+              <div className={styles.iconContent2} onClick={rotateClick2} className='iconContent2' style={mystyle}>
+                <span className={styles.icone2}> <img className={styles.ic2} src={ic2} alt='' className='ic2' /><img className={styles.ic22} src={ic22} alt='' className='ic22' style={{display: 'none'}}/> </span>
               </div>
-              <div className={styles.iconContent3} onClick={rotateClick3} className='iconContent3'data-pos="b1">
-                <span className={styles.icone3}> <img className={styles.ic3} src={ic3} alt='' /><img className={styles.ic32} src={ic32} alt='' /> </span>
+              <div className={styles.iconContent3} onClick={rotateClick3} className='iconContent3' >
+                <span className={styles.icone3}> <img className={styles.ic3} src={ic3} alt='' className='ic3' style={{display: 'none'}}/><img className={styles.ic32} src={ic32} alt='' className='ic32'/> </span>
               </div>
-              <div className={styles.iconContent4} onClick={rotateClick4} className='iconContent4'data-pos="b2">
-                <span className={styles.icone4}> <img className={styles.ic4} src={ic4} alt='' /><img className={styles.ic42} src={ic42} alt='' /> </span>
+              <div className={styles.iconContent4} onClick={rotateClick4} className='iconContent4' >
+                <span className={styles.icone4}> <img className={styles.ic4} src={ic4} alt='' className='ic4' style={{display: 'none'}}/><img className={styles.ic42} src={ic42} alt='' className='ic42'/> </span>
               </div>
             </div>
             <div className={styles.contenu}>

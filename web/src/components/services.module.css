@@ -72,10 +72,12 @@
   align-self: center;
   border: #F26633;
   border-radius: 20px;
+  font-size: 15px;
   background-color: #F26633;
   color: white;
-  height: 4.599659284497444vh;
-  width: 11.796875vw;
+  height: auto;
+  width: auto;
+  padding: 1v;
 }
 
 @media (max-width: 450px) {

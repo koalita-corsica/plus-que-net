@@ -4,14 +4,13 @@
 
 
 .galery{
-  
   height: 96.42248722316866vh;
   width:57.421875vw;
-   
-  
-  
-}
 
+}
+.activated{
+  background-color: #F26633 !important;
+}
 .titleContain {
   margin-left: 43.81875vw;
   width: 43.0625vw;
@@ -53,6 +52,7 @@
   font-family: Roboto, Regular;
   justify-content: space-between;
   column-gap: 2.5vw;
+  margin-left: 3vw;
   font-size: 14px;  
   display: flex;
   color: white;
@@ -86,38 +86,18 @@
       justify-content: center;
       align-items: center;
     }
-    div:hover{
-        transform: scale(1.5);
-        background-color: white;
-        border: #F26633 solid 4px;
-        @media (max-width: 450px){
-          margin-top: -1vh;
-        }
-        .ic1{
-          display: block;
-        }
-        .ic2{
-          display: block;
-        }
-        .ic3{
-          display: block;
-        }
-        .ic4{
-          display: block;
-        }
-        .ic12{
-          display: none;
-        }
-        .ic22{
-          display: none;
-        }
-        .ic32{
-          display: none;
-        }
-        .ic42{
-          display: none;
-        }
+    div{
+      background-color: #F26633;
+      border: #F26633 solid 4px;
+      border-radius: 4px;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+       
     }
+    
     img{
       width: 35px;
       height: auto;
@@ -138,6 +118,7 @@
 .iconContent1{
   grid-row-start: 1;
   grid-column-start: 1;
+  
 }
 .iconContent2{
   grid-row-start: 1;
@@ -166,19 +147,9 @@
 .icone4{  
   transform: rotate(-45deg);
   position: absolute;
+  
 }
-.ic1{
-  display: none;
-}
-.ic2{
-  display: none;
-}
-.ic3{
-  display: none;
-}
-.ic4{
-  display: none;
-} 
+
 }
 .btnBlanc{
   display: flex;
@@ -202,11 +173,7 @@
       margin: 6vh auto;
     }
   }
-  div{
-    background-color: white;
-  }
-  div:hover{
-    background-color: #F26633;
-  }
+  
+  
 }
 
