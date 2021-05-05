@@ -5,14 +5,26 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 3vw;
-  column-gap: 9vh;
-  margin-left: 27vw;
+  column-gap: 6vh;
+  margin-left: 27.65625vw;
 }
 @media (max-width: 450px) {
   .root {
     display: flex;
     flex-direction: column;
     margin: 0;
+  }
+  .root h2:first-child {
+    order: 3;
+  }
+  .root h2:last-child {
+    order: 1;
+  }
+  .root div {
+    order: 4;
+  }
+  .root aside {
+    order: 2;
   }
 }
 

@@ -10,7 +10,19 @@
     margin-left: 27.65625vw;
     @media (max-width: 450px){
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         margin: 0;
+        h2:first-child{
+            order: 3;
+        }
+        h2:last-child{
+            order: 1;
+        }
+        div{
+            order: 4;
+        }
+        aside {
+            order: 2;
+        }
     }
 }

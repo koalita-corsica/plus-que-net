@@ -96,6 +96,7 @@
   }
 }
 .BlockContent .iconeMenu div {
+  cursor: pointer;
   background-color: #F26633;
   border: #F26633 solid 4px;
   border-radius: 4px;

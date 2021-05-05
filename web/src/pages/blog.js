@@ -422,6 +422,7 @@ const BlogPage = props => {
               )}
             </div>
           </aside>
+        </WrapperBlog>
           {hasMore ? (
             <button className={styles.btnSeeMore} onClick={handleLoadMore}> VOIR PLUS D'ARTICLE </button>
           ) : (
@@ -430,7 +431,6 @@ const BlogPage = props => {
           <div className={styles.end}>
             <Link to='/blog'> <BiUpArrowCircle /> <span> Retour haut de page </span> </Link>
           </div>
-        </WrapperBlog>
       </Container>
     </Layout>
   )
