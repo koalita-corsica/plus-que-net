@@ -15,18 +15,16 @@
     -webkit-backdrop-filter: blur(30px);
     background-size:100vw 100vh, 100% 100%;
   }
-  Header {
-    z-index: 999;
-  }
-  .content {
-    z-index: -1;
-  }
+  
+  
     
 }
 .content{
   min-height: 78.8vh;
   
 }
+
+
 
 
 

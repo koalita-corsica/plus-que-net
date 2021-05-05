@@ -10,7 +10,6 @@
   background-color: #F26633 !important;
 }
 
-
 .titleContain {
   margin-left: 43.81875vw;
   width: 43.0625vw;
@@ -54,6 +53,7 @@
   font-family: Roboto, Regular;
   justify-content: space-between;
   column-gap: 2.5vw;
+  margin-left: 3vw;
   font-size: 14px;
   display: flex;
   color: white;
@@ -91,39 +91,15 @@
   justify-content: center;
   align-items: center;
 }
-.BlockContent .iconeMenu div:hover {
-  transform: scale(1.5);
-  background-color: white;
+.BlockContent .iconeMenu div {
+  background-color: #F26633;
   border: #F26633 solid 4px;
-}
-@media (max-width: 450px) {
-  .BlockContent .iconeMenu div:hover {
-    margin-top: -1vh;
-  }
-}
-.BlockContent .iconeMenu div:hover .ic1 {
-  display: block;
-}
-.BlockContent .iconeMenu div:hover .ic2 {
-  display: block;
-}
-.BlockContent .iconeMenu div:hover .ic3 {
-  display: block;
-}
-.BlockContent .iconeMenu div:hover .ic4 {
-  display: block;
-}
-.BlockContent .iconeMenu div:hover .ic12 {
-  display: none;
-}
-.BlockContent .iconeMenu div:hover .ic22 {
-  display: none;
-}
-.BlockContent .iconeMenu div:hover .ic32 {
-  display: none;
-}
-.BlockContent .iconeMenu div:hover .ic42 {
-  display: none;
+  border-radius: 4px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .BlockContent .iconeMenu img {
   width: 35px;
@@ -175,18 +151,6 @@
   transform: rotate(-45deg);
   position: absolute;
 }
-.BlockContent .ic1 {
-  display: none;
-}
-.BlockContent .ic2 {
-  display: none;
-}
-.BlockContent .ic3 {
-  display: none;
-}
-.BlockContent .ic4 {
-  display: none;
-}
 
 .btnBlanc {
   display: flex;
@@ -204,6 +168,7 @@
   cursor: pointer;
   width: 4.453125vw;
   content: "";
+  display: block;
   height: 6px;
   margin-top: 6vh;
   background-color: white;
@@ -214,8 +179,5 @@
     margin: 6vh auto;
   }
 }
-
-
-
 
 /*# sourceMappingURL=tarif.module.css.map */
