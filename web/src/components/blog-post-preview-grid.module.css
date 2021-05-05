@@ -8,8 +8,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  
-  gap: 1.875vw;
+  column-gap: 1.875vw;
+  row-gap: 5vh;
   font-family: Roboto, Regular;
   color: white;
 }
@@ -21,7 +21,7 @@
 }
 @media (max-width: 450px) {
   .grid .article {
-    width: 77%;
+    width: 80%;
     margin-left: 5%;
   }
 }
