@@ -251,11 +251,11 @@ const PrestationPage = props => {
             </div>
           </div>
           <div className={styles.btnBlanc}>
-              <div className={styles.btn1} onClick={() => setQual('service1')}></div>
-              <div className={styles.btn2} onClick={() => setQual('service2')}></div>
-              <div className={styles.btn3} onClick={() => setQual('service3')}></div>
-              <div className={styles.btn4} onClick={() => setQual('service4')}></div>
-            </div>
+            <div className={styles.btn1} onClick={() => setQual('service1')} />
+            <div className={styles.btn2} onClick={() => setQual('service2')} />
+            <div className={styles.btn3} onClick={() => setQual('service3')} />
+            <div className={styles.btn4} onClick={() => setQual('service4')} />
+          </div>
         </Wrapper>
       </Container>
     </Layout>

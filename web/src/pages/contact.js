@@ -5,10 +5,11 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import Layout from '../containers/layout'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faFacebook, faInstagram, faFacebookMessenger, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
-
 import {faPlus} from '@fortawesome/free-solid-svg-icons'
 import styles from './contact2.module.css'
 import styled from 'styled-components'
+import {RiMessengerLine} from '@react-icons/all-files/ri/RiMessengerLine'
+import {IoIosCloseCircle} from '@react-icons/all-files/io/IoIosCloseCircle'
 
 import {isBrowser} from '../lib/utils'
 
@@ -64,15 +65,29 @@ const ContactPage = props => {
   }
   const handleChange = event => {
     var prev = document.getElementById('photoPreview')
+    var myDiv = document.createElement('div')
+    myDiv.classList.add(styles.myImgWBtn)
+    var mySpan = document.createElement('span')
+    mySpan.innerHTML = <IoIosCloseCircle />
 
     for (let i = 0; i < event.target.files.length; i++) {
       var x = document.createElement('IMG')
       x.src = window.URL.createObjectURL(event.target.files[i])
-      prev.appendChild(x)
+      myDiv.appendChild(x)
+      myDiv.appendChild(mySpan)
+      prev.appendChild(myDiv)
     }
   }
 
- 
+  const actContact = () => {
+    document.getElementById('inpContact').classList.add(styles.active)
+    document.getElementById('inpDevis').classList.remove(styles.active)
+  }
+
+  const actDevis = () => {
+    document.getElementById('inpDevis').classList.add(styles.active)
+    document.getElementById('inpContact').classList.remove(styles.active)
+  }
 
   return (
 
@@ -85,36 +100,36 @@ const ContactPage = props => {
           <form name='contact' method='POST' data-netlify='true' onSubmit='submit'>
             <input type='hidden' name='form-name' value='contact' />
             <div className={styles.container}>
-              <input id='inpContact' type='button' className={styles.contact} value='CONTACT' />
-              <input id='inpDevis' type='button' className={styles.devis} value='DEMANDE DE DEVIS' />
+              <input id='inpContact' type='button' className={styles.contact} value='CONTACT' onClick={actContact} />
+              <input id='inpDevis' type='button' className={styles.devis} value='DEMANDE DE DEVIS' onClick={actDevis} />
               <div className={styles.social}>
                 <FontAwesomeIcon icon={faFacebook} className={styles.fb} />
                 <FontAwesomeIcon icon={faInstagram} className={styles.insta} />
-                <FontAwesomeIcon icon={faFacebookMessenger} className={styles.messenger} />
+                <RiMessengerLine className={styles.messenger} />
                 <FontAwesomeIcon icon={faWhatsapp} className={styles.whatsapp} />
               </div>
               <label htmlFor='name' className={styles.name}> nom prenom</label>
               <label htmlFor='numero' className={styles.tel}> téléphone</label>
               <label htmlFor='photo' className={styles.jointe}> pièces jointes </label>
-              <input name='name' placeholder='Votre Nom Prenom' className={styles.nameInput} />
-              <input name='numero' placeholder='Votre Numero' className={styles.telInput} />
+              <input type='text' name='name' placeholder='Votre Nom Prenom' className={styles.nameInput} />
+              <input type='number' name='numero' placeholder='Votre Numero' className={styles.telInput} />
               <label htmlFor='mail'className={styles.mail}> email </label>
-              <input name='mail' placeholder='Votre mail' className={styles.mailInput} />
+              <input type='email' name='mail' placeholder='Votre mail' className={styles.mailInput} />
               <label htmlFor='adresse' className={styles.adresse}> adresse </label>
-              <input name='adresse' placeholder='Votre Adresse' className={styles.adresseInput} />
+              <input type='text' name='adresse' placeholder='Votre Adresse' className={styles.adresseInput} />
               <label htmlFor='message' className={styles.msgLabel}> message </label>
               <textarea name='message' placeholder='Votre Message' rows='3' className={styles.msgArea} />
               <div className={styles.imgPreviewContain}>
                 <div id='photoPreview' className={styles.imgPreview}> </div>
+                <Button onClick={handleClick} className={styles.addIcon}>
+                  <FontAwesomeIcon icon={faPlus} className={styles.add} size='90x' />
+                </Button>
+                <input type='file'
+                  ref={hiddenFileInput}
+                  onChange={handleChange}
+                  style={{display: 'none'}}
+                />
               </div>
-              <Button onClick={handleClick} className={styles.addIcon}>
-                <FontAwesomeIcon icon={faPlus} className={styles.add} size='90x' />
-              </Button>
-              <input type='file'
-                ref={hiddenFileInput}
-                onChange={handleChange}
-                style={{display: 'none'}}
-              />
 
               <button type='submit' className={styles.btnEnvoyer}> Envoyer! </button>
             </div>
