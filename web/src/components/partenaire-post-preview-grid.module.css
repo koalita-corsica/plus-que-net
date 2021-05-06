@@ -12,13 +12,13 @@
   font-family: Roboto, Regular;
   color: white;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .grid {
     display: flex;
     flex-direction: column;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .grid .article {
     width: 77%;
     margin-left: 5%;

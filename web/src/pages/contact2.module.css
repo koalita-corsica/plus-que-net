@@ -303,7 +303,7 @@ textarea {
   top: 0;
 }
 
-@media (max-width: 730px) {
+@media (max-width: 768px) {
   .titleContain {
     margin-left: 5%;
     width: 85%;

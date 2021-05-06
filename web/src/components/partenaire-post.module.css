@@ -8,7 +8,7 @@
   color: white;
   font-family: Roboto, Regular;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .titleContain {
     margin-left: 5%;
     width: 85%;
@@ -26,7 +26,7 @@
 .titleContain h1 {
   font-size: 6.8143100511vh;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .titleContain h1 {
     font-size: 3.4071550256vh;
     width: 90%;
@@ -40,7 +40,7 @@
   font-family: Roboto, Regular;
   gap: 1.875vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .blogContain {
     width: 100%;
     display: flex;
@@ -54,7 +54,7 @@
   color: white;
   gap: 1vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .blogContain .pathContain {
     width: 90%;
     display: flex;
@@ -67,7 +67,7 @@
   width: 46.875vw;
   height: 68.3134582624vh;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .blogContain .imgArticle {
     width: 90%;
     height: auto;
@@ -84,7 +84,7 @@
   gap: 0.5vw;
   border-bottom: solid white 3px;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .blogContain .publish {
     width: 90%;
     height: auto;
@@ -100,7 +100,7 @@
   width: 46.71875vw;
   font-family: Roboto, Regular;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .blogContain .paraWrapper {
     width: 90%;
     height: auto;
@@ -117,7 +117,7 @@
   width: 24.140625vw;
   height: 40.8858603066vh;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .blogContain .paraWrapper .imgPara {
     width: 100%;
     height: auto;
@@ -133,7 +133,7 @@
   color: white;
   width: 19.21875vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .aside {
     display: block;
     width: 100%;
@@ -147,7 +147,7 @@
   gap: 4.7700170358vh;
   overflow: hidden;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .aside .catWrapper {
     flex-direction: row;
     width: 100%;
@@ -160,7 +160,7 @@
   width: 19.21875vw;
   max-height: 27.7683134583vh;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .aside .catWrapper .categorie {
     width: 100%;
     height: auto;
@@ -177,7 +177,7 @@
   opacity: 0.9;
   backdrop-filter: blur(30px);
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .aside .catWrapper .categorie h2 {
     width: 100%;
     height: auto;
@@ -192,7 +192,7 @@
   width: 19.21875vw;
   height: 27.7683134583vh;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .aside .catWrapper .categorie .imgTheme {
     width: 50vw;
     height: 21.1243611584vh;

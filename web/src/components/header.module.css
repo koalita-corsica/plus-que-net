@@ -11,7 +11,7 @@
    justify-content: space-between;
    height: 11.5843270869vh;
  }
- @media (max-width: 450px) {
+ @media (max-width: 768px) {
    .root {
      position: sticky;
      justify-content: center;
@@ -30,7 +30,7 @@
   align-self: center;
   width: 100%;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .root .nav {
     display: none;
   }
@@ -51,7 +51,7 @@
  .root .logo {
    align-self: center;
  }
- @media (max-width: 450px) {
+ @media (max-width: 768px) {
    .root .logo {
      margin-right: 27.328125vw;
      margin-right: 8.328125vw;
@@ -63,7 +63,7 @@
   display: none;
 }
 
-  @media (max-width: 450px) {
+  @media (max-width: 768px) {
     .navBar {
     position: absolute;
     }
@@ -88,7 +88,7 @@
   display: block;
   fill: inherit;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
    .toggleNavButton {
      display: block;
      color: white;

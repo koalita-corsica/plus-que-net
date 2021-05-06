@@ -7,7 +7,7 @@
   color: white;
   font-family: Roboto, Regular;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .titleContain {
     margin-left: 5%;
     width: 85%;
@@ -30,7 +30,7 @@ form {
 .titleContain h1 {
   font-size: 6.8143100511vh;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .titleContain h1 {
     font-size: 3.4071550256vh;
     width: 85%;
@@ -53,14 +53,14 @@ form {
   color: white;
   font-family: Roboto, Regular;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .container {
     width: 100%;
     height: auto;
     margin: 0;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .container .responsive {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -76,7 +76,7 @@ form {
   gap: 2vw;
   height: 3.4071550256vh;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .first {
     justify-content: space-evenly;
     width: 100%;
@@ -90,7 +90,7 @@ form {
   justify-content: space-around;
   font-size: 3vh;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .first .social {
     display: none;
   }
@@ -114,7 +114,7 @@ form {
 .first .contact {
   width: 5.9375vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .first .contact {
     width: auto;
     height: auto;
@@ -123,7 +123,7 @@ form {
 .first .devis {
   width: 12.1875vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .first .devis {
     width: auto;
     height: auto;
@@ -135,39 +135,39 @@ form {
   grid-template-columns: repeat(3, 1fr);
   margin-right: 2vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .second {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
 }
-@media (max-width: 450px) and (max-width: 450px) {
+@media (max-width: 768px) and (max-width: 768px) {
   .second .name {
     order: 1;
   }
 }
-@media (max-width: 450px) and (max-width: 450px) {
+@media (max-width: 768px) and (max-width: 768px) {
   .second .nameInput {
     order: 2;
   }
 }
-@media (max-width: 450px) and (max-width: 450px) {
+@media (max-width: 768px) and (max-width: 768px) {
   .second .tel {
     order: 3;
   }
 }
-@media (max-width: 450px) and (max-width: 450px) {
+@media (max-width: 768px) and (max-width: 768px) {
   .second .telInput {
     order: 4;
   }
 }
-@media (max-width: 450px) and (max-width: 450px) {
+@media (max-width: 768px) and (max-width: 768px) {
   .second .jointe {
     order: 5;
   }
 }
-@media (max-width: 450px) and (max-width: 450px) {
+@media (max-width: 768px) and (max-width: 768px) {
   .second .jointeInput {
     order: 6;
   }
@@ -180,7 +180,7 @@ form {
   height: 4.7700170358vh;
   width: 13.359375vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .second input {
     width: auto;
     height: 5.6112224449vh;
@@ -199,7 +199,7 @@ form {
   grid-template-columns: repeat(3, 1fr);
   margin-right: 2vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .third {
     display: flex;
     flex-direction: column;
@@ -220,7 +220,7 @@ form {
   border-radius: 5px;
   opacity: 1;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .third .mail input {
     width: auto;
     height: 5.6112224449vh;
@@ -238,7 +238,7 @@ form {
   justify-content: space-around;
   grid-area: 1/2/2/3;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .third .msg {
     width: auto;
     height: auto;
@@ -256,7 +256,7 @@ form {
   border-radius: 5px;
   opacity: 1;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .third .msg textarea {
     width: auto;
     height: auto;
@@ -285,7 +285,7 @@ form {
   border-radius: 5px;
   opacity: 1;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .third .preview .preview2 .imgPreview {
     width: auto;
     height: auto;
@@ -302,7 +302,7 @@ form {
   height: 6.9846678024vh;
   color: white;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .third .preview .preview2 .addBtn {
     width: auto;
     height: auto;
@@ -320,7 +320,7 @@ form {
   width: 9.0625vw;
   height: 4.4293015332vh;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .third .preview .btnEnvoyer {
     width: auto;
     height: auto;

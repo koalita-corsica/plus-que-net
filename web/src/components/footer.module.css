@@ -42,7 +42,7 @@
 .root .icon :hover {
   color: #F26633;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .root {
     background-color: black;
     display: grid;

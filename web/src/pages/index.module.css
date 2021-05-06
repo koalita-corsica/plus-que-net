@@ -9,7 +9,7 @@
   font-family: Roboto, Regular;
   line-height: 1;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .titleContain {
     margin-left: 5%;
     width: 85%;
@@ -77,7 +77,7 @@
   font-weight: lighter !important;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .BlockContent {
     font-size: 3.4071550256vh;
     display: block;
@@ -87,7 +87,7 @@
     width: 85%;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .BlockContent .bloc1 {
     font-size: 2.5553662692vh;
   }
@@ -95,7 +95,7 @@
     width: auto;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .BlockContent .bloc1 div {
     display: flex;
     flex-direction: column;
@@ -108,7 +108,7 @@
   padding-left: 2vw;
   margin-top: 1vh;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .BlockContent .bloc1 div img {
     float: none;
     margin-left: 10vw;
@@ -122,7 +122,7 @@
   order: -2;
 }
 
-@media (max-width:450px) {
+@media (max-width:768px) {
   .titleContain h1 {
     font-size: 20px;
     letter-spacing: normal;
@@ -142,7 +142,7 @@
     font-size: 15px;
     width: 100vw;
     font-family: Roboto, Regular;
-  }
+  }  
 }
 
 /*# sourceMappingURL=index.module.css.map */

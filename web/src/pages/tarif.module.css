@@ -18,7 +18,7 @@
   line-height: 1;
   text-transform: uppercase;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .titleContain {
     margin-left: 5%;
     width: 85%;
@@ -41,7 +41,7 @@
   font-weight: 200;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .titleContain h1 {
     font-size: 20px;
     font-family: Roboto, Regular;
@@ -78,7 +78,7 @@
   display: flex;
   color: white;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .BlockContent {
     flex-direction: column;
     row-gap: 5vh;
@@ -96,9 +96,10 @@
   height: 10.2214650767vh;
   align-self: flex-start;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .BlockContent .iconeMenu {
     align-self: center;
+    
   }
 }
 .BlockContent .iconeMenu div {
@@ -132,9 +133,15 @@
 .BlockContent .contenu h1 {
   color: #F26633;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
+  .BlockContent .contenu h1{
+    padding-top: 2vh;
+  }
+}
+@media (max-width: 768px) {
   .BlockContent .contenu {
     text-align: center;
+   
   }
   .BlockContent .contenu button {
     margin: 2vh;
@@ -178,7 +185,7 @@
   width: 20.34375vw;
   gap: 1.328125vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .btnBlanc {
     width: 80%;
     margin-left: 10%;
@@ -194,7 +201,7 @@
   margin-top: 6vh;
   background-color: white;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .btnBlanc div {
     width: 20%;
     margin-top: 2.2vh;
