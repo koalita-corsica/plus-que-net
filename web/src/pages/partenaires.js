@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {graphql} from 'gatsby'
 import {
   mapEdgesToNodes,
@@ -16,6 +16,8 @@ import styles from '../pages/partenaire.module.css'
 import imgTest from '../images/test.jpg'
 import PartenaireLastArticle from '../components/partenaires-last-article'
 import PartenairePostPreviewGrid from '../components/partenaire-post-preview-grid'
+import {BiUpArrowCircle} from '@react-icons/all-files/bi/BiUpArrowCircle'
+import {Link} from 'gatsby'
 
 import {isBrowser} from '../lib/utils'
 
@@ -85,6 +87,33 @@ const PartenairesPage = props => {
   const postNodes = data && data.partenaires && mapEdgesToNodes(data.partenaires)
   const lastNodes = data && data.lastPartenaire && mapEdgesToNodes(data.lastPartenaire)
 
+  const [list, setList] = useState([...postNodes.slice(0, 4)])
+
+  const [hasMore, setHasMore] = useState(postNodes.length > 4)
+
+  const [loadMore, setLoadMore] = useState(false)
+
+  const handleLoadMore = () => {
+    setLoadMore(true)
+  }
+
+  useEffect(() => {
+    if (loadMore && hasMore) {
+      const currentLength = list.length
+      const isMore = currentLength < postNodes.length
+      const nextResults = isMore
+        ? postNodes.slice(currentLength, currentLength + 4)
+        : []
+      setList([...list, ...nextResults])
+      setLoadMore(false)
+    }
+  }, [loadMore, hasMore]) //eslint-disable-line
+
+  useEffect(() => {
+    const isMore = list.length < postNodes.length
+    setHasMore(isMore)
+  }, [list]) //eslint-disable-line
+
   return (
     <Layout>
       <Container>
@@ -101,6 +130,14 @@ const PartenairesPage = props => {
             </div>
           </div>
         </WrapperBlog>
+        {hasMore ? (
+          <button className={styles.btnSeeMore} onClick={handleLoadMore}> VOIR PLUS D'ARTICLES </button>
+        ) : (
+          <div className={styles.mySpace} />
+        )}
+        <div className={styles.end}>
+          <Link to='/partenaires'> <BiUpArrowCircle /> <span> Retour haut de page </span> </Link>
+        </div>
       </Container>
     </Layout>
   )

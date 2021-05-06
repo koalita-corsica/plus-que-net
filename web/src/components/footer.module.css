@@ -11,6 +11,7 @@
   margin-left: 5.5vh;
   background-color: transparent;
   height: 9.6vh;
+  font-weight: bold;
 }
 .root .plan {
   grid-area: 1, 1, 2, 2;

@@ -127,6 +127,7 @@
   .desc p {
     font-size: 17px;
     font-family: Roboto, Regular;
+    font-weight: 500;
   }
 }
 

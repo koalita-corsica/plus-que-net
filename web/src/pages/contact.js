@@ -5,7 +5,7 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import Layout from '../containers/layout'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faFacebook, faInstagram, faFacebookMessenger, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
+import {faFacebookF, faInstagram, faFacebookMessenger, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 import {faPlus} from '@fortawesome/free-solid-svg-icons'
 import styles from './contact2.module.css'
 import styled from 'styled-components'
@@ -111,8 +111,8 @@ const ContactPage = props => {
               <input id='inpContact' type='button' className={styles.contact} value='CONTACT' onClick={actContact} />
               <input id='inpDevis' type='button' className={styles.devis} value='DEMANDE DE DEVIS' onClick={actDevis} />
               <div className={styles.social}>
-                <FontAwesomeIcon icon={faFacebook} className={styles.fb} />
                 <FontAwesomeIcon icon={faInstagram} className={styles.insta} />
+                <FontAwesomeIcon icon={faFacebookF} className={styles.fb} />
                 <RiMessengerLine className={styles.messenger} />
                 <FontAwesomeIcon icon={faWhatsapp} className={styles.whatsapp} />
               </div>
@@ -140,7 +140,7 @@ const ContactPage = props => {
                 />
               </div>
 
-              <button type='submit' className={styles.btnEnvoyer}> Envoyer! </button>
+              <button type='submit' className={styles.btnEnvoyer}> Envoyer </button>
             </div>
           </form>
         </div>

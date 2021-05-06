@@ -424,7 +424,7 @@ const BlogPage = props => {
           </aside>
         </WrapperBlog>
         {hasMore ? (
-          <button className={styles.btnSeeMore} onClick={handleLoadMore}> VOIR PLUS D'ARTICLE </button>
+          <button className={styles.btnSeeMore} onClick={handleLoadMore}> VOIR PLUS D'ARTICLES </button>
         ) : (
           <div className={styles.mySpace} />
         )}

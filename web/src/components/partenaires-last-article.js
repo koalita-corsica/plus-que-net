@@ -7,7 +7,7 @@ import PortableText from './portableText'
 import BlogPostPreview from './blog-post-preview'
 import Block from '@sanity/block-content-to-react'
 
-import styles from './blog-last-article.module.css'
+import styles from './partenaires-last-article.module.css'
 
 function PartenaireLastArticle (props) {
   return (

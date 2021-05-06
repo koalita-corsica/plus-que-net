@@ -44,9 +44,11 @@
 .root .nav ul li * {
   text-decoration: none;
   color: #ffffff;
+  text-transform: uppercase;
 }
 .root .nav ul li :hover {
   color: #F26633;
+
 }
  .root .logo {
    align-self: center;

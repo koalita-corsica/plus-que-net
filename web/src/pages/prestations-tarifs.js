@@ -205,7 +205,7 @@ const PrestationPage = props => {
     const ic32 = document.querySelector('.ic32')
     const ic4 = document.querySelector('.ic4')
     const ic42 = document.querySelector('.ic42')
-    icons3.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3; background-color: white; transform: scale(1.3)')
+    icons3.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3; background-color: white; transform: scale(1.3);')
     icons2.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons1.setAttribute('style', 'grid-area: 2 / 2 / 3 / 3;')
     icons4.setAttribute('style', 'grid-area: 1 / 1 / 2 / 2;')
@@ -308,7 +308,7 @@ const PrestationPage = props => {
     <Layout>
       <Container>
         <div className={styles.titleContain}>
-          <h1 className={styles.title}>PRESTATIONS &<span> TARIFS</span> </h1>
+          <h1 className={styles.title}>PRESTATIONS & TARIFS </h1>
         </div>
         <Wrapper>
           <div className={styles.BlockContent}>
