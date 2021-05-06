@@ -74,7 +74,7 @@ const IndexPage = props => {
     <Layout>
       <Container>
         <div className={styles.titleContain}>
-          <h1 className={styles.title}>Entreprise de lavage de vitres & garde-corps</h1>
+          <h1 className={styles.title}>Entreprise de lavage <span> de vitres & garde-corps </span> </h1>
         </div>
         <Wrapper>
           <div className={styles.BlockContent}>

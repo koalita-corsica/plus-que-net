@@ -57,7 +57,7 @@ const MenuLinks = styled.nav`
   text-align: center;
   height: 100vh;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
    display: ${({nav}) => (nav ? 'block' : 'none')};

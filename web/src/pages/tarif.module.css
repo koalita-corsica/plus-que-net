@@ -27,30 +27,36 @@
 .titleContain h1:after {
   content: "";
   display: block;
-  height: 3px;
+  height: 2px;
   margin-top: 3vh;
   background-color: white;
   background-image: linear-gradient(to right, white 20%, #F26633 20%, #F26633 40%, white 40%);
+  margin-bottom: 8vh;
 }
 .titleContain .title span {
   display: block;
 }
 .titleContain h1 {
   font-size: 40px;
+  font-weight: 200;
 }
 
 @media (max-width: 768px) {
   .titleContain h1 {
     font-size: 20px;
+    font-family: Roboto, Regular;
+    font-weight: normal;
   }
   .titleContain .title span {
     display: inline-flex;
   }
   .titleContain {
+    margin-top: 5vh;
     margin-bottom: 4vh;
-    line-height: 0;
   }
-  
+  .titleContain h1:after {
+    margin-top: 1vh;
+  }
 }
 
 .buttonGalerie {

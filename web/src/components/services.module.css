@@ -151,9 +151,11 @@
 @media (max-width: 768px) {
   .title h1 {
     font-size: 20px;
+    font-family: Roboto, Regular;
   }
   .desc p {
-    font-size: 20px;
+    font-size: 17px;
+    font-family: Roboto, Regular;
   }
 }
 
