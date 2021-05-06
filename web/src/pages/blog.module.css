@@ -165,7 +165,8 @@
     align-self: unset;
   }
   .titleContain {
-    margin-top: 5vh;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
   }
   .titleContain h1 {
     font-weight: normal;

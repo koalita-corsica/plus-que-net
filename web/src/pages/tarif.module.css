@@ -51,8 +51,8 @@
     display: inline-flex;
   }
   .titleContain {
-    margin-top: 5vh;
-    margin-bottom: 4vh;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
   }
   .titleContain h1:after {
     margin-top: 1vh;
