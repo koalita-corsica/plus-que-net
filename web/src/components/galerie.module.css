@@ -37,7 +37,7 @@
 }
 .root div:nth-child(2) button:last-child::before{
   color: white;
-  margin-top: -5vh;
+  margin-top: -2vh;
   font-size: 8px;
 }
 @media (max-width: 768px) {

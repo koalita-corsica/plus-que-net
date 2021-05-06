@@ -417,7 +417,11 @@ const BlogPage = props => {
               {thematique.edges.map(element =>
                 <div onClick={() => setTheme(element.node.slug)} className={styles.categorie}>
                   <img onClick={() => setTheme(element.node.slug)} src={element.node.image.asset.url} className={styles.imgTheme} />
-                  <h2 onClick={() => setTheme(element.node.slug)}> {element.node.title}  <span> Voir </span> </h2>
+                  <div className={styles.backBlr}>
+                    <div className={styles.txtBlr}>
+                      <h2 onClick={() => setTheme(element.node.slug)}> {element.node.title}  <span> Voir </span> </h2>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

@@ -67,15 +67,22 @@
 .aside .catWrapper .categorie {
   max-height: 27.7683134583vh;
 }
-.aside .catWrapper .categorie h2 {
+
+.backBlr {
+  display: flex;
   position: relative;
   width: 19.21875vw;
   top: -15.206132879vh;
-  text-align: center;
-  background: transparent;
   background: linear-gradient(to left, rgba(178, 181, 190, 0.4) 100%, transparent 10% );
-  height: 7vh;
+  height: 8vh;
 }
+
+.txtBlr h2{
+  margin-left: 8vw;
+  text-align: center;
+  align-self: center;
+}
+
 .aside .catWrapper .categorie .imgTheme {
   width: 19.21875vw;
   height: 27.7683134583vh;
@@ -97,8 +104,7 @@
 }
 .catWrapper h2{
   text-transform: uppercase;
-  font-size: 13px !important;
-  
+  font-size: 13px !important;  
 }
 .catWrapper h2 span{
   display: block;
@@ -114,6 +120,7 @@
   font-size: 5vh;
   align-self: flex-end;
   margin-right: 19.21875vw;
+  margin-top: -5vh;
 }
 .end span{
   display: block;
@@ -128,7 +135,7 @@
   color: white;
   font-size: 16px;
   font-family: Roboto;
-  margin-top: 5vh;
+  margin-top: 7vh;
 }
 @media (max-width: 768px) {
   .aside {

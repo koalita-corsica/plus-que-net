@@ -15,6 +15,7 @@ import styles from '../pages/index.module.css'
 import Block from '@sanity/block-content-to-react'
 import urlBuilder from '@sanity/image-url'
 import PortableText from '../components/portableText'
+import homeImg from '../images/home.png'
 
 import {isBrowser} from '../lib/utils'
 
@@ -84,6 +85,7 @@ const IndexPage = props => {
           </div>
         </Wrapper>
       </Container>
+      <img className={styles.aside} src={homeImg} alt='men' />
     </Layout>
   )
 }

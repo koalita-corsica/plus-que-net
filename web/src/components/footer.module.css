@@ -7,11 +7,12 @@
   grid-template-columns: 10% 40% 20% 15% 15%;
   font-family: Roboto, bold;
   font-size: 16px;
-  margin-right: 5.5vh;
-  margin-left: 5.5vh;
+  margin-right: 5.5vw;
+  margin-left: 4vw;
   background-color: transparent;
   height: 9.6vh;
   font-weight: bold;
+  width: 93%;
 }
 .root .plan {
   grid-area: 1, 1, 2, 2;
@@ -53,6 +54,7 @@
     margin-right: 0;
     margin-left: 0;
     border-top:solid white 6px;
+    width: 100%;
   }
   .root .google {
     grid-area: 1/1/2/3;

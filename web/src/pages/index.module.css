@@ -146,4 +146,17 @@
   }  
 }
 
+.aside {
+  width: 546px;
+  height: 819px;
+  margin-top: -110vh;
+  margin-left: -7vw;
+}
+
+@media (max-width: 768px) {
+  .aside {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=index.module.css.map */

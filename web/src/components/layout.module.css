@@ -10,9 +10,9 @@
 }
 @media (max-width: 768px){
   .wrapper{
-    opacity: 0.80;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    background: url("../images/background-flou.jpg"),linear-gradient(#35383F, #35383F);
+    background-repeat: no-repeat;
+    opacity: 1;
     background-size:auto 100vh , 100% 100%;
     background-position-x: 24%;
 
