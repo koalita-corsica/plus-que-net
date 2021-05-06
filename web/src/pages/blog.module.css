@@ -200,6 +200,20 @@
     margin-top: -3vh;
     margin-bottom: 3vh;
   }
+  .backBlr {
+    display: flex;
+    position: relative;
+    width: 100%;
+    top: -15.206132879vh;
+    background: linear-gradient(to left, rgba(178, 181, 190, 0.4) 100%, transparent 10% );
+    height: 8vh;
+  }
+  
+  .txtBlr h2{
+    margin-left: 18vw;
+    text-align: center;
+    align-self: center;
+  }
 }
 
 /*# sourceMappingURL=blog.module.css.map */

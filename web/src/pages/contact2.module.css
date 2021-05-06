@@ -294,6 +294,7 @@ textarea {
   font-size: 1.8vh ; 
   font-family: Roboto, Regular;
   text-indent: 10px;
+  line-height: 2.5 !important;
 }
 
 .myImgWBtn {

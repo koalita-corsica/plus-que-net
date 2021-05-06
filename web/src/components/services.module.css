@@ -9,9 +9,10 @@
   opacity: 1;
   width:57.421875vw;
   height: 79%;
+  background: linear-gradient(to left, rgb(146, 147, 151) 100%, transparent 100% );
   backdrop-filter: blur(40px);
   
-  
+
 }
 
 

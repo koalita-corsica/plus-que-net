@@ -42,7 +42,9 @@ function Services (data) {
           <div className={styles.desc} id='desc'>
             {item.node._rawBody && <PortableText blocks={item.node._rawBody} />}
           </div>
-          <button onClick={openModal} className={styles.buttonGalerie} id='buttonGalerie'>Voir la galerie</button>
+          <div className={styles.getBtn}>
+            <button onClick={openModal} className={styles.buttonGalerie} id='buttonGalerie'>Voir la galerie</button>
+          </div>
           <Modal
             style={{overlay: {backgroundColor: 'transparent'}}}
             isOpen={modalIsOpen}
