@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react'
 import {graphql} from 'gatsby'
 import Container from '../components/container'
@@ -10,6 +11,7 @@ import styles from './contact2.module.css'
 import styled from 'styled-components'
 import {RiMessengerLine} from '@react-icons/all-files/ri/RiMessengerLine'
 import {IoIosCloseCircle} from '@react-icons/all-files/io/IoIosCloseCircle'
+import cross from '../images/remove.png'
 
 import {isBrowser} from '../lib/utils'
 
@@ -66,16 +68,21 @@ const ContactPage = props => {
   const handleChange = event => {
     var prev = document.getElementById('photoPreview')
     var myDiv = document.createElement('div')
-    myDiv.classList.add(styles.myImgWBtn)
-    var mySpan = document.createElement('span')
-    mySpan.innerHTML = <IoIosCloseCircle />
+    myDiv.classList.add(styles.crossImg)
+    var myImg = document.createElement('IMG')
+    myImg.classList.add(styles.crossedImg)
+    myImg.src = cross
+    myImg.addEventListener('click', () => {
+      document.getElementById('s').value = ''
+      console.log('toto')
+    })
 
     for (let i = 0; i < event.target.files.length; i++) {
       var x = document.createElement('IMG')
       x.src = window.URL.createObjectURL(event.target.files[i])
       x.classList.add(styles.imgPreview)
       myDiv.appendChild(x)
-      myDiv.appendChild(mySpan)
+      myDiv.appendChild(myImg)
       prev.appendChild(myDiv)
     }
   }
@@ -129,6 +136,7 @@ const ContactPage = props => {
                   ref={hiddenFileInput}
                   onChange={handleChange}
                   style={{display: 'none'}}
+                  id='s'
                 />
               </div>
 

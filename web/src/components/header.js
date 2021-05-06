@@ -8,7 +8,7 @@ import styles from './header.module.css'
 
 const MenuIcon = styled.div`
   display: ${({show}) => show === false ? 'none' : 'none'};
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   position: absolute;
   top: 2rem;
   left: ${({nav}) => nav ? '' : '2rem'};
@@ -49,7 +49,7 @@ const MenuIcon = styled.div`
 `
 const MenuLinks = styled.nav`
   display: ${({show}) => show === false ? 'none' : 'none'};
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   display: ${({nav}) => (nav ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: start;
@@ -57,7 +57,7 @@ const MenuLinks = styled.nav`
   text-align: center;
   height: 100vh;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
    display: ${({nav}) => (nav ? 'block' : 'none')};

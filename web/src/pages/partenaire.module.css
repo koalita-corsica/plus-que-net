@@ -19,7 +19,7 @@
 .titleContain h1:after {
   content: "";
   display: block;
-  height: 3px;
+  height: 2px;
   margin-top: 3vh;
   background-color: white;
   background-image: linear-gradient(to right, white 60%, #F26633 60%, #F26633 80%, white 80%);
@@ -109,6 +109,22 @@
   .aside .catWrapper .categorie .imgTheme {
     width: 50vw;
     height: 21.1243611584vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .titleContain h1 {
+    font-family: Roboto, Regular;
+    font-size: 20px;
+    font-weight: 200 !important;
+  }
+
+  .titleContain h1:after {
+    margin-top: 1vh;
+    margin-bottom: 10vh;
+  }
+  .titleContain {
+    margin-top: 5vh;
   }
 }
 
