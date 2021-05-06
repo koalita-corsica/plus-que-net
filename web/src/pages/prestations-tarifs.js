@@ -208,11 +208,7 @@ const PrestationPage = props => {
     const ic32 = document.querySelector('.ic32')
     const ic4 = document.querySelector('.ic4')
     const ic42 = document.querySelector('.ic42')
-<<<<<<< HEAD
-    icons3.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3; background-color: white; transform: scale(1.3);')
-=======
     icons3.setAttribute('style', 'grid-area: 1 / 2 / 2 / 3; background-color: white; transform: scale(1.3); left: 0.5vw; bottom: 0.5vw; position: relative')
->>>>>>> 8a02b0b549db53026ac0fa5bb2c0ebbe57cc3985
     icons2.setAttribute('style', 'grid-area: 2 / 1 / 3 / 2;')
     icons1.setAttribute('style', 'grid-area: 2 / 2 / 3 / 3;')
     icons4.setAttribute('style', 'grid-area: 1 / 1 / 2 / 2;')
