@@ -107,7 +107,7 @@
 @media (max-width: 768px) {
   .BlockContent .bloc1 div img {
     float: none;
-    margin-left: 10vw;
+    margin-left: 33%;
     margin-right: 10vw;
   }
 }

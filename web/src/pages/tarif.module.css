@@ -65,7 +65,7 @@
 
 .BlockContent {
   font-family: Roboto, Regular;
-  justify-content: space-between;
+  justify-content: space-evenly;
   column-gap: 2.5vw;
   margin-left: 3vw;
   font-size: 14px;
@@ -85,9 +85,6 @@
   grid-template-rows: repeat(2, 1fr);
   transform: rotate(45deg);
   gap: 1vh;
-  margin-right: 2.8vw;
-  width: 10.2214650767vh;
-  height: 10.2214650767vh;
   align-self: flex-start;
 }
 @media (max-width: 768px) {
@@ -121,20 +118,24 @@
   width: 35px;
   height: auto;
 }
-.BlockContent .contenu {
-  margin-top: 1vh;
+.BlockContent .contenu{
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
 }
 .BlockContent .contenu h1 {
   color: #F26633;
 }
-@media (max-width: 768px) {
-  .BlockContent .contenu h1{
-    padding-top: 2vh;
-  }
-}
+
+
+
+
 @media (max-width: 768px) {
   .BlockContent .contenu {
     text-align: center;
+    margin:0 auto;
+    height: auto;
    
   }
   .BlockContent .contenu button {
