@@ -8,7 +8,7 @@
   column-gap: 6vh;
   margin-left: 27.65625vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .root {
     display: flex;
     flex-direction: column;

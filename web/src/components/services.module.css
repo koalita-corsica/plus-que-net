@@ -14,7 +14,7 @@
 }
 
 
-@media (max-width: 450px){
+@media (max-width: 768px){
   .galery{
     width: 100%;
     height: 100%;
@@ -26,12 +26,14 @@
   
   
 }
-@media (max-width: 450px){
+@media (max-width: 768px){
   .titleContent{
     width: auto;
-    background-color: grey;
+    background-color: transparent;
+    backdrop-filter: blur(40px);
     display: flex;
-    align-items: center;
+    flex-direction: row-reverse;
+    padding-top: 6vh;
 
   }
 }
@@ -43,23 +45,35 @@
   width: 100%;
   padding-top: 2vh;
 }
+@media (max-width: 768px){
+  .titleService{
+    justify-self: center;
+    margin-left: 5vh;
+    align-self: center;
+  }
+}
 
 .buttonClose{
   float: right;
-  color: red;
+  color: #F26633;
   background-color: transparent;
   font-size: 3.5vh;
   padding-top: 5vh;
   padding-right: 1vw; 
 }
 .buttonClose:hover{
-  color: red;
+  color: #F26633;
   background-color: transparent;
   border: none;
 }
-@media (max-width: 450px){
+@media (max-width: 768px){
   .buttonClose{
+    
+    padding-top: 0;
+    margin-right: 5vw;
     float: none;
+    width: auto;
+    
     
     
   }
@@ -80,7 +94,7 @@
   padding: 1v;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .buttonGalerie {
     width: 40%;
     height: 5%;
@@ -101,9 +115,11 @@
 .desc p {
   font-family: Roboto, Regular;
   font-size: 2.2vh;
+  
 }
 
-@media (max-width: 450px) {
+
+@media (max-width: 768px) {
   .title h1 {
     font-size: 20px;
   }

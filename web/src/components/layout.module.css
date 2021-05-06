@@ -8,12 +8,14 @@
   background-size:100vw 100vh, 100% 100%;
 
 }
-@media (max-width: 450px){
+@media (max-width: 768px){
   .wrapper{
-    opacity: 0.85;
+    opacity: 0.80;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-    background-size:100vw 100vh, 100% 100%;
+    background-size:auto 100vh , 100% 100%;
+    background-position-x: 24%;
+
   }
   Header {
     z-index: 999;
