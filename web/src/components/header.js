@@ -102,13 +102,13 @@ const Header = ({nav, showNav, show, data}) => (
         <div />
       </MenuIcon>
       <div className={styles.navBar}>
-        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
+        <Link to='/'> <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' /> </Link>
       </div>
       <div className={styles.logo}>
-        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
+        <Link to='/'> <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' /> </Link>
       </div>
       <MenuLinks nav={nav}>
-        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
+      <Link to='/'> <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' /> </Link>
         <div className={styles.nav}>
           <ul>
             {data.sanitySiteSettings.menu.map(item =>
