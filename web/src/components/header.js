@@ -48,9 +48,12 @@ const MenuIcon = styled.div`
 }
 `
 const MenuLinks = styled.nav`
-  display: ${({show}) => show === false ? 'none' : 'none'};
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  width: 100%;
 @media (max-width: 768px) {
-  display: ${({nav}) => (nav ? 'flex' : 'none')};
+  display: flex;
   text-transform: uppercase;
   flex-direction: column;
   justify-content: start;
@@ -95,33 +98,22 @@ const Header = ({nav, showNav, show, data}) => (
       <div className={styles.navBar}>
         <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
       </div>
-      <MenuLinks nav={nav} styles={{display: 'none'}}>
-        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
-        <ul>
-          {data.sanitySiteSettings.menu.map(item =>
-            <React.Fragment>
-              <li>
-                <Link activeStyle={{color: '#F26633'}} to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`}> {item.page.title}</Link>
-              </li>
-            </React.Fragment>
-          )}
-        </ul>
-      </MenuLinks>
-
       <div className={styles.logo}>
         <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
       </div>
-      <div className={styles.nav}>
-        <ul>
-          {data.sanitySiteSettings.menu.map(item =>
-            <React.Fragment>
-              <li>
-                <Link activeStyle={{color: '#F26633'}} to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`} > {item.page.title}</Link>
-              </li>
-            </React.Fragment>
-          )}
-        </ul>
-      </div>
+      <MenuLinks nav={nav}>
+        <div className={styles.nav}>
+          <ul>
+            {data.sanitySiteSettings.menu.map(item =>
+              <React.Fragment>
+                <li>
+                  <Link activeStyle={{color: '#F26633'}} to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`} > {item.page.title}</Link>
+                </li>
+              </React.Fragment>
+            )}
+          </ul>
+        </div>
+      </MenuLinks>
     </div>
   </React.Fragment>
 )
