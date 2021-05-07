@@ -52,24 +52,25 @@ const MenuLinks = styled.nav`
   justify-content: space-evenly;
   list-style-type: none;
   width: 100%;
+  img {
+    display:none;
+  }
 @media (max-width: 768px) {
-  display: flex;
   text-transform: uppercase;
   flex-direction: column;
-  justify-content: start;
-  align-items: center;
   text-align: center;
   height: 100vh;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-   display: ${({nav}) => (nav ? 'block' : 'none')};
-   background-color: #262626;
-   z-index: 90;
+  display: ${({nav}) => (nav ? 'block' : 'none')};
+  background-color: #262626;
+  z-index: 90;
 
    ul {
      list-style-type: none;
+     flex-direction: column;
   }
   li {
     margin-top: 1rem;
@@ -83,6 +84,11 @@ const MenuLinks = styled.nav`
     :hover{
       color: #f26633;
     }
+  }
+  img {
+    display: inline-block;
+    margin-left: -5.5vw;
+    
   }
 }
 `
@@ -102,6 +108,7 @@ const Header = ({nav, showNav, show, data}) => (
         <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
       </div>
       <MenuLinks nav={nav}>
+        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
         <div className={styles.nav}>
           <ul>
             {data.sanitySiteSettings.menu.map(item =>
