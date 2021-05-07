@@ -50,7 +50,6 @@ const MenuIcon = styled.div`
 const MenuLinks = styled.nav`
   display: ${({show}) => show === false ? 'none' : 'none'};
 @media (max-width: 768px) {
-  text-transform: uppercase;
   display: ${({nav}) => (nav ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: start;
