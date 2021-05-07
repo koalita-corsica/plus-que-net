@@ -16,7 +16,7 @@ function PartenaireLastArticle (props) {
       {props.nodes &&
         props.nodes.map(node => (
           <React.Fragment>
-            <Link to={getBlogUrl(node.publishedAt, node.slug.current)}>
+            <Link to={getPartenaireUrl(node.publishedAt, node.slug.current)}>
               <div key={node.id} className={styles.lastArticle}>
                 <img src={node.mainImage.asset.url} className={styles.imgLastArticle} />
                 <div className={styles.lastArticleContain}>

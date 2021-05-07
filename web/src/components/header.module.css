@@ -30,11 +30,6 @@
   align-self: center;
   width: 100%;
 }
-@media (max-width: 768px) {
-  .root .nav {
-    display: none;
-  }
-}
 .root .nav ul {
   display: flex;
   justify-content: space-evenly;

@@ -48,25 +48,29 @@ const MenuIcon = styled.div`
 }
 `
 const MenuLinks = styled.nav`
-  display: ${({show}) => show === false ? 'none' : 'none'};
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  width: 100%;
+  img {
+    display:none;
+  }
 @media (max-width: 768px) {
-  display: ${({nav}) => (nav ? 'flex' : 'none')};
   text-transform: uppercase;
   flex-direction: column;
-  justify-content: start;
-  align-items: center;
   text-align: center;
   height: 100vh;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-   display: ${({nav}) => (nav ? 'block' : 'none')};
-   background-color: #262626;
-   z-index: 90;
+  display: ${({nav}) => (nav ? 'block' : 'none')};
+  background-color: #262626;
+  z-index: 90;
 
    ul {
      list-style-type: none;
+     flex-direction: column;
   }
   li {
     margin-top: 1rem;
@@ -81,6 +85,11 @@ const MenuLinks = styled.nav`
       color: #f26633;
     }
   }
+  img {
+    display: inline-block;
+    margin-left: -5.5vw;
+    
+  }
 }
 `
 
@@ -93,35 +102,25 @@ const Header = ({nav, showNav, show, data}) => (
         <div />
       </MenuIcon>
       <div className={styles.navBar}>
-        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
+        <Link to='/'> <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' /> </Link>
       </div>
-      <MenuLinks nav={nav} styles={{display: 'none'}}>
-        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
-        <ul>
-          {data.sanitySiteSettings.menu.map(item =>
-            <React.Fragment>
-              <li>
-                <Link activeStyle={{color: '#F26633'}} to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`}> {item.page.title}</Link>
-              </li>
-            </React.Fragment>
-          )}
-        </ul>
-      </MenuLinks>
-
       <div className={styles.logo}>
-        <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' />
+        <Link to='/'> <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' /> </Link>
       </div>
-      <div className={styles.nav}>
-        <ul>
-          {data.sanitySiteSettings.menu.map(item =>
-            <React.Fragment>
-              <li>
-                <Link activeStyle={{color: '#F26633'}} to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`} > {item.page.title}</Link>
-              </li>
-            </React.Fragment>
-          )}
-        </ul>
-      </div>
+      <MenuLinks nav={nav}>
+      <Link to='/'> <img src={data.sanitySiteSettings.mainImage.asset.url} width='256' alt='Plus-que-net' id='logo' /> </Link>
+        <div className={styles.nav}>
+          <ul>
+            {data.sanitySiteSettings.menu.map(item =>
+              <React.Fragment>
+                <li>
+                  <Link activeStyle={{color: '#F26633'}} to={item.page.slug.current === 'accueil' ? '/' : '/' + `${item.page.slug.current}`} > {item.page.title}</Link>
+                </li>
+              </React.Fragment>
+            )}
+          </ul>
+        </div>
+      </MenuLinks>
     </div>
   </React.Fragment>
 )
