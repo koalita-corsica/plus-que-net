@@ -66,6 +66,7 @@
 
 .aside .catWrapper .categorie {
   max-height: 27.7683134583vh;
+  
 }
 
 .backBlr {
@@ -79,8 +80,13 @@
 
 .txtBlr h2{
   margin-left: 8vw;
+  font-size: 15px;
   text-align: center;
   align-self: center;
+  line-height: 1;
+}
+.txtBlr h2 span{
+  font-size: 13px;
 }
 
 .aside .catWrapper .categorie .imgTheme {
@@ -92,7 +98,7 @@
   color: white;
   margin-left: -3.7vw;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 15px;
   font-family: Roboto, Regular;
 }
 .allArticle {
@@ -104,11 +110,11 @@
 }
 .catWrapper h2{
   text-transform: uppercase;
-  font-size: 13px !important;  
+  
 }
 .catWrapper h2 span{
   display: block;
-  font-size: 10px !important;
+  
   color: #F26633;
 }
 .lastArticle {

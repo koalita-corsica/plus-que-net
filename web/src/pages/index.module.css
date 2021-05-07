@@ -2,7 +2,7 @@
 @import '../styles/custom-properties.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .titleContain {
-  margin-left: 43.81875vw;
+  margin-left: 10vw;
   text-transform: uppercase;
   width: 43.0625vw;
   color: white;
@@ -52,6 +52,7 @@
 }
 
 .BlockContent {
+  margin-left: 10vw;
   display: flex;
   flex-direction: column;
   font-family: Roboto, Regular;
@@ -147,10 +148,10 @@
 }
 
 .aside {
-  width: 546px;
-  height: 819px;
-  margin-top: -110vh;
-  margin-left: -7vw;
+  width: 43.8020833333vw;
+  height: 100vh;
+  margin-top: -28vh;
+  margin-left: -8vw;
 }
 
 @media (max-width: 768px) {

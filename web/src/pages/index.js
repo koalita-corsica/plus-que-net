@@ -73,19 +73,17 @@ const IndexPage = props => {
 
   return (
     <Layout>
+      <img className={styles.aside} src={homeImg} alt='men' />
       <Container>
         <div className={styles.titleContain}>
           <h1 className={styles.title}>Entreprise de lavage <span> de vitres & garde-corps </span> </h1>
         </div>
-        <Wrapper>
-          <div className={styles.BlockContent}>
-            <div className={styles.bloc1}>
-              <PortableText serializers={serializer} blocks={page._rawBody} />
-            </div>
+        <div className={styles.BlockContent}>
+          <div className={styles.bloc1}>
+            <PortableText serializers={serializer} blocks={page._rawBody} />
           </div>
-        </Wrapper>
+        </div>
       </Container>
-      <img className={styles.aside} src={homeImg} alt='men' />
     </Layout>
   )
 }
