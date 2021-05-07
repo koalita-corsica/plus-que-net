@@ -78,15 +78,19 @@
 
 .buttonGalerie {
   align-self: center;
-  border: #F26633;
-  border-radius: 20px;
-  font-size: 15px;
-  background-color: #F26633;
+  justify-self: center;
+  background: var(--unnamed-color-f26633) 0% 0% no-repeat padding-box;
+  border: 2px solid var(--unnamed-color-f26633);
+  background: #F26633 0% 0% no-repeat padding-box;
+  border: 2px solid #F26633;
+  border-radius: 13px;
+  opacity: 1;
+  width: 116px;
+  height: 26px;
+  margin-top: 7vh;
+  grid-area: 7/3/6/4;
   color: white;
-  height: auto;
-  width: auto;
-  padding: 1v;
-  margin-top: 4vh;
+  font-weight: bold;
   
 }
 
