@@ -72,19 +72,40 @@ const ContactPage = props => {
     var myImg = document.createElement('IMG')
     myImg.classList.add(styles.crossedImg)
     myImg.src = cross
-    myImg.addEventListener('click', () => {
-      document.getElementById('s').value = ''
-      console.log('toto')
-    })
+    var fileInput = document.getElementById('s')
+    var fileArray = []
 
-    for (let i = 0; i < event.target.files.length; i++) {
+    fileArray = Array.from(fileInput.files)
+
+    for (let i = 0; i < fileArray.length; i++) {
       var x = document.createElement('IMG')
-      x.src = window.URL.createObjectURL(event.target.files[i])
+      var src = window.URL.createObjectURL(fileArray[i])
+      x.src = src
       x.classList.add(styles.imgPreview)
       myDiv.appendChild(x)
       myDiv.appendChild(myImg)
       prev.appendChild(myDiv)
+      console.log(fileArray)
     }
+
+    myImg.addEventListener('click', () => {
+      x.remove()
+      myImg.remove()
+      console.log(fileArray)
+    })
+
+    document.getElementById('go').addEventListener('click', () => {
+      sendForm(fileArray)
+    })
+  }
+
+  const sendForm = (file) => {
+    var formData = new FormData()
+    var request = new XMLHttpRequest()
+
+    formData.set('file', file)
+    request.open('POST', 'link')
+    request.send(formData)
   }
 
   const actContact = () => {
@@ -140,7 +161,7 @@ const ContactPage = props => {
                 />
               </div>
 
-              <button type='submit' className={styles.btnEnvoyer}> Envoyer </button>
+              <button id='go' className={styles.btnEnvoyer}> Envoyer </button>
             </div>
           </form>
         </div>

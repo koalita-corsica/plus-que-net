@@ -1,0 +1,37 @@
+.titleContain {
+  margin-left: 43.81875vw;
+  text-transform: uppercase;
+  width: 43.0625vw;
+  color: white;
+  font-family: Roboto, Regular;
+  line-height: 1;
+}
+@media (max-width: 768px) {
+  .titleContain {
+    margin-left: 5%;
+    width: 85%;
+  }
+}
+.titleContain h1 {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.titleContain span {
+  display: block;
+}
+.titleContain h1:after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 3vh;
+  width: 85%;
+  background-color: white;
+  background-image: linear-gradient(to right, #F26633 20%, white 20%);
+}
+
+.plan ul{
+    color: white;
+    list-style: none;
+
+}
