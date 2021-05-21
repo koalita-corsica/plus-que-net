@@ -16,8 +16,9 @@ a {
 }
 
 .description {
-  font-size: 14px;
-  font-weight: 0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: lighter !important;
 }
 
 .lastArticle {
