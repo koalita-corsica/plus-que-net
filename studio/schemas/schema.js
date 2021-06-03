@@ -20,9 +20,9 @@ import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
 import thematiques from './documents/thematiques'
 import pageReference from './objects/pageReference'
-import data from './objects/data'
 import partenaire from './documents/partenaire'
-import testform from './documents/testform'
+import contact from './documents/contact'
+import data from './objects/data'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -46,9 +46,9 @@ export default createSchema({
     bioPortableText,
     excerptPortableText,
     pageReference,
-    data,
     partenaire,
-    testform
+    contact,
+    data
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import React from 'react'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import Layout from '../containers/layout'
@@ -12,6 +13,7 @@ import styled from 'styled-components'
 import {RiMessengerLine} from '@react-icons/all-files/ri/RiMessengerLine'
 import {IoIosCloseCircle} from '@react-icons/all-files/io/IoIosCloseCircle'
 import cross from '../images/remove.png'
+import $ from 'jquery'
 
 import {isBrowser} from '../lib/utils'
 
@@ -61,11 +63,24 @@ const ContactPage = props => {
 `
 
   const hiddenFileInput = React.useRef(null)
+  const hiddenContact = React.useRef(null)
+  const hiddenDevis = React.useRef(null)
+
+  const handleRaisonContact = event => {
+    hiddenContact.current.click()
+    actContact()
+  }
+
+  const handleRaisonDevis = event => {
+    hiddenDevis.current.click()
+    actDevis()
+  }
 
   const handleClick = event => {
     hiddenFileInput.current.click()
   }
   const handleChange = event => {
+    console.log(document.getElementById('s').value)
     var prev = document.getElementById('photoPreview')
     var myDiv = document.createElement('div')
     myDiv.classList.add(styles.crossImg)
@@ -81,7 +96,6 @@ const ContactPage = props => {
       var x = document.createElement('IMG')
       var src = window.URL.createObjectURL(fileArray[i])
       x.src = src
-      x.classList.add(styles.imgPreview)
       myDiv.appendChild(x)
       myDiv.appendChild(myImg)
       prev.appendChild(myDiv)
@@ -93,44 +107,41 @@ const ContactPage = props => {
       myImg.remove()
       console.log(fileArray)
     })
-
-    document.getElementById('go').addEventListener('click', () => {
-      sendForm(fileArray)
-    })
   }
 
-  const sendForm = (file) => {
-    var formData = new FormData()
-    var request = new XMLHttpRequest()
-
-    formData.set('file', file)
-    request.open('POST', 'link')
-    request.send(formData)
+  const srcimg = () => {
+    var res = document.getElementById('s').value
+    return res
   }
 
   const actContact = () => {
     document.getElementById('inpContact').classList.add(styles.active)
     document.getElementById('inpDevis').classList.remove(styles.active)
+    document.getElementById('DevisCheck').checked = false
+    document.getElementById('ContactCheck').checked = true
   }
 
   const actDevis = () => {
     document.getElementById('inpDevis').classList.add(styles.active)
     document.getElementById('inpContact').classList.remove(styles.active)
+    document.getElementById('ContactCheck').checked = false
+    document.getElementById('DevisCheck').checked = true
   }
 
   return (
-
     <Layout>
       <Container>
         <div className={styles.titleContain}>
           <h1 className={styles.title}>{page.title}</h1>
         </div>
         <div className={styles.contactWrapper}>
-          <form name='contact' method='POST' data-netlify='true' onSubmit='submit'>
+          <form action='/contact' name='contact' method='POST' data-netlify='true' onSubmit='submit'>
             <input type='hidden' name='form-name' value='contact' />
             <div className={styles.container}>
-              <input id='inpContact' type='button' className={styles.contact} value='CONTACT' onClick={actContact} />
-              <input id='inpDevis' type='button' className={styles.devis} value='DEMANDE DE DEVIS' onClick={actDevis} />
+              <input id='inpContact' name='raison' type='button' className={styles.contact} value='CONTACT' onClick={handleRaisonContact} />
+              <input type='checkbox' id='ContactCheck' name='raison' value='CONTACT' ref={hiddenContact} onChange={handleRaisonContact} style={{display: 'none'}} />
+              <input id='inpDevis' name='raison' type='button' className={styles.devis} value='DEMANDE DE DEVIS' onClick={handleRaisonDevis} />
+              <input type='checkbox' id='DevisCheck' name='raison'value='DEMANDE DE DEVIS' ref={hiddenDevis} onChange={handleRaisonDevis} style={{display: 'none'}} />
               <div className={styles.social}>
                 <FontAwesomeIcon icon={faInstagram} className={styles.insta} />
                 <FontAwesomeIcon icon={faFacebookF} className={styles.fb} />
@@ -158,9 +169,9 @@ const ContactPage = props => {
                   onChange={handleChange}
                   style={{display: 'none'}}
                   id='s'
+                  name='image'
                 />
               </div>
-
               <button id='go' className={styles.btnEnvoyer}> Envoyer </button>
             </div>
           </form>
