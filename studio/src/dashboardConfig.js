@@ -1,6 +1,6 @@
 export default {
   widgets: [
-    { name: 'structure-menu' },
+    {name: 'structure-menu'},
     {
       name: 'project-info',
       options: {
@@ -33,15 +33,15 @@ export default {
             value: 'https://github.com/koalita-corsica/plus-que-net',
             category: 'Code'
           },
-          { title: 'Frontend', value: 'https://plus-que-net.netlify.app', category: 'apps' }
+          {title: 'Frontend', value: 'https://plus-que-net.netlify.app', category: 'apps'}
         ]
       }
     },
-    { name: 'project-users', layout: { height: 'auto' } },
+    {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: { title: 'Recent blog posts', order: '_createdAt desc', types: ['post'] },
-      layout: { width: 'medium' }
+      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
+      layout: {width: 'medium'}
     }
   ]
 }
