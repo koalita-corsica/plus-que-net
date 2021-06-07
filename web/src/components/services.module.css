@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 .galery {
@@ -7,65 +7,59 @@
   margin-left: 30vw;
   border-radius: 8px;
   opacity: 1;
-  width:57.421875vw;
+  width: 57.421875vw;
   height: 79%;
-  background: linear-gradient(to left, rgb(146, 147, 151) 100%, transparent 100% );
+  background: linear-gradient(to left, rgb(146, 147, 151) 100%, transparent 100%);
   backdrop-filter: blur(40px);
-  
-
 }
 
-
-@media (max-width: 768px){
-  .galery{
+@media (max-width: 768px) {
+  .galery {
     width: 100%;
     height: 100%;
     margin: 0 auto;
   }
 }
-.titleContent{
+.titleContent {
   width: 100%;
-  
-  
 }
-@media (max-width: 768px){
-  .titleContent{
+@media (max-width: 768px) {
+  .titleContent {
     width: auto;
     background-color: transparent;
     backdrop-filter: blur(40px);
     display: flex;
     flex-direction: row-reverse;
     padding-top: 6vh;
-
   }
 }
 
-.titleService{
+.titleService {
   text-align: center;
   color: white;
   font-family: Roboto, Regular;
   width: 100%;
   padding-top: 2vh;
 }
-@media (max-width: 768px){
-  .titleService{
+@media (max-width: 768px) {
+  .titleService {
     justify-self: center;
     margin-left: 5vh;
     align-self: center;
   }
 }
 
-.buttonClose{
+.buttonClose {
   cursor: pointer;
   float: right;
-  color: #F26633;
+  color: #f26633;
   background-color: transparent;
   font-size: 3.5vh;
   padding-top: 5vh;
-  padding-right: 1vw; 
+  padding-right: 1vw;
 }
-@media (max-width: 768px){
-  .buttonClose{
+@media (max-width: 768px) {
+  .buttonClose {
     margin-top: 1.5vh;
     margin-right: 5vw;
     float: none;
@@ -73,25 +67,21 @@
   }
 }
 
-
-
-
 .buttonGalerie {
   align-self: center;
   justify-self: center;
   background: var(--unnamed-color-f26633) 0% 0% no-repeat padding-box;
   border: 2px solid var(--unnamed-color-f26633);
-  background: #F26633 0% 0% no-repeat padding-box;
-  border: 2px solid #F26633;
+  background: #f26633 0% 0% no-repeat padding-box;
+  border: 2px solid #f26633;
   border-radius: 13px;
   opacity: 1;
-  width: 116px;
+  width: 150px;
   height: 26px;
   margin-top: 7vh;
   grid-area: 7/3/6/4;
   color: white;
   font-weight: bold;
-  
 }
 
 @media (max-width: 768px) {
@@ -101,27 +91,25 @@
     margin-top: -5vh;
   }
 }
-.buttonGalerie:hover{
+.buttonGalerie:hover {
   background-color: white;
-  color: #F26633;
+  color: #f26633;
   /* border: solid 2px #F26633; */
 }
 
 .title {
   font-family: Roboto, Regular;
   text-transform: uppercase;
-  color: #F26633;
+  color: #f26633;
   margin-top: 2vh;
 }
 
-
 .desc {
-  
   font-family: Roboto, Regular;
   height: auto;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: #F26633 white;
+  scrollbar-color: #f26633 white;
   width: 93%;
 }
 .desc p {
@@ -131,22 +119,16 @@
 }
 
 .desc::-webkit-scrollbar-thumb {
-  background-color: #F26633; /* color of the scroll thumb */
+  background-color: #f26633; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
-
-    
 }
 .desc::-webkit-scrollbar-track {
   background: white; /* color of the tracking area */
   border-radius: 20px;
-
-  
 }
 .desc::-webkit-scrollbar {
   width: 0.4vw; /* width of the entire scrollbar */
-  
 }
-
 
 @media (max-width: 768px) {
   .title h1 {
@@ -161,6 +143,5 @@
     width: 95%;
   }
 }
-
 
 /*# sourceMappingURL=tarif.module.css.map */

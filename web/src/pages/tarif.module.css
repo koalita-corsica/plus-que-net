@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .galery {
   height: 96.4224872232vh;
@@ -7,7 +7,7 @@
 }
 
 .activated {
-  background-color: #F26633 !important;
+  background-color: #f26633 !important;
 }
 
 .titleContain {
@@ -31,7 +31,7 @@
   margin-top: 2vh;
   width: 85%;
   background-color: white;
-  background-image: linear-gradient(to right, white 20%, #F26633 20%, #F26633 40%, white 40%);
+  background-image: linear-gradient(to right, white 20%, #f26633 20%, #f26633 40%, white 40%);
   margin-bottom: 8vh;
 }
 .titleContain .title span {
@@ -62,9 +62,9 @@
 
 .buttonGalerie {
   align-self: center;
-  border: #F26633;
+  border: #f26633;
   border-radius: 20px;
-  background-color: #F26633;
+  background-color: #f26633;
   color: white;
   height: 3.066439523vh;
   width: 9.140625vw;
@@ -97,13 +97,12 @@
 @media (max-width: 768px) {
   .BlockContent .iconeMenu {
     align-self: center;
-    
   }
 }
 .BlockContent .iconeMenu div {
   cursor: pointer;
-  background-color: #F26633;
-  border: #F26633 solid 4px;
+  background-color: #f26633;
+  border: #f26633 solid 4px;
   border-radius: 4px;
   height: 40px;
   width: 40px;
@@ -112,8 +111,8 @@
   align-items: center;
 }
 .BlockContent .iconeMenu div {
-  background-color: #F26633;
-  border: #F26633 solid 4px;
+  background-color: #f26633;
+  border: #f26633 solid 4px;
   border-radius: 4px;
   height: 40px;
   width: 40px;
@@ -126,25 +125,19 @@
   height: auto;
 }
 
-
-
-.BlockContent .contenu{
+.BlockContent .contenu {
   height: 45vh;
   display: flex;
   flex-direction: column;
   margin-left: 1vw;
+  width: 55vw;
 }
-
-
-
-
 
 @media (max-width: 768px) {
   .BlockContent .contenu {
     text-align: center;
-    margin:0 auto;
+    margin: 0 auto;
     height: auto;
-   
   }
   .BlockContent .contenu button {
     margin: 2vh;

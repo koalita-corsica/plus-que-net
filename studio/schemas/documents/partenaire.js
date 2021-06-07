@@ -1,9 +1,11 @@
-import {format} from 'date-fns'
+import { format } from 'date-fns'
+import { FaHandshake } from 'react-icons/fa'
 
 export default {
   name: 'partenaire',
   type: 'document',
   title: 'Partenaires',
+  icon: FaHandshake,
   fields: [
     {
       name: 'title',
@@ -55,7 +57,7 @@ export default {
       title: 'Categories',
       to: [
         {
-          type: 'category',
+          type: 'category'
         }
       ]
     },
@@ -65,7 +67,7 @@ export default {
       title: 'Thematiques',
       to: [
         {
-          type: 'thematiques',
+          type: 'thematiques'
         }
       ]
     },
@@ -78,8 +80,8 @@ export default {
       title: 'Page',
       name: 'page',
       type: 'reference',
-      to: [{type: 'page'}]
-  },
+      to: [{ type: 'page' }]
+    }
   ],
   orderings: [
     {
@@ -118,7 +120,7 @@ export default {
       slug: 'slug',
       media: 'mainImage'
     },
-    prepare ({title = 'No title', publishedAt, slug = {}, media}) {
+    prepare({ title = 'No title', publishedAt, slug = {}, media }) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/${dateSegment}/${slug.current}/`
       return {
