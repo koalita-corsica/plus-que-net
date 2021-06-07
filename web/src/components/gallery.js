@@ -14,6 +14,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./galerie.module.css";
 import imgTest from "../images/test.jpg";
+import urlBuilder from "@sanity/image-url";
+
+const urlFor = (source) =>
+  urlBuilder({ projectId: "xlw4ib3d", dataset: "production" }).image(source);
 
 const settings = {
   infinite: true,
@@ -35,7 +39,7 @@ const SimpleSlider = ({ data }) => {
             element.node.images.map((i) => (
               <React.Fragment>
                 <div key={element.id} className={styles.imgCentered}>
-                  <img src={i.asset.url} className={styles.selectedImg} />
+                  <img src={urlFor(i.asset).url()} alt="sss" className={styles.selectedImg} />
                 </div>
               </React.Fragment>
             ))
