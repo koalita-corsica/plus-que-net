@@ -32,6 +32,7 @@
     "gatsby-plugin-styled-components": "^4.4.0",
     "gatsby-source-google-reviews": "0.0.7",
     "google-maps-reviews": "^0.1.1",
+    "imagemin": "^8.0.0",
     "jquery": "^3.6.0",
     "react": "^16.14.0",
     "react-dom": "^17.0.2",
