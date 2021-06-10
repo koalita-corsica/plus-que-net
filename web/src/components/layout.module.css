@@ -1,21 +1,18 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
-
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .wrapper {
-  background: url("../images/background1.jpg"),linear-gradient(#35383F, #35383F);
+  background: url("../images/background1.jpg"), linear-gradient(#35383f, #35383f);
   background-repeat: no-repeat;
-  background-size:100vw 100vh, 100% 100%;
-
+  background-size: 100vw 100vh, 100% 100%;
 }
-@media (max-width: 768px){
-  .wrapper{
-    background: url("../images/background-flou.jpg"),linear-gradient(#35383F, #35383F);
+@media (max-width: 768px) {
+  .wrapper {
+    background: url("../images/background-flou.jp2"), linear-gradient(#35383f, #35383f);
     background-repeat: no-repeat;
     opacity: 1;
-    background-size:auto 100vh , 100% 100%;
+    background-size: auto 100vh, 100% 100%;
     background-position-x: 24%;
-
   }
   Header {
     z-index: 999;
@@ -23,19 +20,8 @@
   .content {
     z-index: -4;
   }
-  
-  
-  
-    
 }
-.content{
+.content {
   min-height: 78.8vh;
   display: flex;
 }
-
-
-
-
-
-
-
