@@ -6,11 +6,10 @@
 .root{
     display: grid;
     align-items: center;
-    grid-template-columns: 10% 40% 20% 15% 15%;
+    grid-template-columns: 10vw 40vw 20% 10vw 10vw 10vw;
     font-family: 'Roboto', sans-serif, bold;
     font-size: 16px;
-    margin-right: 5.5vh;
-    margin-left: 5.5vh;
+    width: 100%;
     background-color: transparent;
     .plan{
         grid-area: 1,1,2,2;
@@ -42,6 +41,7 @@
         grid-area: 1,5,2,6;
         display: flex;
         justify-content: space-evenly;
+        margin-right: 5.5vh;
         :hover{
             color: #F26633;
         }

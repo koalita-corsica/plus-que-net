@@ -50,6 +50,22 @@
         grid-template-rows: repeat(13, 1fr);
         column-gap: 8vw;
     }
+    a{
+        margin-top: 2vh;
+        width: 13.75vw;
+        grid-area: 1 / 1 / 2 / 3;
+        justify-self: center;
+        @media (max-width: 450px){
+            grid-area: 1 / 2 / 2 / 3;
+            width: 100%;
+            height: auto;
+        }
+        
+    }
+    .devis:hover{
+        background-color: #F26633;
+        color: white;
+    }
     
      
 }
@@ -64,22 +80,7 @@
         height: auto;
     }
 }
-.devis{
-    margin-top: 2vh;
-    width: 13.75vw;
-    grid-area: 1 / 1 / 2 / 3;
-    justify-self: center;
-    @media (max-width: 450px){
-        grid-area: 1 / 2 / 2 / 3;
-        width: 100%;
-        height: auto;
-    }
-    
-}
-.devis:hover{
-    background-color: #F26633;
-    color: white;
-}
+
 .contact:hover{
     background-color: #F26633;
     color: white;
