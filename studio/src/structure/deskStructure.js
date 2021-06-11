@@ -1,17 +1,12 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { MdSettings } from "react-icons/md";
-import {
-  MdPerson,
-  MdDescription,
-  MdLocalOffer
-} from "react-icons/md"
+import { MdSettings } from 'react-icons/md'
+import { MdPerson, MdDescription, MdLocalOffer } from 'react-icons/md'
 import IframePreview from '../previews/IframePreview'
 
 // Web preview configuration
-const remoteURL = 'https://plus-que-net.netlify.app'
+const remoteURL = 'https://plusquenetmain.gatsbyjs.io'
 const localURL = 'http://localhost:8000'
-const previewURL =
-  window.location.hostname === 'localhost' ? localURL : remoteURL
+const previewURL = window.location.hostname === 'localhost' ? localURL : remoteURL
 
 export const getDefaultDocumentNode = props => {
   /**
@@ -48,6 +43,11 @@ export default () =>
     .title('Content')
     .items([
       S.listItem()
+        .title('Blog posts')
+        .icon(MdDescription)
+        .schemaType('post')
+        .child(S.documentTypeList('post').title('Blog posts')),
+      S.listItem()
         .title('Settings')
         .icon(MdSettings)
         .child(
@@ -57,11 +57,6 @@ export default () =>
             .documentId('siteSettings')
         ),
       S.divider(),
-      S.listItem()
-        .title('Blog posts')
-        .icon(MdDescription)
-        .schemaType('post')
-        .child(S.documentTypeList('post').title('Blog posts')),
       S.listItem()
         .title('Authors')
         .icon(MdPerson)
@@ -76,9 +71,6 @@ export default () =>
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
-        listItem =>
-          !['category', 'author', 'post', 'siteSettings'].includes(
-            listItem.getId()
-          )
+        listItem => !['category', 'author', 'post', 'siteSettings'].includes(listItem.getId())
       )
     ])

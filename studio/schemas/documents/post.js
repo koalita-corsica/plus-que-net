@@ -1,4 +1,4 @@
-import {format} from 'date-fns'
+import { format } from 'date-fns'
 
 export default {
   name: 'post',
@@ -55,7 +55,7 @@ export default {
       title: 'Categories',
       to: [
         {
-          type: 'category',
+          type: 'category'
         }
       ]
     },
@@ -65,7 +65,7 @@ export default {
       title: 'Thematiques',
       to: [
         {
-          type: 'thematiques',
+          type: 'thematiques'
         }
       ]
     },
@@ -78,8 +78,13 @@ export default {
       title: 'Page',
       name: 'page',
       type: 'reference',
-      to: [{type: 'page'}]
-  },
+      to: [{ type: 'page' }]
+    },
+    {
+      title: 'Video',
+      name: 'vide',
+      type: 'videoBlogPost'
+    }
   ],
   orderings: [
     {
@@ -118,7 +123,7 @@ export default {
       slug: 'slug',
       media: 'mainImage'
     },
-    prepare ({title = 'No title', publishedAt, slug = {}, media}) {
+    prepare({ title = 'No title', publishedAt, slug = {}, media }) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/${dateSegment}/${slug.current}/`
       return {

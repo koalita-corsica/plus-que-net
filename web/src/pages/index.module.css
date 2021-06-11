@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .titleContain {
   margin-left: 10vw;
@@ -30,11 +30,11 @@
   margin-top: 3vh;
   width: 85%;
   background-color: white;
-  background-image: linear-gradient(to right, #F26633 20%, white 20%);
+  background-image: linear-gradient(to right, #f26633 20%, white 20%);
 }
 
 .BlockContent::-webkit-scrollbar-thumb {
-  background-color: #F26633;
+  background-color: #f26633;
   /* color of the scroll thumb */
   border-radius: 20px;
   /* roundness of the scroll thumb */
@@ -62,21 +62,32 @@
   color: white;
   margin-right: 3.4296875vw;
   scrollbar-width: thin;
-  scrollbar-color: #F26633 white;
+  scrollbar-color: #f26633 white;
   margin-top: -3vh;
 }
 
-.BlockContent .bloc1 h1{
+.BlockContent .bloc1 h1 {
   font-family: Roboto, Regular;
   font-size: 19px;
   text-transform: uppercase;
 }
 
-.BlockContent .bloc1 p{
+.BlockContent .bloc1 p {
   font-family: Roboto;
   width: 45vw;
   font-size: 16px;
   font-weight: lighter !important;
+}
+
+.BlockContent .bloc1 li {
+  list-style: none;
+}
+
+.BlockContent .bloc1 li:before {
+  content: "·";
+  font-size: 45px;
+  vertical-align: middle;
+  line-height: 20px;
 }
 
 @media (max-width: 768px) {
@@ -93,7 +104,7 @@
   .BlockContent .bloc1 {
     font-size: 2.5553662692vh;
   }
-  .BlockContent .bloc1 p{
+  .BlockContent .bloc1 p {
     width: auto;
   }
 }
@@ -124,7 +135,7 @@
   order: -2;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .titleContain h1 {
     font-size: 20px;
     letter-spacing: normal;
@@ -133,7 +144,7 @@
   .titleContain span {
     display: block;
   }
-  .titleContain h1::after{
+  .titleContain h1::after {
     margin-top: 1vh;
   }
   .titleContain {
@@ -144,7 +155,7 @@
     font-size: 15px;
     width: 100vw;
     font-family: Roboto, Regular;
-  }  
+  }
 }
 
 .aside {
