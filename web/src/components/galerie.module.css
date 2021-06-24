@@ -48,14 +48,13 @@
 }
 
 .imgCentered {
-  padding-right: 2vw;
-  padding-left: 2vw;
-  padding-bottom: 2vw;
+  margin-left: 205px;
+  padding-bottom: 20px;
   width: 52.8125vw;
   height: 59.2844974446vh;
 }
 @media (max-width: 768px) {
-  .imgCentered {
+  .imgCentered amp-img{
     width: 85%;
     margin: 5vh auto;
   }

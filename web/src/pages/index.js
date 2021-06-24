@@ -1,23 +1,23 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import {graphql} from 'gatsby'
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture,
-} from "../lib/helpers";
-import BlogPostPreviewList from "../components/blog-post-preview-list";
-import Container from "../components/container";
-import GraphQLErrorList from "../components/graphql-error-list";
-import SEO from "../components/seo";
-import Layout from "../containers/layout";
-import Wrapper from "../components/wrapper";
-import styles from "../pages/index.module.css";
-import Block from "@sanity/block-content-to-react";
-import urlBuilder from "@sanity/image-url";
-import PortableText from "../components/portableText";
-import homeImg from "../images/home.png";
+  filterOutDocsPublishedInTheFuture
+} from '../lib/helpers'
+import BlogPostPreviewList from '../components/blog-post-preview-list'
+import Container from '../components/container'
+import GraphQLErrorList from '../components/graphql-error-list'
+import SEO from '../components/seo'
+import Layout from '../containers/layout'
+import Wrapper from '../components/wrapper'
+import styles from '../pages/index.module.css'
+import Block from '@sanity/block-content-to-react'
+import urlBuilder from '@sanity/image-url'
+import PortableText from '../components/portableText'
+import homeImg from '../images/home.png'
 
-import { isBrowser } from "../lib/utils";
+import {isBrowser} from '../lib/utils'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -32,18 +32,27 @@ export const query = graphql`
       }
     }
   }
-`;
+`
+
+const brow = typeof window !== 'undefined'
+
+if (brow) {
+  let script = document.createElement('script')
+  script.src = 'https://cdn.ampproject.org/v0.js'
+  script.async = true
+  document.body.appendChild(script)
+}
 
 const IndexPage = (props) => {
   if (!isBrowser) {
-    return;
+    return
   }
 
-  const { data, errors } = props;
-  const page = data && data.page;
+  const {data, errors} = props
+  const page = data && data.page
 
   const urlFor = (source) =>
-    urlBuilder({ projectId: "og13jxpg", dataset: "production" }).image(source);
+    urlBuilder({projectId: 'og13jxpg', dataset: 'production'}).image(source)
 
   const serializer = {
     types: {
@@ -53,25 +62,27 @@ const IndexPage = (props) => {
 
           <figcaption>{props.node.caption}</figcaption>
         </figure>
-      ),
-    },
-  };
+      )
+    }
+  }
 
   if (errors) {
     return (
       <Layout>
         <GraphQLErrorList errors={errors} />
       </Layout>
-    );
+    )
   }
 
   return (
     <Layout>
-      <img className={styles.aside} src={homeImg} alt="men" />
+      <div className={styles.aside}>
+        <amp-img src={homeImg} alt='men' Layout='responsive' />
+      </div>
       <Container>
         <div className={styles.titleContain}>
           <h1 className={styles.title}>
-            Entreprise de lavage <span> de vitres & garde-corps </span>{" "}
+            Entreprise de lavage <span> de vitres & garde-corps </span>{' '}
           </h1>
         </div>
         <div className={styles.BlockContent}>
@@ -81,7 +92,7 @@ const IndexPage = (props) => {
         </div>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
