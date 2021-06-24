@@ -30,6 +30,7 @@
     "fs": "0.0.1-security",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
     "gatsby-plugin-styled-components": "^4.4.0",
+    "gatsby-source-filesystem": "^3.8.0",
     "gatsby-source-google-reviews": "0.0.7",
     "google-maps-reviews": "^0.1.1",
     "hls.js": "^1.0.0-alpha.5",

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 import React from 'react'
+import {state} from 'react'
 import {graphql, Link} from 'gatsby'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
@@ -78,39 +78,11 @@ const ContactPage = (props) => {
   const handleClick = (event) => {
     hiddenFileInput.current.click()
   }
-  const handleChange = (event) => {
-    console.log(document.getElementById('s').value)
-    var prev = document.getElementById('photoPreview')
-    var myDiv = document.createElement('div')
-    myDiv.classList.add(styles.crossImg)
-    var myImg = document.createElement('IMG')
-    myImg.classList.add(styles.crossedImg)
-    myImg.src = cross
+  const prev = () => {
     var fileInput = document.getElementById('s')
-    var fileArray = []
-
-    fileArray = Array.from(fileInput.files)
-
-    for (let i = 0; i < fileArray.length; i++) {
-      var x = document.createElement('IMG')
-      var src = window.URL.createObjectURL(fileArray[i])
-      x.src = src
-      myDiv.appendChild(x)
-      myDiv.appendChild(myImg)
-      prev.appendChild(myDiv)
-      console.log(fileArray)
-    }
-
-    myImg.addEventListener('click', () => {
-      x.remove()
-      myImg.remove()
-      console.log(fileArray)
-    })
-  }
-
-  const srcimg = () => {
-    var res = document.getElementById('s').value
-    return res
+    var fileList = []
+    var fileListDisplay = document.getElementById('file-list-display')
+    var renderFileList, sendFile
   }
 
   const actContact = () => {
@@ -127,145 +99,157 @@ const ContactPage = (props) => {
     document.getElementById('DevisCheck').checked = true
   }
 
-  if (typeof window !== 'undefined') {
-    return (
-      <Layout>
-        <Container>
-          <div className={styles.titleContain}>
-            <h1 className={styles.title}>{page.title}</h1>
-          </div>
-          <div className={styles.contactWrapper}>
-            <form
-              action='/contact'
-              name='contact'
-              method='POST'
-              data-netlify='true'
-              onSubmit='submit'
-            >
-              {window.location && window.location === 'http://localhost:8000/contact/#devis' ? (
-                <>
-                  <input type='hidden' name='form-name' value='contact' />
-                  <div className={styles.container}>
+  return (
+    <Layout>
+      <Container>
+        <div className={styles.titleContain}>
+          <h1 className={styles.title}>{page.title}</h1>
+        </div>
+        <div className={styles.contactWrapper}>
+          <form
+            id='form'
+            name='contact'
+            method='POST'
+            data-netlify='true'
+            action='https://getform.io/f/7c4360fc-4ede-44a5-a86f-a12c6b159989'
+            encType='multipart/form-data'
+          >
+            {typeof window !== 'undefined' &&
+            window.location == 'http://localhost:8000/contact/#devis' ? (
+              <>
+                <input type='hidden' name='form-name' value='contact' />
+                <div className={styles.container}>
+                  <input
+                    id='inpContact'
+                    name='raison'
+                    type='button'
+                    className={styles.contact}
+                    value='CONTACT'
+                    onClick={handleRaisonContact}
+                  />
+                  <input
+                    type='checkbox'
+                    id='ContactCheck'
+                    name='raison'
+                    value='CONTACT'
+                    ref={hiddenContact}
+                    onChange={handleRaisonContact}
+                    style={{display: 'none'}}
+                  />
+                  <Link to='/contact/#devis'>
                     <input
-                      id='inpContact'
+                      id='inpDevis'
                       name='raison'
                       type='button'
-                      className={styles.contact}
-                      value='CONTACT'
-                      onClick={handleRaisonContact}
-                    />
-                    <input
-                      type='checkbox'
-                      id='ContactCheck'
-                      name='raison'
-                      value='CONTACT'
-                      ref={hiddenContact}
-                      onChange={handleRaisonContact}
-                      style={{display: 'none'}}
-                      checked
-                    />
-                    <Link to='/contact/#devis'>
-                      <input
-                        id='inpDevis'
-                        name='raison'
-                        type='button'
-                        className={styles.devis + ' ' + styles.active}
-                        value='DEMANDE DE DEVIS'
-                        onClick={handleRaisonDevis}
-                      />
-                    </Link>
-                    <input
-                      type='checkbox'
-                      id='DevisCheck'
-                      name='raison'
+                      className={styles.active + ' ' + styles.devis}
                       value='DEMANDE DE DEVIS'
-                      ref={hiddenDevis}
-                      onChange={handleRaisonDevis}
-                      style={{display: 'none'}}
+                      onClick={handleRaisonDevis}
                     />
+                  </Link>
+                  <input
+                    type='checkbox'
+                    id='DevisCheck'
+                    name='raison'
+                    value='DEMANDE DE DEVIS'
+                    ref={hiddenDevis}
+                    onChange={handleRaisonDevis}
+                    style={{display: 'none'}}
+                    checked
+                  />
 
-                    <div className={styles.social}>
-                      <FontAwesomeIcon icon={faInstagram} className={styles.insta} />
-                      <FontAwesomeIcon icon={faFacebookF} className={styles.fb} />
-                      <RiMessengerLine className={styles.messenger} />
-                      <FontAwesomeIcon icon={faWhatsapp} className={styles.whatsapp} />
-                    </div>
-                    <label htmlFor='name' className={styles.name}>
-                      {' '}
-                      nom prenom
-                    </label>
-                    <label htmlFor='numero' className={styles.tel}>
-                      {' '}
-                      téléphone
-                    </label>
-                    <label htmlFor='photo' className={styles.jointe}>
-                      {' '}
-                      pièces jointes{' '}
-                    </label>
-                    <input
-                      type='text'
-                      name='name'
-                      placeholder='Votre Nom Prenom'
-                      className={styles.nameInput}
+                  <div className={styles.social}>
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      className={styles.insta}
                     />
-                    <input
-                      type='number'
-                      name='numero'
-                      placeholder='Votre Numero'
-                      className={styles.telInput}
+                    <FontAwesomeIcon icon={faFacebookF} className={styles.fb} />
+                    <RiMessengerLine className={styles.messenger} />
+                    <FontAwesomeIcon
+                      icon={faWhatsapp}
+                      className={styles.whatsapp}
                     />
-                    <label htmlFor='mail' className={styles.mail}>
-                      {' '}
-                      email{' '}
-                    </label>
-                    <input
-                      type='email'
-                      name='mail'
-                      placeholder='Votre mail'
-                      className={styles.mailInput}
-                    />
-                    <label htmlFor='adresse' className={styles.adresse}>
-                      {' '}
-                      adresse{' '}
-                    </label>
-                    <input
-                      type='text'
-                      name='adresse'
-                      placeholder='Votre Adresse'
-                      className={styles.adresseInput}
-                    />
-                    <label htmlFor='message' className={styles.msgLabel}>
-                      {' '}
-                      message{' '}
-                    </label>
-                    <textarea
-                      name='message'
-                      placeholder='Votre Message'
-                      rows='3'
-                      className={styles.msgArea}
-                    />
-                    <div className={styles.imgPreviewContain}>
-                      <div id='photoPreview' className={styles.imgPreview}>
-                        {' '}
-                      </div>
-                      <Button onClick={handleClick} className={styles.addIcon}>
-                        <FontAwesomeIcon icon={faPlus} className={styles.add} size='90x' />
-                      </Button>
-                      <input
-                        type='file'
-                        ref={hiddenFileInput}
-                        onChange={handleChange}
-                        style={{display: 'none'}}
-                        id='s'
-                        name='image'
-                      />
-                    </div>
-                    <button id='go' className={styles.btnEnvoyer}>
-                      {' '}
-                      Envoyer{' '}
-                    </button>
                   </div>
-                </>
+                  <label htmlFor='name' className={styles.name}>
+                    {' '}
+                    nom prenom
+                  </label>
+                  <label htmlFor='numero' className={styles.tel}>
+                    {' '}
+                    téléphone
+                  </label>
+                  <label htmlFor='photo' className={styles.jointe}>
+                    {' '}
+                    pièces jointes{' '}
+                  </label>
+                  <input
+                    type='text'
+                    name='name'
+                    placeholder='Votre Nom Prenom'
+                    className={styles.nameInput}
+                  />
+                  <input
+                    type='number'
+                    name='numero'
+                    placeholder='Votre Numero'
+                    className={styles.telInput}
+                  />
+                  <label htmlFor='mail' className={styles.mail}>
+                    {' '}
+                    email{' '}
+                  </label>
+                  <input
+                    type='email'
+                    name='mail'
+                    placeholder='Votre mail'
+                    className={styles.mailInput}
+                  />
+                  <label htmlFor='adresse' className={styles.adresse}>
+                    {' '}
+                    adresse{' '}
+                  </label>
+                  <input
+                    type='text'
+                    name='adresse'
+                    placeholder='Votre Adresse'
+                    className={styles.adresseInput}
+                  />
+                  <label htmlFor='message' className={styles.msgLabel}>
+                    {' '}
+                    message{' '}
+                  </label>
+                  <textarea
+                    name='message'
+                    placeholder='Votre Message'
+                    rows='3'
+                    className={styles.msgArea}
+                  />
+                  <div className={styles.imgPreviewContain}>
+                    <div id='photoPreview' className={styles.imgPreview}>
+                      {' '}
+                    </div>
+                    <Button onClick={handleClick} className={styles.addIcon}>
+                      <FontAwesomeIcon
+                        icon={faPlus}
+                        className={styles.add}
+                        size='90x'
+                      />
+                    </Button>
+                    <input
+                      type='file'
+                      ref={hiddenFileInput}
+                      onChange={prev}
+                      style={{display: 'none'}}
+                      id='s'
+                      name='file[]'
+                      multiple
+                    />
+                  </div>
+                  <button id='go' className={styles.btnEnvoyer}>
+                    {' '}
+                    Envoyer{' '}
+                  </button>
+                </div>
+              </>
               ) : (
                 <>
                   <input type='hidden' name='form-name' value='contact' />
@@ -308,10 +292,16 @@ const ContactPage = (props) => {
                       style={{display: 'none'}}
                     />
                     <div className={styles.social}>
-                      <FontAwesomeIcon icon={faInstagram} className={styles.insta} />
+                      <FontAwesomeIcon
+                        icon={faInstagram}
+                        className={styles.insta}
+                      />
                       <FontAwesomeIcon icon={faFacebookF} className={styles.fb} />
                       <RiMessengerLine className={styles.messenger} />
-                      <FontAwesomeIcon icon={faWhatsapp} className={styles.whatsapp} />
+                      <FontAwesomeIcon
+                        icon={faWhatsapp}
+                        className={styles.whatsapp}
+                      />
                     </div>
                     <label htmlFor='name' className={styles.name}>
                       {' '}
@@ -372,15 +362,20 @@ const ContactPage = (props) => {
                         {' '}
                       </div>
                       <Button onClick={handleClick} className={styles.addIcon}>
-                        <FontAwesomeIcon icon={faPlus} className={styles.add} size='90x' />
+                        <FontAwesomeIcon
+                          icon={faPlus}
+                          className={styles.add}
+                          size='90x'
+                        />
                       </Button>
                       <input
                         type='file'
                         ref={hiddenFileInput}
-                        onChange={handleChange}
+                        onChange={prev}
                         style={{display: 'none'}}
                         id='s'
-                        name='image'
+                        name='file[]'
+                        multiple
                       />
                     </div>
                     <button id='go' className={styles.btnEnvoyer}>
@@ -390,12 +385,11 @@ const ContactPage = (props) => {
                   </div>
                 </>
               )}
-            </form>
-          </div>
-        </Container>
-      </Layout>
-    )
-  }
+          </form>
+        </div>
+      </Container>
+    </Layout>
+  )
 }
 
 export default ContactPage
