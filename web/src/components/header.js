@@ -92,15 +92,6 @@ const MenuLinks = styled.nav`
   }
 `
 
-const isBrowser = typeof window !== 'undefined'
-
-if (isBrowser) {
-  var meta = document.createElement('meta')
-  meta.httpEquiv = 'cache-control'
-  meta.content = 'max-age=31536000'
-  document.getElementsByTagName('head')[0].appendChild(meta)
-}
-
 const Header = ({nav, showNav, show, data}) => (
   <React.Fragment>
     <div className={styles.root}>

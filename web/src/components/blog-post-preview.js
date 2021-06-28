@@ -4,9 +4,21 @@ import React from "react";
 import { buildImageObj, cn, getBlogUrl } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
 import PortableText from "./portableText";
+import getYouTubeId from 'get-youtube-id'
+import YouTube from 'react-youtube'
 
 import styles from "./blog-post-preview.module.css";
 import { responsiveTitle3 } from "./typography.module.css";
+
+const serializers = {
+  types: {
+    youtube: ({node}) => {
+      const {url} = node
+      const id = getYouTubeId(url)
+      return (<YouTube videoId={id} />)
+    }
+  }
+}
 
 function BlogPostPreview(props) {
   console.log(props);
@@ -34,7 +46,7 @@ function BlogPostPreview(props) {
           <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
           {props._rawExcerpt && (
             <div className={styles.excerpt}>
-              <PortableText blocks={props._rawExcerpt} />
+              <PortableText blocks={props._rawExcerpt} serializers={serializers} />
             </div>
           )}
         </div>

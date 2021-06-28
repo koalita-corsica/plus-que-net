@@ -79,14 +79,13 @@ const ContactPage = (props) => {
     hiddenFileInput.current.click()
   }
   const prev = () => {
-    console.log(document.getElementById('s').value)
-    var prev = document.getElementById('photoPreview')
+    var prev = document.getElementById('fichier1')
     var myDiv = document.createElement('div')
     myDiv.classList.add(styles.crossImg)
     var myImg = document.createElement('IMG')
     myImg.classList.add(styles.crossedImg)
     myImg.src = cross
-    var fileInput = document.getElementById('s')
+    var fileInput = document.getElementById('fichier-1')
     var fileArray = []
     var myFiles = []
 
@@ -98,45 +97,228 @@ const ContactPage = (props) => {
       x.src = src
       myDiv.appendChild(x)
       myDiv.appendChild(myImg)
+      prev.style.all = 'revert'
+      prev.innerHTML = ''
       prev.appendChild(myDiv)
-      console.log(myFiles)
     }
 
     myImg.addEventListener('click', () => {
+      fileInput.value = ''
       x.remove()
       myImg.remove()
-      console.log(fileArray)
+      prev.innerHTML = '+'
+      prev.style.color = '#F26633'
+      prev.style.border = 'solid 1px #F26633'
+      prev.style.borderRadius = '10px'
+      prev.style.height = '2.1rem'
+      prev.style.width = '2.1rem'
+      prev.style.textAlign = 'center'
+      prev.style.fontSize = '2rem'
+      prev.style.lineHeight = '2rem'
+      prev.style.padding = '0.1rem'
     })
   }
 
-  const openM = () => {
-    var form = document.getElementById('myForm')
-    var div = document.createElement('DIV')
-    var image1 = document.createElement('input')
-    image1.type = 'file'
-    image1.name = 'image1'
-    var image2 = document.createElement('input')
-    image2.type = 'file'
-    image2.name = 'image2'
-    var image3 = document.createElement('input')
-    image3.type = 'file'
-    image3.name = 'image3'
-    var image4 = document.createElement('input')
-    image4.type = 'file'
-    image4.name = 'image4'
-    var image5 = document.createElement('input')
-    image5.type = 'file'
-    image5.name = 'image5'
-    var image6 = document.createElement('input')
-    image6.type = 'file'
-    image6.name = 'image6'
-    div.appendChild(image1)
-    div.appendChild(image2)
-    div.appendChild(image3)
-    div.appendChild(image4)
-    div.appendChild(image5)
-    div.appendChild(image6)
-    form.appendChild(div)
+  const prev1 = () => {
+    var prev = document.getElementById('fichier2')
+    var myDiv = document.createElement('div')
+    myDiv.classList.add(styles.crossImg)
+    var myImg = document.createElement('IMG')
+    myImg.classList.add(styles.crossedImg)
+    myImg.src = cross
+    var fileInput = document.getElementById('fichier-2')
+    var fileArray = []
+    var myFiles = []
+
+    fileArray = Array.from(fileInput.files)
+
+    for (let i = 0; i < fileArray.length; i++) {
+      var x = document.createElement('IMG')
+      var src = window.URL.createObjectURL(fileArray[i])
+      x.src = src
+      myDiv.appendChild(x)
+      myDiv.appendChild(myImg)
+      prev.style.all = 'revert'
+      prev.innerHTML = ''
+      prev.appendChild(myDiv)
+    }
+
+    myImg.addEventListener('click', () => {
+      fileInput.value = ''
+      x.remove()
+      myImg.remove()
+      prev.innerHTML = '+'
+      prev.style.color = '#F26633'
+      prev.style.border = 'solid 1px #F26633'
+      prev.style.borderRadius = '10px'
+      prev.style.height = '2.1rem'
+      prev.style.width = '2.1rem'
+      prev.style.textAlign = 'center'
+      prev.style.fontSize = '2rem'
+      prev.style.lineHeight = '2rem'
+      prev.style.padding = '0.1rem'
+    })
+  }
+  const prev2 = () => {
+    var prev = document.getElementById('fichier3')
+    var myDiv = document.createElement('div')
+    myDiv.classList.add(styles.crossImg)
+    var myImg = document.createElement('IMG')
+    myImg.classList.add(styles.crossedImg)
+    myImg.src = cross
+    var fileInput = document.getElementById('fichier-3')
+    var fileArray = []
+    var myFiles = []
+
+    fileArray = Array.from(fileInput.files)
+
+    for (let i = 0; i < fileArray.length; i++) {
+      var x = document.createElement('IMG')
+      var src = window.URL.createObjectURL(fileArray[i])
+      x.src = src
+      myDiv.appendChild(x)
+      myDiv.appendChild(myImg)
+      prev.style.all = 'revert'
+      prev.innerHTML = ''
+      prev.appendChild(myDiv)
+    }
+
+    myImg.addEventListener('click', () => {
+      fileInput.value = ''
+      x.remove()
+      myImg.remove()
+      prev.innerHTML = '+'
+      prev.style.color = '#F26633'
+      prev.style.border = 'solid 1px #F26633'
+      prev.style.borderRadius = '10px'
+      prev.style.height = '2.1rem'
+      prev.style.width = '2.1rem'
+      prev.style.textAlign = 'center'
+      prev.style.fontSize = '2rem'
+      prev.style.lineHeight = '2rem'
+      prev.style.padding = '0.1rem'
+    })
+  }
+  const prev3 = () => {
+    var prev = document.getElementById('fichier4')
+    var myDiv = document.createElement('div')
+    myDiv.classList.add(styles.crossImg)
+    var myImg = document.createElement('IMG')
+    myImg.classList.add(styles.crossedImg)
+    myImg.src = cross
+    var fileInput = document.getElementById('fichier-4')
+    var fileArray = []
+    var myFiles = []
+
+    fileArray = Array.from(fileInput.files)
+
+    for (let i = 0; i < fileArray.length; i++) {
+      var x = document.createElement('IMG')
+      var src = window.URL.createObjectURL(fileArray[i])
+      x.src = src
+      myDiv.appendChild(x)
+      myDiv.appendChild(myImg)
+      prev.style.all = 'revert'
+      prev.innerHTML = ''
+      prev.appendChild(myDiv)
+    }
+
+    myImg.addEventListener('click', () => {
+      fileInput.value = ''
+      x.remove()
+      myImg.remove()
+      prev.innerHTML = '+'
+      prev.style.color = '#F26633'
+      prev.style.border = 'solid 1px #F26633'
+      prev.style.borderRadius = '10px'
+      prev.style.height = '2.1rem'
+      prev.style.width = '2.1rem'
+      prev.style.textAlign = 'center'
+      prev.style.fontSize = '2rem'
+      prev.style.lineHeight = '2rem'
+      prev.style.padding = '0.1rem'
+    })
+  }
+  const prev4 = () => {
+    var prev = document.getElementById('fichier5')
+    var myDiv = document.createElement('div')
+    myDiv.classList.add(styles.crossImg)
+    var myImg = document.createElement('IMG')
+    myImg.classList.add(styles.crossedImg)
+    myImg.src = cross
+    var fileInput = document.getElementById('fichier-5')
+    var fileArray = []
+    var myFiles = []
+
+    fileArray = Array.from(fileInput.files)
+
+    for (let i = 0; i < fileArray.length; i++) {
+      var x = document.createElement('IMG')
+      var src = window.URL.createObjectURL(fileArray[i])
+      x.src = src
+      myDiv.appendChild(x)
+      myDiv.appendChild(myImg)
+      prev.style.all = 'revert'
+      prev.innerHTML = ''
+      prev.appendChild(myDiv)
+    }
+
+    myImg.addEventListener('click', () => {
+      fileInput.value = ''
+      x.remove()
+      myImg.remove()
+      prev.innerHTML = '+'
+      prev.style.color = '#F26633'
+      prev.style.border = 'solid 1px #F26633'
+      prev.style.borderRadius = '10px'
+      prev.style.height = '2.1rem'
+      prev.style.width = '2.1rem'
+      prev.style.textAlign = 'center'
+      prev.style.fontSize = '2rem'
+      prev.style.lineHeight = '2rem'
+      prev.style.padding = '0.1rem'
+    })
+  }
+
+  const prev5 = () => {
+    var prev = document.getElementById('fichier6')
+    var myDiv = document.createElement('div')
+    myDiv.classList.add(styles.crossImg)
+    var myImg = document.createElement('IMG')
+    myImg.classList.add(styles.crossedImg)
+    myImg.src = cross
+    var fileInput = document.getElementById('fichier-6')
+    var fileArray = []
+    var myFiles = []
+
+    fileArray = Array.from(fileInput.files)
+
+    for (let i = 0; i < fileArray.length; i++) {
+      var x = document.createElement('IMG')
+      var src = window.URL.createObjectURL(fileArray[i])
+      x.src = src
+      myDiv.appendChild(x)
+      myDiv.appendChild(myImg)
+      prev.style.all = 'revert'
+      prev.innerHTML = ''
+      prev.appendChild(myDiv)
+    }
+
+    myImg.addEventListener('click', () => {
+      fileInput.value = ''
+      x.remove()
+      myImg.remove()
+      prev.innerHTML = '+'
+      prev.style.color = '#F26633'
+      prev.style.border = 'solid 1px #F26633'
+      prev.style.borderRadius = '10px'
+      prev.style.height = '2.1rem'
+      prev.style.width = '2.1rem'
+      prev.style.textAlign = 'center'
+      prev.style.fontSize = '2rem'
+      prev.style.lineHeight = '2rem'
+      prev.style.padding = '0.1rem'
+    })
   }
 
   const actContact = () => {
@@ -247,16 +429,13 @@ const ContactPage = (props) => {
                 />
               </div>
               <label htmlFor='name' className={styles.name}>
-                {' '}
                 nom prenom
               </label>
               <label htmlFor='numero' className={styles.tel}>
-                {' '}
                 téléphone
               </label>
               <label htmlFor='photo' className={styles.jointe}>
-                {' '}
-                pièces jointes{' '}
+                pièces jointes
               </label>
               <input
                 type='text'
@@ -271,8 +450,7 @@ const ContactPage = (props) => {
                 className={styles.telInput}
               />
               <label htmlFor='mail' className={styles.mail}>
-                {' '}
-                email{' '}
+                email
               </label>
               <input
                 type='email'
@@ -281,8 +459,7 @@ const ContactPage = (props) => {
                 className={styles.mailInput}
               />
               <label htmlFor='adresse' className={styles.adresse}>
-                {' '}
-                adresse{' '}
+                adresse
               </label>
               <input
                 type='text'
@@ -291,8 +468,7 @@ const ContactPage = (props) => {
                 className={styles.adresseInput}
               />
               <label htmlFor='message' className={styles.msgLabel}>
-                {' '}
-                message{' '}
+                message
               </label>
               <textarea
                 name='message'
@@ -302,17 +478,24 @@ const ContactPage = (props) => {
               />
               <div className={styles.imgPreviewContain}>
                 <div id='photoPreview' className={styles.imgPreview}>
-                  <input type='file' name='resume' />
-                  <input type='file' name='photo' />
-                  <input type='file' name='document' />
-                  <input type='file' name='doc1' />
-                  <input type='file' name='doc2' />
-                  <input type='file' name='doc3' />
+                  <div id='imgup' className={styles.imgup}>
+                    <input type='file' name='plop' id='fichier-1' className={styles.inputfile} onChange={prev} />
+                    <label id='fichier1' htmlFor='fichier-1'>+</label>
+                    <input type='file' name='plop1' id='fichier-2' className={styles.inputfile} onChange={prev1} />
+                    <label htmlFor='fichier-2' id='fichier2'>+</label>
+                    <input type='file' name='plop2' id='fichier-3' className={styles.inputfile} onChange={prev2} />
+                    <label htmlFor='fichier-3' id='fichier3' >+</label>
+                    <input type='file' name='plop3' id='fichier-4' className={styles.inputfile} onChange={prev3} />
+                    <label htmlFor='fichier-4' id='fichier4'>+</label>
+                    <input type='file' name='plop4' id='fichier-5' className={styles.inputfile} onChange={prev4} />
+                    <label htmlFor='fichier-5' id='fichier5'>+</label>
+                    <input type='file' name='plop5' id='fichier-6' className={styles.inputfile} onChange={prev5} />
+                    <label htmlFor='fichier-6' id='fichier6'>+</label>
+                  </div>
                 </div>
               </div>
               <button id='go' className={styles.btnEnvoyer}>
-                {' '}
-                Envoyer{' '}
+                Envoyer
               </button>
             </div>
           </form>

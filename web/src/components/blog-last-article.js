@@ -6,6 +6,8 @@ import { imageUrlFor } from "../lib/image-url";
 import PortableText from "./portableText";
 import BlogPostPreview from "./blog-post-preview";
 import Block from "@sanity/block-content-to-react";
+import getYouTubeId from 'get-youtube-id'
+import YouTube from 'react-youtube'
 
 import styles from "./blog-last-article.module.css";
 import { responsiveTitle3 } from "./typography.module.css";
@@ -13,6 +15,16 @@ import urlBuilder from "@sanity/image-url";
 
 const urlFor = (source) =>
   urlBuilder({ projectId: "xlw4ib3d", dataset: "production" }).image(source);
+
+  const serializers = {
+    types: {
+      youtube: ({node}) => {
+        const {url} = node
+        const id = getYouTubeId(url)
+        return (<YouTube videoId={id} />)
+      }
+    }
+  }
 
 function BlogLastArticle(props) {
   return (
@@ -34,7 +46,7 @@ function BlogLastArticle(props) {
                   <h3 className={styles.articleTitle}> {node.title} </h3>
                   <span className={styles.description}>
                     {" "}
-                    <PortableText blocks={node._rawExcerpt} />{" "}
+                    <PortableText blocks={node._rawExcerpt} serializers={serializers} />
                   </span>
                 </div>
               </div>

@@ -12,19 +12,6 @@ export const query = graphql`
     post: sanityPost(id: { eq: $id }) {
       id
       publishedAt
-      vide {
-        video {
-          asset {
-            _key
-            _type
-            assetId
-            filename
-            playbackId
-            status
-            thumbTime
-          }
-        }
-      }
       mainImage {
         alt
         asset {

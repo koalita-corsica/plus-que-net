@@ -30,7 +30,11 @@
 }
 
 .contactWrapper {
-  background: linear-gradient(to left, rgba(205, 211, 228, 0.3) 100%, transparent 10%);
+  background: linear-gradient(
+    to left,
+    rgba(205, 211, 228, 0.3) 100%,
+    transparent 10%
+  );
   backdrop-filter: blur(20px);
 }
 
@@ -499,4 +503,67 @@ textarea {
     width: 100%;
     height: auto;
   }
+}
+
+.imgup {
+  max-width: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  place-items: center;
+}
+.imgup .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.imgup label {
+  height: 2.1rem;
+  width: 2.1rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  border: solid 1px #f26633;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.1rem;
+  color: #f26633;
+}
+.imgup label:hover {
+  cursor: pointer;
+  border: solid 1px white;
+  color: white;
+  background-color: #f26633;
+}
+
+hr {
+  margin: 3rem;
+}
+
+.imgup2 {
+  max-width: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  place-items: center;
+}
+.imgup2 .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.imgup2 img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: solid 1px #f26633;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.imgup2 img:hover {
+  cursor: pointer;
 }

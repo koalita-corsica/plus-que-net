@@ -79,11 +79,6 @@ export default {
       name: 'page',
       type: 'reference',
       to: [{ type: 'page' }]
-    },
-    {
-      title: 'Video',
-      name: 'vide',
-      type: 'videoBlogPost'
     }
   ],
   orderings: [
