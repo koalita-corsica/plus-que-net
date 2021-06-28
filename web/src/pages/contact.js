@@ -335,35 +335,35 @@ const ContactPage = (props) => {
     document.getElementById('DevisCheck').checked = true
   }
 
-  const [serverState, setServerState] = useState({
-    submitting: false,
-    status: null
-  })
-  const handleServerResponse = (ok, msg, form) => {
-    setServerState({
-      submitting: false,
-      status: {ok, msg}
-    })
-    if (ok) {
-      form.reset()
-    }
-  }
-  const handleOnSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    setServerState({submitting: true})
-    axios({
-      method: 'post',
-      url: 'https://getform.io/f/9104b7d5-5703-45d8-9e32-81178542190f',
-      data: new FormData(form)
-    })
-      .then(r => {
-        handleServerResponse(true, 'Thanks!', form)
-      })
-      .catch(r => {
-        handleServerResponse(false, r.response.data.error, form)
-      })
-  }
+  // const [serverState, setServerState] = useState({
+  //   submitting: false,
+  //   status: null
+  // })
+  // const handleServerResponse = (ok, msg, form) => {
+  //   setServerState({
+  //     submitting: false,
+  //     status: {ok, msg}
+  //   })
+  //   if (ok) {
+  //     form.reset()
+  //   }
+  // }
+  // const handleOnSubmit = e => {
+  //   e.preventDefault()
+  //   const form = e.target
+  //   setServerState({submitting: true})
+  //   axios({
+  //     method: 'post',
+  //     url: '',
+  //     data: new FormData(form)
+  //   })
+  //     .then(r => {
+  //       handleServerResponse(true, 'Thanks!', form)
+  //     })
+  //     .catch(r => {
+  //       handleServerResponse(false, r.response.data.error, form)
+  //     })
+  // }
 
   return (
     <Layout>
@@ -373,7 +373,7 @@ const ContactPage = (props) => {
         </div>
         <div className={styles.contactWrapper}>
           <form
-            onSubmit={handleOnSubmit}
+            action='https://getform.io/f/9104b7d5-5703-45d8-9e32-81178542190f' method='POST'
             id='myForm'
             encType='multipart/form-data'
           >
