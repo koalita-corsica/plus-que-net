@@ -369,7 +369,7 @@ const ContactPage = (props) => {
     <Layout>
       <Container>
         <div className={styles.titleContain}>
-          <h1 className={styles.title}>{page.title}</h1>
+           <h1 className={styles.title}>{page.title}</h1>
         </div>
         <div className={styles.contactWrapper}>
           <form
